@@ -1,0 +1,44 @@
+[EXPFILE]
+#---------------------------------------------------------
+# Casetalk Expression File
+# Author: marcow
+# Created: 18-8-2016
+#---------------------------------------------------------
+
+[weight]
+"Athlete 113 weighs 48kg."
+[height]
+"Athlete 113 is 1.61m in height."
+[age]
+"Athlete 113 is 34 years old."
+[gender]
+"Athlete 113 is female."
+[first name]
+"Athlete 113 has first name Andrea."
+[surname]
+"Athlete 113 has surname Kilday."
+[athlete country]
+"Athlete 113 plays for NZL."
+[athlete sport]
+"Athlete 113 plays Taekwondo."
+
+[competition score]
+"At Rio2016, Taekwondo Woman -49kg in round of 16 athlete 113 scored 5 points."
+"At Rio2016, Taekwondo Woman -49kg in round of 16 athlete 104 scored 7 points."
+[competition result]
+"At Rio2016, Taekwondo Woman -49kg in round of 16 athlete 104 won by final score."
+[competition official]
+"At Rio2016, Taekwondo Woman -49kg in round of 16 has referee DIB Julie."
+"At Rio2016, Taekwondo Woman -49kg in round of 16 has judge Chbibi Abdelhak."
+"At Rio2016, Taekwondo Woman -49kg in round of 16 has judge Molapo Moshoeshoe."
+[event time]
+"Rio2016 shows Taekwondo Woman -49kg where round of 16 takes place on 17 Aug at 14:00 BRT."
+[event venue]
+"Rio2016 shows Taekwondo Woman -49kg where round of 16 takes place at venue Carioca Arena 3."
+[country name]
+"Country code NZL stands for New Zealand."
+"Country code BRA stands for Brazil."
+[athlete medal]
+"At Rio2016, Taekwondo Woman -49kg athlete 104 won the Silver medal."
+"At Rio2016, Taekwondo Woman -49kg athlete 149 won the Bronze medal."
+"At Rio2016, Taekwondo Woman -49kg athlete 36 won the Bronze medal."
