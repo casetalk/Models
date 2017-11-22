@@ -1,0 +1,32 @@
+[EXPFILE, WIN]
+
+[Student]
+"There is a student Peter Johnson."
+"There is a student John Hendrix."
+"There is a student Jan de Groot."
+
+[City Of Residence]
+"Student Peter Johnson lives in the city New York."
+"Student Jan Hendriks lives in the city New York."
+
+[Apprenticeship]
+"Apprenticeship S101 is available."
+"Apprenticeship S110 is available."
+"Apprenticeship S200 is available."
+"Apprenticeship S203 is available."
+
+[Apprenticeship Preference]
+"Student Peter Johnson has as preference no. 2 apprenticeship S203."
+"Student Peter Johnson has as preference no. 3 apprenticeship S110."
+
+[Apprenticeship City]
+"Apprenticeship S101 takes place in the city New York."
+"Apprenticeship S110 takes place in the city New York."
+"Apprenticeship S200 takes place in the city Washington."
+"Apprenticeship S203 takes place in the city Washington."
+
+[Apprenticeship Description]
+"Apprenticeship S101 concerns the development of a magazine information system."
+"Apprenticeship S110 concerns introducing a RDBMS in a company."
+"Apprenticeship S200 concerns develoment of a technical information system."
+"Apprenticeship S203 concerns writing training material about NIAM."
