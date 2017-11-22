@@ -1,0 +1,52 @@
+[EXPFILE]
+
+[Customer Location]
+"Customer 4081 is located in Utrecht."
+
+[Customer Project]
+"Project 6323.16 is carried out for customer 4081."
+
+[Division Employee]
+"Employee 312 is arranged to division 6."
+"Employee 618 is arranged to division 6."
+
+[Employee Name]
+"Employee 232 has name Bakker R.P.."
+"Employee 618 has name Boven W.J. van."
+
+[Employee Title]
+"Employee 312 has title ir."
+"Employee 618 has title ing."
+
+[Hour Rate]
+"From week 200109 the hour rate for employee 618 working on project 6323.16 is EUR 213,83."
+"From week 200138 the hour rate for employee 312 working on project 7004.07 is EUR 164,00."
+
+[Name of Customer]
+"Customer 4081 has name District Limburg S.E."
+
+[Name of Division]
+"Division 6 has name Soil Research."
+
+[Project Description]
+"Project 6323.16 has description Investigation of ...dumping site in Ulbach."
+
+[Project Manager]
+"Project 6323.16 is managed by employee 283."
+"Project 7004.07 is managed by employee 618."
+
+[Responsible Division]
+"Project 6323.16 is the responsibility of division 6."
+
+[Work Task]
+"There is a Work Task with wbs code 1."
+"There is a Work Task with wbs code 14."
+
+[Work Task Name]
+"Work task 1 has name preparation."
+"Work task 14 has name drawing."
+
+[Working Hours]
+"In week 200138 employee 232 working on project 6323.16 4 hours at work task 14 ."
+"In week 200138 employee 618 working on project 7004.07 2 hours at work task 1 ."
+

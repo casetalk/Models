@@ -1,0 +1,402 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:profile="http://www.daml.org/services/owl-s/1.0/Profile.owl#" xmlns:grounding="http://www.daml.org/services/owl-s/1.0/Grounding.owl#"  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:process="http://www.daml.org/services/owl-s/1.0/Process.owl#" xmlns:service="http://www.daml.org/services/owl-s/1.0/Service.owl#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns:local="http://www.example-domain.org/workinghours_rdf_owl#" xml:base="http://www.example-domain.org/workinghours_rdf_owl">
+  <owl:Ontology rdf:about="IG_c6233e97-6fad-4ac8-94f7-e8f5b45cda31">
+    <owl:versionInfo>1</owl:versionInfo>
+    <dc:creator>BCP Software</dc:creator>
+    <dc:source>file://\\\\Mac\\Home\\Documents\\CaseTalk\\Modellen\\WorkingHours\\WorkingHours</dc:source>
+    <dc:date>2017-11-22</dc:date>
+    <rdfs:label>Working Hours</rdfs:label>
+  </owl:Ontology>
+  <owl:Class rdfs:about="#Expression">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:label>Expression</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </owl:Class>
+    <owl:Class rdf:ID="OBB2F40690">
+      <rdfs:label>Amount</rdfs:label>
+      <owl:hasKey rdf:parseType="Collection">
+        <owl:DatatypeProperty rdf:about="OB40385E07"/><!-- Amount:amount of euros -->
+      </owl:hasKey>
+      </owl:Class>
+    <owl:Class rdf:ID="OBCE26601D">
+      <rdfs:label>Customer</rdfs:label>
+      <rdfs:comment>what can this mean?</rdfs:comment>
+      <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="OB0735EE08"/><!-- Customer Location -->
+          <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+        </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="OBBE36D706"/><!-- Name of Customer -->
+          <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+          <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        </owl:Restriction>
+      </rdfs:subClassOf>
+      <owl:hasKey rdf:parseType="Collection">
+        <owl:DatatypeProperty rdf:about="OB7A979494"/><!-- Customer:customernumber -->
+      </owl:hasKey>
+        <local:DataWarehouse_History>No history</local:DataWarehouse_History>
+      </owl:Class>
+    <owl:Class rdf:ID="OB3025CDAA">
+      <rdfs:label>Division</rdfs:label>
+      <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="OBB3C43B95"/><!-- Name of Division -->
+          <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+          <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        </owl:Restriction>
+      </rdfs:subClassOf>
+      <owl:hasKey rdf:parseType="Collection">
+        <owl:DatatypeProperty rdf:about="OBD1637D9F"/><!-- Division:division nr -->
+      </owl:hasKey>
+      </owl:Class>
+    <owl:Class rdf:ID="OBF8C8B903">
+      <rdfs:label>Employee</rdfs:label>
+      <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#OB24D4B6C3"/><!-- Division Employee -->
+          <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+          <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="OB25BE7B08"/><!-- Employee Name -->
+          <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+          <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#OB429D1175"/><!-- Employee Title -->
+          <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+          <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        </owl:Restriction>
+      </rdfs:subClassOf>
+      <owl:hasKey rdf:parseType="Collection">
+        <owl:DatatypeProperty rdf:about="OBBCB91A75"/><!-- Employee:employee no -->
+      </owl:hasKey>
+      </owl:Class>
+    <owl:Class rdf:ID="OBBA54BFD0">
+      <rdfs:label>Hour Rate</rdfs:label>
+      <local:Expression rdf:ID="F12" >&quot;From &lt;Week&gt; the hour rate for &lt;Project Employee&gt; is &lt;Amount&gt;.&quot;</local:Expression>
+      <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#OB805232EB"/><!-- Amount -->
+          <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+          <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        </owl:Restriction>
+      </rdfs:subClassOf>
+      <owl:hasKey rdf:parseType="Collection">
+        <owl:ObjectProperty rdf:about="#OB88653FD2"/><!-- Hour Rate:Project Employee -->
+        <owl:ObjectProperty rdf:about="#OB6A7632CC"/><!-- Hour Rate:Week -->
+      </owl:hasKey>
+      </owl:Class>
+    <owl:Class rdf:ID="OB9E727FDD">
+      <rdfs:label>Project</rdfs:label>
+      <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#OBB6766D93"/><!-- Customer Project -->
+          <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+          <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="OB74BDB230"/><!-- Project Description -->
+          <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+          <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#OB93127E9C"/><!-- Responsible Division -->
+          <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+          <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        </owl:Restriction>
+      </rdfs:subClassOf>
+      <owl:hasKey rdf:parseType="Collection">
+        <owl:DatatypeProperty rdf:about="OB08863636"/><!-- Project:project no -->
+      </owl:hasKey>
+      </owl:Class>
+    <owl:Class rdf:ID="OB093AB989">
+      <rdfs:label>Project Employee</rdfs:label>
+      <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#OB24044892"/><!-- Employee -->
+          <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+          <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#OB7C024B1F"/><!-- Project -->
+          <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+          <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        </owl:Restriction>
+      </rdfs:subClassOf>
+      </owl:Class>
+    <owl:Class rdf:ID="OBB78A3223">
+      <rdfs:label>Title</rdfs:label>
+      <owl:hasKey rdf:parseType="Collection">
+        <owl:DatatypeProperty rdf:about="OBD5FF208A"/><!-- Title:title code -->
+      </owl:hasKey>
+        <local:DataWarehouse_History>No history</local:DataWarehouse_History>
+      </owl:Class>
+    <owl:Class rdf:ID="OBD2CE0095">
+      <rdfs:label>Week</rdfs:label>
+      <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#OB52DCFF7E"/><!-- Year -->
+          <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+          <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        </owl:Restriction>
+      </rdfs:subClassOf>
+      <owl:hasKey rdf:parseType="Collection">
+        <owl:DatatypeProperty rdf:about="OB3C0FBAC8"/><!-- Week:week no -->
+      </owl:hasKey>
+<!--
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="#OB1F1E051E"/>
+          <rdf:Description rdf:about="#OB6A7632CC"/>
+        </owl:unionOf>
+-->
+      </owl:Class>
+    <owl:Class rdf:ID="OBD8CB7A1A">
+      <rdfs:label>Work Task</rdfs:label>
+      <local:Expression rdf:ID="F3" >&quot;There is a Work Task with wbs code &lt;wbs number&gt;.&quot;</local:Expression>
+      <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="OB49E64D4A"/><!-- Work Task Name -->
+          <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+          <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        </owl:Restriction>
+      </rdfs:subClassOf>
+      <owl:hasKey rdf:parseType="Collection">
+        <owl:DatatypeProperty rdf:about="OBE6DACC31"/><!-- Work Task:wbs number -->
+      </owl:hasKey>
+      </owl:Class>
+    <owl:Class rdf:ID="OB801D05B0">
+      <rdfs:label>Working Hours</rdfs:label>
+      <local:Expression rdf:ID="F2" >&quot;In &lt;Week&gt; &lt;Project Employee&gt; &lt;amount of hours&gt; hours at &lt;Work Task&gt; .&quot;</local:Expression>
+      <owl:hasKey rdf:parseType="Collection">
+        <owl:ObjectProperty rdf:about="#OB39C2AF04"/><!-- Working Hours:Project Employee -->
+        <owl:ObjectProperty rdf:about="#OB1F1E051E"/><!-- Working Hours:Week -->
+        <owl:ObjectProperty rdf:about="#OB9D3BC6D3"/><!-- Working Hours:Work Task -->
+      </owl:hasKey>
+      <owl:hasKey rdf:parseType="Collection">
+        <owl:ObjectProperty rdf:about="#OB39C2AF04"/><!-- Working Hours:Project Employee -->
+        <owl:ObjectProperty rdf:about="#OB1F1E051E"/><!-- Working Hours:Week -->
+        <owl:DatatypeProperty rdf:about="OB57035676"/><!-- Working Hours:amount of hours -->
+      </owl:hasKey>
+      </owl:Class>
+    <owl:Class rdf:ID="OB537C66B2">
+      <rdfs:label>Year</rdfs:label>
+      <owl:hasKey rdf:parseType="Collection">
+        <owl:DatatypeProperty rdf:about="OBEF4BBBE2"/><!-- Year:year no -->
+      </owl:hasKey>
+      </owl:Class>
+    <owl:DatatypeProperty rdf:about="OB40385E07">
+      <rdfs:label>amount of euros</rdfs:label>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+      <rdfs:domain rdf:resource="#OBB2F40690"/>
+      </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="OB0735EE08">
+      <rdfs:label>Customer Location</rdfs:label>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      <rdfs:domain rdf:resource="#OBCE26601D"/>
+      <local:Expression rdf:ID="F14" >&quot;&lt;Customer&gt; is located in &lt;City&gt;.&quot;</local:Expression>
+      </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="OBBE36D706">
+      <rdfs:label>Name of Customer</rdfs:label>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      <rdfs:domain rdf:resource="#OBCE26601D"/>
+      <local:Expression rdf:ID="F9" >&quot;&lt;Customer&gt; has name &lt;customer name&gt;.&quot;</local:Expression>
+      </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="OB7A979494">
+      <rdfs:label>customernumber</rdfs:label>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+      <rdfs:domain rdf:resource="#OBCE26601D"/>
+      </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="OBB3C43B95">
+      <rdfs:label>Name of Division</rdfs:label>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      <rdfs:domain rdf:resource="#OB3025CDAA"/>
+      <local:Expression rdf:ID="F6" >&quot;&lt;Division&gt; has name &lt;division name&gt;.&quot;</local:Expression>
+      </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="OBD1637D9F">
+      <rdfs:label>division nr</rdfs:label>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+      <rdfs:domain rdf:resource="#OB3025CDAA"/>
+      </owl:DatatypeProperty>
+    <owl:ObjectProperty rdf:ID="OB24D4B6C3">
+      <rdfs:label>Division Employee</rdfs:label>
+      <rdfs:range rdf:resource="#OB3025CDAA"/>
+      <rdfs:domain rdf:resource="#OBF8C8B903"/>
+      <local:Expression rdf:ID="F13" >&quot;&lt;Employee&gt; is arranged to &lt;Division&gt;.&quot;</local:Expression>
+      </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="OB25BE7B08">
+      <rdfs:label>Employee Name</rdfs:label>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      <rdfs:domain rdf:resource="#OBF8C8B903"/>
+      <local:Expression rdf:ID="F1" >&quot;&lt;Employee&gt; has name &lt;person name&gt;.&quot;</local:Expression>
+      </owl:DatatypeProperty>
+    <owl:ObjectProperty rdf:ID="OB429D1175">
+      <rdfs:label>Employee Title</rdfs:label>
+      <rdfs:range rdf:resource="#OBB78A3223"/>
+      <rdfs:domain rdf:resource="#OBF8C8B903"/>
+      <local:Expression rdf:ID="F11" >&quot;&lt;Employee&gt; has &lt;Title&gt;.&quot;</local:Expression>
+      </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="OBBCB91A75">
+      <rdfs:label>employee no</rdfs:label>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+      <rdfs:domain rdf:resource="#OBF8C8B903"/>
+      </owl:DatatypeProperty>
+    <owl:ObjectProperty rdf:ID="OB805232EB">
+      <rdfs:label>Amount</rdfs:label>
+      <rdfs:range rdf:resource="#OBB2F40690"/>
+      <rdfs:domain rdf:resource="#OBBA54BFD0"/>
+      </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="OB88653FD2">
+      <rdfs:label>Project Employee</rdfs:label>
+      <rdfs:range rdf:resource="#OB093AB989"/>
+      <rdfs:domain>
+        <owl:Class>
+          <owl:unionOf rdf:parseType="Collection">
+            <owl:Class rdf:about="#OBBA54BFD0"/><!-- HourRate -->
+          </owl:unionOf>
+        </owl:Class>
+      </rdfs:domain>
+      </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="OB6A7632CC">
+      <rdfs:label>Week</rdfs:label>
+      <rdfs:range rdf:resource="#OBD2CE0095"/>
+      <rdfs:domain>
+        <owl:Class>
+          <owl:unionOf rdf:parseType="Collection">
+            <owl:Class rdf:about="#OBBA54BFD0"/><!-- HourRate -->
+          </owl:unionOf>
+        </owl:Class>
+      </rdfs:domain>
+      </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="OBB6766D93">
+      <rdfs:label>Customer Project</rdfs:label>
+      <rdfs:range rdf:resource="#OBCE26601D"/>
+      <rdfs:domain rdf:resource="#OB9E727FDD"/>
+      <local:Expression rdf:ID="F8" >&quot;&lt;Project&gt; is carried out for &lt;Customer&gt;.&quot;</local:Expression>
+      </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="OB74BDB230">
+      <rdfs:label>Project Description</rdfs:label>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      <rdfs:domain rdf:resource="#OB9E727FDD"/>
+      <local:Expression rdf:ID="F10" >&quot;&lt;Project&gt; has description &lt;description&gt;.&quot;</local:Expression>
+      </owl:DatatypeProperty>
+    <owl:ObjectProperty rdf:ID="OB93127E9C">
+      <rdfs:label>Responsible Division</rdfs:label>
+      <rdfs:range rdf:resource="#OB3025CDAA"/>
+      <rdfs:domain rdf:resource="#OB9E727FDD"/>
+      <local:Expression rdf:ID="F5" >&quot;&lt;Project&gt; is the responsibility of &lt;Division&gt;.&quot;</local:Expression>
+      </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="OB08863636">
+      <rdfs:label>project no</rdfs:label>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      <rdfs:domain rdf:resource="#OB9E727FDD"/>
+      </owl:DatatypeProperty>
+    <owl:ObjectProperty rdf:ID="OB24044892">
+      <rdfs:label>Employee</rdfs:label>
+      <rdfs:range rdf:resource="#OBF8C8B903"/>
+      <rdfs:domain>
+        <owl:Class>
+          <owl:unionOf rdf:parseType="Collection">
+            <owl:Class rdf:about="#OB093AB989"/><!-- ProjectEmployee -->
+          </owl:unionOf>
+        </owl:Class>
+      </rdfs:domain>
+      </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="OB7C024B1F">
+      <rdfs:label>Project</rdfs:label>
+      <rdfs:range rdf:resource="#OB9E727FDD"/>
+      <rdfs:domain>
+        <owl:Class>
+          <owl:unionOf rdf:parseType="Collection">
+            <owl:Class rdf:about="#OB093AB989"/><!-- ProjectEmployee -->
+          </owl:unionOf>
+        </owl:Class>
+      </rdfs:domain>
+      </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="OBD5FF208A">
+      <rdfs:label>title code</rdfs:label>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      <rdfs:domain rdf:resource="#OBB78A3223"/>
+      </owl:DatatypeProperty>
+    <owl:ObjectProperty rdf:ID="OB52DCFF7E">
+      <rdfs:label>Year</rdfs:label>
+      <rdfs:range rdf:resource="#OB537C66B2"/>
+      <rdfs:domain rdf:resource="#OBD2CE0095"/>
+      </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="OB3C0FBAC8">
+      <rdfs:label>week no</rdfs:label>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+      <rdfs:domain rdf:resource="#OBD2CE0095"/>
+      </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="OB49E64D4A">
+      <rdfs:label>Work Task Name</rdfs:label>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      <rdfs:domain rdf:resource="#OBD8CB7A1A"/>
+      <local:Expression rdf:ID="F4" >&quot;&lt;Work Task&gt; has name &lt;task name&gt;.&quot;</local:Expression>
+      </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="OBE6DACC31">
+      <rdfs:label>wbs number</rdfs:label>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+      <rdfs:domain rdf:resource="#OBD8CB7A1A"/>
+      </owl:DatatypeProperty>
+    <owl:ObjectProperty rdf:ID="OB39C2AF04">
+      <rdfs:label>Project Employee</rdfs:label>
+      <rdfs:range rdf:resource="#OB093AB989"/>
+      <rdfs:domain>
+        <owl:Class>
+          <owl:unionOf rdf:parseType="Collection">
+            <owl:Class rdf:about="#OB801D05B0"/><!-- WorkingHours -->
+          </owl:unionOf>
+        </owl:Class>
+      </rdfs:domain>
+      </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="OB1F1E051E">
+      <rdfs:label>Week</rdfs:label>
+      <rdfs:range rdf:resource="#OBD2CE0095"/>
+      <rdfs:domain>
+        <owl:Class>
+          <owl:unionOf rdf:parseType="Collection">
+            <owl:Class rdf:about="#OB801D05B0"/><!-- WorkingHours -->
+          </owl:unionOf>
+        </owl:Class>
+      </rdfs:domain>
+      </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="OB9D3BC6D3">
+      <rdfs:label>Work Task</rdfs:label>
+      <rdfs:range rdf:resource="#OBD8CB7A1A"/>
+      <rdfs:domain rdf:resource="#OB801D05B0"/>
+      </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="OB57035676">
+      <rdfs:label>amount of hours</rdfs:label>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+      <rdfs:domain rdf:resource="#OB801D05B0"/>
+      </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="OBEF4BBBE2">
+      <rdfs:label>year no</rdfs:label>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+      <rdfs:domain rdf:resource="#OB537C66B2"/>
+      </owl:DatatypeProperty>
+    <rdf:Description rdf:about="#OBB78A3223_1">
+    <rdfs:label>Title (ing)</rdfs:label>
+      <rdf:type rdf:resource="#OBB78A3223"/><!-- Title -->
+      <local:TitleCode>ing</local:TitleCode>
+    </rdf:Description>
+    <rdf:Description rdf:about="#OBB78A3223_2">
+    <rdfs:label>Title (ir)</rdfs:label>
+      <rdf:type rdf:resource="#OBB78A3223"/><!-- Title -->
+      <local:TitleCode>ir</local:TitleCode>
+    </rdf:Description>
+</rdf:RDF>
