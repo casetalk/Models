@@ -1,5 +1,7 @@
 # ![CaseTalk Logo](https://www.casetalk.com/templates/casetalk/favicon.ico) CarFuel.prj
 A simple example to illustrate the table as designed in any relational casetool lacks semantics. The columns require meaning.
+
+*Project created with CaseTalk v8.27, release 1, build 4349.*
 * CarFuel.prj
   * CarFuel.ig
     * carFuel.igd
@@ -7,4 +9,4 @@ A simple example to illustrate the table as designed in any relational casetool 
     * CarFuel_GLR.igg
       * CarFuel_GLR_SQL92.SQL
 ## carFuel.igd
-![Diagram carFuel.igd](./carFuel.png)
+![Diagram carFuel.igd](carFuel.png)

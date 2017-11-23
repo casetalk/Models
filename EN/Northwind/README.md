@@ -1,5 +1,8 @@
 # ![CaseTalk Logo](https://www.casetalk.com/templates/casetalk/favicon.ico) Northwind.prj
 This model is generated from reverse engineering the well known Northwind example database in MsSQLServer.
+
+*Project created with CaseTalk v8.27, release 1, build 4349.*
+
 * Northwind.prj
   * northwind.ig
     * categories.igd
