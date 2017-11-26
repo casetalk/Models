@@ -1,4 +1,5 @@
 # ![CaseTalk Logo](https://www.casetalk.com/images/icons/casetalk.png)NorthwindAndEmployee.prj
+This project contains a combination of the Northwind and Employee database. The Northwind was reverse engineered and then remodeled in a more elegant model, deduplicating address information, and splitting Customer into Company, Contact, Location. On top of that the Employee database was merged and the model again edited. The Employee database contains projects and project employees.
 *Project created with CaseTalk v8.27, release 1, build 4349.*
 
 * ![Project](https://www.casetalk.com/images/icons/prj.png) NorthwindAndEmployee.prj
@@ -14,7 +15,6 @@
     * ![Diagram](https://www.casetalk.com/images/icons/igd.png) suppliers.igd
     * ![Diagram](https://www.casetalk.com/images/icons/igd.png) job.igd
     * ![Diagram](https://www.casetalk.com/images/icons/igd.png) project.igd
-    * ![Diagram](https://www.casetalk.com/images/icons/igd.png) sales.igd
 ## categories.igd
 ![Diagram categories.igd](categories.png)
 ## products.igd
@@ -37,5 +37,3 @@
 ![Diagram job.igd](job.png)
 ## project.igd
 ![Diagram project.igd](project.png)
-## sales.igd
-![Diagram sales.igd](sales.png)
