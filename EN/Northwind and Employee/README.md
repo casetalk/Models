@@ -12,6 +12,9 @@
     * ![Diagram](https://www.casetalk.com/images/icons/igd.png) customers.igd
     * ![Diagram](https://www.casetalk.com/images/icons/igd.png) shippers.igd
     * ![Diagram](https://www.casetalk.com/images/icons/igd.png) suppliers.igd
+    * ![Diagram](https://www.casetalk.com/images/icons/igd.png) job.igd
+    * ![Diagram](https://www.casetalk.com/images/icons/igd.png) project.igd
+    * ![Diagram](https://www.casetalk.com/images/icons/igd.png) sales.igd
 ## categories.igd
 ![Diagram categories.igd](categories.png)
 ## products.igd
@@ -30,3 +33,9 @@
 ![Diagram shippers.igd](shippers.png)
 ## suppliers.igd
 ![Diagram suppliers.igd](suppliers.png)
+## job.igd
+![Diagram job.igd](job.png)
+## project.igd
+![Diagram project.igd](project.png)
+## sales.igd
+![Diagram sales.igd](sales.png)
