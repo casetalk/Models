@@ -1,14 +1,7 @@
 {
-# Project=WorkingHours.prj
-# Path=Z:\Documents\CaseTalk\Models\EN\WorkingHours\
-# Description=A more realistic example where worksheets are verbalized and modeled. The model validation shows potential redundancy warnings.
-# 
-# Repository=Z:\Documents\CaseTalk\Models\EN\WorkingHours\WorkingHours_GLR.igg
-# Author=BCP Software
-#
 "name" : "WorkingHours_GLR",
 "title" : "WorkingHours_GLR",
-"id" : "{593324E5-47FA-43C3-A0A1-D894BE275AC2}",
+"id" : "{C298D431-EDAF-4741-9DD0-BDAF2A7C33C6}",
 "profile" : "JSON Table Schema",
 "resources" : [ 
   {
@@ -51,7 +44,8 @@
           "City" : "Utrecht"
         }
         ]
-    },
+    }
+  },
   {
     "name" : "Employee",
     "description" : "\"Employee <employee no> has name <Employee Name>.\"\r\n\"Employee <employee no> has title <Title>.\"\r\n\"Employee <employee no> is arranged to division <Division>.\"",
@@ -115,7 +109,8 @@
           "Division" : "6"
         }
         ]
-    },
+    }
+  },
   {
     "name" : "Hour_Rate",
     "description" : "\"From week <Year><week no> the hour rate for employee <Employee> working on project <Project> is EUR <Amount>.\"",
@@ -200,14 +195,9 @@
           "Amount" : "164,00"
         }
         ]
-    },
+    }
+  },
   {
-    # Data Warehouse
-    #   History : No history
-    # Source
-    #   Created at : 26-10-2017 17:00:10
-    #   Modeler : marcow
-    #   Modified at : 26-10-2017 17:00:10
     "name" : "Name_of_Customer",
     "description" : "blablabla\r\n\r\n\"Customer <Customer> has name <customer name>.\"",
     "schema" : {
@@ -236,7 +226,8 @@
           "customer_name" : "District Limburg S.E"
         }
         ]
-    },
+    }
+  },
   {
     "name" : "Name_of_Division",
     "description" : "\"Division <Division> has name <division name>.\"",
@@ -266,7 +257,8 @@
           "division_name" : "Soil Research"
         }
         ]
-    },
+    }
+  },
   {
     "name" : "Project",
     "description" : "\"Project <project no> is the responsibility of division <Division>.\"\r\n\"Project <project no> is managed by employee <Employee>.\"\r\n\"Project <project no> is carried out for customer <Customer>.\"\r\n\"Project <project no> has description <Project Description>.\"",
@@ -292,7 +284,7 @@
       {
         "name" : "Employee",
         "title" : "Project Manager/Employee",
-        "type" : "integer",
+        "type" : "integer"
       },
       {
         "name" : "Customer",
@@ -347,7 +339,8 @@
           "Project_Description" : "Investigation of ...dumping site in Ulbach"
         }
         ]
-    },
+    }
+  },
   {
     "name" : "Work_Task_Name",
     "description" : "\"Work task <Work Task> has name <task name>.\"",
@@ -382,7 +375,8 @@
           "task_name" : "drawing"
         }
         ]
-    },
+    }
+  },
   {
     "name" : "Working_Hours",
     "description" : "\"In week <Year><week no> employee <Employee> working on project <Project> <amount of hours> hours at work task <Work Task> .\"",
@@ -497,5 +491,6 @@
         }
         ]
     }
+  }
   ]
 }
