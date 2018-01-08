@@ -1,0 +1,432 @@
+#
+# Project=WorkingHours.prj
+# Path=Z:\Documents\CaseTalk\Models\EN\WorkingHours\
+# Description=A more realistic example where worksheets are verbalized and modeled. The model validation shows potential redundancy warnings.
+# 
+# Repository=Z:\Documents\CaseTalk\Models\EN\WorkingHours\WorkingHours_GLR.igg
+# Author=BCP Software
+#
+"resources" : [ 
+  {
+    # Table Customer_Location
+    # "Customer <Customer> is located in <City>."
+    "name" : "Customer_Location",
+    "schema" : {
+      "fields" : [
+      {
+        "name" : "Customer",
+        "type" : "integer",
+        "constraints" : {
+          "required" : "true"
+          }
+      },
+      {
+        "name" : "City",
+        "type" : "string",
+        "constraints" : {
+          "required" : "true",
+          "maxLength" : "7"
+          }
+      }
+      ],
+      "primaryKey" : [
+        "Customer", 
+        "City"
+        ],
+      "foreignKeys" : [
+      {
+        "fields" : "Customer",
+        "reference" : { 
+          "resource" : "Name_of_Customer",
+          "fields" : "Customer"
+          }
+      }
+      ]
+    },
+  {
+    # Table Employee
+    # "Employee <employee no> has name <Employee Name>."
+    # "Employee <employee no> has title <Title>."
+    # "Employee <employee no> is arranged to division <Division>."
+    "name" : "Employee",
+    "schema" : {
+      "fields" : [
+      {
+        "name" : "employee_no",
+        "title" : "employee no",
+        "type" : "integer",
+        "constraints" : {
+          "required" : "true"
+          }
+      },
+      {
+        "name" : "Employee_Name",
+        "title" : "Employee Name",
+        "type" : "string",
+        "constraints" : {
+          "required" : "true",
+          "maxLength" : "14"
+          }
+      },
+      {
+        "name" : "Title",
+        "title" : "Employee Title/Title",
+        "type" : "string",
+        "constraints" : {
+          "enum" : [
+            "ing",
+            "ir",
+            "mr",
+            "mrs",
+            "ms"
+            ]
+          }
+      },
+      {
+        "name" : "Division",
+        "title" : "Division Employee/Division",
+        "type" : "integer",
+        "constraints" : {
+          "required" : "true"
+          }
+      }
+      ],
+      "primaryKey" : "employee_no",
+      "foreignKeys" : [
+      {
+        "fields" : "Division",
+        "reference" : { 
+          "resource" : "Name_of_Division",
+          "fields" : "Division"
+          }
+      }
+      ]
+    },
+  {
+    # Table Hour_Rate
+    # "From week <Year><week no> the hour rate for employee <Employee> working on project <Project> is EUR <Amount>."
+    "name" : "Hour_Rate",
+    "schema" : {
+      "fields" : [
+      {
+        "name" : "Year",
+        "title" : "Week/Year",
+        "type" : "integer",
+        "constraints" : {
+          "required" : "true"
+          }
+      },
+      {
+        "name" : "week_no",
+        "title" : "Week/week no",
+        "type" : "integer",
+        "constraints" : {
+          "required" : "true"
+          }
+      },
+      {
+        "name" : "Employee",
+        "title" : "Project Employee/Employee",
+        "type" : "integer",
+        "constraints" : {
+          "required" : "true"
+          }
+      },
+      {
+        "name" : "Project",
+        "title" : "Project Employee/Project",
+        "type" : "string",
+        "constraints" : {
+          "required" : "true",
+          "maxLength" : "7"
+          }
+      },
+      {
+        "name" : "Amount",
+        "type" : "integer",
+        "constraints" : {
+          "required" : "true"
+          }
+      }
+      ],
+      "primaryKey" : [
+        "Year", 
+        "week_no", 
+        "Employee", 
+        "Project"
+        ],
+      "foreignKeys" : [
+      {
+        "fields" : "Employee",
+        "reference" : { 
+          "resource" : "Employee",
+          "fields" : "employee_no"
+          }
+      },
+      {
+        "fields" : "Project",
+        "reference" : { 
+          "resource" : "Project",
+          "fields" : "project_no"
+          }
+      }
+      ]
+    },
+  {
+    # Table Name_of_Customer
+    # blablabla
+    # 
+    # "Customer <Customer> has name <customer name>."
+    # Data Warehouse
+    #   History : No history
+    # Source
+    #   Created at : 26-10-2017 17:00:10
+    #   Modeler : marcow
+    #   Modified at : 26-10-2017 17:00:10
+    "name" : "Name_of_Customer",
+    "schema" : {
+      "fields" : [
+      {
+        "name" : "Customer",
+        "type" : "integer",
+        "constraints" : {
+          "required" : "true"
+          }
+      },
+      {
+        "name" : "customer_name",
+        "title" : "customer name",
+        "type" : "string",
+        "constraints" : {
+          "required" : "true",
+          "maxLength" : "20"
+          }
+      }
+      ],
+      "primaryKey" : "Customer"
+    },
+  {
+    # Table Name_of_Division
+    # "Division <Division> has name <division name>."
+    "name" : "Name_of_Division",
+    "schema" : {
+      "fields" : [
+      {
+        "name" : "Division",
+        "type" : "integer",
+        "constraints" : {
+          "required" : "true"
+          }
+      },
+      {
+        "name" : "division_name",
+        "title" : "division name",
+        "type" : "string",
+        "constraints" : {
+          "required" : "true",
+          "maxLength" : "13"
+          }
+      }
+      ],
+      "primaryKey" : "Division"
+    },
+  {
+    # Table Project
+    # "Project <project no> is the responsibility of division <Division>."
+    # "Project <project no> is managed by employee <Employee>."
+    # "Project <project no> is carried out for customer <Customer>."
+    # "Project <project no> has description <Project Description>."
+    "name" : "Project",
+    "schema" : {
+      "fields" : [
+      {
+        "name" : "project_no",
+        "title" : "project no",
+        "type" : "string",
+        "constraints" : {
+          "required" : "true",
+          "maxLength" : "7"
+          }
+      },
+      {
+        "name" : "Division",
+        "title" : "Responsible Division/Division",
+        "type" : "integer",
+        "constraints" : {
+          "required" : "true"
+          }
+      },
+      {
+        "name" : "Employee",
+        "title" : "Project Manager/Employee",
+        "type" : "integer",
+      },
+      {
+        "name" : "Customer",
+        "title" : "Customer Project/Customer",
+        "type" : "integer",
+        "description" : "pipo",
+        "constraints" : {
+          "required" : "true"
+          }
+      },
+      {
+        "name" : "Project_Description",
+        "title" : "Project Description",
+        "type" : "string",
+        "description" : "de clown",
+        "constraints" : {
+          "required" : "true",
+          "maxLength" : "42"
+          }
+      }
+      ],
+      "primaryKey" : "project_no",
+      "foreignKeys" : [
+      {
+        "fields" : "Employee",
+        "reference" : { 
+          "resource" : "Employee",
+          "fields" : "employee_no"
+          }
+      },
+      {
+        "fields" : "Customer",
+        "reference" : { 
+          "resource" : "Name_of_Customer",
+          "fields" : "Customer"
+          }
+      },
+      {
+        "fields" : "Division",
+        "reference" : { 
+          "resource" : "Name_of_Division",
+          "fields" : "Division"
+          }
+      }
+      ]
+    },
+  {
+    # Table Work_Task_Name
+    # "Work task <Work Task> has name <task name>."
+    "name" : "Work_Task_Name",
+    "schema" : {
+      "fields" : [
+      {
+        "name" : "Work_Task",
+        "title" : "Work Task",
+        "type" : "integer",
+        "constraints" : {
+          "required" : "true"
+          }
+      },
+      {
+        "name" : "task_name",
+        "title" : "task name",
+        "type" : "string",
+        "constraints" : {
+          "required" : "true",
+          "maxLength" : "11"
+          }
+      }
+      ],
+      "primaryKey" : "Work_Task"
+    },
+  {
+    # Table Working_Hours
+    # "In week <Year><week no> employee <Employee> working on project <Project> <amount of hours> hours at work task <Work Task> ."
+    "name" : "Working_Hours",
+    "schema" : {
+      "fields" : [
+      {
+        "name" : "Year",
+        "title" : "Week/Year",
+        "type" : "integer",
+        "constraints" : {
+          "required" : "true"
+          }
+      },
+      {
+        "name" : "week_no",
+        "title" : "Week/week no",
+        "type" : "integer",
+        "constraints" : {
+          "required" : "true"
+          }
+      },
+      {
+        "name" : "Employee",
+        "title" : "Project Employee/Employee",
+        "type" : "integer",
+        "constraints" : {
+          "required" : "true"
+          }
+      },
+      {
+        "name" : "Project",
+        "title" : "Project Employee/Project",
+        "type" : "string",
+        "constraints" : {
+          "required" : "true",
+          "maxLength" : "7"
+          }
+      },
+      {
+        "name" : "Work_Task",
+        "title" : "Work Task",
+        "type" : "integer",
+        "constraints" : {
+          "required" : "true"
+          }
+      },
+      {
+        "name" : "amount_of_hours",
+        "title" : "amount of hours",
+        "type" : "integer",
+        "constraints" : {
+          "required" : "true"
+          }
+      }
+      ],
+      "primaryKey" : [
+        "Year", 
+        "week_no", 
+        "Employee", 
+        "Project", 
+        "Work_Task"
+        ],
+      "foreignKeys" : [
+      {
+        "fields" : "Employee",
+        "reference" : { 
+          "resource" : "Employee",
+          "fields" : "employee_no"
+          }
+      },
+      {
+        "fields" : ["Employee", "Project"],
+        "reference" : { 
+          "resource" : "Hour_Rate",
+          "fields" : [
+            "Employee",
+            "Project"
+            ]
+          }
+      },
+      {
+        "fields" : "Project",
+        "reference" : { 
+          "resource" : "Project",
+          "fields" : "project_no"
+          }
+      },
+      {
+        "fields" : "Work_Task",
+        "reference" : { 
+          "resource" : "Work_Task_Name",
+          "fields" : "Work_Task"
+          }
+      }
+      ]
+    }
+  ] # End Of Resources
