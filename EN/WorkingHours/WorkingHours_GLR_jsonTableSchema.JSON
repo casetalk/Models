@@ -1,4 +1,4 @@
-#
+{
 # Project=WorkingHours.prj
 # Path=Z:\Documents\CaseTalk\Models\EN\WorkingHours\
 # Description=A more realistic example where worksheets are verbalized and modeled. The model validation shows potential redundancy warnings.
@@ -6,11 +6,14 @@
 # Repository=Z:\Documents\CaseTalk\Models\EN\WorkingHours\WorkingHours_GLR.igg
 # Author=BCP Software
 #
+"name" : "WorkingHours_GLR",
+"title" : "WorkingHours_GLR",
+"id" : "{593324E5-47FA-43C3-A0A1-D894BE275AC2}",
+"profile" : "JSON Table Schema",
 "resources" : [ 
   {
-    # Table Customer_Location
-    # "Customer <Customer> is located in <City>."
     "name" : "Customer_Location",
+    "description" : "\"Customer <Customer> is located in <City>.\"",
     "schema" : {
       "fields" : [
       {
@@ -41,14 +44,17 @@
           "fields" : "Customer"
           }
       }
-      ]
+      ],
+      "data" : [
+        {
+          "Customer" : "4081",
+          "City" : "Utrecht"
+        }
+        ]
     },
   {
-    # Table Employee
-    # "Employee <employee no> has name <Employee Name>."
-    # "Employee <employee no> has title <Title>."
-    # "Employee <employee no> is arranged to division <Division>."
     "name" : "Employee",
+    "description" : "\"Employee <employee no> has name <Employee Name>.\"\r\n\"Employee <employee no> has title <Title>.\"\r\n\"Employee <employee no> is arranged to division <Division>.\"",
     "schema" : {
       "fields" : [
       {
@@ -100,12 +106,19 @@
           "fields" : "Division"
           }
       }
-      ]
+      ],
+      "data" : [
+        {
+          "employee_no" : "618",
+          "Employee_Name" : "Boven W.J. van",
+          "Title" : "ing",
+          "Division" : "6"
+        }
+        ]
     },
   {
-    # Table Hour_Rate
-    # "From week <Year><week no> the hour rate for employee <Employee> working on project <Project> is EUR <Amount>."
     "name" : "Hour_Rate",
+    "description" : "\"From week <Year><week no> the hour rate for employee <Employee> working on project <Project> is EUR <Amount>.\"",
     "schema" : {
       "fields" : [
       {
@@ -170,13 +183,25 @@
           "fields" : "project_no"
           }
       }
-      ]
+      ],
+      "data" : [
+        {
+          "Year" : "2001",
+          "week_no" : "09",
+          "Employee" : "618",
+          "Project" : "6323.16",
+          "Amount" : "213,83"
+        },
+        {
+          "Year" : "2001",
+          "week_no" : "38",
+          "Employee" : "312",
+          "Project" : "7004.07",
+          "Amount" : "164,00"
+        }
+        ]
     },
   {
-    # Table Name_of_Customer
-    # blablabla
-    # 
-    # "Customer <Customer> has name <customer name>."
     # Data Warehouse
     #   History : No history
     # Source
@@ -184,6 +209,7 @@
     #   Modeler : marcow
     #   Modified at : 26-10-2017 17:00:10
     "name" : "Name_of_Customer",
+    "description" : "blablabla\r\n\r\n\"Customer <Customer> has name <customer name>.\"",
     "schema" : {
       "fields" : [
       {
@@ -203,12 +229,17 @@
           }
       }
       ],
-      "primaryKey" : "Customer"
+      "primaryKey" : "Customer",
+      "data" : [
+        {
+          "Customer" : "4081",
+          "customer_name" : "District Limburg S.E"
+        }
+        ]
     },
   {
-    # Table Name_of_Division
-    # "Division <Division> has name <division name>."
     "name" : "Name_of_Division",
+    "description" : "\"Division <Division> has name <division name>.\"",
     "schema" : {
       "fields" : [
       {
@@ -228,15 +259,17 @@
           }
       }
       ],
-      "primaryKey" : "Division"
+      "primaryKey" : "Division",
+      "data" : [
+        {
+          "Division" : "6",
+          "division_name" : "Soil Research"
+        }
+        ]
     },
   {
-    # Table Project
-    # "Project <project no> is the responsibility of division <Division>."
-    # "Project <project no> is managed by employee <Employee>."
-    # "Project <project no> is carried out for customer <Customer>."
-    # "Project <project no> has description <Project Description>."
     "name" : "Project",
+    "description" : "\"Project <project no> is the responsibility of division <Division>.\"\r\n\"Project <project no> is managed by employee <Employee>.\"\r\n\"Project <project no> is carried out for customer <Customer>.\"\r\n\"Project <project no> has description <Project Description>.\"",
     "schema" : {
       "fields" : [
       {
@@ -304,12 +337,20 @@
           "fields" : "Division"
           }
       }
-      ]
+      ],
+      "data" : [
+        {
+          "project_no" : "6323.16",
+          "Division" : "6",
+          "Employee" : "283",
+          "Customer" : "4081",
+          "Project_Description" : "Investigation of ...dumping site in Ulbach"
+        }
+        ]
     },
   {
-    # Table Work_Task_Name
-    # "Work task <Work Task> has name <task name>."
     "name" : "Work_Task_Name",
+    "description" : "\"Work task <Work Task> has name <task name>.\"",
     "schema" : {
       "fields" : [
       {
@@ -330,12 +371,21 @@
           }
       }
       ],
-      "primaryKey" : "Work_Task"
+      "primaryKey" : "Work_Task",
+      "data" : [
+        {
+          "Work_Task" : "1",
+          "task_name" : "preparation"
+        },
+        {
+          "Work_Task" : "14",
+          "task_name" : "drawing"
+        }
+        ]
     },
   {
-    # Table Working_Hours
-    # "In week <Year><week no> employee <Employee> working on project <Project> <amount of hours> hours at work task <Work Task> ."
     "name" : "Working_Hours",
+    "description" : "\"In week <Year><week no> employee <Employee> working on project <Project> <amount of hours> hours at work task <Work Task> .\"",
     "schema" : {
       "fields" : [
       {
@@ -427,6 +477,25 @@
           "fields" : "Work_Task"
           }
       }
-      ]
+      ],
+      "data" : [
+        {
+          "Year" : "2001",
+          "week_no" : "38",
+          "Employee" : "618",
+          "Project" : "7004.07",
+          "Work_Task" : "1",
+          "amount_of_hours" : "2"
+        },
+        {
+          "Year" : "2001",
+          "week_no" : "38",
+          "Employee" : "232",
+          "Project" : "6323.16",
+          "Work_Task" : "14",
+          "amount_of_hours" : "4"
+        }
+        ]
     }
-  ] # End Of Resources
+  ]
+}
