@@ -1,0 +1,455 @@
+# ########################################################################
+# Project=WorkingHours.prj
+# Path=Z:\Documents\CaseTalk\Models\EN\WorkingHours\
+# Description=A more realistic example where worksheets are verbalized and modeled. The model validation shows potential redundancy warnings.
+# 
+# Repository=Z:\Documents\CaseTalk\Models\EN\WorkingHours\WorkingHours_GLR.igg
+# Author=BCP Software
+# ########################################################################
+
+-- ENTER SINGLE USER MODE;
+
+# ########################################################################
+# I18N MAPS
+# ########################################################################
+/*
+DROP MAP i18n IF EXISTS nl_euro_custom CASCADE;
+CREATE MAP i18n nl_euro_custom (
+  'country' = 'NL'
+  'currency' = 'EURO'
+  'currencydecimalposition' = '2'
+  'currencydecimalseparator' = ','
+  'currencygroupseparator' = '.'
+  'currencysymbol' = '€'
+  'datepattern' = 'dd-MM-yyyy HH:mm:ss'
+  'doubledecimalposition' = '2'
+  'doubledecimalseparator' = ','
+  'doublegroupseparator' = ''
+  'language' = 'nl'
+  'moneypattern' = '###.###.###,##'
+  'timepattern' = 'DAY'
+  'timesubtypepattern' = 'HH:mm:ss'
+  'timezone' = 'Europe/Amsterdam'
+);
+*/
+
+# ########################################################################
+# DATABASE
+# ########################################################################
+
+# DROP DATABASE IF EXISTS casetalk_denodo;
+# CREATE DATABASE casetalk_denodo 'CaseTalk Denodo';
+CONNECT DATABASE casetalk_denodo;
+
+# ########################################################################
+# FOLDERS
+# ########################################################################
+
+CREATE OR REPLACE FOLDER '/CaseTalk';
+CREATE OR REPLACE FOLDER '/CaseTalk/WorkingHours_GLR';
+CREATE OR REPLACE FOLDER '/CaseTalk/WorkingHours_GLR/Interface';
+CREATE OR REPLACE FOLDER '/CaseTalk/WorkingHours_GLR/Association';
+CREATE OR REPLACE FOLDER '/CaseTalk/WorkingHours_GLR/Implementation';
+CREATE OR REPLACE FOLDER '/CaseTalk/WorkingHours_GLR/Examples';
+
+# ########################################################################
+# EXAMPLES IN MATERIALIZED TABLES
+# ########################################################################
+
+CREATE OR REPLACE MATERIALIZED TABLE t_Customer_Location
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Examples'
+  DESCRIPTION = '"Customer <Customer> is located in <City>."'
+  (
+  Customer,
+  City
+  )
+  CONSTRAINT 't_Customer_Location_pk' PRIMARY KEY('customer', 'city');
+  ;
+INSERT INTO t_Customer_Location
+  ('Customer', 'City')
+VALUES
+  (4081, 'Utrecht');
+
+CREATE OR REPLACE MATERIALIZED TABLE t_Employee
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Examples'
+  DESCRIPTION = '"Employee <employee no> has name <Employee Name>."\n"Employee <employee no> has title <Title>."\n"Employee <employee no> is arranged to division <Division>."\n'
+  (
+  employee_no,
+  Employee_Name,
+  Title,
+  Division
+  )
+  CONSTRAINT 't_Employee_pk' PRIMARY KEY('employee_no');
+  ;
+INSERT INTO t_Employee
+  ('employee_no', 'Employee_Name', 'Title', 'Division')
+VALUES
+  (618, 'Boven W.J. van', 'ing', 6);
+
+CREATE OR REPLACE MATERIALIZED TABLE t_Hour_Rate
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Examples'
+  DESCRIPTION = '"From week <Year><week no> the hour rate for employee <Employee> working on project <Project> is EUR <Amount>."'
+  (
+  Year,
+  week_no,
+  Employee,
+  Project,
+  Amount
+  )
+  CONSTRAINT 't_Hour_Rate_pk' PRIMARY KEY('year', 'week_no', 'employee', 'project');
+  ;
+INSERT INTO t_Hour_Rate
+  ('Year', 'week_no', 'Employee', 'Project', 'Amount')
+VALUES
+  (2001, 09, 618, '6323.16', 213,83),
+  (2001, 38, 312, '7004.07', 164,00);
+
+CREATE OR REPLACE MATERIALIZED TABLE t_Name_of_Customer
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Examples'
+  DESCRIPTION = 'blablabla\n\n"Customer <Customer> has name <customer name>."\n'
+  (
+  Customer,
+  customer_name
+  )
+  CONSTRAINT 't_Name_of_Customer_pk' PRIMARY KEY('customer');
+  ;
+INSERT INTO t_Name_of_Customer
+  ('Customer', 'customer_name')
+VALUES
+  (4081, 'District Limburg S.E');
+
+CREATE OR REPLACE MATERIALIZED TABLE t_Name_of_Division
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Examples'
+  DESCRIPTION = '"Division <Division> has name <division name>."'
+  (
+  Division,
+  division_name
+  )
+  CONSTRAINT 't_Name_of_Division_pk' PRIMARY KEY('division');
+  ;
+INSERT INTO t_Name_of_Division
+  ('Division', 'division_name')
+VALUES
+  (6, 'Soil Research');
+
+CREATE OR REPLACE MATERIALIZED TABLE t_Project
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Examples'
+  DESCRIPTION = '"Project <project no> is the responsibility of division <Division>."\n"Project <project no> is managed by employee <Employee>."\n"Project <project no> is carried out for customer <Customer>."\n"Project <project no> has description <Project Description>."\n'
+  (
+  project_no,
+  Division,
+  Employee,
+  Customer (description = 'pipo'),
+  Project_Description (description = 'de clown')
+  )
+  CONSTRAINT 't_Project_pk' PRIMARY KEY('project_no');
+  ;
+INSERT INTO t_Project
+  ('project_no', 'Division', 'Employee', 'Customer', 'Project_Description')
+VALUES
+  ('6323.16', 6, 283, 4081, 'Investigation of ...dumping site in Ulbach');
+
+CREATE OR REPLACE MATERIALIZED TABLE t_Work_Task_Name
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Examples'
+  DESCRIPTION = '"Work task <Work Task> has name <task name>."'
+  (
+  Work_Task,
+  task_name
+  )
+  CONSTRAINT 't_Work_Task_Name_pk' PRIMARY KEY('work_task');
+  ;
+INSERT INTO t_Work_Task_Name
+  ('Work_Task', 'task_name')
+VALUES
+  (1, 'preparation'),
+  (14, 'drawing');
+
+CREATE OR REPLACE MATERIALIZED TABLE t_Working_Hours
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Examples'
+  DESCRIPTION = '"In week <Year><week no> employee <Employee> working on project <Project> <amount of hours> hours at work task <Work Task> ."'
+  (
+  Year,
+  week_no,
+  Employee,
+  Project,
+  Work_Task,
+  amount_of_hours
+  )
+  CONSTRAINT 't_Working_Hours_pk' PRIMARY KEY('year', 'week_no', 'employee', 'project', 'work_task');
+  ;
+INSERT INTO t_Working_Hours
+  ('Year', 'week_no', 'Employee', 'Project', 'Work_Task', 'amount_of_hours')
+VALUES
+  (2001, 38, 618, '7004.07', 1, 2),
+  (2001, 38, 232, '6323.16', 14, 4);
+
+# ########################################################################
+# IMPLEMENTATION VIEWS, DEFAULT CONNECTED TO MATERIALIZED TABLES
+# ########################################################################
+
+CREATE OR REPLACE VIEW c_Customer_Location
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Implementation'
+  DESCRIPTION = '"Customer <Customer> is located in <City>."'
+  PRIMARY KEY('customer', 'city')
+(
+  Customer,
+  City
+)
+  AS
+  SELECT Customer, City FROM t_Customer_Location;
+
+CREATE OR REPLACE VIEW c_Employee
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Implementation'
+  DESCRIPTION = '"Employee <employee no> has name <Employee Name>."\n"Employee <employee no> has title <Title>."\n"Employee <employee no> is arranged to division <Division>."\n'
+  PRIMARY KEY('employee_no')
+(
+  employee_no,
+  Employee_Name,
+  Title,
+  Division
+)
+  AS
+  SELECT employee_no, Employee_Name, Title, Division FROM t_Employee;
+
+CREATE OR REPLACE VIEW c_Hour_Rate
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Implementation'
+  DESCRIPTION = '"From week <Year><week no> the hour rate for employee <Employee> working on project <Project> is EUR <Amount>."'
+  PRIMARY KEY('year', 'week_no', 'employee', 'project')
+(
+  Year,
+  week_no,
+  Employee,
+  Project,
+  Amount
+)
+  AS
+  SELECT Year, week_no, Employee, Project, Amount FROM t_Hour_Rate;
+
+CREATE OR REPLACE VIEW c_Name_of_Customer
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Implementation'
+  DESCRIPTION = 'blablabla\n\n"Customer <Customer> has name <customer name>."\n'
+  PRIMARY KEY('customer')
+(
+  Customer,
+  customer_name
+)
+  AS
+  SELECT Customer, customer_name FROM t_Name_of_Customer;
+
+CREATE OR REPLACE VIEW c_Name_of_Division
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Implementation'
+  DESCRIPTION = '"Division <Division> has name <division name>."'
+  PRIMARY KEY('division')
+(
+  Division,
+  division_name
+)
+  AS
+  SELECT Division, division_name FROM t_Name_of_Division;
+
+CREATE OR REPLACE VIEW c_Project
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Implementation'
+  DESCRIPTION = '"Project <project no> is the responsibility of division <Division>."\n"Project <project no> is managed by employee <Employee>."\n"Project <project no> is carried out for customer <Customer>."\n"Project <project no> has description <Project Description>."\n'
+  PRIMARY KEY('project_no')
+(
+  project_no,
+  Division,
+  Employee,
+  Customer (description = 'pipo'),
+  Project_Description (description = 'de clown')
+)
+  AS
+  SELECT project_no, Division, Employee, Customer, Project_Description FROM t_Project;
+
+CREATE OR REPLACE VIEW c_Work_Task_Name
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Implementation'
+  DESCRIPTION = '"Work task <Work Task> has name <task name>."'
+  PRIMARY KEY('work_task')
+(
+  Work_Task,
+  task_name
+)
+  AS
+  SELECT Work_Task, task_name FROM t_Work_Task_Name;
+
+CREATE OR REPLACE VIEW c_Working_Hours
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Implementation'
+  DESCRIPTION = '"In week <Year><week no> employee <Employee> working on project <Project> <amount of hours> hours at work task <Work Task> ."'
+  PRIMARY KEY('year', 'week_no', 'employee', 'project', 'work_task')
+(
+  Year,
+  week_no,
+  Employee,
+  Project,
+  Work_Task,
+  amount_of_hours
+)
+  AS
+  SELECT Year, week_no, Employee, Project, Work_Task, amount_of_hours FROM t_Working_Hours;
+
+# ########################################################################
+# INTERFACE VIEWS
+# ########################################################################
+
+CREATE OR REPLACE INTERFACE VIEW v_Customer_Location (
+    Customer:int, # Customer
+    City:text # City
+  )
+  SET IMPLEMENTATION c_Customer_Location
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Interface'
+  DESCRIPTION = '"Customer <Customer> is located in <City>."'
+
+CREATE OR REPLACE INTERFACE VIEW v_Employee (
+    employee_no:int, # employee no
+    Employee_Name:text, # Employee Name
+    Title:text, # Employee Title/Title
+    Division:int # Division Employee/Division
+  )
+  SET IMPLEMENTATION c_Employee
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Interface'
+  DESCRIPTION = '"Employee <employee no> has name <Employee Name>."\n"Employee <employee no> has title <Title>."\n"Employee <employee no> is arranged to division <Division>."\n'
+
+CREATE OR REPLACE INTERFACE VIEW v_Hour_Rate (
+    Year:int, # Week/Year
+    week_no:int, # Week/week no
+    Employee:int, # Project Employee/Employee
+    Project:text, # Project Employee/Project
+    Amount:blob # Amount
+  )
+  SET IMPLEMENTATION c_Hour_Rate
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Interface'
+  DESCRIPTION = '"From week <Year><week no> the hour rate for employee <Employee> working on project <Project> is EUR <Amount>."'
+
+CREATE OR REPLACE INTERFACE VIEW v_Name_of_Customer (
+    Customer:int, # Customer
+    customer_name:text # customer name
+  )
+  SET IMPLEMENTATION c_Name_of_Customer
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Interface'
+  DESCRIPTION = 'blablabla\n\n"Customer <Customer> has name <customer name>."\n'
+
+CREATE OR REPLACE INTERFACE VIEW v_Name_of_Division (
+    Division:int, # Division
+    division_name:text # division name
+  )
+  SET IMPLEMENTATION c_Name_of_Division
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Interface'
+  DESCRIPTION = '"Division <Division> has name <division name>."'
+
+CREATE OR REPLACE INTERFACE VIEW v_Project (
+    project_no:text, # project no
+    Division:int, # Responsible Division/Division
+    Employee:int, # Project Manager/Employee
+    Customer:int, # Customer Project/Customer
+    Project_Description:text # Project Description
+  )
+  SET IMPLEMENTATION c_Project
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Interface'
+  DESCRIPTION = '"Project <project no> is the responsibility of division <Division>."\n"Project <project no> is managed by employee <Employee>."\n"Project <project no> is carried out for customer <Customer>."\n"Project <project no> has description <Project Description>."\n'
+
+CREATE OR REPLACE INTERFACE VIEW v_Work_Task_Name (
+    Work_Task:int, # Work Task
+    task_name:text # task name
+  )
+  SET IMPLEMENTATION c_Work_Task_Name
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Interface'
+  DESCRIPTION = '"Work task <Work Task> has name <task name>."'
+
+CREATE OR REPLACE INTERFACE VIEW v_Working_Hours (
+    Year:int, # Week/Year
+    week_no:int, # Week/week no
+    Employee:int, # Project Employee/Employee
+    Project:text, # Project Employee/Project
+    Work_Task:int, # Work Task
+    amount_of_hours:int # amount of hours
+  )
+  SET IMPLEMENTATION c_Working_Hours
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Interface'
+  DESCRIPTION = '"In week <Year><week no> employee <Employee> working on project <Project> <amount of hours> hours at work task <Work Task> ."'
+
+# ########################################################################
+# VIEW ASSOCIATIONS
+# ########################################################################
+
+CREATE OR REPLACE ASSOCIATION FK1_Project_Employee REFERENTIAL CONSTRAINT
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Association'
+  ENDPOINT Employee_Project v_Employee PRINCIPAL (0,1)
+  ENDPOINT Project_Employee v_Project  (*)
+  DESCRIPTION = 'During lexicalizing generated SC\nDue to role substitution\n'
+  ADD MAPPING v_Employee.employee_no = v_Project.Employee;
+
+CREATE OR REPLACE ASSOCIATION FK2_Project_Name_of_Customer REFERENTIAL CONSTRAINT
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Association'
+  ENDPOINT Name_of_Customer_Project v_Name_of_Customer PRINCIPAL (1)
+  ENDPOINT Project_Name_of_Customer v_Project  (+)
+  DESCRIPTION = 'During lexicalizing generated SC\nWhile reducing "Customer"\n'
+  ADD MAPPING v_Name_of_Customer.Customer = v_Project.Customer;
+
+CREATE OR REPLACE ASSOCIATION FK3_Customer_Location_Name_of_Customer REFERENTIAL CONSTRAINT
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Association'
+  ENDPOINT Name_of_Customer_Customer_Location v_Name_of_Customer PRINCIPAL (1)
+  ENDPOINT Customer_Location_Name_of_Customer v_Customer_Location  (+)
+  DESCRIPTION = 'During lexicalizing generated SC\nWhile reducing "Customer"\n'
+  ADD MAPPING v_Name_of_Customer.Customer = v_Customer_Location.Customer;
+
+CREATE OR REPLACE ASSOCIATION FK4_Project_Name_of_Division REFERENTIAL CONSTRAINT
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Association'
+  ENDPOINT Name_of_Division_Project v_Name_of_Division PRINCIPAL (1)
+  ENDPOINT Project_Name_of_Division v_Project  (+)
+  DESCRIPTION = 'During lexicalizing generated SC\nWhile reducing "Division"\n'
+  ADD MAPPING v_Name_of_Division.Division = v_Project.Division;
+
+CREATE OR REPLACE ASSOCIATION FK5_Employee_Name_of_Division REFERENTIAL CONSTRAINT
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Association'
+  ENDPOINT Name_of_Division_Employee v_Name_of_Division PRINCIPAL (1)
+  ENDPOINT Employee_Name_of_Division v_Employee  (+)
+  DESCRIPTION = 'During lexicalizing generated SC\nWhile reducing "Division"\n'
+  ADD MAPPING v_Name_of_Division.Division = v_Employee.Division;
+
+CREATE OR REPLACE ASSOCIATION FK6_Working_Hours_Employee REFERENTIAL CONSTRAINT
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Association'
+  ENDPOINT Employee_Working_Hours v_Employee PRINCIPAL (1)
+  ENDPOINT Working_Hours_Employee v_Working_Hours  (+)
+  DESCRIPTION = 'During lexicalizing generated SC\nWhile reducing "Project Employee"\n'
+  ADD MAPPING v_Employee.employee_no = v_Working_Hours.Employee;
+
+CREATE OR REPLACE ASSOCIATION FK7_Working_Hours_Hour_Rate REFERENTIAL CONSTRAINT
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Association'
+  ENDPOINT Hour_Rate_Working_Hours v_Hour_Rate PRINCIPAL (1)
+  ENDPOINT Working_Hours_Hour_Rate v_Working_Hours  (+)
+  DESCRIPTION = 'During lexicalizing generated SC\nWhile reducing "Project Employee"\n'
+  ADD MAPPING v_Hour_Rate.Employee = v_Working_Hours.Employee
+  ADD MAPPING v_Hour_Rate.Project = v_Working_Hours.Project;
+
+CREATE OR REPLACE ASSOCIATION FK8_Working_Hours_Project REFERENTIAL CONSTRAINT
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Association'
+  ENDPOINT Project_Working_Hours v_Project PRINCIPAL (1)
+  ENDPOINT Working_Hours_Project v_Working_Hours  (+)
+  DESCRIPTION = 'During lexicalizing generated SC\nWhile reducing "Project Employee"\n'
+  ADD MAPPING v_Project.project_no = v_Working_Hours.Project;
+
+CREATE OR REPLACE ASSOCIATION FK9_Hour_Rate_Employee REFERENTIAL CONSTRAINT
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Association'
+  ENDPOINT Employee_Hour_Rate v_Employee PRINCIPAL (1)
+  ENDPOINT Hour_Rate_Employee v_Hour_Rate  (+)
+  DESCRIPTION = 'During lexicalizing generated SC\nWhile reducing "Project Employee"\n'
+  ADD MAPPING v_Employee.employee_no = v_Hour_Rate.Employee;
+
+CREATE OR REPLACE ASSOCIATION FK10_Hour_Rate_Project REFERENTIAL CONSTRAINT
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Association'
+  ENDPOINT Project_Hour_Rate v_Project PRINCIPAL (1)
+  ENDPOINT Hour_Rate_Project v_Hour_Rate  (+)
+  DESCRIPTION = 'During lexicalizing generated SC\nWhile reducing "Project Employee"\n'
+  ADD MAPPING v_Project.project_no = v_Hour_Rate.Project;
+
+CREATE OR REPLACE ASSOCIATION FK11_Working_Hours_Work_Task_Name REFERENTIAL CONSTRAINT
+  FOLDER = '/CaseTalk/WorkingHours_GLR/Association'
+  ENDPOINT Work_Task_Name_Working_Hours v_Work_Task_Name PRINCIPAL (1)
+  ENDPOINT Working_Hours_Work_Task_Name v_Working_Hours  (+)
+  DESCRIPTION = 'During lexicalizing generated SC\nWhile reducing "Work Task"\n'
+  ADD MAPPING v_Work_Task_Name.Work_Task = v_Working_Hours.Work_Task;
+
+# ########################################################################
+# END OF SCRIPT
+# ########################################################################
+

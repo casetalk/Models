@@ -11,6 +11,7 @@ A more realistic example where worksheets are verbalized and modeled. The model 
       * ![XML Schema](https://www.casetalk.com/images/icons/txt.png) WorkingHours_GLR_XMLSchema.XSD
       * ![Sql script](https://www.casetalk.com/images/icons/txt.png) WorkingHours_GLR_SQL92.SQL
       * ![JSON File](https://www.casetalk.com/images/icons/json.png) WorkingHours_GLR_jsonTableSchema.JSON
+      * ![External File](https://www.casetalk.com/images/icons/unknown.png) WorkingHours_GLR_Denodo.vql
     * ![Text File](https://www.casetalk.com/images/icons/txt.png) WorkingHours_RDF_OWL.rdf
 ## WorkingHours.igd
 ![Diagram WorkingHours.igd](WorkingHours.png)
