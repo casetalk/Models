@@ -1,8 +1,9 @@
 --
 -- Project=WorkingHours.prj
--- Path=\\Mac\Home\Documents\CaseTalk\Modellen\WorkingHours\
--- Description=
--- Repository=\\Mac\Home\Documents\CaseTalk\Modellen\WorkingHours\WorkingHours_GLR.igg
+-- Path=\\Mac\Home\Documents\CaseTalk\Models\EN\WorkingHours\
+-- Description=A more realistic example where worksheets are verbalized and modeled. The model validation shows potential redundancy warnings.
+-- 
+-- Repository=\\Mac\Home\Documents\CaseTalk\Models\EN\WorkingHours\WorkingHours_GLR.igg
 -- Author=BCP Software
 --
 
@@ -26,7 +27,14 @@ CREATE DOMAIN "PROJECT_NO" AS CHAR(7);
 --   Modified at : 22-10-2017 21:41:07
 --
 CREATE DOMAIN "TASK_NAME" AS CHAR(11);
-CREATE DOMAIN "TITLE_CODE" AS CHAR(3);
+-- 
+-- Source
+--   Created at : 8-1-2018 11:52:11
+--   Modeler : BCP Software
+--   Modified at : 8-1-2018 11:52:11
+--
+CREATE DOMAIN "TITLE_CODE" AS CHAR(3)
+   CHECK (VALUE IN ('ing', 'ir', 'mr', 'mrs', 'ms'));
 -- 
 -- Source
 --   Created at : 15-9-2017 12:54:57
@@ -37,14 +45,39 @@ CREATE DOMAIN "WBS_NUMBER" AS INTEGER;
 CREATE DOMAIN "WEEK_NO" AS INTEGER;
 CREATE DOMAIN "YEAR_NO" AS INTEGER;
 --
--- [Description]
 -- Artificial key domain
 --
 CREATE DOMAIN "GENID" AS INTEGER;
 
--- Table "CUSTOMER_LOCATION"
--- [Description]
+-- Table "CUSTOMER"
+-- what can this mean?
 -- 
+-- "Customer <customernumber> has name <Name of Customer>."
+--
+-- 
+-- Data Warehouse
+--   History : No history
+--
+-- Column "NAME_OF_CUSTOMER"
+-- blablabla
+--
+-- 
+-- Data Warehouse
+--   History : No history
+-- Source
+--   Created at : 26-10-2017 17:00:10
+--   Modeler : marcow
+--   Modified at : 26-10-2017 17:00:10
+--
+CREATE TABLE "CUSTOMER" (
+   "CUSTOMERNUMBER" "CUSTOMERNUMBER" NOT NULL, -- customernumber
+   "NAME_OF_CUSTOMER" "CUSTOMER_NAME" NOT NULL, -- Name of Customer
+
+   PRIMARY KEY ("CUSTOMERNUMBER"),
+   UNIQUE ("NAME_OF_CUSTOMER")
+);
+
+-- Table "CUSTOMER_LOCATION"
 -- "Customer <Customer> is located in <City>."
 --
 CREATE TABLE "CUSTOMER_LOCATION" (
@@ -54,9 +87,18 @@ CREATE TABLE "CUSTOMER_LOCATION" (
    PRIMARY KEY ("CUSTOMER", "CITY")
 );
 
+-- Table "DIVISION"
+-- "Division <division nr> has name <Name of Division>."
+--
+CREATE TABLE "DIVISION" (
+   "DIVISION_NR" "DIVISION_NR" NOT NULL, -- division nr
+   "NAME_OF_DIVISION" "DIVISION_NAME" NOT NULL, -- Name of Division
+
+   PRIMARY KEY ("DIVISION_NR"),
+   UNIQUE ("NAME_OF_DIVISION")
+);
+
 -- Table "EMPLOYEE"
--- [Description]
--- 
 -- "Employee <employee no> has name <Employee Name>."
 -- "Employee <employee no> has title <Title>."
 -- "Employee <employee no> is arranged to division <Division>."
@@ -71,8 +113,6 @@ CREATE TABLE "EMPLOYEE" (
 );
 
 -- Table "HOUR_RATE"
--- [Description]
--- 
 -- "From week <Year><week no> the hour rate for employee <Employee> working on project <Project> is EUR <Amount>."
 --
 CREATE TABLE "HOUR_RATE" (
@@ -85,50 +125,13 @@ CREATE TABLE "HOUR_RATE" (
    PRIMARY KEY ("YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT")
 );
 
--- Table "NAME_OF_CUSTOMER"
--- [Description]
--- blablabla
--- 
--- "Customer <Customer> has name <customer name>."
---
--- 
--- Data Warehouse
---   History : No history
--- Source
---   Created at : 26-10-2017 17:00:10
---   Modeler : marcow
---   Modified at : 26-10-2017 17:00:10
---
-CREATE TABLE "NAME_OF_CUSTOMER" (
-   "CUSTOMER" "CUSTOMERNUMBER" NOT NULL, -- Customer
-   "CUSTOMER_NAME" "CUSTOMER_NAME" NOT NULL, -- customer name
-
-   UNIQUE ("CUSTOMER_NAME"),
-   PRIMARY KEY ("CUSTOMER")
-);
-
--- Table "NAME_OF_DIVISION"
--- [Description]
--- 
--- "Division <Division> has name <division name>."
---
-CREATE TABLE "NAME_OF_DIVISION" (
-   "DIVISION" "DIVISION_NR" NOT NULL, -- Division
-   "DIVISION_NAME" "DIVISION_NAME" NOT NULL, -- division name
-
-   UNIQUE ("DIVISION_NAME"),
-   PRIMARY KEY ("DIVISION")
-);
-
 -- Table "PROJECT"
--- [Description]
--- 
 -- "Project <project no> is the responsibility of division <Division>."
+-- "Project <project no> is managed by employee <Employee>."
 -- "Project <project no> is carried out for customer <Customer>."
 -- "Project <project no> has description <Project Description>."
 --
 -- Column "CUSTOMER"
--- [Description]
 -- pipo
 --
 -- 
@@ -140,7 +143,6 @@ CREATE TABLE "NAME_OF_DIVISION" (
 --   Modified at : 14-11-2017 13:35:47
 --
 -- Column "PROJECT_DESCRIPTION"
--- [Description]
 -- de clown
 --
 -- 
@@ -154,40 +156,26 @@ CREATE TABLE "NAME_OF_DIVISION" (
 CREATE TABLE "PROJECT" (
    "PROJECT_NO" "PROJECT_NO" NOT NULL, -- project no
    "DIVISION" "DIVISION_NR" NOT NULL, -- Responsible Division/Division
+   "EMPLOYEE" "EMPLOYEE_NO", -- Project Manager/Employee
    "CUSTOMER" "CUSTOMERNUMBER" NOT NULL, -- Customer Project/Customer
    "PROJECT_DESCRIPTION" "DESCRIPTION" NOT NULL, -- Project Description
 
    PRIMARY KEY ("PROJECT_NO")
 );
 
--- Table "PROJECT_MANAGER"
--- [Description]
--- 
--- "Project <Project> is managed by employee <Employee>."
+-- Table "WORK_TASK"
+-- "There is a Work Task with wbs code <wbs number>."
+-- "Work task <wbs number> has name <Work Task Name>."
 --
-CREATE TABLE "PROJECT_MANAGER" (
-   "PROJECT" "PROJECT_NO" NOT NULL, -- Project
-   "EMPLOYEE" "EMPLOYEE_NO" NOT NULL, -- Employee
+CREATE TABLE "WORK_TASK" (
+   "WBS_NUMBER" "WBS_NUMBER" NOT NULL, -- wbs number
+   "WORK_TASK_NAME" "TASK_NAME" NOT NULL, -- Work Task Name
 
-   PRIMARY KEY ("PROJECT", "EMPLOYEE")
-);
-
--- Table "WORK_TASK_NAME"
--- [Description]
--- 
--- "Work task <Work Task> has name <task name>."
---
-CREATE TABLE "WORK_TASK_NAME" (
-   "WORK_TASK" "WBS_NUMBER" NOT NULL, -- Work Task
-   "TASK_NAME" "TASK_NAME" NOT NULL, -- task name
-
-   UNIQUE ("TASK_NAME"),
-   PRIMARY KEY ("WORK_TASK")
+   PRIMARY KEY ("WBS_NUMBER"),
+   UNIQUE ("WORK_TASK_NAME")
 );
 
 -- Table "WORKING_HOURS"
--- [Description]
--- 
 -- "In week <Year><week no> employee <Employee> working on project <Project> <amount of hours> hours at work task <Work Task> ."
 --
 CREATE TABLE "WORKING_HOURS" (
@@ -203,61 +191,54 @@ CREATE TABLE "WORKING_HOURS" (
 );
 
 -- FOREIGN KEY 
--- [Description]
 -- During lexicalizing generated SC
 -- Due to role substitution
 --
-ALTER TABLE "PROJECT_MANAGER"
-   ADD FOREIGN KEY ("PROJECT")
-   REFERENCES "PROJECT" ("PROJECT_NO");
+ALTER TABLE "WORKING_HOURS"
+   ADD FOREIGN KEY ("WORK_TASK")
+   REFERENCES "WORK_TASK" ("WBS_NUMBER");
 
 -- FOREIGN KEY 
--- [Description]
 -- During lexicalizing generated SC
 -- Due to role substitution
 --
-ALTER TABLE "PROJECT_MANAGER"
+ALTER TABLE "PROJECT"
+   ADD FOREIGN KEY ("DIVISION")
+   REFERENCES "DIVISION" ("DIVISION_NR");
+
+-- FOREIGN KEY 
+-- During lexicalizing generated SC
+-- Due to role substitution
+--
+ALTER TABLE "PROJECT"
    ADD FOREIGN KEY ("EMPLOYEE")
    REFERENCES "EMPLOYEE" ("EMPLOYEE_NO");
 
 -- FOREIGN KEY 
--- [Description]
 -- During lexicalizing generated SC
--- While reducing "Customer"
+-- Due to role substitution
 --
 ALTER TABLE "PROJECT"
    ADD FOREIGN KEY ("CUSTOMER")
-   REFERENCES "NAME_OF_CUSTOMER" ("CUSTOMER");
+   REFERENCES "CUSTOMER" ("CUSTOMERNUMBER");
 
 -- FOREIGN KEY 
--- [Description]
 -- During lexicalizing generated SC
--- While reducing "Customer"
---
-ALTER TABLE "CUSTOMER_LOCATION"
-   ADD FOREIGN KEY ("CUSTOMER")
-   REFERENCES "NAME_OF_CUSTOMER" ("CUSTOMER");
-
--- FOREIGN KEY 
--- [Description]
--- During lexicalizing generated SC
--- While reducing "Division"
---
-ALTER TABLE "PROJECT"
-   ADD FOREIGN KEY ("DIVISION")
-   REFERENCES "NAME_OF_DIVISION" ("DIVISION");
-
--- FOREIGN KEY 
--- [Description]
--- During lexicalizing generated SC
--- While reducing "Division"
+-- Due to role substitution
 --
 ALTER TABLE "EMPLOYEE"
    ADD FOREIGN KEY ("DIVISION")
-   REFERENCES "NAME_OF_DIVISION" ("DIVISION");
+   REFERENCES "DIVISION" ("DIVISION_NR");
 
 -- FOREIGN KEY 
--- [Description]
+-- During lexicalizing generated SC
+-- Due to role substitution
+--
+ALTER TABLE "CUSTOMER_LOCATION"
+   ADD FOREIGN KEY ("CUSTOMER")
+   REFERENCES "CUSTOMER" ("CUSTOMERNUMBER");
+
+-- FOREIGN KEY 
 -- During lexicalizing generated SC
 -- While reducing "Project Employee"
 --
@@ -266,7 +247,6 @@ ALTER TABLE "WORKING_HOURS"
    REFERENCES "EMPLOYEE" ("EMPLOYEE_NO");
 
 -- SUBSET 
--- [Description]
 -- During lexicalizing generated SC
 -- While reducing "Project Employee"
 --
@@ -279,7 +259,6 @@ ALTER TABLE "WORKING_HOURS"
         AND    "PROJECT" = "WORKING_HOURS"."PROJECT"));
 
 -- FOREIGN KEY 
--- [Description]
 -- During lexicalizing generated SC
 -- While reducing "Project Employee"
 --
@@ -288,7 +267,6 @@ ALTER TABLE "WORKING_HOURS"
    REFERENCES "PROJECT" ("PROJECT_NO");
 
 -- FOREIGN KEY 
--- [Description]
 -- During lexicalizing generated SC
 -- While reducing "Project Employee"
 --
@@ -297,7 +275,6 @@ ALTER TABLE "HOUR_RATE"
    REFERENCES "EMPLOYEE" ("EMPLOYEE_NO");
 
 -- FOREIGN KEY 
--- [Description]
 -- During lexicalizing generated SC
 -- While reducing "Project Employee"
 --
@@ -305,31 +282,40 @@ ALTER TABLE "HOUR_RATE"
    ADD FOREIGN KEY ("PROJECT")
    REFERENCES "PROJECT" ("PROJECT_NO");
 
--- FOREIGN KEY 
--- [Description]
--- During lexicalizing generated SC
--- While reducing "Work Task"
+-- DATABASE VIEWS
 --
-ALTER TABLE "WORKING_HOURS"
-   ADD FOREIGN KEY ("WORK_TASK")
-   REFERENCES "WORK_TASK_NAME" ("WORK_TASK");
 
+CREATE VIEW "Project Employee" AS
+  SELECT DISTINCT     "EMPLOYEE" as Employee,  /* Project Employee/Employee */
+    "PROJECT" as Project,  /* Project Employee/Project */
+  FROM "HOUR_RATE";
+
+CREATE VIEW "Week" AS
+  SELECT DISTINCT     "YEAR" as Year,  /* Week/Year */
+    "WEEK_NO" as week no,  /* Week/week no */
+  FROM "HOUR_RATE";
+
+--
+
+-- POPULATION
+--
+
+INSERT INTO "CUSTOMER"
+  ("CUSTOMERNUMBER", "NAME_OF_CUSTOMER")
+  VALUES
+  (4081, 'District Limburg S.E');
 INSERT INTO "CUSTOMER_LOCATION"
   ("CUSTOMER", "CITY")
   VALUES
   (4081, 'Utrecht');
+INSERT INTO "DIVISION"
+  ("DIVISION_NR", "NAME_OF_DIVISION")
+  VALUES
+  (6, 'Soil Research');
 INSERT INTO "EMPLOYEE"
   ("EMPLOYEE_NO", "EMPLOYEE_NAME", "TITLE", "DIVISION")
   VALUES
   (618, 'Boven W.J. van', 'ing', 6);
-INSERT INTO "EMPLOYEE"
-  ("EMPLOYEE_NO", "EMPLOYEE_NAME", "TITLE", "DIVISION")
-  VALUES
-  (232, 'Bakker R.P.', null, null);
-INSERT INTO "EMPLOYEE"
-  ("EMPLOYEE_NO", "EMPLOYEE_NAME", "TITLE", "DIVISION")
-  VALUES
-  (312, null, 'ir', 6);
 INSERT INTO "HOUR_RATE"
   ("YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT", "AMOUNT")
   VALUES
@@ -338,32 +324,16 @@ INSERT INTO "HOUR_RATE"
   ("YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT", "AMOUNT")
   VALUES
   (2001, 38, 312, '7004.07', 164,00);
-INSERT INTO "NAME_OF_CUSTOMER"
-  ("CUSTOMER", "CUSTOMER_NAME")
-  VALUES
-  (4081, 'District Limburg S.E');
-INSERT INTO "NAME_OF_DIVISION"
-  ("DIVISION", "DIVISION_NAME")
-  VALUES
-  (6, 'Soil Research');
 INSERT INTO "PROJECT"
-  ("PROJECT_NO", "DIVISION", "CUSTOMER", "PROJECT_DESCRIPTION")
+  ("PROJECT_NO", "DIVISION", "EMPLOYEE", "CUSTOMER", "PROJECT_DESCRIPTION")
   VALUES
-  ('6323.16', 6, 4081, 'Investigation of ...dumping site in Ulbach');
-INSERT INTO "PROJECT_MANAGER"
-  ("PROJECT", "EMPLOYEE")
-  VALUES
-  ('6323.16', 283);
-INSERT INTO "PROJECT_MANAGER"
-  ("PROJECT", "EMPLOYEE")
-  VALUES
-  ('7004.07', 618);
-INSERT INTO "WORK_TASK_NAME"
-  ("WORK_TASK", "TASK_NAME")
+  ('6323.16', 6, 283, 4081, 'Investigation of ...dumping site in Ulbach');
+INSERT INTO "WORK_TASK"
+  ("WBS_NUMBER", "WORK_TASK_NAME")
   VALUES
   (1, 'preparation');
-INSERT INTO "WORK_TASK_NAME"
-  ("WORK_TASK", "TASK_NAME")
+INSERT INTO "WORK_TASK"
+  ("WBS_NUMBER", "WORK_TASK_NAME")
   VALUES
   (14, 'drawing');
 INSERT INTO "WORKING_HOURS"

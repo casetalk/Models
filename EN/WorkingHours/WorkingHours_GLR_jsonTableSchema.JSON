@@ -1,9 +1,45 @@
 {
+"$schema": "https://frictionlessdata.io/schemas/data-package.json",
 "name" : "WorkingHours_GLR",
 "title" : "WorkingHours_GLR",
-"id" : "{C298D431-EDAF-4741-9DD0-BDAF2A7C33C6}",
+"id" : "{D1898142-72C7-40F2-ACD2-CEF3434AFF9A}",
 "profile" : "JSON Table Schema",
 "resources" : [ 
+  {
+    "name" : "Customer",
+    "description" : "what can this mean?\r\n\r\n\"Customer <customernumber> has name <Name of Customer>.\"",
+    "schema" : {
+      "fields" : [
+      {
+        "name" : "customernumber",
+        "type" : "integer",
+        "constraints" : {
+          "required" : "true"
+          }
+      },
+      {
+        "name" : "Name_of_Customer",
+        "title" : "Name of Customer",
+        "type" : "string",
+        "description" : "blablabla",
+        "constraints" : {
+          "required" : "true",
+          "maxLength" : "20"
+          }
+      }
+      ],
+      "primaryKey" : "customernumber",
+      "unique" : [
+      { "fields": ["Name_of_Customer"] }
+      ],
+      "data" : [
+        {
+          "customernumber" : "4081",
+          "Name_of_Customer" : "District Limburg S.E"
+        }
+        ]
+    }
+  },
   {
     "name" : "Customer_Location",
     "description" : "\"Customer <Customer> is located in <City>.\"",
@@ -33,8 +69,8 @@
       {
         "fields" : "Customer",
         "reference" : { 
-          "resource" : "Name_of_Customer",
-          "fields" : "Customer"
+          "resource" : "Customer",
+          "fields" : "customernumber"
           }
       }
       ],
@@ -42,6 +78,41 @@
         {
           "Customer" : "4081",
           "City" : "Utrecht"
+        }
+        ]
+    }
+  },
+  {
+    "name" : "Division",
+    "description" : "\"Division <division nr> has name <Name of Division>.\"",
+    "schema" : {
+      "fields" : [
+      {
+        "name" : "division_nr",
+        "title" : "division nr",
+        "type" : "integer",
+        "constraints" : {
+          "required" : "true"
+          }
+      },
+      {
+        "name" : "Name_of_Division",
+        "title" : "Name of Division",
+        "type" : "string",
+        "constraints" : {
+          "required" : "true",
+          "maxLength" : "13"
+          }
+      }
+      ],
+      "primaryKey" : "division_nr",
+      "unique" : [
+      { "fields": ["Name_of_Division"] }
+      ],
+      "data" : [
+        {
+          "division_nr" : "6",
+          "Name_of_Division" : "Soil Research"
         }
         ]
     }
@@ -96,8 +167,8 @@
       {
         "fields" : "Division",
         "reference" : { 
-          "resource" : "Name_of_Division",
-          "fields" : "Division"
+          "resource" : "Division",
+          "fields" : "division_nr"
           }
       }
       ],
@@ -198,68 +269,6 @@
     }
   },
   {
-    "name" : "Name_of_Customer",
-    "description" : "blablabla\r\n\r\n\"Customer <Customer> has name <customer name>.\"",
-    "schema" : {
-      "fields" : [
-      {
-        "name" : "Customer",
-        "type" : "integer",
-        "constraints" : {
-          "required" : "true"
-          }
-      },
-      {
-        "name" : "customer_name",
-        "title" : "customer name",
-        "type" : "string",
-        "constraints" : {
-          "required" : "true",
-          "maxLength" : "20"
-          }
-      }
-      ],
-      "primaryKey" : "Customer",
-      "data" : [
-        {
-          "Customer" : "4081",
-          "customer_name" : "District Limburg S.E"
-        }
-        ]
-    }
-  },
-  {
-    "name" : "Name_of_Division",
-    "description" : "\"Division <Division> has name <division name>.\"",
-    "schema" : {
-      "fields" : [
-      {
-        "name" : "Division",
-        "type" : "integer",
-        "constraints" : {
-          "required" : "true"
-          }
-      },
-      {
-        "name" : "division_name",
-        "title" : "division name",
-        "type" : "string",
-        "constraints" : {
-          "required" : "true",
-          "maxLength" : "13"
-          }
-      }
-      ],
-      "primaryKey" : "Division",
-      "data" : [
-        {
-          "Division" : "6",
-          "division_name" : "Soil Research"
-        }
-        ]
-    }
-  },
-  {
     "name" : "Project",
     "description" : "\"Project <project no> is the responsibility of division <Division>.\"\r\n\"Project <project no> is managed by employee <Employee>.\"\r\n\"Project <project no> is carried out for customer <Customer>.\"\r\n\"Project <project no> has description <Project Description>.\"",
     "schema" : {
@@ -309,6 +318,13 @@
       "primaryKey" : "project_no",
       "foreignKeys" : [
       {
+        "fields" : "Division",
+        "reference" : { 
+          "resource" : "Division",
+          "fields" : "division_nr"
+          }
+      },
+      {
         "fields" : "Employee",
         "reference" : { 
           "resource" : "Employee",
@@ -318,15 +334,8 @@
       {
         "fields" : "Customer",
         "reference" : { 
-          "resource" : "Name_of_Customer",
-          "fields" : "Customer"
-          }
-      },
-      {
-        "fields" : "Division",
-        "reference" : { 
-          "resource" : "Name_of_Division",
-          "fields" : "Division"
+          "resource" : "Customer",
+          "fields" : "customernumber"
           }
       }
       ],
@@ -342,21 +351,21 @@
     }
   },
   {
-    "name" : "Work_Task_Name",
-    "description" : "\"Work task <Work Task> has name <task name>.\"",
+    "name" : "Work_Task",
+    "description" : "\"There is a Work Task with wbs code <wbs number>.\"\r\n\"Work task <wbs number> has name <Work Task Name>.\"",
     "schema" : {
       "fields" : [
       {
-        "name" : "Work_Task",
-        "title" : "Work Task",
+        "name" : "wbs_number",
+        "title" : "wbs number",
         "type" : "integer",
         "constraints" : {
           "required" : "true"
           }
       },
       {
-        "name" : "task_name",
-        "title" : "task name",
+        "name" : "Work_Task_Name",
+        "title" : "Work Task Name",
         "type" : "string",
         "constraints" : {
           "required" : "true",
@@ -364,15 +373,18 @@
           }
       }
       ],
-      "primaryKey" : "Work_Task",
+      "primaryKey" : "wbs_number",
+      "unique" : [
+      { "fields": ["Work_Task_Name"] }
+      ],
       "data" : [
         {
-          "Work_Task" : "1",
-          "task_name" : "preparation"
+          "wbs_number" : "1",
+          "Work_Task_Name" : "preparation"
         },
         {
-          "Work_Task" : "14",
-          "task_name" : "drawing"
+          "wbs_number" : "14",
+          "Work_Task_Name" : "drawing"
         }
         ]
     }
@@ -439,7 +451,17 @@
         "Project", 
         "Work_Task"
         ],
+      "unique" : [
+      { "fields": ["Year", "week_no", "Employee", "Project", "amount_of_hours"] }
+      ],
       "foreignKeys" : [
+      {
+        "fields" : "Work_Task",
+        "reference" : { 
+          "resource" : "Work_Task",
+          "fields" : "wbs_number"
+          }
+      },
       {
         "fields" : "Employee",
         "reference" : { 
@@ -462,13 +484,6 @@
         "reference" : { 
           "resource" : "Project",
           "fields" : "project_no"
-          }
-      },
-      {
-        "fields" : "Work_Task",
-        "reference" : { 
-          "resource" : "Work_Task_Name",
-          "fields" : "Work_Task"
           }
       }
       ],
