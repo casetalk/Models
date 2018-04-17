@@ -17,6 +17,7 @@ A more realistic example where worksheets are verbalized and modeled. The model 
       * ![JSON File](https://www.casetalk.com/images/icons/json.png) WorkingHours_GLR_jsonTableSchema.JSON
       * ![Denodo Script](https://www.casetalk.com/images/icons/txt.png) WorkingHours_GLR_Denodo.vql
       * ![XML Schema](https://www.casetalk.com/images/icons/txt.png) WorkingHours_GLR_XMLSchema.XSD
+            
 ## WorkingHours.igd
 ![Diagram WorkingHours.igd](WorkingHours.png)
 ## WorkingHours-Logical.CRD
