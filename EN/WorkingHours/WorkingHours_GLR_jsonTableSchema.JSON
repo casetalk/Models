@@ -1,8 +1,8 @@
 {
 "$schema": "https://frictionlessdata.io/schemas/data-package.json",
-"name" : "WorkingHours_GLR",
-"title" : "WorkingHours_GLR",
-"id" : "{D1898142-72C7-40F2-ACD2-CEF3434AFF9A}",
+"name" : "WorkingHours_GLR_igg",
+"title" : "WorkingHours_GLR.igg",
+"id" : "{ECCA41A8-14C6-4CB2-AC1C-EC5FEFD12A13}",
 "profile" : "JSON Table Schema",
 "resources" : [ 
   {
@@ -256,14 +256,14 @@
           "week_no" : "09",
           "Employee" : "618",
           "Project" : "6323.16",
-          "Amount" : "213,83"
+          "Amount" : "213.83"
         },
         {
           "Year" : "2001",
           "week_no" : "38",
           "Employee" : "312",
           "Project" : "7004.07",
-          "Amount" : "164,00"
+          "Amount" : "164"
         }
         ]
     }

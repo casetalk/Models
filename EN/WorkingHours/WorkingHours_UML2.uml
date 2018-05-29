@@ -1,28 +1,28 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<uml:Model xmi:id="__Mac_Home_Documents_CaseTalk_Models_EN_WorkingHours_WorkingHours_UML_XMI__2_x__uml" xmi:version="2.1" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" name="workinghoursumlxmix">
-  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="amount_of_euros" name="Amount_of_euros">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:id="__Mac_Home_Documents_CaseTalk_Models_EN_WorkingHours_WorkingHours_UML2_uml" xmi:version="2.1" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" name="workinghoursuml">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="amount_of_euros" name="Amount_of_euros" type="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#numeric">
     </packagedElement>
-  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="amount_of_hours" name="Amount_of_hours">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="amount_of_hours" name="Amount_of_hours" type="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#integer">
     </packagedElement>
-  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="City" name="City">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="City" name="City" type="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#string">
     </packagedElement>
-  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="customer_name" name="Customer_name">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="customer_name" name="Customer_name" type="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#string">
     </packagedElement>
-  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="customernumber" name="Customernumber">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="customernumber" name="Customernumber" type="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#integer">
     </packagedElement>
-  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="description" name="Description">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="description" name="Description" type="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#string">
     </packagedElement>
-  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="division_name" name="Division_name">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="division_name" name="Division_name" type="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#string">
     </packagedElement>
-  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="division_nr" name="Division_nr">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="division_nr" name="Division_nr" type="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#integer">
     </packagedElement>
-  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="employee_no" name="Employee_no">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="employee_no" name="Employee_no" type="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#integer">
     </packagedElement>
-  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="person_name" name="Person_name">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="person_name" name="Person_name" type="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#string">
     </packagedElement>
-  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="project_no" name="Project_no">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="project_no" name="Project_no" type="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#string">
     </packagedElement>
-  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="task_name" name="Task_name">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="task_name" name="Task_name" type="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#string">
     </packagedElement>
   <packagedElement xmi:type="uml:Enumeration" xmi:id="title_code" name="Title_code">
     <ownedLiteral xmi:id="title_code_ing" xmi:type="uml:EnumerationLiteral" name="ing"/>
@@ -31,13 +31,14 @@
     <ownedLiteral xmi:id="title_code_mrs" xmi:type="uml:EnumerationLiteral" name="mrs"/>
     <ownedLiteral xmi:id="title_code_ms" xmi:type="uml:EnumerationLiteral" name="ms"/>
     </packagedElement>
-  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="wbs_number" name="Wbs_number">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="wbs_number" name="Wbs_number" type="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#integer">
     </packagedElement>
-  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="week_no" name="Week_no">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="week_no" name="Week_no" type="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#integer">
     </packagedElement>
-  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="year_no" name="Year_no">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="year_no" name="Year_no" type="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#integer">
     </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="Amount" name="Amount">
+    <ownedComment xmi:type="uml:Comment" xmi:id="Comment_Amount" body="ërg"/>
     <ownedAttribute xmi:id="_A_Amount__amount_of_euros__37" name="amount_of_euros" xmi:type="uml:Property" type="amount_of_euros" >
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_Amountamount_of_euros" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_Amountamount_of_euros" value="1"/>
@@ -45,22 +46,25 @@
     </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="Customer" name="Customer">
     <ownedComment xmi:type="uml:Comment" xmi:id="Comment_Customer" body="what can this mean?"/>
+    <ownedAttribute xmi:id="_A_Customer__City__40" name="customer_Location" xmi:type="uml:Property" type="City" >
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_CustomerCustomer_Location" value="0"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_CustomerCustomer_Location" value="*"/>
+      </ownedAttribute>
+    <ownedAttribute xmi:id="_A_Customer__customer_name__27" name="name_of_Customer" xmi:type="uml:Property" type="customer_name" >
+      <ownedComment xmi:type="uml:Comment" xmi:id="Comment__A_Customer__customer_name__27" body="blablabla"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_CustomerName_of_Customer" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_CustomerName_of_Customer" value="1"/>
+      </ownedAttribute>
     <ownedAttribute xmi:id="_A_Customer__customernumber__26" name="customernumber" xmi:type="uml:Property" type="customernumber" >
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_Customercustomernumber" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_Customercustomernumber" value="1"/>
       </ownedAttribute>
     </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="Customer_Location" name="Customer_Location">
-    <ownedAttribute xmi:id="_A_Customer_Location__City__41" name="city" xmi:type="uml:Property" type="City" >
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_Customer_LocationCity" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_Customer_LocationCity" value="1"/>
-      </ownedAttribute>
-    <ownedAttribute xmi:id="_A_Customer_Location__Customer__40" name="customer" xmi:type="uml:Property" type="Customer" association="Customer_Location_Customer_40" >
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_Customer_LocationCustomer" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_Customer_LocationCustomer" value="1"/>
-      </ownedAttribute>
-    </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="Division" name="Division">
+    <ownedAttribute xmi:id="_A_Division__division_name__20" name="name_of_Division" xmi:type="uml:Property" type="division_name" >
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_DivisionName_of_Division" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_DivisionName_of_Division" value="1"/>
+      </ownedAttribute>
     <ownedAttribute xmi:id="_A_Division__division_nr__19" name="division_nr" xmi:type="uml:Property" type="division_nr" >
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_Divisiondivision_nr" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_Divisiondivision_nr" value="1"/>
@@ -86,6 +90,7 @@
     </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="Hour_Rate" name="Hour_Rate">
     <ownedAttribute xmi:id="_A_Hour_Rate__Amount__36" name="amount" xmi:type="uml:Property" type="Amount" association="Hour_Rate_Amount_36" >
+      <ownedComment xmi:type="uml:Comment" xmi:id="Comment__A_Hour_Rate__Amount__36" body="ërg"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_Hour_RateAmount" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_Hour_RateAmount" value="1"/>
       </ownedAttribute>
@@ -98,39 +103,16 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_Hour_RateWeek" value="1"/>
       </ownedAttribute>
     </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="Name_of_Customer" name="Name_of_Customer">
-    <ownedComment xmi:type="uml:Comment" xmi:id="Comment_Name_of_Customer" body="blablabla"/>
-    <ownedAttribute xmi:id="_A_Name_of_Customer__Customer__27" name="customer" xmi:type="uml:Property" type="Customer" association="Name_of_Customer_Customer_27" >
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_Name_of_CustomerCustomer" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_Name_of_CustomerCustomer" value="1"/>
-      </ownedAttribute>
-    <ownedAttribute xmi:id="_A_Name_of_Customer__customer_name__28" name="customer_name" xmi:type="uml:Property" type="customer_name" >
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_Name_of_Customercustomer_name" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_Name_of_Customercustomer_name" value="1"/>
-      </ownedAttribute>
-    </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="Name_of_Division" name="Name_of_Division">
-    <ownedAttribute xmi:id="_A_Name_of_Division__Division__20" name="division" xmi:type="uml:Property" type="Division" association="Name_of_Division_Division_20" >
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_Name_of_DivisionDivision" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_Name_of_DivisionDivision" value="1"/>
-      </ownedAttribute>
-    <ownedAttribute xmi:id="_A_Name_of_Division__division_name__21" name="division_name" xmi:type="uml:Property" type="division_name" >
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_Name_of_Divisiondivision_name" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_Name_of_Divisiondivision_name" value="1"/>
-      </ownedAttribute>
-    </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="Project" name="Project">
     <ownedAttribute xmi:id="_A_Project__Customer__24" name="customer_Project" xmi:type="uml:Property" type="Customer" association="Project_Customer_24" >
+      <ownedComment xmi:type="uml:Comment" xmi:id="Comment__A_Project__Customer__24" body="pipo&#13;&#10;"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_ProjectCustomer_Project" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_ProjectCustomer_Project" value="1"/>
       </ownedAttribute>
     <ownedAttribute xmi:id="_A_Project__description__29" name="project_Description" xmi:type="uml:Property" type="description" >
+      <ownedComment xmi:type="uml:Comment" xmi:id="Comment__A_Project__description__29" body="de clown&#13;&#10;"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_ProjectProject_Description" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_ProjectProject_Description" value="1"/>
-      </ownedAttribute>
-    <ownedAttribute xmi:id="_A_Project__Employee__22" name="project_Manager" xmi:type="uml:Property" type="Employee" association="Project_Employee_22" >
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_ProjectProject_Manager" value="0"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_ProjectProject_Manager" value="1"/>
       </ownedAttribute>
     <ownedAttribute xmi:id="_A_Project__Division__17" name="responsible_Division" xmi:type="uml:Property" type="Division" association="Project_Division_17" >
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_ProjectResponsible_Division" value="1"/>
@@ -151,6 +133,16 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_Project_EmployeeProject" value="1"/>
       </ownedAttribute>
     </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="Project_Manager" name="Project_Manager">
+    <ownedAttribute xmi:id="_A_Project_Manager__Employee__23" name="employee" xmi:type="uml:Property" type="Employee" association="Project_Manager_Employee_23" >
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_Project_ManagerEmployee" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_Project_ManagerEmployee" value="1"/>
+      </ownedAttribute>
+    <ownedAttribute xmi:id="_A_Project_Manager__Project__22" name="project" xmi:type="uml:Property" type="Project" association="Project_Manager_Project_22" >
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_Project_ManagerProject" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_Project_ManagerProject" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="Title" name="Title">
     <ownedAttribute xmi:id="_A_Title__title_code__33" name="title_code" xmi:type="uml:Property" type="title_code" >
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_Titletitle_code" value="1"/>
@@ -168,19 +160,13 @@
       </ownedAttribute>
     </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="Work_Task" name="Work_Task">
+    <ownedAttribute xmi:id="_A_Work_Task__task_name__15" name="work_Task_Name" xmi:type="uml:Property" type="task_name" >
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_Work_TaskWork_Task_Name" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_Work_TaskWork_Task_Name" value="1"/>
+      </ownedAttribute>
     <ownedAttribute xmi:id="_A_Work_Task__wbs_number__14" name="wbs_number" xmi:type="uml:Property" type="wbs_number" >
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_Work_Taskwbs_number" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_Work_Taskwbs_number" value="1"/>
-      </ownedAttribute>
-    </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="Work_Task_Name" name="Work_Task_Name">
-    <ownedAttribute xmi:id="_A_Work_Task_Name__Work_Task__15" name="work_Task" xmi:type="uml:Property" type="Work_Task" association="Work_Task_Name_Work_Task_15" >
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_Work_Task_NameWork_Task" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_Work_Task_NameWork_Task" value="1"/>
-      </ownedAttribute>
-    <ownedAttribute xmi:id="_A_Work_Task_Name__task_name__16" name="task_name" xmi:type="uml:Property" type="task_name" >
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_Work_Task_Nametask_name" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_Work_Task_Nametask_name" value="1"/>
       </ownedAttribute>
     </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="Working_Hours" name="Working_Hours">
@@ -206,12 +192,6 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_Yearyear_no" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U_Yearyear_no" value="1"/>
       </ownedAttribute>
-    </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="Customer_Location_Customer_40" memberEnd="_A_Customer_Location__Customer__40 _OE_Customer_Location_Customer_40">
-    <ownedEnd xmi:type="uml:Property" xmi:id="_OE_Customer_Location_Customer_40" name="Customer_Location_Customer_40" type="Customer_Location" association="Customer_Location_Customer_40">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OE_L_Customer_Location_Customer_40" value="0"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OE_U_Customer_Location_Customer_40" value="*"/>
-    </ownedEnd>
     </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="Project_Customer_24" memberEnd="_A_Project__Customer__24 _OE_Customer_Project">
     <ownedEnd xmi:type="uml:Property" xmi:id="_OE_Customer_Project" name="Customer_Project" type="Project" association="Project_Customer_24">
@@ -249,18 +229,6 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OE_U_Hour_Rate_Week_34" value="*"/>
     </ownedEnd>
     </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="Name_of_Customer_Customer_27" memberEnd="_A_Name_of_Customer__Customer__27 _OE_Name_of_Customer_Customer_27">
-    <ownedEnd xmi:type="uml:Property" xmi:id="_OE_Name_of_Customer_Customer_27" name="Name_of_Customer_Customer_27" type="Name_of_Customer" association="Name_of_Customer_Customer_27">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OE_L_Name_of_Customer_Customer_27" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OE_U_Name_of_Customer_Customer_27" value="1"/>
-    </ownedEnd>
-    </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="Name_of_Division_Division_20" memberEnd="_A_Name_of_Division__Division__20 _OE_Name_of_Division_Division_20">
-    <ownedEnd xmi:type="uml:Property" xmi:id="_OE_Name_of_Division_Division_20" name="Name_of_Division_Division_20" type="Name_of_Division" association="Name_of_Division_Division_20">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OE_L_Name_of_Division_Division_20" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OE_U_Name_of_Division_Division_20" value="1"/>
-    </ownedEnd>
-    </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="Project_Employee_Employee_11" memberEnd="_A_Project_Employee__Employee__11 _OE_Project_Employee_Employee_11">
     <ownedEnd xmi:type="uml:Property" xmi:id="_OE_Project_Employee_Employee_11" name="Project_Employee_Employee_11" type="Project_Employee" association="Project_Employee_Employee_11">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OE_L_Project_Employee_Employee_11" value="0"/>
@@ -273,10 +241,16 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OE_U_Project_Employee_Project_12" value="*"/>
     </ownedEnd>
     </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="Project_Employee_22" memberEnd="_A_Project__Employee__22 _OE_Project_Manager">
-    <ownedEnd xmi:type="uml:Property" xmi:id="_OE_Project_Manager" name="Project_Manager" type="Project" association="Project_Employee_22">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OE_L_Project_Manager" value="0"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OE_U_Project_Manager" value="1"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="Project_Manager_Employee_23" memberEnd="_A_Project_Manager__Employee__23 _OE_Project_Manager_Employee_23">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_OE_Project_Manager_Employee_23" name="Project_Manager_Employee_23" type="Project_Manager" association="Project_Manager_Employee_23">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OE_L_Project_Manager_Employee_23" value="0"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OE_U_Project_Manager_Employee_23" value="*"/>
+    </ownedEnd>
+    </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="Project_Manager_Project_22" memberEnd="_A_Project_Manager__Project__22 _OE_Project_Manager_Project_22">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_OE_Project_Manager_Project_22" name="Project_Manager_Project_22" type="Project_Manager" association="Project_Manager_Project_22">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OE_L_Project_Manager_Project_22" value="0"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OE_U_Project_Manager_Project_22" value="*"/>
     </ownedEnd>
     </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="Project_Division_17" memberEnd="_A_Project__Division__17 _OE_Responsible_Division">
@@ -289,12 +263,6 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_OE_Week_Year_8" name="Week_Year_8" type="Week" association="Week_Year_8">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OE_L_Week_Year_8" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OE_U_Week_Year_8" value="*"/>
-    </ownedEnd>
-    </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="Work_Task_Name_Work_Task_15" memberEnd="_A_Work_Task_Name__Work_Task__15 _OE_Work_Task_Name_Work_Task_15">
-    <ownedEnd xmi:type="uml:Property" xmi:id="_OE_Work_Task_Name_Work_Task_15" name="Work_Task_Name_Work_Task_15" type="Work_Task_Name" association="Work_Task_Name_Work_Task_15">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OE_L_Work_Task_Name_Work_Task_15" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OE_U_Work_Task_Name_Work_Task_15" value="1"/>
     </ownedEnd>
     </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="Working_Hours_Project_Employee_5" memberEnd="_A_Working_Hours__Project_Employee__5 _OE_Working_Hours_Project_Employee_5">

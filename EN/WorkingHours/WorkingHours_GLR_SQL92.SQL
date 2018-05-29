@@ -7,7 +7,7 @@
 -- Author=BCP Software
 --
 
-CREATE SCHEMA "WORKINGHOURS_GLR";
+CREATE SCHEMA "WORKINGHOURS_GLR_IGG";
 
 CREATE DOMAIN "AMOUNT_OF_EUROS" AS NUMERIC(6,0);
 CREATE DOMAIN "AMOUNT_OF_HOURS" AS INTEGER;
@@ -76,6 +76,12 @@ CREATE TABLE "CUSTOMER" (
    PRIMARY KEY ("CUSTOMERNUMBER"),
    UNIQUE ("NAME_OF_CUSTOMER")
 );
+CREATE OR REPLACE VIEW e_"CUSTOMER" AS
+  FOLDER = '/CaseTalk/WorkingHours_GLR.igg/Documentation'
+SELECT "CUSTOMERNUMBER",
+ 'Customer ' || "CUSTOMERNUMBER" ||  ' has name ' || "NAME_OF_CUSTOMER" || '.' AS FactExpression
+ FROM "CUSTOMER";
+
 
 -- Table "CUSTOMER_LOCATION"
 -- "Customer <Customer> is located in <City>."
@@ -86,6 +92,12 @@ CREATE TABLE "CUSTOMER_LOCATION" (
 
    PRIMARY KEY ("CUSTOMER", "CITY")
 );
+CREATE OR REPLACE VIEW e_"CUSTOMER_LOCATION" AS
+  FOLDER = '/CaseTalk/WorkingHours_GLR.igg/Documentation'
+SELECT "CUSTOMER", "CITY",
+ 'Customer ' || "CUSTOMER" ||  ' is located in ' || "CITY" || '.' AS FactExpression
+ FROM "CUSTOMER_LOCATION";
+
 
 -- Table "DIVISION"
 -- "Division <division nr> has name <Name of Division>."
@@ -97,6 +109,12 @@ CREATE TABLE "DIVISION" (
    PRIMARY KEY ("DIVISION_NR"),
    UNIQUE ("NAME_OF_DIVISION")
 );
+CREATE OR REPLACE VIEW e_"DIVISION" AS
+  FOLDER = '/CaseTalk/WorkingHours_GLR.igg/Documentation'
+SELECT "DIVISION_NR",
+ 'Division ' || "DIVISION_NR" ||  ' has name ' || "NAME_OF_DIVISION" || '.' AS FactExpression
+ FROM "DIVISION";
+
 
 -- Table "EMPLOYEE"
 -- "Employee <employee no> has name <Employee Name>."
@@ -111,6 +129,20 @@ CREATE TABLE "EMPLOYEE" (
 
    PRIMARY KEY ("EMPLOYEE_NO")
 );
+CREATE OR REPLACE VIEW e_"EMPLOYEE" AS
+  FOLDER = '/CaseTalk/WorkingHours_GLR.igg/Documentation'
+SELECT "EMPLOYEE_NO",
+ 'Employee ' || "EMPLOYEE_NO" ||  ' has name ' || "EMPLOYEE_NAME" || '.' AS FactExpression
+ FROM "EMPLOYEE"
+UNION
+SELECT "EMPLOYEE_NO",
+ 'Employee ' || "EMPLOYEE_NO" ||  ' has title ' || "TITLE" || '.' AS FactExpression
+ FROM "EMPLOYEE"
+UNION
+SELECT "EMPLOYEE_NO",
+ 'Employee ' || "EMPLOYEE_NO" ||  ' is arranged to division ' || "DIVISION" || '.' AS FactExpression
+ FROM "EMPLOYEE";
+
 
 -- Table "HOUR_RATE"
 -- "From week <Year><week no> the hour rate for employee <Employee> working on project <Project> is EUR <Amount>."
@@ -124,6 +156,12 @@ CREATE TABLE "HOUR_RATE" (
 
    PRIMARY KEY ("YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT")
 );
+CREATE OR REPLACE VIEW e_"HOUR_RATE" AS
+  FOLDER = '/CaseTalk/WorkingHours_GLR.igg/Documentation'
+SELECT "YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT",
+ 'From week ' || "YEAR" || "WEEK_NO" ||  ' the hour rate for employee ' || "EMPLOYEE" ||  ' working on project ' || "PROJECT" ||  ' is EUR ' || "AMOUNT" || '.' AS FactExpression
+ FROM "HOUR_RATE";
+
 
 -- Table "PROJECT"
 -- "Project <project no> is the responsibility of division <Division>."
@@ -162,6 +200,24 @@ CREATE TABLE "PROJECT" (
 
    PRIMARY KEY ("PROJECT_NO")
 );
+CREATE OR REPLACE VIEW e_"PROJECT" AS
+  FOLDER = '/CaseTalk/WorkingHours_GLR.igg/Documentation'
+SELECT "PROJECT_NO",
+ 'Project ' || "PROJECT_NO" ||  ' is the responsibility of division ' || "DIVISION" || '.' AS FactExpression
+ FROM "PROJECT"
+UNION
+SELECT "PROJECT_NO",
+ 'Project ' || "PROJECT_NO" ||  ' is managed by employee ' || "EMPLOYEE" || '.' AS FactExpression
+ FROM "PROJECT"
+UNION
+SELECT "PROJECT_NO",
+ 'Project ' || "PROJECT_NO" ||  ' is carried out for customer ' || "CUSTOMER" || '.' AS FactExpression
+ FROM "PROJECT"
+UNION
+SELECT "PROJECT_NO",
+ 'Project ' || "PROJECT_NO" ||  ' has description ' || "PROJECT_DESCRIPTION" || '.' AS FactExpression
+ FROM "PROJECT";
+
 
 -- Table "WORK_TASK"
 -- "There is a Work Task with wbs code <wbs number>."
@@ -174,6 +230,16 @@ CREATE TABLE "WORK_TASK" (
    PRIMARY KEY ("WBS_NUMBER"),
    UNIQUE ("WORK_TASK_NAME")
 );
+CREATE OR REPLACE VIEW e_"WORK_TASK" AS
+  FOLDER = '/CaseTalk/WorkingHours_GLR.igg/Documentation'
+SELECT "WBS_NUMBER",
+ 'There is a Work Task with wbs code ' || "WBS_NUMBER" || '.' AS FactExpression
+ FROM "WORK_TASK"
+UNION
+SELECT "WBS_NUMBER",
+ 'Work task ' || "WBS_NUMBER" ||  ' has name ' || "WORK_TASK_NAME" || '.' AS FactExpression
+ FROM "WORK_TASK";
+
 
 -- Table "WORKING_HOURS"
 -- "In week <Year><week no> employee <Employee> working on project <Project> <amount of hours> hours at work task <Work Task> ."
@@ -189,6 +255,12 @@ CREATE TABLE "WORKING_HOURS" (
    UNIQUE ("YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT", "AMOUNT_OF_HOURS"),
    PRIMARY KEY ("YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT", "WORK_TASK")
 );
+CREATE OR REPLACE VIEW e_"WORKING_HOURS" AS
+  FOLDER = '/CaseTalk/WorkingHours_GLR.igg/Documentation'
+SELECT "YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT", "WORK_TASK",
+ 'In week ' || "YEAR" || "WEEK_NO" ||  ' employee ' || "EMPLOYEE" ||  ' working on project ' || "PROJECT" ||  ' ' || "AMOUNT_OF_HOURS" ||  ' hours at work task ' || "WORK_TASK" || ' .' AS FactExpression
+ FROM "WORKING_HOURS";
+
 
 -- FOREIGN KEY 
 -- During lexicalizing generated SC
@@ -285,15 +357,27 @@ ALTER TABLE "HOUR_RATE"
 -- DATABASE VIEWS
 --
 
-CREATE VIEW "Project Employee" AS
-  SELECT DISTINCT     "EMPLOYEE" as Employee,  /* Project Employee/Employee */
-    "PROJECT" as Project,  /* Project Employee/Project */
-  FROM "HOUR_RATE";
+CREATE VIEW "PROJECT_EMPLOYEE" AS
+  SELECT 
+    "EMPLOYEE",  -- Project Employee/Employee
+    "PROJECT" -- Project Employee/Project
+  FROM "HOUR_RATE"
+  UNION
+  SELECT 
+    "EMPLOYEE",  -- Project Employee/Employee
+    "PROJECT" -- Project Employee/Project
+  FROM "WORKING_HOURS";
 
-CREATE VIEW "Week" AS
-  SELECT DISTINCT     "YEAR" as Year,  /* Week/Year */
-    "WEEK_NO" as week no,  /* Week/week no */
-  FROM "HOUR_RATE";
+CREATE VIEW "WEEK" AS
+  SELECT 
+    "YEAR",  -- Week/Year
+    "WEEK_NO" -- Week/week no
+  FROM "HOUR_RATE"
+  UNION
+  SELECT 
+    "YEAR",  -- Week/Year
+    "WEEK_NO" -- Week/week no
+  FROM "WORKING_HOURS";
 
 --
 
@@ -319,11 +403,11 @@ INSERT INTO "EMPLOYEE"
 INSERT INTO "HOUR_RATE"
   ("YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT", "AMOUNT")
   VALUES
-  (2001, 09, 618, '6323.16', 213,83);
+  (2001, 09, 618, '6323.16', 213.83);
 INSERT INTO "HOUR_RATE"
   ("YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT", "AMOUNT")
   VALUES
-  (2001, 38, 312, '7004.07', 164,00);
+  (2001, 38, 312, '7004.07', 164);
 INSERT INTO "PROJECT"
   ("PROJECT_NO", "DIVISION", "EMPLOYEE", "CUSTOMER", "PROJECT_DESCRIPTION")
   VALUES
