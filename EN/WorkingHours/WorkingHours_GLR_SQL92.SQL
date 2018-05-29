@@ -7,33 +7,33 @@
 -- Author=BCP Software
 --
 
-CREATE SCHEMA "WORKINGHOURS_GLR_IGG";
+CREATE SCHEMA WorkingHours_GLR_igg;
 
-CREATE DOMAIN "AMOUNT_OF_EUROS" AS NUMERIC(6,0);
-CREATE DOMAIN "AMOUNT_OF_HOURS" AS INTEGER;
-CREATE DOMAIN "CITY" AS CHAR(7);
-CREATE DOMAIN "CUSTOMER_NAME" AS CHAR(20);
-CREATE DOMAIN "CUSTOMERNUMBER" AS INTEGER;
-CREATE DOMAIN "DESCRIPTION" AS CHAR(42);
-CREATE DOMAIN "DIVISION_NAME" AS CHAR(13);
-CREATE DOMAIN "DIVISION_NR" AS INTEGER;
-CREATE DOMAIN "EMPLOYEE_NO" AS INTEGER;
-CREATE DOMAIN "PERSON_NAME" AS CHAR(14);
-CREATE DOMAIN "PROJECT_NO" AS CHAR(7);
+CREATE DOMAIN amount_of_euros AS NUMERIC(6,0);
+CREATE DOMAIN amount_of_hours AS INTEGER;
+CREATE DOMAIN City AS CHAR(7);
+CREATE DOMAIN customer_name AS CHAR(20);
+CREATE DOMAIN customernumber AS INTEGER;
+CREATE DOMAIN description AS CHAR(42);
+CREATE DOMAIN division_name AS CHAR(13);
+CREATE DOMAIN division_nr AS INTEGER;
+CREATE DOMAIN employee_no AS INTEGER;
+CREATE DOMAIN person_name AS CHAR(14);
+CREATE DOMAIN project_no AS CHAR(7);
 -- 
 -- Source
 --   Created at : 3-10-2017 9:33:02
 --   Modeler : marcow
 --   Modified at : 22-10-2017 21:41:07
 --
-CREATE DOMAIN "TASK_NAME" AS CHAR(11);
+CREATE DOMAIN task_name AS CHAR(11);
 -- 
 -- Source
 --   Created at : 8-1-2018 11:52:11
 --   Modeler : BCP Software
 --   Modified at : 8-1-2018 11:52:11
 --
-CREATE DOMAIN "TITLE_CODE" AS CHAR(3)
+CREATE DOMAIN title_code AS CHAR(3)
    CHECK (VALUE IN ('ing', 'ir', 'mr', 'mrs', 'ms'));
 -- 
 -- Source
@@ -41,15 +41,15 @@ CREATE DOMAIN "TITLE_CODE" AS CHAR(3)
 --   Modeler : marcow
 --   Modified at : 15-9-2017 12:54:57
 --
-CREATE DOMAIN "WBS_NUMBER" AS INTEGER;
-CREATE DOMAIN "WEEK_NO" AS INTEGER;
-CREATE DOMAIN "YEAR_NO" AS INTEGER;
+CREATE DOMAIN wbs_number AS INTEGER;
+CREATE DOMAIN week_no AS INTEGER;
+CREATE DOMAIN year_no AS INTEGER;
 --
 -- Artificial key domain
 --
-CREATE DOMAIN "GENID" AS INTEGER;
+CREATE DOMAIN GENID AS INTEGER;
 
--- Table "CUSTOMER"
+-- Table Customer
 -- what can this mean?
 -- 
 -- "Customer <customernumber> has name <Name of Customer>."
@@ -58,7 +58,7 @@ CREATE DOMAIN "GENID" AS INTEGER;
 -- Data Warehouse
 --   History : No history
 --
--- Column "NAME_OF_CUSTOMER"
+-- Column Name_of_Customer
 -- blablabla
 --
 -- 
@@ -69,107 +69,102 @@ CREATE DOMAIN "GENID" AS INTEGER;
 --   Modeler : marcow
 --   Modified at : 26-10-2017 17:00:10
 --
-CREATE TABLE "CUSTOMER" (
-   "CUSTOMERNUMBER" "CUSTOMERNUMBER" NOT NULL, -- customernumber
-   "NAME_OF_CUSTOMER" "CUSTOMER_NAME" NOT NULL, -- Name of Customer
+CREATE TABLE Customer (
+   customernumber customernumber NOT NULL, -- customernumber
+   Name_of_Customer customer_name NOT NULL, -- Name of Customer
 
-   PRIMARY KEY ("CUSTOMERNUMBER"),
-   UNIQUE ("NAME_OF_CUSTOMER")
+   PRIMARY KEY (customernumber),
+   UNIQUE (Name_of_Customer)
 );
-CREATE OR REPLACE VIEW e_"CUSTOMER" AS
-  FOLDER = '/CaseTalk/WorkingHours_GLR.igg/Documentation'
-SELECT "CUSTOMERNUMBER",
- 'Customer ' || "CUSTOMERNUMBER" ||  ' has name ' || "NAME_OF_CUSTOMER" || '.' AS FactExpression
- FROM "CUSTOMER";
+CREATE VIEW Customer_Expression AS
+SELECT customernumber,
+ 'Customer ' || customernumber ||  ' has name ' || Name_of_Customer || '.' AS FactExpression
+ FROM Customer;
 
 
--- Table "CUSTOMER_LOCATION"
+-- Table Customer_Location
 -- "Customer <Customer> is located in <City>."
 --
-CREATE TABLE "CUSTOMER_LOCATION" (
-   "CUSTOMER" "CUSTOMERNUMBER" NOT NULL, -- Customer
-   "CITY" "CITY" NOT NULL, -- City
+CREATE TABLE Customer_Location (
+   Customer customernumber NOT NULL, -- Customer
+   City City NOT NULL, -- City
 
-   PRIMARY KEY ("CUSTOMER", "CITY")
+   PRIMARY KEY (Customer, City)
 );
-CREATE OR REPLACE VIEW e_"CUSTOMER_LOCATION" AS
-  FOLDER = '/CaseTalk/WorkingHours_GLR.igg/Documentation'
-SELECT "CUSTOMER", "CITY",
- 'Customer ' || "CUSTOMER" ||  ' is located in ' || "CITY" || '.' AS FactExpression
- FROM "CUSTOMER_LOCATION";
+CREATE VIEW Customer_Location_Expression AS
+SELECT Customer, City,
+ 'Customer ' || Customer ||  ' is located in ' || City || '.' AS FactExpression
+ FROM Customer_Location;
 
 
--- Table "DIVISION"
+-- Table Division
 -- "Division <division nr> has name <Name of Division>."
 --
-CREATE TABLE "DIVISION" (
-   "DIVISION_NR" "DIVISION_NR" NOT NULL, -- division nr
-   "NAME_OF_DIVISION" "DIVISION_NAME" NOT NULL, -- Name of Division
+CREATE TABLE Division (
+   division_nr division_nr NOT NULL, -- division nr
+   Name_of_Division division_name NOT NULL, -- Name of Division
 
-   PRIMARY KEY ("DIVISION_NR"),
-   UNIQUE ("NAME_OF_DIVISION")
+   PRIMARY KEY (division_nr),
+   UNIQUE (Name_of_Division)
 );
-CREATE OR REPLACE VIEW e_"DIVISION" AS
-  FOLDER = '/CaseTalk/WorkingHours_GLR.igg/Documentation'
-SELECT "DIVISION_NR",
- 'Division ' || "DIVISION_NR" ||  ' has name ' || "NAME_OF_DIVISION" || '.' AS FactExpression
- FROM "DIVISION";
+CREATE VIEW Division_Expression AS
+SELECT division_nr,
+ 'Division ' || division_nr ||  ' has name ' || Name_of_Division || '.' AS FactExpression
+ FROM Division;
 
 
--- Table "EMPLOYEE"
+-- Table Employee
 -- "Employee <employee no> has name <Employee Name>."
 -- "Employee <employee no> has title <Title>."
 -- "Employee <employee no> is arranged to division <Division>."
 --
-CREATE TABLE "EMPLOYEE" (
-   "EMPLOYEE_NO" "EMPLOYEE_NO" NOT NULL, -- employee no
-   "EMPLOYEE_NAME" "PERSON_NAME" NOT NULL, -- Employee Name
-   "TITLE" "TITLE_CODE", -- Employee Title/Title
-   "DIVISION" "DIVISION_NR" NOT NULL, -- Division Employee/Division
+CREATE TABLE Employee (
+   employee_no employee_no NOT NULL, -- employee no
+   Employee_Name person_name NOT NULL, -- Employee Name
+   Title title_code, -- Employee Title/Title
+   Division division_nr NOT NULL, -- Division Employee/Division
 
-   PRIMARY KEY ("EMPLOYEE_NO")
+   PRIMARY KEY (employee_no)
 );
-CREATE OR REPLACE VIEW e_"EMPLOYEE" AS
-  FOLDER = '/CaseTalk/WorkingHours_GLR.igg/Documentation'
-SELECT "EMPLOYEE_NO",
- 'Employee ' || "EMPLOYEE_NO" ||  ' has name ' || "EMPLOYEE_NAME" || '.' AS FactExpression
- FROM "EMPLOYEE"
+CREATE VIEW Employee_Expression AS
+SELECT employee_no,
+ 'Employee ' || employee_no ||  ' has name ' || Employee_Name || '.' AS FactExpression
+ FROM Employee
 UNION
-SELECT "EMPLOYEE_NO",
- 'Employee ' || "EMPLOYEE_NO" ||  ' has title ' || "TITLE" || '.' AS FactExpression
- FROM "EMPLOYEE"
+SELECT employee_no,
+ 'Employee ' || employee_no ||  ' has title ' || Title || '.' AS FactExpression
+ FROM Employee
 UNION
-SELECT "EMPLOYEE_NO",
- 'Employee ' || "EMPLOYEE_NO" ||  ' is arranged to division ' || "DIVISION" || '.' AS FactExpression
- FROM "EMPLOYEE";
+SELECT employee_no,
+ 'Employee ' || employee_no ||  ' is arranged to division ' || Division || '.' AS FactExpression
+ FROM Employee;
 
 
--- Table "HOUR_RATE"
+-- Table Hour_Rate
 -- "From week <Year><week no> the hour rate for employee <Employee> working on project <Project> is EUR <Amount>."
 --
-CREATE TABLE "HOUR_RATE" (
-   "YEAR" "YEAR_NO" NOT NULL, -- Week/Year
-   "WEEK_NO" "WEEK_NO" NOT NULL, -- Week/week no
-   "EMPLOYEE" "EMPLOYEE_NO" NOT NULL, -- Project Employee/Employee
-   "PROJECT" "PROJECT_NO" NOT NULL, -- Project Employee/Project
-   "AMOUNT" "AMOUNT_OF_EUROS" NOT NULL, -- Amount
+CREATE TABLE Hour_Rate (
+   Year year_no NOT NULL, -- Week/Year
+   week_no week_no NOT NULL, -- Week/week no
+   Employee employee_no NOT NULL, -- Project Employee/Employee
+   Project project_no NOT NULL, -- Project Employee/Project
+   Amount amount_of_euros NOT NULL, -- Amount
 
-   PRIMARY KEY ("YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT")
+   PRIMARY KEY (Year, week_no, Employee, Project)
 );
-CREATE OR REPLACE VIEW e_"HOUR_RATE" AS
-  FOLDER = '/CaseTalk/WorkingHours_GLR.igg/Documentation'
-SELECT "YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT",
- 'From week ' || "YEAR" || "WEEK_NO" ||  ' the hour rate for employee ' || "EMPLOYEE" ||  ' working on project ' || "PROJECT" ||  ' is EUR ' || "AMOUNT" || '.' AS FactExpression
- FROM "HOUR_RATE";
+CREATE VIEW Hour_Rate_Expression AS
+SELECT Year, week_no, Employee, Project,
+ 'From week ' || Year || week_no ||  ' the hour rate for employee ' || Employee ||  ' working on project ' || Project ||  ' is EUR ' || Amount || '.' AS FactExpression
+ FROM Hour_Rate;
 
 
--- Table "PROJECT"
+-- Table Project
 -- "Project <project no> is the responsibility of division <Division>."
 -- "Project <project no> is managed by employee <Employee>."
 -- "Project <project no> is carried out for customer <Customer>."
 -- "Project <project no> has description <Project Description>."
 --
--- Column "CUSTOMER"
+-- Column Customer
 -- pipo
 --
 -- 
@@ -180,7 +175,7 @@ SELECT "YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT",
 --   Modeler : marcow
 --   Modified at : 14-11-2017 13:35:47
 --
--- Column "PROJECT_DESCRIPTION"
+-- Column Project_Description
 -- de clown
 --
 -- 
@@ -191,241 +186,238 @@ SELECT "YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT",
 --   Modeler : marcow
 --   Modified at : 14-11-2017 13:35:54
 --
-CREATE TABLE "PROJECT" (
-   "PROJECT_NO" "PROJECT_NO" NOT NULL, -- project no
-   "DIVISION" "DIVISION_NR" NOT NULL, -- Responsible Division/Division
-   "EMPLOYEE" "EMPLOYEE_NO", -- Project Manager/Employee
-   "CUSTOMER" "CUSTOMERNUMBER" NOT NULL, -- Customer Project/Customer
-   "PROJECT_DESCRIPTION" "DESCRIPTION" NOT NULL, -- Project Description
+CREATE TABLE Project (
+   project_no project_no NOT NULL, -- project no
+   Division division_nr NOT NULL, -- Responsible Division/Division
+   Employee employee_no, -- Project Manager/Employee
+   Customer customernumber NOT NULL, -- Customer Project/Customer
+   Project_Description description NOT NULL, -- Project Description
 
-   PRIMARY KEY ("PROJECT_NO")
+   PRIMARY KEY (project_no)
 );
-CREATE OR REPLACE VIEW e_"PROJECT" AS
-  FOLDER = '/CaseTalk/WorkingHours_GLR.igg/Documentation'
-SELECT "PROJECT_NO",
- 'Project ' || "PROJECT_NO" ||  ' is the responsibility of division ' || "DIVISION" || '.' AS FactExpression
- FROM "PROJECT"
+CREATE VIEW Project_Expression AS
+SELECT project_no,
+ 'Project ' || project_no ||  ' is the responsibility of division ' || Division || '.' AS FactExpression
+ FROM Project
 UNION
-SELECT "PROJECT_NO",
- 'Project ' || "PROJECT_NO" ||  ' is managed by employee ' || "EMPLOYEE" || '.' AS FactExpression
- FROM "PROJECT"
+SELECT project_no,
+ 'Project ' || project_no ||  ' is managed by employee ' || Employee || '.' AS FactExpression
+ FROM Project
 UNION
-SELECT "PROJECT_NO",
- 'Project ' || "PROJECT_NO" ||  ' is carried out for customer ' || "CUSTOMER" || '.' AS FactExpression
- FROM "PROJECT"
+SELECT project_no,
+ 'Project ' || project_no ||  ' is carried out for customer ' || Customer || '.' AS FactExpression
+ FROM Project
 UNION
-SELECT "PROJECT_NO",
- 'Project ' || "PROJECT_NO" ||  ' has description ' || "PROJECT_DESCRIPTION" || '.' AS FactExpression
- FROM "PROJECT";
+SELECT project_no,
+ 'Project ' || project_no ||  ' has description ' || Project_Description || '.' AS FactExpression
+ FROM Project;
 
 
--- Table "WORK_TASK"
+-- Table Work_Task
 -- "There is a Work Task with wbs code <wbs number>."
 -- "Work task <wbs number> has name <Work Task Name>."
 --
-CREATE TABLE "WORK_TASK" (
-   "WBS_NUMBER" "WBS_NUMBER" NOT NULL, -- wbs number
-   "WORK_TASK_NAME" "TASK_NAME" NOT NULL, -- Work Task Name
+CREATE TABLE Work_Task (
+   wbs_number wbs_number NOT NULL, -- wbs number
+   Work_Task_Name task_name NOT NULL, -- Work Task Name
 
-   PRIMARY KEY ("WBS_NUMBER"),
-   UNIQUE ("WORK_TASK_NAME")
+   PRIMARY KEY (wbs_number),
+   UNIQUE (Work_Task_Name)
 );
-CREATE OR REPLACE VIEW e_"WORK_TASK" AS
-  FOLDER = '/CaseTalk/WorkingHours_GLR.igg/Documentation'
-SELECT "WBS_NUMBER",
- 'There is a Work Task with wbs code ' || "WBS_NUMBER" || '.' AS FactExpression
- FROM "WORK_TASK"
+CREATE VIEW Work_Task_Expression AS
+SELECT wbs_number,
+ 'There is a Work Task with wbs code ' || wbs_number || '.' AS FactExpression
+ FROM Work_Task
 UNION
-SELECT "WBS_NUMBER",
- 'Work task ' || "WBS_NUMBER" ||  ' has name ' || "WORK_TASK_NAME" || '.' AS FactExpression
- FROM "WORK_TASK";
+SELECT wbs_number,
+ 'Work task ' || wbs_number ||  ' has name ' || Work_Task_Name || '.' AS FactExpression
+ FROM Work_Task;
 
 
--- Table "WORKING_HOURS"
+-- Table Working_Hours
 -- "In week <Year><week no> employee <Employee> working on project <Project> <amount of hours> hours at work task <Work Task> ."
 --
-CREATE TABLE "WORKING_HOURS" (
-   "YEAR" "YEAR_NO" NOT NULL, -- Week/Year
-   "WEEK_NO" "WEEK_NO" NOT NULL, -- Week/week no
-   "EMPLOYEE" "EMPLOYEE_NO" NOT NULL, -- Project Employee/Employee
-   "PROJECT" "PROJECT_NO" NOT NULL, -- Project Employee/Project
-   "WORK_TASK" "WBS_NUMBER" NOT NULL, -- Work Task
-   "AMOUNT_OF_HOURS" "AMOUNT_OF_HOURS" NOT NULL, -- amount of hours
+CREATE TABLE Working_Hours (
+   Year year_no NOT NULL, -- Week/Year
+   week_no week_no NOT NULL, -- Week/week no
+   Employee employee_no NOT NULL, -- Project Employee/Employee
+   Project project_no NOT NULL, -- Project Employee/Project
+   Work_Task wbs_number NOT NULL, -- Work Task
+   amount_of_hours amount_of_hours NOT NULL, -- amount of hours
 
-   UNIQUE ("YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT", "AMOUNT_OF_HOURS"),
-   PRIMARY KEY ("YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT", "WORK_TASK")
+   UNIQUE (Year, week_no, Employee, Project, amount_of_hours),
+   PRIMARY KEY (Year, week_no, Employee, Project, Work_Task)
 );
-CREATE OR REPLACE VIEW e_"WORKING_HOURS" AS
-  FOLDER = '/CaseTalk/WorkingHours_GLR.igg/Documentation'
-SELECT "YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT", "WORK_TASK",
- 'In week ' || "YEAR" || "WEEK_NO" ||  ' employee ' || "EMPLOYEE" ||  ' working on project ' || "PROJECT" ||  ' ' || "AMOUNT_OF_HOURS" ||  ' hours at work task ' || "WORK_TASK" || ' .' AS FactExpression
- FROM "WORKING_HOURS";
+CREATE VIEW Working_Hours_Expression AS
+SELECT Year, week_no, Employee, Project, Work_Task,
+ 'In week ' || Year || week_no ||  ' employee ' || Employee ||  ' working on project ' || Project ||  ' ' || amount_of_hours ||  ' hours at work task ' || Work_Task || ' .' AS FactExpression
+ FROM Working_Hours;
 
 
 -- FOREIGN KEY 
 -- During lexicalizing generated SC
 -- Due to role substitution
 --
-ALTER TABLE "WORKING_HOURS"
-   ADD FOREIGN KEY ("WORK_TASK")
-   REFERENCES "WORK_TASK" ("WBS_NUMBER");
+ALTER TABLE Working_Hours
+   ADD FOREIGN KEY (Work_Task)
+   REFERENCES Work_Task (wbs_number);
 
 -- FOREIGN KEY 
 -- During lexicalizing generated SC
 -- Due to role substitution
 --
-ALTER TABLE "PROJECT"
-   ADD FOREIGN KEY ("DIVISION")
-   REFERENCES "DIVISION" ("DIVISION_NR");
+ALTER TABLE Project
+   ADD FOREIGN KEY (Division)
+   REFERENCES Division (division_nr);
 
 -- FOREIGN KEY 
 -- During lexicalizing generated SC
 -- Due to role substitution
 --
-ALTER TABLE "PROJECT"
-   ADD FOREIGN KEY ("EMPLOYEE")
-   REFERENCES "EMPLOYEE" ("EMPLOYEE_NO");
+ALTER TABLE Project
+   ADD FOREIGN KEY (Employee)
+   REFERENCES Employee (employee_no);
 
 -- FOREIGN KEY 
 -- During lexicalizing generated SC
 -- Due to role substitution
 --
-ALTER TABLE "PROJECT"
-   ADD FOREIGN KEY ("CUSTOMER")
-   REFERENCES "CUSTOMER" ("CUSTOMERNUMBER");
+ALTER TABLE Project
+   ADD FOREIGN KEY (Customer)
+   REFERENCES Customer (customernumber);
 
 -- FOREIGN KEY 
 -- During lexicalizing generated SC
 -- Due to role substitution
 --
-ALTER TABLE "EMPLOYEE"
-   ADD FOREIGN KEY ("DIVISION")
-   REFERENCES "DIVISION" ("DIVISION_NR");
+ALTER TABLE Employee
+   ADD FOREIGN KEY (Division)
+   REFERENCES Division (division_nr);
 
 -- FOREIGN KEY 
 -- During lexicalizing generated SC
 -- Due to role substitution
 --
-ALTER TABLE "CUSTOMER_LOCATION"
-   ADD FOREIGN KEY ("CUSTOMER")
-   REFERENCES "CUSTOMER" ("CUSTOMERNUMBER");
+ALTER TABLE Customer_Location
+   ADD FOREIGN KEY (Customer)
+   REFERENCES Customer (customernumber);
 
 -- FOREIGN KEY 
 -- During lexicalizing generated SC
 -- While reducing "Project Employee"
 --
-ALTER TABLE "WORKING_HOURS"
-   ADD FOREIGN KEY ("EMPLOYEE")
-   REFERENCES "EMPLOYEE" ("EMPLOYEE_NO");
+ALTER TABLE Working_Hours
+   ADD FOREIGN KEY (Employee)
+   REFERENCES Employee (employee_no);
 
 -- SUBSET 
 -- During lexicalizing generated SC
 -- While reducing "Project Employee"
 --
 
-ALTER TABLE "WORKING_HOURS"
+ALTER TABLE Working_Hours
    ADD CHECK (EXISTS
        (SELECT *
-        FROM   "HOUR_RATE"
-        WHERE  "EMPLOYEE" = "WORKING_HOURS"."EMPLOYEE"
-        AND    "PROJECT" = "WORKING_HOURS"."PROJECT"));
+        FROM   Hour_Rate
+        WHERE  Employee = Working_Hours.Employee
+        AND    Project = Working_Hours.Project));
 
 -- FOREIGN KEY 
 -- During lexicalizing generated SC
 -- While reducing "Project Employee"
 --
-ALTER TABLE "WORKING_HOURS"
-   ADD FOREIGN KEY ("PROJECT")
-   REFERENCES "PROJECT" ("PROJECT_NO");
+ALTER TABLE Working_Hours
+   ADD FOREIGN KEY (Project)
+   REFERENCES Project (project_no);
 
 -- FOREIGN KEY 
 -- During lexicalizing generated SC
 -- While reducing "Project Employee"
 --
-ALTER TABLE "HOUR_RATE"
-   ADD FOREIGN KEY ("EMPLOYEE")
-   REFERENCES "EMPLOYEE" ("EMPLOYEE_NO");
+ALTER TABLE Hour_Rate
+   ADD FOREIGN KEY (Employee)
+   REFERENCES Employee (employee_no);
 
 -- FOREIGN KEY 
 -- During lexicalizing generated SC
 -- While reducing "Project Employee"
 --
-ALTER TABLE "HOUR_RATE"
-   ADD FOREIGN KEY ("PROJECT")
-   REFERENCES "PROJECT" ("PROJECT_NO");
+ALTER TABLE Hour_Rate
+   ADD FOREIGN KEY (Project)
+   REFERENCES Project (project_no);
 
 -- DATABASE VIEWS
 --
 
-CREATE VIEW "PROJECT_EMPLOYEE" AS
+CREATE VIEW Project_Employee AS
   SELECT 
-    "EMPLOYEE",  -- Project Employee/Employee
-    "PROJECT" -- Project Employee/Project
-  FROM "HOUR_RATE"
+    Employee,  -- Project Employee/Employee
+    Project -- Project Employee/Project
+  FROM Hour_Rate
   UNION
   SELECT 
-    "EMPLOYEE",  -- Project Employee/Employee
-    "PROJECT" -- Project Employee/Project
-  FROM "WORKING_HOURS";
+    Employee,  -- Project Employee/Employee
+    Project -- Project Employee/Project
+  FROM Working_Hours;
 
-CREATE VIEW "WEEK" AS
+CREATE VIEW Week AS
   SELECT 
-    "YEAR",  -- Week/Year
-    "WEEK_NO" -- Week/week no
-  FROM "HOUR_RATE"
+    Year,  -- Week/Year
+    week_no -- Week/week no
+  FROM Hour_Rate
   UNION
   SELECT 
-    "YEAR",  -- Week/Year
-    "WEEK_NO" -- Week/week no
-  FROM "WORKING_HOURS";
+    Year,  -- Week/Year
+    week_no -- Week/week no
+  FROM Working_Hours;
 
 --
 
 -- POPULATION
 --
 
-INSERT INTO "CUSTOMER"
-  ("CUSTOMERNUMBER", "NAME_OF_CUSTOMER")
+INSERT INTO Customer
+  (customernumber, Name_of_Customer)
   VALUES
   (4081, 'District Limburg S.E');
-INSERT INTO "CUSTOMER_LOCATION"
-  ("CUSTOMER", "CITY")
+INSERT INTO Customer_Location
+  (Customer, City)
   VALUES
   (4081, 'Utrecht');
-INSERT INTO "DIVISION"
-  ("DIVISION_NR", "NAME_OF_DIVISION")
+INSERT INTO Division
+  (division_nr, Name_of_Division)
   VALUES
   (6, 'Soil Research');
-INSERT INTO "EMPLOYEE"
-  ("EMPLOYEE_NO", "EMPLOYEE_NAME", "TITLE", "DIVISION")
+INSERT INTO Employee
+  (employee_no, Employee_Name, Title, Division)
   VALUES
   (618, 'Boven W.J. van', 'ing', 6);
-INSERT INTO "HOUR_RATE"
-  ("YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT", "AMOUNT")
+INSERT INTO Hour_Rate
+  (Year, week_no, Employee, Project, Amount)
   VALUES
   (2001, 09, 618, '6323.16', 213.83);
-INSERT INTO "HOUR_RATE"
-  ("YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT", "AMOUNT")
+INSERT INTO Hour_Rate
+  (Year, week_no, Employee, Project, Amount)
   VALUES
   (2001, 38, 312, '7004.07', 164);
-INSERT INTO "PROJECT"
-  ("PROJECT_NO", "DIVISION", "EMPLOYEE", "CUSTOMER", "PROJECT_DESCRIPTION")
+INSERT INTO Project
+  (project_no, Division, Employee, Customer, Project_Description)
   VALUES
   ('6323.16', 6, 283, 4081, 'Investigation of ...dumping site in Ulbach');
-INSERT INTO "WORK_TASK"
-  ("WBS_NUMBER", "WORK_TASK_NAME")
+INSERT INTO Work_Task
+  (wbs_number, Work_Task_Name)
   VALUES
   (1, 'preparation');
-INSERT INTO "WORK_TASK"
-  ("WBS_NUMBER", "WORK_TASK_NAME")
+INSERT INTO Work_Task
+  (wbs_number, Work_Task_Name)
   VALUES
   (14, 'drawing');
-INSERT INTO "WORKING_HOURS"
-  ("YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT", "WORK_TASK", "AMOUNT_OF_HOURS")
+INSERT INTO Working_Hours
+  (Year, week_no, Employee, Project, Work_Task, amount_of_hours)
   VALUES
   (2001, 38, 618, '7004.07', 1, 2);
-INSERT INTO "WORKING_HOURS"
-  ("YEAR", "WEEK_NO", "EMPLOYEE", "PROJECT", "WORK_TASK", "AMOUNT_OF_HOURS")
+INSERT INTO Working_Hours
+  (Year, week_no, Employee, Project, Work_Task, amount_of_hours)
   VALUES
   (2001, 38, 232, '6323.16', 14, 4);
 
