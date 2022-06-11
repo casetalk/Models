@@ -1,0 +1,60 @@
+[EXPFILE]
+; The cookie expressions are based upon the examples provided by Steve Hoberman.
+; They are modeled using Fact Oriented Modeling in CaseTalk by Marco Wobben.
+
+[Ingredient]
+"Ingredient frosting exists.", Tag
+
+[Supplier]
+"Supplier HAL exists.", Tag
+
+[Ingredient Supplier]
+"IBM supplies butter.", Tag
+"IBM supplies sugar.", Tag
+"ABC supplies egg.", Tag
+"CBA supplies sugar.", Tag
+"CBA supplies frosting.", Tag
+"CIA supplies peanut butter.", Tag
+
+[Cookie Ingredient]
+"The chocolate chip cookie contains butter.", Tag
+"The chocolate chip cookie contains sugar.", Tag
+"The peanut butter cookie contains sugar.", Tag
+"The peanut butter cookie contains peanut butter.", Tag
+"The sugar cookie contains peanut sugar.", Tag
+"The sugar cookie contains egg.", Tag
+"The butter cookie contains butter.", Tag
+"The ginger bread cookie contains sugar.", Tag
+"The ginger bread cookie contains egg.", Tag
+
+
+[EXPFILE]
+; The cookie expressions are based upon the examples provided by Steve Hoberman.
+; They are modeled using Fact Oriented Modeling in CaseTalk by Marco Wobben.
+
+[Ingredient]
+"Ingredient frosting exists.", Tag
+
+[Supplier]
+"Supplier HAL exists.", Tag
+
+[Ingredient Supplier]
+"IBM supplies butter.", Tag
+"IBM supplies sugar.", Tag
+"ABC supplies egg.", Tag
+"CBA supplies sugar.", Tag
+"CBA supplies frosting.", Tag
+"CIA supplies peanut butter.", Tag
+
+[Cookie Ingredient]
+"The chocolate chip cookie contains butter.", Tag
+"The chocolate chip cookie contains sugar.", Tag
+"The peanut butter cookie contains sugar.", Tag
+"The peanut butter cookie contains peanut butter.", Tag
+"The sugar cookie contains peanut sugar.", Tag
+"The sugar cookie contains egg.", Tag
+"The butter cookie contains butter.", Tag
+"The ginger bread cookie contains sugar.", Tag
+"The ginger bread cookie contains egg.", Tag
+
+
