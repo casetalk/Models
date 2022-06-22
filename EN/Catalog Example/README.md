@@ -1,5 +1,5 @@
 ﻿# ![CaseTalk Logo](https://www.casetalk.com/images/icons/casetalk.png) Catalog Entry.prj
-*Project created with CaseTalk v12.4 Build 2.28751.*
+*Project created with CaseTalk v12.4 Build 2.28837.*
 
 * ![Project](https://www.casetalk.com/images/icons/prj.png) Catalog Entry.prj
   * ![Repository](https://www.casetalk.com/images/icons/ig.png) catalog entry.ig
