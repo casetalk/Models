@@ -2,7 +2,7 @@
 Reverse engineered to a Fact Based Model in CaseTalk.
 The source database is an example deployment taken from an Interbase/Firebird database.
 
-*Project created with CaseTalk v12.4 Build 2.28751.*
+*Project created with CaseTalk v12.4 Build 2.28837.*
 
 * ![Project](https://www.casetalk.com/images/icons/prj.png) employee.prj
   * ![Repository](https://www.casetalk.com/images/icons/ig.png) employee.ig
@@ -11,6 +11,7 @@ The source database is an example deployment taken from an Interbase/Firebird da
     * ![Diagram](https://www.casetalk.com/images/icons/igd.png) sales.igd
     * ![Diagram](https://www.casetalk.com/images/icons/igd.png) customer.igd
     * ![Diagram](https://www.casetalk.com/images/icons/igd.png) all.igd
+    * ![Diagram](https://www.casetalk.com/images/icons/igd.png) Department.igd
 ## job.igd
 ![Diagram job.igd](job.png)
 ## job.igd /ERD
@@ -51,3 +52,11 @@ The source database is an example deployment taken from an Interbase/Firebird da
 ![Diagram all.igd /UML](all.uml.png)
 ## all.igd /MAP
 ![Diagram all.igd /MAP](all.map.png)
+## Department.igd
+![Diagram Department.igd](Department.png)
+## Department.igd /ERD
+![Diagram Department.igd /ERD](Department.erd.png)
+## Department.igd /UML
+![Diagram Department.igd /UML](Department.uml.png)
+## Department.igd /MAP
+![Diagram Department.igd /MAP](Department.map.png)
