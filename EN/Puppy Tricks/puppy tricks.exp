@@ -1,0 +1,73 @@
+[EXPFILE]
+;---------------------------------------------------------
+; Based upon the available data from the rettigNormalizationPoster
+; and completed with some additional made up example data.
+
+[Puppy Name]
+"Puppy 51 is called Chief.", F1
+"Puppy 52 is called Boo.", F1
+"Puppy 53 is called Phydeaux.", F1
+"Puppy 54 is called Bugger.", F1
+
+[Puppy Cause of Death]
+"Puppy 51 deceased for it was eaten by a lion.", F13
+
+[Puppy Location]
+; It is unknown if the puppy resides in a kennel and learned tricks elsewhere.
+; But since the source started with a Puppy Table combining Puppy Number and
+; kennel information, we should be able to assume there is a relation.
+"Puppy 54 is housed in kennel 16.", F15
+
+[Puppy Trick where Learned]
+"Puppy 52 learned trick 27 at kennel 16.", F2
+"Puppy 53 learned trick 16 at kennel 9.", F2
+"Puppy 54 learned trick 27 at kennel 9.", F2
+
+[Puppy Trick Skill Level]
+"Puppy 52 knows trick 27 at level 9.", F5
+"Puppy 53 knows trick 16 at level 9.", F5
+"Puppy 54 knows trick 27 at level 5.", F5
+
+[Puppy Costume]
+"Puppy 52 can wear a Groucho Marx mask.", F4
+"Puppy 54 can wear a Wet suit.", F4
+
+[Trick Name]
+"Trick 27 is called Roll Over.", F3
+"Trick 16 is called Nose Stand.", F3
+"Trick 18 is called Sit Up and Beg.", F3
+
+[Kennel Name]
+"Kennel 5 is named Daisy Hill Puppy Farm.", F6
+"Kennel 6 is named Khabul Khennels.", F6
+
+[Kennel Location]
+"Kennel 5 is located in Chicago.", F7
+
+[Kennel-Breed]
+"Kennel 5 has dogs of the breed Spaniel.", F9
+"Kennel 5 has dogs of the breed Dachshund.", F9
+"Kennel 5 has dogs of the breed Banana-Biter.", F9
+
+[Kennel-Breeder]
+"Kennel 5 sells dogs from breeder Acme.", F10
+"Kennel 5 sells dogs from breeder Puppy Factory.", F10
+"Kennel 5 sells dogs from breeder Whatapuppy.", F10
+
+[Breed]
+"The breed Afghans exists.", F8
+
+[Breed Full Name]
+"The full name of the breed Banana-Biters is West Indian Banana-Biters.", F11
+
+[Breeder Breed]
+"Breeder Acme breeds Spaniel.", F12
+"Breeder Acme breeds Dachshund.", F12
+"Breeder Acme breeds Banana-Biter.", F12
+"Breeder Puppy Factory breeds Spaniel.", F12
+"Breeder Puppy Factory breeds Dachshund.", F12
+"Breeder Puppy Factory breeds Banana-Biter.", F12
+"Breeder Whatapuppy breeds Spaniel.", F12
+"Breeder Whatapuppy breeds Dachshund.", F12
+"Breeder Whatapuppy breeds Banana-Biter.", F12
+
