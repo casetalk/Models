@@ -1,7 +1,7 @@
 ﻿# ![CaseTalk Logo](https://www.casetalk.com/images/icons/casetalk.png) WorkingHours.prj
 A more realistic example where worksheets are verbalized and modeled. The model validation shows potential redundancy warnings.
 
-*Project created with CaseTalk v12.4 Build 2.28751.*
+*Project created with CaseTalk v12.6 Build 0.30996.*
 
 * ![Project](https://www.casetalk.com/images/icons/prj.png) WorkingHours.prj
   * ![Repository](https://www.casetalk.com/images/icons/ig.png) WorkingHours.ig
@@ -15,3 +15,5 @@ A more realistic example where worksheets are verbalized and modeled. The model 
 ![Diagram WorkingHours.igd /UML](WorkingHours.uml.png)
 ## WorkingHours.igd /MAP
 ![Diagram WorkingHours.igd /MAP](WorkingHours.map.png)
+## WorkingHours.igd /EXP
+![Diagram WorkingHours.igd /EXP](WorkingHours.exp.png)
