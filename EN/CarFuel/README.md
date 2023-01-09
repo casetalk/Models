@@ -14,3 +14,5 @@ A simple example to illustrate the table as designed in any relational casetool 
 ![Diagram carFuel.igd /UML](carFuel.uml.png)
 ## carFuel.igd /MAP
 ![Diagram carFuel.igd /MAP](carFuel.map.png)
+## carFuel.igd /EXP
+![Diagram carFuel.igd /EXP](carFuel.exp.png)
