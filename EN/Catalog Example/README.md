@@ -1,5 +1,5 @@
 ﻿# ![CaseTalk Logo](https://www.casetalk.com/images/icons/casetalk.png) Catalog Entry.prj
-*Project created with CaseTalk v12.4 Build 2.28837.*
+*Project created with CaseTalk v12.6 Build 0.30996.*
 
 * ![Project](https://www.casetalk.com/images/icons/prj.png) Catalog Entry.prj
   * ![Repository](https://www.casetalk.com/images/icons/ig.png) catalog entry.ig
@@ -12,3 +12,5 @@
 ![Diagram employee.igd /UML](employee.uml.png)
 ## employee.igd /MAP
 ![Diagram employee.igd /MAP](employee.map.png)
+## employee.igd /EXP
+![Diagram employee.igd /EXP](employee.exp.png)
