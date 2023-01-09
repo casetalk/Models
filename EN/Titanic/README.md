@@ -1,5 +1,5 @@
 ﻿# ![CaseTalk Logo](https://www.casetalk.com/images/icons/casetalk.png) Titanic.prj
-*Project created with CaseTalk v12.4 Build 2.28858.*
+*Project created with CaseTalk v12.6 Build 0.30996.*
 
 * ![Project](https://www.casetalk.com/images/icons/prj.png) Titanic.prj
   * ![Repository](https://www.casetalk.com/images/icons/ig.png) titanic.ig
@@ -14,3 +14,5 @@
 ![Diagram titanic.igd /UML](titanic.uml.png)
 ## titanic.igd /MAP
 ![Diagram titanic.igd /MAP](titanic.map.png)
+## titanic.igd /EXP
+![Diagram titanic.igd /EXP](titanic.exp.png)
