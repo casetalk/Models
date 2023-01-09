@@ -1,5 +1,5 @@
 ﻿# ![CaseTalk Logo](https://www.casetalk.com/images/icons/casetalk.png) Cookies.prj
-*Project created with CaseTalk v12.4 Build 2.28751.*
+*Project created with CaseTalk v12.6 Build 0.30996.*
 
 * ![Project](https://www.casetalk.com/images/icons/prj.png) Cookies.prj
   * ![Repository](https://www.casetalk.com/images/icons/ig.png) cookies.ig
@@ -13,3 +13,5 @@
 ![Diagram cookies.igd /UML](cookies.uml.png)
 ## cookies.igd /MAP
 ![Diagram cookies.igd /MAP](cookies.map.png)
+## cookies.igd /EXP
+![Diagram cookies.igd /EXP](cookies.exp.png)
