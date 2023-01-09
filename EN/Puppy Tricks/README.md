@@ -1,13 +1,11 @@
 ﻿# ![CaseTalk Logo](https://www.casetalk.com/images/icons/casetalk.png) puppytricks.prj
-
+[Description]
 This model is loosely based upon the a poster used in the article by Thomas Frisendal.
 The article is here:
 https://www.dataversity.net/say-hello-to-graph-normal-form-gnf/#
 
-And the poster is about normalization. Though aged, containing spelling errors, and assuming a few relations, this may provide some insight how the original article holds up in FCO-IM.
-
-
-*Project created with CaseTalk v12.4 Build 3.28868.*
+And the poster is about normalization. Though aged, containing
+*Project created with CaseTalk v12.6 Build 0.30996.*
 
 * ![Project](https://www.casetalk.com/images/icons/prj.png) puppytricks.prj
   * ![Repository](https://www.casetalk.com/images/icons/ig.png) puppytricks.ig
@@ -21,3 +19,5 @@ And the poster is about normalization. Though aged, containing spelling errors, 
 ![Diagram puppytricks.igd /UML](puppytricks.uml.png)
 ## puppytricks.igd /MAP
 ![Diagram puppytricks.igd /MAP](puppytricks.map.png)
+## puppytricks.igd /EXP
+![Diagram puppytricks.igd /EXP](puppytricks.exp.png)
