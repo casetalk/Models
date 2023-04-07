@@ -1,0 +1,27 @@
+[EXPFILE]
+; Marco Wobben
+
+[Driver Vehicle]
+"Driver John owns vehicle 22-PZ-TV.", Tag
+
+[Support Request]
+"Driver John requested support ticket 8899.", Tag
+
+[Ticket Vehicle]
+"Ticket 8899 concerns support for vehicle 22-PZ-TV.", Tag
+
+[Ticket Escalation]
+"Lisa escalates ticket 8899.", Tag
+
+[Supervision]
+"Lisa reports to Supervisor Ronald.", Tag
+
+[Support Authorization]
+"Ronald authorizes support for ticket 8899.", Tag
+
+[Support Assignment]
+"Engineer Jack handles ticket 8899.", Tag
+
+[Registration*]
+;; Registration is a complete ticket with car, owner and employee
+"Lisa registers ticket 8899 for vehicle 22-PZ-TV of driver John."
