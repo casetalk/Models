@@ -1,14 +1,13 @@
 Authorized Ticket
+Day
 Driver
 Driver Vehicle
 Employee
+Employment Start Date
 Engineer
-freelancer
 License Plate
-medewerker
 Person
 Person Name
-stagiere
 Supervision
 Supervisor
 Support Assignment
@@ -18,5 +17,6 @@ Ticket
 Ticket Employee
 Ticket Escalation
 Ticket Number
+Ticket Origin
 Ticket Vehicle
 Vehicle

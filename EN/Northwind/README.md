@@ -1,7 +1,7 @@
 ﻿# ![CaseTalk Logo](https://www.casetalk.com/images/icons/casetalk.png) Northwind.prj
 This model is generated from reverse engineering the well known Northwind example database in MsSQLServer.
 
-*Project created with CaseTalk v12.4 Build 2.28751.*
+*Project created with CaseTalk v12.7 Build 3.43435.*
 
 * ![Project](https://www.casetalk.com/images/icons/prj.png) Northwind.prj
   * ![Repository](https://www.casetalk.com/images/icons/ig.png) northwind.ig
@@ -14,6 +14,7 @@ This model is generated from reverse engineering the well known Northwind exampl
     * ![Diagram](https://www.casetalk.com/images/icons/igd.png) customers.igd
     * ![Diagram](https://www.casetalk.com/images/icons/igd.png) shippers.igd
     * ![Diagram](https://www.casetalk.com/images/icons/igd.png) suppliers.igd
+    * ![Diagram](https://www.casetalk.com/images/icons/igd.png) Location.igd
 ## categories.igd
 ![Diagram categories.igd](categories.png)
 ## categories.igd /ERD
@@ -63,13 +64,15 @@ This model is generated from reverse engineering the well known Northwind exampl
 ## regions.igd /MAP
 ![Diagram regions.igd /MAP](regions.map.png)
 ## customers.igd
-![Diagram customers.igd](customers.png)
+![Diagram customers.igd](customers.svg)
 ## customers.igd /ERD
 ![Diagram customers.igd /ERD](customers.erd.png)
 ## customers.igd /UML
 ![Diagram customers.igd /UML](customers.uml.png)
 ## customers.igd /MAP
 ![Diagram customers.igd /MAP](customers.map.png)
+## customers.igd /EXP
+![Diagram customers.igd /EXP](customers.exp.svg)
 ## shippers.igd
 ![Diagram shippers.igd](shippers.png)
 ## shippers.igd /ERD
@@ -86,3 +89,13 @@ This model is generated from reverse engineering the well known Northwind exampl
 ![Diagram suppliers.igd /UML](suppliers.uml.png)
 ## suppliers.igd /MAP
 ![Diagram suppliers.igd /MAP](suppliers.map.png)
+## Location.igd
+![Diagram Location.igd](Location.svg)
+## Location.igd /ERD
+![Diagram Location.igd /ERD](Location.erd.svg)
+## Location.igd /UML
+![Diagram Location.igd /UML](Location.uml.svg)
+## Location.igd /MAP
+![Diagram Location.igd /MAP](Location.map.svg)
+## Location.igd /EXP
+![Diagram Location.igd /EXP](Location.exp.svg)

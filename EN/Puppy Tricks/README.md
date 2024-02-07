@@ -5,7 +5,7 @@ The article is here:
 https://www.dataversity.net/say-hello-to-graph-normal-form-gnf/#
 
 And the poster is about normalization. Though aged, containing
-*Project created with CaseTalk v12.6 Build 0.30996.*
+*Project created with CaseTalk v13.0 Build 1.55377.*
 
 * ![Project](https://www.casetalk.com/images/icons/prj.png) puppytricks.prj
   * ![Repository](https://www.casetalk.com/images/icons/ig.png) puppytricks.ig
