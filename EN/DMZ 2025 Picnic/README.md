@@ -30,7 +30,7 @@
 
 ## Party.igd /ER
 
-![Diagram Party.igd /ER](Party.er.png)
+![Diagram Party.igd /ER](Party.Er.png)
 
 ## Party.igd /KG
 
