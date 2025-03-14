@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>picnic</title>
+    <script
+      src="https://www.w3.org/Tools/respec/respec-w3c"
+      class="remove"
+      defer
+    ></script>
+
+    <!-- <script src="postprocess.js" class="remove"></script> -->
+  <script>
+    function markupDefTables() {
+      const tables = document.getElementsByTagName("table");
+      for (const table of tables) {
+        if (table.rows[0].cells[0].innerHTML=='{: .def}') {
+          table.classList.add('def');
+          table.deleteRow(0);
+          for (const row of table.rows) {
+            const thcell = document.createElement("th");
+            var tdcell = row.cells[0];
+            thcell.innerHTML = tdcell.innerHTML;
+            row.replaceChild(thcell,tdcell);
+          }
+        }
+        if (table.rows[0].cells[0].innerHTML=='{: .data}') {
+          table.classList.add('data');
+          table.deleteRow(0);
+          for (const row of table.rows) {
+            const thcell = document.createElement("th");
+            var tdcell = row.cells[0];
+            thcell.innerHTML = tdcell.innerHTML;
+            row.replaceChild(thcell,tdcell);
+          }
+        }
+      }
+      return
+    }
+  </script>    <script class="remove">
+      // All config options at https://respec.org/docs/
+      var respecConfig = {
+        specStatus: "base",
+        shortName: "Project Report",
+        subtitle: "",
+        publishDate: "2025-03-14",
+        postProcess: [markupDefTables],
+        latestVersion: "file:///%5C%5Cmac%5Chome%5Cdocuments%5CCaseTalk%5CGitHub%5CModels%5CEN%5Cdmz+2025+picnic%5CPicnichtml",
+        maxTocLevel: 2,
+        editors: [
+          {
+            name: "marcowobben", 
+name: "John Doe"
+          },
+        ],
+    logos: [
+        {
+          src: "https://www.casetalk.com/images/logos/Casetalk_LOGO_2020_-_noname_-_300.png",
+          url: "https://www.casetalk.com",
+          alt: "www.casetalk.com",
+          width: 150,
+          height: 150,
+          id: "casetalk-logo",
+        },
+      ],
+        lint: false,
+      };
+    </script>
+  </head>
+  <body>
+    <section data-include-format="markdown" data-include=""></section>
+    <style></style><section id="abstract"></section>
+<section><h2>Terms and Definitions</h2>
+No elements found...
+<section><h2>Diagrams</h2>
+<h3> Concept Map Party</h3>
+<figure id="Party.map.png"><img src="\\mac\home\documents\CaseTalk\GitHub\Models\EN\dmz 2025 picnic\Party.map.png" alt="Concept Map Party.igd" /><figcaption>Concept Map Party.igd</figcaption></figure>
+<h3> Object Types Party</h3>
+<figure id="Party.exp.png"><img src="\\mac\home\documents\CaseTalk\GitHub\Models\EN\dmz 2025 picnic\Party.exp.png" alt="Object Types Party.igd" /><figcaption>Object Types Party.igd</figcaption></figure>
+</section>
+</section>
+<section><h2>Concepts and Containers</h2>
+No elements found...
+</section>
+<section><h2>Value types and Reference Lists</h2>
+<section><h3>Contribution-type</h3>
+<table class="def">
+<tr><td>Relation with</td><td><a href="#Contribution Type">Contribution Type</a></td></tr>
+<tr><td>Type</td><td>default(1)</td></tr>
+<tr><td>Options</td><td>dessert, drinks, main course, snack, candy</td></tr>
+<table class="data">
+<tr><td colspan="2"><b>Owner</b></td></tr>
+<tr><td>Date</td><td>3/14/2025 1:13:42 PM</td></tr>
+</table>
+</table>
+</section>
+</section>
+<section><h2>Entities and Attributes</h2>
+<section><h3>Contribution</h3>
+<table class="def">
+<tr><td>Identification</td><td><a href="#Contribution Name">Contribution Name</a></td></tr>
+<tr><td>Attributes</td><td><a href="#Contribution Type">Contribution Type</a>, <a href="#Participant Contribution">Participant Contribution</a></td></tr>
+<tr><td>Predicates</td><td><a href="#Participant">Participant</a> and brings <a href="#Contribution">Contribution</a>.
+The <a href="#Contribution">Contribution</a> is a <a href="#Contribution-type">Contribution-type</a>.
+</td></tr>
+<aside class="example">"party 1000 takes part in event 9000 and brings carrotcake."<br/>"The carrotcake is a dessert."<br/></aside>
+</table>
+</section>
+<section><h3>Event</h3>
+<table class="def">
+<tr><td>Identification</td><td><a href="#Event ID">Event ID</a></td></tr>
+<tr><td>Attributes</td><td><a href="#Participant">Participant</a></td></tr>
+<table class="data">
+<tr><td colspan="2"><b>Owner</b></td></tr>
+<tr><td>Date</td><td>3/14/2025 1:37:45 PM</td></tr>
+<tr><td>Date</td><td>3/14/2025 1:37:45 PM</td></tr>
+</table>
+
+</table>
+</section>
+<section><h3>Group</h3>
+<table class="def">
+<tr><td>Subtype of</td><td>Party</td></tr>
+<tr><td>Identification</td><td><a href="#Party">Party</a></td></tr>
+<tr><td>Attributes</td><td><a href="#Party Size">Party Size</a>, <a href="#Group Member">Group Member</a></td></tr>
+<tr><td>Predicates</td><td><a href="#Person">Person</a> is part of the <a href="#Group">Group</a>.
+The <a href="#Group">Group</a> consists of <a href="#Amount">Amount</a> people.
+</td></tr>
+<table class="data">
+<tr><td colspan="2"><b>Owner</b></td></tr>
+<tr><td>Date</td><td>3/14/2025 1:32:40 PM</td></tr>
+<tr><td>Date</td><td>3/14/2025 1:32:40 PM</td></tr>
+</table>
+<aside class="example">"participant 1001 is part of the Group party 9001."<br/>"The Group party 9001 consists of 6 people."<br/></aside>
+</table>
+</section>
+<section><h3>Participant</h3>
+<table class="def">
+<tr><td>Identification</td><td><a href="#Party">Party</a>, <a href="#Event">Event</a></td></tr>
+<tr><td>Attributes</td><td><a href="#Participant Contribution">Participant Contribution</a></td></tr>
+<tr><td>Predicates</td><td><a href="#Participant">Participant</a> and brings <a href="#Contribution">Contribution</a>.
+</td></tr>
+<table class="data">
+<tr><td colspan="2"><b>Owner</b></td></tr>
+<tr><td>Date</td><td>3/14/2025 1:37:58 PM</td></tr>
+<tr><td>Date</td><td>3/14/2025 1:37:58 PM</td></tr>
+</table>
+<aside class="example">"party 1000 takes part in event 9000 and brings carrotcake."<br/></aside>
+</table>
+</section>
+<section><h3>Participant Contribution</h3>
+<table class="def">
+<tr><td>Identification</td><td><a href="#Participant">Participant</a>, <a href="#Contribution">Contribution</a></td></tr>
+<tr><td>Attributes</td><td><a href="#Contribution Restriction">Contribution Restriction</a></td></tr>
+<tr><td>Predicates</td><td><a href="#Participant Contribution">Participant Contribution</a> which is not for people with restriction: <a href="#Restriction">Restriction</a>.
+<a href="#Participant">Participant</a> and brings <a href="#Contribution">Contribution</a>.
+</td></tr>
+<aside class="example">"party 1000 takes part in event 9000 and brings carrotcake which is not for people with restriction: allergic to nuts."<br/>"party 1000 takes part in event 9000 and brings carrotcake."<br/></aside>
+</table>
+</section>
+<section><h3>Party</h3>
+<table class="def">
+<tr><td>Identification</td><td><a href="#Party ID">Party ID</a></td></tr>
+<tr><td>Attributes</td><td><a href="#Participant">Participant</a>, <a href="#Party Full Name">Party Full Name</a>, <a href="#Group">Group</a>, <a href="#Person">Person</a></td></tr>
+<tr><td>Predicates</td><td><a href="#Party">Party</a> is called <a href="#Full Name">Full Name</a>.
+</td></tr>
+<table class="data">
+<tr><td colspan="2"><b>Owner</b></td></tr>
+<tr><td>Date</td><td>3/14/2025 1:33:47 PM</td></tr>
+<tr><td>Date</td><td>3/14/2025 1:33:47 PM</td></tr>
+</table>
+<aside class="example">"party 1000 is called John Doe."<br/></aside>
+</table>
+</section>
+<section><h3>Person</h3>
+<table class="def">
+<tr><td>Subtype of</td><td>Party</td></tr>
+<tr><td>Identification</td><td><a href="#Party">Party</a></td></tr>
+<tr><td>Attributes</td><td><a href="#Party Restrictions">Party Restrictions</a>, <a href="#Person Alias">Person Alias</a>, <a href="#Group Member">Group Member</a></td></tr>
+<tr><td>Predicates</td><td><a href="#Person">Person</a> is part of the <a href="#Group">Group</a>.
+<a href="#Person">Person</a> is known as <a href="#Alias">Alias</a>.
+<a href="#Person">Person</a> is <a href="#Restriction">Restriction</a>.
+</td></tr>
+<table class="data">
+<tr><td colspan="2"><b>Owner</b></td></tr>
+<tr><td>Date</td><td>3/14/2025 1:32:30 PM</td></tr>
+<tr><td>Date</td><td>3/14/2025 1:32:30 PM</td></tr>
+</table>
+<aside class="example">"participant 1001 is part of the Group party 9001."<br/>"participant 1001 is known as Steve-the-human."<br/>"participant 1001 is allergic to nuts."<br/></aside>
+</table>
+</section>
+<section><h3>Restriction</h3>
+<table class="def">
+<tr><td>Identification</td><td><a href="#Description">Description</a></td></tr>
+<tr><td>Attributes</td><td><a href="#Party Restrictions">Party Restrictions</a>, <a href="#Contribution Restriction">Contribution Restriction</a></td></tr>
+<tr><td>Predicates</td><td><a href="#Participant Contribution">Participant Contribution</a> which is not for people with restriction: <a href="#Restriction">Restriction</a>.
+<a href="#Person">Person</a> is <a href="#Restriction">Restriction</a>.
+The following food restriction exists: <a href="#Description">Description</a>.
+</td></tr>
+<aside class="example">"party 1000 takes part in event 9000 and brings carrotcake which is not for people with restriction: allergic to nuts."<br/>"participant 1001 is allergic to nuts."<br/>"The following food restriction exists: allergic to nuts."<br/></aside>
+</table>
+</section>
+<section><h2>Diagrams</h2>
+<h3> UML Classes Party</h3>
+<figure id="Party.uml.png"><img src="\\mac\home\documents\CaseTalk\GitHub\Models\EN\dmz 2025 picnic\Party.uml.png" alt="UML Classes Party.igd" /><figcaption>UML Classes Party.igd</figcaption></figure>
+</section>
+</section>
+<section><h2>Logical Tables</h2>
+<section><h3>Contribution</h3>
+<table class="def">
+<tr><td>Columns</td><td><Contribution-type>, Contribution-type, <Contribution Name>, Contribution Name</td></tr>
+<tr><td>Predicates</td><td>"The <a href="#Contribution Name">Contribution Name</a> is a <a href="#Contribution-type">Contribution-type</a>."<br/></td></tr>
+<aside class="example">"The carrotcake is a dessert."<br/></aside>
+</table>
+</section>
+<section><h3>Contribution Restriction</h3>
+<table class="def">
+<tr><td>Columns</td><td><Party ID>, Party ID, <Event ID>, Event ID, <Contribution Name>, Contribution Name, <Description>, Description</td></tr>
+<tr><td>Predicates</td><td>"Party <a href="#Party ID">Party ID</a> takes part in event <a href="#Event ID">Event ID</a> and brings <a href="#Contribution Name">Contribution Name</a> which is not for people with restriction: <a href="#Description">Description</a>."<br/></td></tr>
+<aside class="example">"Party 1000 takes part in event 9000 and brings carrotcake which is not for people with restriction: allergic to nuts."<br/></aside>
+</table>
+</section>
+<section><h3>Group</h3>
+<table class="def">
+<tr><td>Columns</td><td><Amount>, Amount, <Party ID>, Party ID</td></tr>
+<tr><td>Predicates</td><td>"The Group party <a href="#Party ID">Party ID</a> consists of <a href="#Amount">Amount</a> people."<br/>"Group <a href="#Party ID">Party ID</a>."<br/>"The Group <a href="#Party ID">Party ID</a> consists of <a href="#Amount">Amount</a> people."<br/></td></tr>
+<table class="data">
+<tr><td colspan="2"><b>Owner</b></td></tr>
+<tr><td>Date</td><td>3/14/2025 1:32:40 PM</td></tr>
+<tr><td>Date</td><td>3/14/2025 1:32:40 PM</td></tr>
+</table>
+<aside class="example">"The Group party 9001 consists of 6 people."<br/>"Group 9001."<br/>"The Group 9001 consists of 6 people."<br/></aside>
+</table>
+</section>
+<section><h3>Group Member</h3>
+<table class="def">
+<tr><td>Columns</td><td><Party ID>, Party ID</td></tr>
+<tr><td>Predicates</td><td>"Participant <a href="#Party ID">Party ID</a> is part of the Group party <a href="#Party ID">Party ID</a>."<br/></td></tr>
+<aside class="example">"Participant 1001 is part of the Group party 9001."<br/></aside>
+</table>
+</section>
+<section><h3>Participant</h3>
+<table class="def">
+<tr><td>Columns</td><td><Party ID>, Party ID, <Event ID>, Event ID</td></tr>
+<table class="data">
+<tr><td colspan="2"><b>Owner</b></td></tr>
+<tr><td>Date</td><td>3/14/2025 1:37:58 PM</td></tr>
+<tr><td>Date</td><td>3/14/2025 1:37:58 PM</td></tr>
+</table>
+
+</table>
+</section>
+<section><h3>Participant Contribution</h3>
+<table class="def">
+<tr><td>Columns</td><td><Party ID>, Party ID, <Event ID>, Event ID, <Contribution Name>, Contribution Name</td></tr>
+<tr><td>Predicates</td><td>"Party <a href="#Party ID">Party ID</a> takes part in event <a href="#Event ID">Event ID</a> and brings <a href="#Contribution Name">Contribution Name</a>."<br/></td></tr>
+<aside class="example">"Party 1000 takes part in event 9000 and brings carrotcake."<br/></aside>
+</table>
+</section>
+<section><h3>Party</h3>
+<table class="def">
+<tr><td>Columns</td><td><Party ID>, Party ID, <Full Name>, Full Name</td></tr>
+<tr><td>Predicates</td><td>"Party <a href="#Party ID">Party ID</a> is called <a href="#Full Name">Full Name</a>."<br/></td></tr>
+<table class="data">
+<tr><td colspan="2"><b>Owner</b></td></tr>
+<tr><td>Date</td><td>3/14/2025 1:33:47 PM</td></tr>
+<tr><td>Date</td><td>3/14/2025 1:33:47 PM</td></tr>
+</table>
+<aside class="example">"Party 1000 is called John Doe."<br/>"Party 1001 is called Marco Wobben."<br/>"Party 9001 is called CaseTalk Team."<br/></aside>
+</table>
+</section>
+<section><h3>Party Restrictions</h3>
+<table class="def">
+<tr><td>Columns</td><td><Party ID>, Party ID, <Description>, Description</td></tr>
+<tr><td>Predicates</td><td>"Participant <a href="#Party ID">Party ID</a> is <a href="#Description">Description</a>."<br/></td></tr>
+<aside class="example">"Participant 1001 is allergic to nuts."<br/></aside>
+</table>
+</section>
+<section><h3>Person</h3>
+<table class="def">
+<tr><td>Columns</td><td><Party ID>, Party ID</td></tr>
+<table class="data">
+<tr><td colspan="2"><b>Owner</b></td></tr>
+<tr><td>Date</td><td>3/14/2025 1:32:30 PM</td></tr>
+<tr><td>Date</td><td>3/14/2025 1:32:30 PM</td></tr>
+</table>
+
+</table>
+</section>
+<section><h3>Person Alias</h3>
+<table class="def">
+<tr><td>Columns</td><td><Party ID>, Party ID, <Alias>, Alias</td></tr>
+<tr><td>Predicates</td><td>"Participant <a href="#Party ID">Party ID</a> is known as <a href="#Alias">Alias</a>."<br/></td></tr>
+<aside class="example">"Participant 1001 is known as Steve-the-human."<br/></aside>
+</table>
+</section>
+<section><h3>Restriction</h3>
+<table class="def">
+<tr><td>Columns</td><td><Description>, Description</td></tr>
+<tr><td>Predicates</td><td>"The following food restriction exists: <a href="#Description">Description</a>."<br/></td></tr>
+<aside class="example">"The following food restriction exists: allergic to nuts."<br/></aside>
+</table>
+</section>
+<section><h2>Diagrams</h2>
+<h3>Party</h3>
+<figure id="Party.erd.png"><img src="\\mac\home\documents\CaseTalk\GitHub\Models\EN\dmz 2025 picnic\Party.erd.png" alt="Logical Model Party.igd" /><figcaption>Logical Model Party.igd</figcaption></figure>
+</section>
+</section>
+<section><h2>Fact View Diagrams</h2>
+<h3>Party</h3>
+
+<figure id="Party.png"><img src="\\mac\home\documents\CaseTalk\GitHub\Models\EN\dmz 2025 picnic\Party.png" alt="Fact View Party.igd" /><figcaption>Fact View Party.igd</figcaption></figure>
+</section>
+<section><h2>Entity-Relation Model</h2>
+<h3> Party</h3>
+<figure id="Party.er.png"><img src="\\mac\home\documents\CaseTalk\GitHub\Models\EN\dmz 2025 picnic\Party.er.png" alt="Entity-Relation Model Party.igd" /><figcaption>Entity-Relation Model Party.igd</figcaption></figure>
+</section>
+<section><h2>Knowledge Graph</h2>
+<h3> Party</h3>
+<figure id="Party.kg.png"><img src="\\mac\home\documents\CaseTalk\GitHub\Models\EN\dmz 2025 picnic\Party.kg.png" alt="Knowledge Graph Party.igd" /><figcaption>Knowledge Graph Party.igd</figcaption></figure>
+</section>
+
+    <section id="references"></section>  </body>
+</html>
