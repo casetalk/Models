@@ -1,5 +1,5 @@
 ﻿# ![CaseTalk Logo](https://www.casetalk.com/images/icons/casetalk.png) Picnic.prj
-*Project created with CaseTalk v14.2 Build 0.56771.*
+*Project created with CaseTalk v14.2 Build 0.56772.*
 
 *![Project](https://www.casetalk.com/images/icons/prj.png) Picnic.prj
 
@@ -35,3 +35,5 @@
 ## Party.igd /KG
 
 ![Diagram Party.igd /KG](Party.kg.png)
+  *![Text File](https://www.casetalk.com/images/icons/txt.png) picnic.html
+

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>picnic</title>
+    <title>Picnic</title>
     <script
       src="https://www.w3.org/Tools/respec/respec-w3c"
       class="remove"
@@ -71,7 +71,42 @@ name: "John Doe"
     <section data-include-format="markdown" data-include=""></section>
     <style></style><section id="abstract"></section>
 <section><h2>Terms and Definitions</h2>
-No elements found...
+<section><h3>Contribution Restriction</h3>
+<table class="def">
+<tr><td>Contains</td><td><a href="#Participant Contribution">Participant Contribution</a>, <a href="#Restriction">Restriction</a></td></tr>
+<tr><td>Type</td><td>Fact Type</td></tr>
+<tr><td>Predicates</td><td>"<a href="#Participant Contribution">Participant Contribution</a> which is not for people with restriction: <a href="#Restriction">Restriction</a>."<br/></td></tr>
+<table class="data">
+<tr><td colspan="2"><b>Owner</b></td></tr>
+<tr><td>Date</td><td>3/14/2025 4:43:49 PM</td></tr>
+<tr><td>Date</td><td>3/14/2025 4:43:49 PM</td></tr>
+</table>
+<p>This may not yet be entirely correct. Is this how we should register allergies and restrictions?</p>
+<aside class="example">"party 1000 takes part in event 9000 and brings carrotcake which is not for people with restriction: allergic to nuts."<br/></aside>
+</table>
+</section>
+<section><h3>Restriction</h3>
+<table class="def">
+<tr><td>Abreviation</td><td>Rest</td></tr>
+<tr><td>Plural</td><td>Restrictions</td></tr>
+<tr><td>Contains</td><td><a href="#Description">Description</a></td></tr>
+<tr><td>Relation with</td><td><a href="#Party Restrictions">Party Restrictions</a>, <a href="#Contribution Restriction">Contribution Restriction</a></td></tr>
+<tr><td>Type</td><td>Fact Type</td></tr>
+<tr><td>Predicates</td><td>"The following food restriction exists: <a href="#Description">Description</a>."<br/></td></tr>
+<table class="data">
+<tr><td colspan="2"><b>Owner</b></td></tr>
+<tr><td>Date</td><td>3/14/2025 4:45:59 PM</td></tr>
+<tr><td>Date</td><td>3/14/2025 4:45:59 PM</td></tr>
+</table>
+<b>Comment</b><br/>
+<p>Restrictions are put in place to regulate or manage certain situations or behaviors. They can be imposed by authorities or agreed upon by parties involved.</p>
+<b>Definition</b><br/>
+<p>A limitation or rule that restricts or controls something.</p>
+<b>Questions</b><br/>
+<p>What is the purpose of a restriction? How are restrictions enforced? Can restrictions be lifted or changed?</p>
+<aside class="example">"The following food restriction exists: allergic to nuts."<br/></aside>
+</table>
+</section>
 <section><h2>Diagrams</h2>
 <h3> Concept Map Party</h3>
 <figure id="Party.map.png"><img src="\\mac\home\documents\CaseTalk\GitHub\Models\EN\dmz 2025 picnic\Party.map.png" alt="Concept Map Party.igd" /><figcaption>Concept Map Party.igd</figcaption></figure>
@@ -197,6 +232,17 @@ The <a href="#Group">Group</a> consists of <a href="#Amount">Amount</a> people.
 <a href="#Person">Person</a> is <a href="#Restriction">Restriction</a>.
 The following food restriction exists: <a href="#Description">Description</a>.
 </td></tr>
+<table class="data">
+<tr><td colspan="2"><b>Owner</b></td></tr>
+<tr><td>Date</td><td>3/14/2025 4:45:59 PM</td></tr>
+<tr><td>Date</td><td>3/14/2025 4:45:59 PM</td></tr>
+</table>
+<b>Comment</b><br/>
+<p>Restrictions are put in place to regulate or manage certain situations or behaviors. They can be imposed by authorities or agreed upon by parties involved.</p>
+<b>Definition</b><br/>
+<p>A limitation or rule that restricts or controls something.</p>
+<b>Questions</b><br/>
+<p>What is the purpose of a restriction? How are restrictions enforced? Can restrictions be lifted or changed?</p>
 <aside class="example">"party 1000 takes part in event 9000 and brings carrotcake which is not for people with restriction: allergic to nuts."<br/>"participant 1001 is allergic to nuts."<br/>"The following food restriction exists: allergic to nuts."<br/></aside>
 </table>
 </section>
@@ -217,6 +263,12 @@ The following food restriction exists: <a href="#Description">Description</a>.
 <table class="def">
 <tr><td>Columns</td><td><Party ID>, Party ID, <Event ID>, Event ID, <Contribution Name>, Contribution Name, <Description>, Description</td></tr>
 <tr><td>Predicates</td><td>"Party <a href="#Party ID">Party ID</a> takes part in event <a href="#Event ID">Event ID</a> and brings <a href="#Contribution Name">Contribution Name</a> which is not for people with restriction: <a href="#Description">Description</a>."<br/></td></tr>
+<table class="data">
+<tr><td colspan="2"><b>Owner</b></td></tr>
+<tr><td>Date</td><td>3/14/2025 4:43:49 PM</td></tr>
+<tr><td>Date</td><td>3/14/2025 4:43:49 PM</td></tr>
+</table>
+<p>This may not yet be entirely correct. Is this how we should register allergies and restrictions?</p>
 <aside class="example">"Party 1000 takes part in event 9000 and brings carrotcake which is not for people with restriction: allergic to nuts."<br/></aside>
 </table>
 </section>
@@ -296,8 +348,21 @@ The following food restriction exists: <a href="#Description">Description</a>.
 </section>
 <section><h3>Restriction</h3>
 <table class="def">
+<tr><td>Abreviation</td><td>Rest</td></tr>
+<tr><td>Plural</td><td>Restrictions</td></tr>
 <tr><td>Columns</td><td><Description>, Description</td></tr>
 <tr><td>Predicates</td><td>"The following food restriction exists: <a href="#Description">Description</a>."<br/></td></tr>
+<table class="data">
+<tr><td colspan="2"><b>Owner</b></td></tr>
+<tr><td>Date</td><td>3/14/2025 4:45:59 PM</td></tr>
+<tr><td>Date</td><td>3/14/2025 4:45:59 PM</td></tr>
+</table>
+<b>Comment</b><br/>
+<p>Restrictions are put in place to regulate or manage certain situations or behaviors. They can be imposed by authorities or agreed upon by parties involved.</p>
+<b>Definition</b><br/>
+<p>A limitation or rule that restricts or controls something.</p>
+<b>Questions</b><br/>
+<p>What is the purpose of a restriction? How are restrictions enforced? Can restrictions be lifted or changed?</p>
 <aside class="example">"The following food restriction exists: allergic to nuts."<br/></aside>
 </table>
 </section>
