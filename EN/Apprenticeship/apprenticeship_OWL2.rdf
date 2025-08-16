@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:profile="http://www.daml.org/services/owl-s/1.0/Profile.owl#" xmlns:grounding="http://www.daml.org/services/owl-s/1.0/Grounding.owl#"  xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:process="http://www.daml.org/services/owl-s/1.0/Process.owl#" xmlns:service="http://www.daml.org/services/owl-s/1.0/Service.owl#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:casetalk="https://www.casetalk.com/2019/05#" xmlns:local="http://otl.prorail.nl/" xml:base="http://otl.prorail.nl/">
+  <owl:Ontology rdf:about="IG_5254b815-6585-4495-af76-cad990619c72">
+    <owl:versionInfo>2</owl:versionInfo>
+    <dc:description>Generated with CaseTalk Lab Edition, Version 14.2.0 Build 56823, Compiled on 2025-04-11 21:50.</dc:description>
+    <dc:description>RDF/OWL module 2025-03-15 16:40</dc:description>
+    <dc:description>CaseTalk Server "ProRail", version number "250"</dc:description>
+    <dc:creator>marcow</dc:creator>
+    <dc:language>en-GB</dc:language>
+    <dc:source>file://\\\\mac\\home\\documents\\CaseTalk\\GitHub\\Models\\EN\\apprenticeship\\apprenticeship.ig</dc:source>
+    <dc:date>2025-04-10 10:37</dc:date>
+    <dc:description>Model well-formedness run at 2025-04-11 21:52 reported 0 errors, 0 warnings, and0 hints.</dc:description>
+    <dc:description>Generated from a Model containing 36 fact-/object-/label-types, 32 expressions, and 39 roles, from 1 namespaces.</dc:description>
+    <skos:prefLabel>apprenticeship</skos:prefLabel>
+  </owl:Ontology>
+  <owl:AnnotationProperty rdf:about="Expression"/>
+  <owl:AnnotationProperty rdf:about="Definition.Schema"><skos:prefLabel>Definition: Schema</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="External.Homepage"><skos:prefLabel>External: Homepage</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="Owner.Date"><skos:prefLabel>Owner: Date</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="ReferenceData.Abbreviation"><skos:prefLabel>Reference Data: Abbreviation</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="ReferenceData.Plural"><skos:prefLabel>Reference Data: Plural</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="ReferenceData.Schema"><skos:prefLabel>Reference Data: Schema</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="References.DeleteObjectCascadeToRole"><skos:prefLabel>References: Delete Object cascade to Role</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="References.UpdateObjectCascadeToRole"><skos:prefLabel>References: Update Object cascade to Role</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="Source.Date"><skos:prefLabel>Source: Date</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="Source.Modeler"><skos:prefLabel>Source: Modeler</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="Status.Approved"><skos:prefLabel>Status: Approved</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="CaseTalk.Abstract"><skos:prefLabel>CaseTalk: Abstract</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="CaseTalk.Derivable"><skos:prefLabel>CaseTalk: Derivable</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="CaseTalk.Plural"><skos:prefLabel>CaseTalk: Plural</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="CaseTalk.Abbreviation"><skos:prefLabel>CaseTalk: Abbreviation</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="CaseTalk.Concept"><skos:prefLabel>CaseTalk: Concept</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="CaseTalk.Task"><skos:prefLabel>CaseTalk: Task</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="CaseTalk.Color"><skos:prefLabel>CaseTalk: Color</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="CaseTalk.Background"><skos:prefLabel>CaseTalk: Background</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="CaseTalk.Picture"><skos:prefLabel>CaseTalk: Picture</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="CaseTalk.ArtificalKey"><skos:prefLabel>CaseTalk: Artifical Key</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="CaseTalk.StaticPopulation"><skos:prefLabel>CaseTalk: Static Population</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="CaseTalk.Transitional"><skos:prefLabel>CaseTalk: Transitional</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="CaseTalk.EstimatedTuples"><skos:prefLabel>CaseTalk: Estimated Tuples</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="CaseTalk.Temporal"><skos:prefLabel>CaseTalk: Temporal</skos:prefLabel></owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="CaseTalk.Namespace"><skos:prefLabel>CaseTalk: Namespace</skos:prefLabel></owl:AnnotationProperty>
+<skos:ConceptScheme rdf:about="http://otl.prorail.nl/_5254B815-6585-4495-AF76-CAD990619C72">
+   <dc:title>apprenticeship - apprenticeship</dc:title>
+ </skos:ConceptScheme>
+      <rdfs:Datatype rdf:about="C2C51CCB1-AAB2-42C1-9BFE-3684EAE9212D">
+      <skos:prefLabel xml:lang="en-GB">#citizens</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+      </rdfs:Datatype>
+      <rdfs:Datatype rdf:about="C89237773-7F70-41F5-A8BF-85B0A3A6085F">
+      <skos:prefLabel xml:lang="en-GB">Category Title</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </rdfs:Datatype>
+      <rdfs:Datatype rdf:about="C3CB03017-CCF8-4129-ACF6-1C4C54FC7415">
+      <skos:prefLabel xml:lang="en-GB">Grade</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#any"/>
+      </rdfs:Datatype>
+      <rdfs:Datatype rdf:about="CE42335CE-2FE5-4785-8798-D8DCB72E013D">
+      <skos:prefLabel xml:lang="en-GB">Month Amount</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+      </rdfs:Datatype>
+      <rdfs:Datatype rdf:about="C85C058D5-E337-4F33-A0B2-0B45CB21003D">
+      <skos:prefLabel xml:lang="en-GB">Name</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#any"/>
+      </rdfs:Datatype>
+      <rdfs:Datatype rdf:about="C87987DD6-B4A6-4078-AD76-CEF3C6793FD6">
+      <skos:prefLabel xml:lang="en-GB">Type</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+          <owl:equivalentClass>
+           <rdfs:Datatype>
+            <owl:oneOf rdf:parseType="Resource">
+            <rdf:first>DropOut-&gt;[*]</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+            <rdf:first>Graduate-&gt;[*]</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+            <rdf:first>Registered-&gt;Student;Declined</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+            <rdf:first>Student-&gt;DropOut</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+            <rdf:first>Student-&gt;Graduate</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+            <rdf:first>[*]-&gt;Registered</rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:rest>
+            </rdf:rest>
+            </rdf:rest>
+            </rdf:rest>
+            </rdf:rest>
+            </owl:oneOf>
+           </rdfs:Datatype>
+          </owl:equivalentClass>
+        <local:Owner.Date>27/03/2025 16:26:43</local:Owner.Date>
+        <local:CaseTalk.Background>#CCFFCC</local:CaseTalk.Background>
+      </rdfs:Datatype>
+      <rdfs:Datatype rdf:about="CA6FA095E-6C27-44A5-886D-06C74A93EDE8">
+      <skos:prefLabel xml:lang="en-GB">apprenticeship_code</skos:prefLabel>
+    <rdfs:comment xml:lang="en-GB" >123ABC</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </rdfs:Datatype>
+      <rdfs:Datatype rdf:about="CB3047901-F3FB-414E-A373-C179E1220528">
+      <skos:prefLabel xml:lang="en-GB">city_name</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#name"/>
+      </rdfs:Datatype>
+      <rdfs:Datatype rdf:about="C8D295EC1-9808-4050-9863-DAF78DBED40B">
+      <skos:prefLabel xml:lang="en-GB">datum</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+      </rdfs:Datatype>
+      <rdfs:Datatype rdf:about="C32308B6A-C86D-48E3-BD29-64D91D875A00">
+      <skos:prefLabel xml:lang="en-GB">description</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </rdfs:Datatype>
+      <rdfs:Datatype rdf:about="C6C16FCCB-3E75-481C-A15D-C04A46EAD14B">
+      <skos:prefLabel xml:lang="en-GB">firstname</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </rdfs:Datatype>
+      <rdfs:Datatype rdf:about="CC6524DC7-1ADD-4196-82AF-3AC8BA0B51E6">
+      <skos:prefLabel xml:lang="en-GB">lastname</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </rdfs:Datatype>
+      <rdfs:Datatype rdf:about="CB4B775D6-2AB0-433C-8367-690D766879D4">
+      <skos:prefLabel xml:lang="en-GB">number</skos:prefLabel>
+    <rdfs:comment xml:lang="en-GB" >Choices to be made</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+          <owl:equivalentClass>
+           <rdfs:Datatype>
+            <owl:oneOf rdf:parseType="Resource">
+            <rdf:first>1</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+            <rdf:first>2</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+            <rdf:first>3</rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:rest>
+            </rdf:rest>
+            </owl:oneOf>
+           </rdfs:Datatype>
+          </owl:equivalentClass>
+      </rdfs:Datatype>
+      <rdfs:Datatype rdf:about="C0183E2ED-46A9-4DF8-A489-782D1F38F2B3">
+      <skos:prefLabel xml:lang="en-GB">student count</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#any"/>
+      </rdfs:Datatype>
+    <owl:Class rdf:about="C188DCE63-A493-47E2-AC13-BD43D1C36187">
+      <skos:prefLabel xml:lang="en-GB">Alumni</skos:prefLabel>
+      <owl:versionInfo>243</owl:versionInfo>
+      <rdfs:subClassOf rdf:resource="CA855B70D-19D9-4B09-A913-0CBA57C5D17E"/><!-- Student -->
+      <skos:broader>CA855B70D-19D9-4B09-A913-0CBA57C5D17E</skos:broader>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      </owl:Class>
+    <owl:Class rdf:about="CDCBD2B26-BADB-4A2B-8F1F-0C83BD0F1DC3">
+      <skos:prefLabel xml:lang="en-GB">Apprenticeship</skos:prefLabel>
+    <rdfs:comment xml:lang="en-GB" >a position as an apprentice : an arrangement in which someone learns an art, trade, or job under another.</rdfs:comment>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:subClassOf>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_0DB4FC90-91D3-4F0F-8871-C6BBA87CA6FF"/><!-- Apprenticeship Assigned -->
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_0DB4FC90-91D3-4F0F-8871-C6BBA87CA6FF"/><!-- Apprenticeship Assigned -->
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+          </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="E40606DB-1B10-49E8-A114-37043205D7E5"/><!-- Apprenticeship Category -->
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="E40606DB-1B10-49E8-A114-37043205D7E5"/><!-- Apprenticeship Category -->
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+          </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_14555F31-B1F0-409D-ABA8-4BFCDE3F2ADE"/><!-- Apprenticeship City -->
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_14555F31-B1F0-409D-ABA8-4BFCDE3F2ADE"/><!-- Apprenticeship City -->
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+          </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_3B37F93C-027D-487A-A453-40485F4F3FE9"/><!-- Apprenticeship Description -->
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_3B37F93C-027D-487A-A453-40485F4F3FE9"/><!-- Apprenticeship Description -->
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+          </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_3BD8D031-C77C-45C4-A135-0715F0891AA4"/><!-- Apprenticeship Duration -->
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_3BD8D031-C77C-45C4-A135-0715F0891AA4"/><!-- Apprenticeship Duration -->
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+          </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+      </rdfs:subClassOf>
+      <owl:hasKey rdf:parseType="Collection">
+        <owl:DatatypeProperty rdf:about="CC23C193-5AF1-4007-97E3-D4C46B131C64"/><!-- apprenticeship_code -->
+      </owl:hasKey>
+        <local:External.Homepage>https://en.wikipedia.org/wiki/Apprenticeship</local:External.Homepage>
+        <local:Source.Modeler>Marco Wobben</local:Source.Modeler>
+        <local:Status.Approved>false</local:Status.Approved>
+        <local:CaseTalk.Concept>Thing</local:CaseTalk.Concept>
+      </owl:Class>
+    <owl:Class rdf:about="CCAA1BFD3-EC2F-493D-8767-344A572A67AB">
+      <skos:prefLabel xml:lang="en-GB">Apprenticeship Preference</skos:prefLabel>
+    <rdfs:comment xml:lang="en-GB" >one that is preferred</rdfs:comment>
+    <local:Definition xml:lang="en-GB" >-- connection: SomeDbNameHereselect columnn as labeltypenamefrom tableorder by column</local:Definition>
+    <local:ReferenceData xml:lang="en-GB" >-- connection: SomeDbNameHereselect columnn as labeltypenamefrom tableorder by column</local:ReferenceData>
+      <local:Expression rdf:ID="_51A598B8-5DEC-45A3-AC66-2F71B287B388" xml:lang="en" >&quot;&lt;Student&gt; has as preference no. &lt;number&gt; &lt;Apprenticeship&gt;.&quot;</local:Expression>
+      <local:Expression rdf:ID="_44EAE4A7-C608-4A96-80DE-DEA226BABDF6" xml:lang="nl" >&quot;&lt;Student&gt; heeft als voorkeur &lt;number&gt; de &lt;Apprenticeship&gt;.&quot;</local:Expression>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:hasKey rdf:parseType="Collection">
+        <owl:ObjectProperty rdf:about="OPCCAA1BFD3-EC2F-493D-8767-344A572A67AB15832DAB-F2BC-49FF-A8CB-7DF7DB66DF4C"/><!-- Apprenticeship Preference_Student -->
+        <owl:DatatypeProperty rdf:about="_41B135E0-3C79-4379-89B4-B6CFA4F1D43C"/><!-- number -->
+      </owl:hasKey>
+      <owl:hasKey rdf:parseType="Collection">
+        <owl:ObjectProperty rdf:about="OPCCAA1BFD3-EC2F-493D-8767-344A572A67ABE30F4F3C-EACC-4BE1-AF55-B8004125B443"/><!-- Apprenticeship Preference_Apprenticeship -->
+        <owl:ObjectProperty rdf:about="OPCCAA1BFD3-EC2F-493D-8767-344A572A67AB15832DAB-F2BC-49FF-A8CB-7DF7DB66DF4C"/><!-- Apprenticeship Preference_Student -->
+      </owl:hasKey>
+        <local:Owner.Date>08/02/2023 08:59:36</local:Owner.Date>
+        <local:Source.Date>08/02/2023 08:59:36</local:Source.Date>
+        <local:Source.Modeler>marcowobben</local:Source.Modeler>
+        <local:Status.Approved>false</local:Status.Approved>
+      </owl:Class>
+    <owl:Class rdf:about="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31">
+      <skos:prefLabel xml:lang="en-GB">City</skos:prefLabel>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:subClassOf>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_3F5ACC2D-E60C-48AF-AC42-3FD04B18A8A9"/><!-- City Student Count -->
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_3F5ACC2D-E60C-48AF-AC42-3FD04B18A8A9"/><!-- City Student Count -->
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+          </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_7F4AFAA1-A363-459C-8C31-1CCD02274D30"/><!-- Population -->
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_7F4AFAA1-A363-459C-8C31-1CCD02274D30"/><!-- Population -->
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+          </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+      </rdfs:subClassOf>
+      <owl:hasKey rdf:parseType="Collection">
+        <owl:DatatypeProperty rdf:about="_3695D836-25BA-4367-93E6-CB4BA9868015"/><!-- city_name -->
+      </owl:hasKey>
+        <local:CaseTalk.Concept>Location</local:CaseTalk.Concept>
+        <local:CaseTalk.Picture>https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Sol_Lumen.jpg/2560px-Sol_Lumen.jpg</local:CaseTalk.Picture>
+        <local:CaseTalk.StaticPopulation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</local:CaseTalk.StaticPopulation>
+      </owl:Class>
+    <rdf:Description rdf:about="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31_1">
+      <skos:prefLabel xml:lang="en-GB">City 1</skos:prefLabel>
+      <rdf:type rdf:resource="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31"/><!-- City -->
+      <local:_3695D836-25BA-4367-93E6-CB4BA9868015>New York</local:_3695D836-25BA-4367-93E6-CB4BA9868015> <!-- city_name -->
+    </rdf:Description>
+    <rdf:Description rdf:about="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31_2">
+      <skos:prefLabel xml:lang="en-GB">City 2</skos:prefLabel>
+      <rdf:type rdf:resource="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31"/><!-- City -->
+      <local:_3695D836-25BA-4367-93E6-CB4BA9868015>Amsterdam</local:_3695D836-25BA-4367-93E6-CB4BA9868015> <!-- city_name -->
+    </rdf:Description>
+    <rdf:Description rdf:about="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31_3">
+      <skos:prefLabel xml:lang="en-GB">City 3</skos:prefLabel>
+      <rdf:type rdf:resource="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31"/><!-- City -->
+      <local:_3695D836-25BA-4367-93E6-CB4BA9868015>Utrecht</local:_3695D836-25BA-4367-93E6-CB4BA9868015> <!-- city_name -->
+    </rdf:Description>
+    <rdf:Description rdf:about="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31_4">
+      <skos:prefLabel xml:lang="en-GB">City 4</skos:prefLabel>
+      <rdf:type rdf:resource="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31"/><!-- City -->
+      <local:_3695D836-25BA-4367-93E6-CB4BA9868015>Enschede</local:_3695D836-25BA-4367-93E6-CB4BA9868015> <!-- city_name -->
+    </rdf:Description>
+    <rdf:Description rdf:about="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31_5">
+      <skos:prefLabel xml:lang="en-GB">City 5</skos:prefLabel>
+      <rdf:type rdf:resource="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31"/><!-- City -->
+      <local:_3695D836-25BA-4367-93E6-CB4BA9868015>Utrech</local:_3695D836-25BA-4367-93E6-CB4BA9868015> <!-- city_name -->
+    </rdf:Description>
+    <rdf:Description rdf:about="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31_6">
+      <skos:prefLabel xml:lang="en-GB">City 6</skos:prefLabel>
+      <rdf:type rdf:resource="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31"/><!-- City -->
+      <local:_3695D836-25BA-4367-93E6-CB4BA9868015>Berlin</local:_3695D836-25BA-4367-93E6-CB4BA9868015> <!-- city_name -->
+    </rdf:Description>
+    <rdf:Description rdf:about="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31_7">
+      <skos:prefLabel xml:lang="en-GB">City 7</skos:prefLabel>
+      <rdf:type rdf:resource="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31"/><!-- City -->
+      <local:_3695D836-25BA-4367-93E6-CB4BA9868015>Madrid</local:_3695D836-25BA-4367-93E6-CB4BA9868015> <!-- city_name -->
+    </rdf:Description>
+    <rdf:Description rdf:about="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31_8">
+      <skos:prefLabel xml:lang="en-GB">City 8</skos:prefLabel>
+      <rdf:type rdf:resource="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31"/><!-- City -->
+      <local:_3695D836-25BA-4367-93E6-CB4BA9868015>Rome</local:_3695D836-25BA-4367-93E6-CB4BA9868015> <!-- city_name -->
+    </rdf:Description>
+    <rdf:Description rdf:about="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31_9">
+      <skos:prefLabel xml:lang="en-GB">City 9</skos:prefLabel>
+      <rdf:type rdf:resource="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31"/><!-- City -->
+      <local:_3695D836-25BA-4367-93E6-CB4BA9868015>Athens</local:_3695D836-25BA-4367-93E6-CB4BA9868015> <!-- city_name -->
+    </rdf:Description>
+    <rdf:Description rdf:about="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31_10">
+      <skos:prefLabel xml:lang="en-GB">City 10</skos:prefLabel>
+      <rdf:type rdf:resource="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31"/><!-- City -->
+      <local:_3695D836-25BA-4367-93E6-CB4BA9868015>Warsaw</local:_3695D836-25BA-4367-93E6-CB4BA9868015> <!-- city_name -->
+    </rdf:Description>
+    <owl:Class rdf:about="CD3DD2DF5-EA14-4C86-A4DE-F4AC4F4EDFC8">
+      <skos:prefLabel xml:lang="en-GB">Date Entry</skos:prefLabel>
+    <local:BusinessRule xml:lang="en-GB" >Dates must be registered in YYYY-MM-DD format.</local:BusinessRule>
+      <owl:versionInfo>237</owl:versionInfo>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:subClassOf>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_1C68F456-86C1-4657-96CE-DF2B90EDA2B0"/><!-- datum -->
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_1C68F456-86C1-4657-96CE-DF2B90EDA2B0"/><!-- datum -->
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+          </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+      </rdfs:subClassOf>
+        <local:CaseTalk.Concept>Rule</local:CaseTalk.Concept>
+      </owl:Class>
+    <owl:Class rdf:about="CC7EE188A-0C68-4BD9-A22A-E33323822EE1">
+      <skos:prefLabel xml:lang="en-GB">Graduate</skos:prefLabel>
+    <local:ReferenceData xml:lang="en-GB" >-- connection: SomeDbNameHereselect columnn as labeltypenamefrom tableorder by column</local:ReferenceData>
+      <rdfs:subClassOf rdf:resource="CA855B70D-19D9-4B09-A913-0CBA57C5D17E"/><!-- Student -->
+      <skos:broader>CA855B70D-19D9-4B09-A913-0CBA57C5D17E</skos:broader>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:subClassOf>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_154981DA-4C72-4D7E-A85E-507073EA59A1"/><!-- Graduation Date -->
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_154981DA-4C72-4D7E-A85E-507073EA59A1"/><!-- Graduation Date -->
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+          </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+      </rdfs:subClassOf>
+        <local:CaseTalk.Concept>Person</local:CaseTalk.Concept>
+      </owl:Class>
+    <owl:Class rdf:about="CA855B70D-19D9-4B09-A913-0CBA57C5D17E">
+      <skos:prefLabel xml:lang="en-GB">Student</skos:prefLabel>
+      <skos:altLabel xml:lang="en-GB">Learner</skos:altLabel>
+      <skos:altLabel xml:lang="en-GB">Pupil</skos:altLabel>
+      <skos:altLabel xml:lang="en-GB">Scholar</skos:altLabel>
+      <skos:altLabel xml:lang="en-GB">scholier</skos:altLabel>
+      <skos:altLabel xml:lang="en-GB">kind</skos:altLabel>
+      <local:CaseTalk.Plural xml:lang="en-GB">Students</local:CaseTalk.Plural>
+      <local:CaseTalk.Abbreviation xml:lang="en-GB">Stu.</local:CaseTalk.Abbreviation>
+    <rdfs:comment xml:lang="en-GB" >Students are the lifeblood of any educational institution.</rdfs:comment>
+    <local:Definition xml:lang="en-GB" >A person who is enrolled in an educational institution.</local:Definition>
+    <local:Methods xml:lang="en-GB" >Register()&#13;&#10;Unregister()&#13;&#10;Email()&#13;&#10;Update()</local:Methods>
+    <local:ReferenceData xml:lang="en-GB" >-- connection: SomeDbNameHereselect columnn as labeltypenamefrom tableorder by column</local:ReferenceData>
+      <local:Expression rdf:ID="_1534D466-AFB7-4B71-BA8E-3C223798C932" xml:lang="en" >&quot;&lt;firstname&gt; &lt;lastname&gt; is a student.&quot;</local:Expression>
+      <local:Expression rdf:ID="_9D5A83E7-E2F1-48F0-BDE6-8ED029AD092B" xml:lang="nl" >&quot;&lt;firstname&gt; &lt;lastname&gt; is een scholier.&quot;</local:Expression>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:subClassOf>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="D750459C-7586-4857-8BF0-D27C5EB3F943"/><!-- City Of Residence -->
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="D750459C-7586-4857-8BF0-D27C5EB3F943"/><!-- City Of Residence -->
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+          </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_8FBC1C3F-1A75-48FE-ACAD-3112BDA6CD04"/><!-- Exam Score -->
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_8FBC1C3F-1A75-48FE-ACAD-3112BDA6CD04"/><!-- Exam Score -->
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+          </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_1995347F-8C0F-488C-89DA-DD70917F0108"/><!-- Student Buddy -->
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="_1995347F-8C0F-488C-89DA-DD70917F0108"/><!-- Student Buddy -->
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+          </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="CFCA607A-B80F-4042-B1D6-610E8BE9EBCE"/><!-- Student Type -->
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="CFCA607A-B80F-4042-B1D6-610E8BE9EBCE"/><!-- Student Type -->
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+          </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+      </rdfs:subClassOf>
+      <owl:hasKey rdf:parseType="Collection">
+        <owl:DatatypeProperty rdf:about="DAB763DF-0BB7-428B-ACE3-9B54CB038EFE"/><!-- firstname -->
+        <owl:DatatypeProperty rdf:about="_720CB1D7-B531-4DAE-8D26-598533621EEE"/><!-- lastname -->
+      </owl:hasKey>
+        <local:ReferenceData.Abbreviation>Stu.</local:ReferenceData.Abbreviation>
+        <local:ReferenceData.Plural>Studenten</local:ReferenceData.Plural>
+        <local:Source.Modeler>marcowobben</local:Source.Modeler>
+        <local:Status.Approved>false</local:Status.Approved>
+        <local:CaseTalk.Concept>Person</local:CaseTalk.Concept>
+        <local:CaseTalk.Picture>https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Student_in_Class_%283618969705%29.jpg/800px-Student_in_Class_%283618969705%29.jpg</local:CaseTalk.Picture>
+        <local:CaseTalk.ArtificalKey rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</local:CaseTalk.ArtificalKey>
+      </owl:Class>
+    <owl:ObjectProperty rdf:about="_0DB4FC90-91D3-4F0F-8871-C6BBA87CA6FF">
+      <skos:prefLabel xml:lang="en-GB">Apprenticeship Assigned</skos:prefLabel>
+      <rdfs:range rdf:resource="CA855B70D-19D9-4B09-A913-0CBA57C5D17E"/>
+        <local:CaseTalk.Concept>Aggregation</local:CaseTalk.Concept>
+      <local:Expression rdf:ID="E7E9CB83-C2BD-4EAF-A932-AE3E24BD1D06" xml:lang="en" >&quot;&lt;Apprenticeship&gt; is assigned to &lt;Student&gt;.&quot;</local:Expression>
+    <local:ReferenceData xml:lang="en-GB" >-- connection: SomeDbNameHereselect columnn as labeltypenamefrom tableorder by column</local:ReferenceData>
+      <rdfs:domain rdf:resource="CDCBD2B26-BADB-4A2B-8F1F-0C83BD0F1DC3"/>
+      </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="E40606DB-1B10-49E8-A114-37043205D7E5">
+      <skos:prefLabel xml:lang="en-GB">Apprenticeship Category</skos:prefLabel>
+      <rdfs:range rdf:resource="C89237773-7F70-41F5-A8BF-85B0A3A6085F"/>
+      <local:Expression rdf:ID="_9298C1D5-9AC3-4028-9F04-F2C320ED4609" xml:lang="en" >&quot;&lt;Apprenticeship&gt; falls in the category &lt;Category Title&gt;.&quot;</local:Expression>
+    <local:ReferenceData xml:lang="en-GB" >-- connection: SomeDbNameHereselect columnn as labeltypenamefrom tableorder by column</local:ReferenceData>
+      <rdfs:domain rdf:resource="CDCBD2B26-BADB-4A2B-8F1F-0C83BD0F1DC3"/>
+      </owl:DatatypeProperty>
+    <owl:ObjectProperty rdf:about="_14555F31-B1F0-409D-ABA8-4BFCDE3F2ADE">
+      <skos:prefLabel xml:lang="en-GB">Apprenticeship City</skos:prefLabel>
+      <rdfs:range rdf:resource="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31"/>
+      <local:Expression rdf:ID="_5A94B471-4952-470C-979C-FC357ED15FF1" xml:lang="en" >&quot;&lt;Apprenticeship&gt; takes place in &lt;City&gt;.&quot;</local:Expression>
+      <local:Expression rdf:ID="_77D0C617-1EA0-40BE-9A71-701CE9E6111A" xml:lang="nl" >&quot;&lt;Apprenticeship&gt; vindt plaats in &lt;City&gt;.&quot;</local:Expression>
+      <local:Expression rdf:ID="_82C9BAF1-7143-47D9-A5CD-6DDDF5AA0C1C" xml:lang="en" >&quot;Where does &lt;Apprenticeship&gt; take place? &lt;City&gt;.&quot;</local:Expression>
+      <local:Expression rdf:ID="F0A5270F-CD96-4F99-8A2B-1CFBEEDC0895" xml:lang="en" >&quot;Does &lt;Apprenticeship&gt; take place in &lt;City&gt;?&quot;</local:Expression>
+    <rdfs:comment xml:lang="en-GB" >The apprenticeship takes place in a single city.</rdfs:comment>
+    <local:ReferenceData xml:lang="en-GB" >-- connection: SomeDbNameHereselect columnn as labeltypenamefrom tableorder by column</local:ReferenceData>
+      <rdfs:domain rdf:resource="CDCBD2B26-BADB-4A2B-8F1F-0C83BD0F1DC3"/>
+      </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="_3B37F93C-027D-487A-A453-40485F4F3FE9">
+      <skos:prefLabel xml:lang="en-GB">Apprenticeship Description</skos:prefLabel>
+      <rdfs:range rdf:resource="C32308B6A-C86D-48E3-BD29-64D91D875A00"/>
+        <local:Source.Modeler>marcowobben</local:Source.Modeler>
+        <local:Status.Approved>false</local:Status.Approved>
+      <local:Expression rdf:ID="DCA0AC86-CBBF-456E-913D-3BBD38D40E79" xml:lang="en" >&quot;&lt;Apprenticeship&gt; concerns &lt;description&gt;.&quot;</local:Expression>
+      <local:Expression rdf:ID="_73187E69-74BD-41AC-BAD5-E7BA386C5259" xml:lang="nl" >&quot;&lt;Apprenticeship&gt; betreft &lt;description&gt;.&quot;</local:Expression>
+      <rdfs:domain rdf:resource="CDCBD2B26-BADB-4A2B-8F1F-0C83BD0F1DC3"/>
+      </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="_3BD8D031-C77C-45C4-A135-0715F0891AA4">
+      <skos:prefLabel xml:lang="en-GB">Apprenticeship Duration</skos:prefLabel>
+      <rdfs:range rdf:resource="CE42335CE-2FE5-4785-8798-D8DCB72E013D"/>
+      <local:Expression rdf:ID="D26A0413-FCB4-40FB-A078-78914F07D9B4" xml:lang="en" >&quot;&lt;Apprenticeship&gt; will take &lt;Month Amount&gt; months.&quot;</local:Expression>
+      <rdfs:domain rdf:resource="CDCBD2B26-BADB-4A2B-8F1F-0C83BD0F1DC3"/>
+      </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="CC23C193-5AF1-4007-97E3-D4C46B131C64">
+      <skos:prefLabel xml:lang="en-GB">apprenticeship_code</skos:prefLabel>
+      <rdfs:range rdf:resource="CA6FA095E-6C27-44A5-886D-06C74A93EDE8"/>
+      <rdfs:domain rdf:resource="CDCBD2B26-BADB-4A2B-8F1F-0C83BD0F1DC3"/>
+      </owl:DatatypeProperty>
+    <owl:ObjectProperty rdf:about="OPCCAA1BFD3-EC2F-493D-8767-344A572A67ABE30F4F3C-EACC-4BE1-AF55-B8004125B443">
+      <skos:prefLabel xml:lang="en-GB">Apprenticeship Preference_Apprenticeship</skos:prefLabel>
+      <rdfs:range rdf:resource="CDCBD2B26-BADB-4A2B-8F1F-0C83BD0F1DC3"/>
+      <rdfs:domain rdf:resource="CCAA1BFD3-EC2F-493D-8767-344A572A67AB"/>
+      </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="OPCCAA1BFD3-EC2F-493D-8767-344A572A67AB15832DAB-F2BC-49FF-A8CB-7DF7DB66DF4C">
+      <skos:prefLabel xml:lang="en-GB">Apprenticeship Preference_Student</skos:prefLabel>
+      <rdfs:range rdf:resource="CA855B70D-19D9-4B09-A913-0CBA57C5D17E"/>
+      <rdfs:domain rdf:resource="CCAA1BFD3-EC2F-493D-8767-344A572A67AB"/>
+      </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="_41B135E0-3C79-4379-89B4-B6CFA4F1D43C">
+      <skos:prefLabel xml:lang="en-GB">number</skos:prefLabel>
+      <rdfs:range rdf:resource="CB4B775D6-2AB0-433C-8367-690D766879D4"/>
+      <rdfs:domain rdf:resource="CCAA1BFD3-EC2F-493D-8767-344A572A67AB"/>
+      </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="_3F5ACC2D-E60C-48AF-AC42-3FD04B18A8A9">
+      <skos:prefLabel xml:lang="en-GB">City Student Count</skos:prefLabel>
+      <rdfs:range rdf:resource="C0183E2ED-46A9-4DF8-A489-782D1F38F2B3"/>
+        <local:Owner.Date>05/04/2025 12:56:52</local:Owner.Date>
+        <local:Source.Date>05/04/2025 12:56:52</local:Source.Date>
+        <local:CaseTalk.Derivable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</local:CaseTalk.Derivable>
+        <local:CaseTalk.Concept>Aggregation</local:CaseTalk.Concept>
+      <local:Expression rdf:ID="F651CC69-4D1A-4856-9B1F-5417BEE775A1" xml:lang="en" >&quot;&lt;City&gt; houses &lt;student count&gt; students.&quot;</local:Expression>
+    <local:Derivation xml:lang="en-GB" >select count(*) as student count&#13;&#10;from city of residence&#13;&#10;group by firstname, lastname</local:Derivation>
+      <rdfs:domain rdf:resource="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31"/>
+      </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="_7F4AFAA1-A363-459C-8C31-1CCD02274D30">
+      <skos:prefLabel xml:lang="en-GB">Population</skos:prefLabel>
+      <rdfs:range rdf:resource="C2C51CCB1-AAB2-42C1-9BFE-3684EAE9212D"/>
+      <local:Expression rdf:ID="CF819812-113B-47A5-A9D3-05AE7B653BAD" xml:lang="en" >&quot;&lt;City&gt; has &lt;#citizens&gt; citizens.&quot;</local:Expression>
+      <local:Expression rdf:ID="AA4BC30C-0299-4B77-AC9B-42AB9CD90111" xml:lang="nl" >&quot;&lt;City&gt; heeft &lt;#citizens&gt; inwoners.&quot;</local:Expression>
+      <rdfs:domain rdf:resource="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31"/>
+      </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="_3695D836-25BA-4367-93E6-CB4BA9868015">
+      <skos:prefLabel xml:lang="en-GB">city_name</skos:prefLabel>
+      <rdfs:range rdf:resource="CB3047901-F3FB-414E-A373-C179E1220528"/>
+      <rdfs:domain rdf:resource="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31"/>
+      </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="_1C68F456-86C1-4657-96CE-DF2B90EDA2B0">
+      <skos:prefLabel xml:lang="en-GB">datum</skos:prefLabel>
+      <rdfs:range rdf:resource="C8D295EC1-9808-4050-9863-DAF78DBED40B"/>
+      <rdfs:domain rdf:resource="CD3DD2DF5-EA14-4C86-A4DE-F4AC4F4EDFC8"/>
+      </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="_154981DA-4C72-4D7E-A85E-507073EA59A1">
+      <skos:prefLabel xml:lang="en-GB">Graduation Date</skos:prefLabel>
+      <rdfs:range rdf:resource="C8D295EC1-9808-4050-9863-DAF78DBED40B"/>
+      <local:Expression rdf:ID="_5450F3C0-EAB1-4A55-84DB-96F0408CBEC9" xml:lang="en" >&quot;&lt;Graduate&gt; graduated on &lt;datum&gt;.&quot;</local:Expression>
+      <local:Expression rdf:ID="C423A84C-4B21-4A65-A141-E66055D2089D" xml:lang="nl" >&quot;&lt;Graduate&gt; studeerde af op &lt;datum&gt;.&quot;</local:Expression>
+      <rdfs:domain rdf:resource="CC7EE188A-0C68-4BD9-A22A-E33323822EE1"/>
+      </owl:DatatypeProperty>
+    <owl:ObjectProperty rdf:about="D750459C-7586-4857-8BF0-D27C5EB3F943">
+      <skos:prefLabel xml:lang="en-GB">City Of Residence</skos:prefLabel>
+      <local:CaseTalk.Plural xml:lang="en-GB">Cities of Residence</local:CaseTalk.Plural>
+      <local:CaseTalk.Abbreviation xml:lang="en-GB">COR</local:CaseTalk.Abbreviation>
+      <rdfs:range rdf:resource="C3162DBF6-3993-4DC1-BE09-F929D3AE0F31"/>
+        <local:Source.Modeler>marcowobben</local:Source.Modeler>
+        <local:Status.Approved>false</local:Status.Approved>
+        <local:CaseTalk.Temporal>Valid &amp; Transaction Time</local:CaseTalk.Temporal>
+      <local:Expression rdf:ID="_6BD9BB77-97ED-440A-A077-8FF8B63C45A5" xml:lang="en" >&quot;&lt;Student&gt; lives in &lt;City&gt;.&quot;</local:Expression>
+      <local:Expression rdf:ID="_3EC443F5-707F-45D9-9F32-EB5F6741F05A" xml:lang="nl" >&quot;&lt;Student&gt; woont in &lt;City&gt;.&quot;</local:Expression>
+    <rdfs:comment xml:lang="en-GB" >It is important to provide accurate information about your City of Residence in order to ensure accurate record keeping.</rdfs:comment>
+    <local:Definition xml:lang="en-GB" >The city in which a person lives</local:Definition>
+      <local:Incoming rdf:ID="in_D750459C-7586-4857-8BF0-D27C5EB3F943" >inhabits</local:Incoming>
+      <rdfs:domain rdf:resource="CA855B70D-19D9-4B09-A913-0CBA57C5D17E"/>
+      </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="_8FBC1C3F-1A75-48FE-ACAD-3112BDA6CD04">
+      <skos:prefLabel xml:lang="en-GB">Exam Score</skos:prefLabel>
+      <rdfs:range rdf:resource="C3CB03017-CCF8-4129-ACF6-1C4C54FC7415"/>
+        <local:Owner.Date>18/03/2025 13:19:02</local:Owner.Date>
+        <local:Source.Date>18/03/2025 13:19:03</local:Source.Date>
+        <local:CaseTalk.Derivable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</local:CaseTalk.Derivable>
+      <local:Expression rdf:ID="_3D6AF248-A398-4919-89C6-620821B854AC" xml:lang="en" >&quot;&lt;Student&gt; scores a &lt;Grade&gt; on the exam.&quot;</local:Expression>
+    <local:Definition xml:lang="en-GB" >The exam score is calculated from&#13;&#10;the number of apprenticeships and&#13;&#10;points scored at classes.</local:Definition>
+    <local:Math xml:lang="en-GB" >pi=sqrt(6*sum(1/(n^2),n=1,inf))=!(int(e^(-x^2)*dx,-inf,+inf))^2</local:Math>
+      <rdfs:domain rdf:resource="CA855B70D-19D9-4B09-A913-0CBA57C5D17E"/>
+      </owl:DatatypeProperty>
+    <owl:ObjectProperty rdf:about="_1995347F-8C0F-488C-89DA-DD70917F0108">
+      <skos:prefLabel xml:lang="en-GB">Student Buddy</skos:prefLabel>
+      <rdfs:range rdf:resource="CA855B70D-19D9-4B09-A913-0CBA57C5D17E"/>
+        <local:CaseTalk.Concept>Role</local:CaseTalk.Concept>
+      <local:Expression rdf:ID="_51D1DAA4-D81D-4B24-99CC-54149751C8E2" xml:lang="en" >&quot;&lt;Student&gt; is a buddy for &lt;Student&gt;.&quot;</local:Expression>
+    <local:ReferenceData xml:lang="en-GB" >-- connection: SomeDbNameHereselect columnn as labeltypenamefrom tableorder by column</local:ReferenceData>
+      <rdfs:domain rdf:resource="CA855B70D-19D9-4B09-A913-0CBA57C5D17E"/>
+      </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="CFCA607A-B80F-4042-B1D6-610E8BE9EBCE">
+      <skos:prefLabel xml:lang="en-GB">Student Type</skos:prefLabel>
+      <rdfs:range rdf:resource="C87987DD6-B4A6-4078-AD76-CEF3C6793FD6"/>
+        <local:Source.Modeler>marcowobben</local:Source.Modeler>
+        <local:Status.Approved>false</local:Status.Approved>
+        <local:CaseTalk.Concept>Classification</local:CaseTalk.Concept>
+      <local:Expression rdf:ID="_3D478B37-0DC4-40F1-B0AE-3C5D91D3CDC4" xml:lang="en" >&quot;&lt;Student&gt; is a &lt;Type&gt;.&quot;</local:Expression>
+    <local:ReferenceData xml:lang="en-GB" >-- connection: SomeDbNameHereselect columnn as labeltypenamefrom tableorder by column</local:ReferenceData>
+      <rdfs:domain rdf:resource="CA855B70D-19D9-4B09-A913-0CBA57C5D17E"/>
+      </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="DAB763DF-0BB7-428B-ACE3-9B54CB038EFE">
+      <skos:prefLabel xml:lang="en-GB">firstname</skos:prefLabel>
+      <rdfs:range rdf:resource="C6C16FCCB-3E75-481C-A15D-C04A46EAD14B"/>
+      <rdfs:domain rdf:resource="CA855B70D-19D9-4B09-A913-0CBA57C5D17E"/>
+      </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="_720CB1D7-B531-4DAE-8D26-598533621EEE">
+      <skos:prefLabel xml:lang="en-GB">lastname</skos:prefLabel>
+      <rdfs:range rdf:resource="CC6524DC7-1ADD-4196-82AF-3AC8BA0B51E6"/>
+      <rdfs:domain rdf:resource="CA855B70D-19D9-4B09-A913-0CBA57C5D17E"/>
+      </owl:DatatypeProperty>
+</rdf:RDF>

@@ -3,7 +3,7 @@
 This is an example project to illustrate FCO-IM and CaseTalk features.
 [Default]
 
-*Project created with CaseTalk v14.2 Build 0.56769.*
+*Project created with CaseTalk v14.2 Build 3.56992.*
 
 *![Project](https://www.casetalk.com/images/icons/prj.png) apprenticeship.prj
 
@@ -37,14 +37,10 @@ This is an example project to illustrate FCO-IM and CaseTalk features.
 ## apprenticeship.igd /ER
 
 ![Diagram apprenticeship.igd /ER](apprenticeship.er.png)
-    *![JSON File](https://www.casetalk.com/images/icons/json.png) apprenticeship.json
 
-    *![Text File](https://www.casetalk.com/images/icons/txt.png) graph.plantuml
+## apprenticeship.igd /KG
 
-    *![Text File](https://www.casetalk.com/images/icons/txt.png) apprenticeship.txt
-
-    *![Text File](https://www.casetalk.com/images/icons/txt.png) apprenticeship.plantuml
-
+![Diagram apprenticeship.igd /KG](apprenticeship.kg.png)
     *![Diagram](https://www.casetalk.com/images/icons/igd.png) Assigned.igd
 
 
@@ -67,13 +63,41 @@ This is an example project to illustrate FCO-IM and CaseTalk features.
 ## Assigned.igd /EXP
 
 ![Diagram Assigned.igd /EXP](Assigned.exp.png)
+
+## Assigned.igd /ER
+
+![Diagram Assigned.igd /ER](Assigned.er.png)
+
+## Assigned.igd /KG
+
+![Diagram Assigned.igd /KG](Assigned.kg.png)
     *![Rich Text File](https://www.casetalk.com/images/icons/txt.png) Apprenticeship.rtf
 
-    *![Repository](https://www.casetalk.com/images/icons/igg.png) apprenticeship - GLR.igg
+    *![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_init.SQL
 
-  *![Text File](https://www.casetalk.com/images/icons/txt.png) BWBR0002628_2024-01-01_0.xml
+    *![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_create.SQL
 
-  *![External File](https://www.casetalk.com/images/icons/unknown.png) apprenticeship.md
+    *![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_load.SQL
 
-  *![HTML File](https://www.casetalk.com/images/icons/txt.png) base-Project Report-20250211.html
+    *![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_protect.SQL
+
+    *![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_access.SQL
+
+    *![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_noaccess.SQL
+
+    *![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_unload.SQL
+
+    *![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_drop.SQL
+
+    *![Log file](https://www.casetalk.com/images/icons/log.png) apprenticeship_Postgresql.log
+
+    *![JSON File](https://www.casetalk.com/images/icons/json.png) apprenticeship_Postgresql.json
+
+    *![Text File](https://www.casetalk.com/images/icons/txt.png) apprenticeship_OWL2.rdf
+
+  *![Text File](https://www.casetalk.com/images/icons/txt.png) apprenticeship.igd.html
+
+  *![PDF File](https://www.casetalk.com/images/icons/txt.png) apprenticeship.pdf
+
+  *![Text File](https://www.casetalk.com/images/icons/txt.png) Assigned.igd.html
 
