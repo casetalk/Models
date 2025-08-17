@@ -1,103 +1,99 @@
 ﻿# ![CaseTalk Logo](https://www.casetalk.com/images/icons/casetalk.png) apprenticeship.prj
-[Description]
-This is an example project to illustrate FCO-IM and CaseTalk features.
-[Default]
+*Project created with CaseTalk v14.2 Build 3.56993.*
 
-*Project created with CaseTalk v14.2 Build 3.56992.*
+* ![Project](https://www.casetalk.com/images/icons/prj.png) apprenticeship.prj
 
-*![Project](https://www.casetalk.com/images/icons/prj.png) apprenticeship.prj
+  * ![Repository](https://www.casetalk.com/images/icons/ig.png) apprenticeship.ig
 
-  *![Repository](https://www.casetalk.com/images/icons/ig.png) apprenticeship.ig
+    * ![Expression File](https://www.casetalk.com/images/icons/exp.png) apprenticeship.exp
 
-    *![Expression File](https://www.casetalk.com/images/icons/exp.png) apprenticeship.exp
-
-    *![Diagram](https://www.casetalk.com/images/icons/igd.png) apprenticeship.igd
+    * ![Diagram](https://www.casetalk.com/images/icons/igd.png) apprenticeship.igd
 
 
-## apprenticeship.igd
+## apprenticeship.igd / Fact Model
 
-![Diagram apprenticeship.igd](apprenticeship.png)
+![Diagram apprenticeship.igd / Fact Model](apprenticeship.png)
 
-## apprenticeship.igd /ERD
+## apprenticeship.igd / Logical Model
 
-![Diagram apprenticeship.igd /ERD](apprenticeship.erd.png)
+![Diagram apprenticeship.igd / Logical Model](apprenticeship.erd.png)
 
-## apprenticeship.igd /UML
+## apprenticeship.igd / UML Classes
 
-![Diagram apprenticeship.igd /UML](apprenticeship.uml.png)
+![Diagram apprenticeship.igd / UML Classes](apprenticeship.uml.png)
 
-## apprenticeship.igd /MAP
+## apprenticeship.igd / Concept Map
 
-![Diagram apprenticeship.igd /MAP](apprenticeship.map.png)
+![Diagram apprenticeship.igd / Concept Map](apprenticeship.map.png)
 
-## apprenticeship.igd /EXP
+## apprenticeship.igd / Object types
 
-![Diagram apprenticeship.igd /EXP](apprenticeship.exp.png)
+![Diagram apprenticeship.igd / Object types](apprenticeship.exp.png)
 
-## apprenticeship.igd /ER
+## apprenticeship.igd / Entity-Relation Model
 
-![Diagram apprenticeship.igd /ER](apprenticeship.er.png)
+![Diagram apprenticeship.igd / Entity-Relation Model](apprenticeship.er.png)
 
-## apprenticeship.igd /KG
+## apprenticeship.igd / Knowledge Graph
 
-![Diagram apprenticeship.igd /KG](apprenticeship.kg.png)
-    *![Diagram](https://www.casetalk.com/images/icons/igd.png) Assigned.igd
+![Diagram apprenticeship.igd / Knowledge Graph](apprenticeship.kg.png)
+    * ![Diagram](https://www.casetalk.com/images/icons/igd.png) Assigned.igd
 
 
-## Assigned.igd
+## Assigned.igd / Fact Model
 
-![Diagram Assigned.igd](Assigned.png)
+![Diagram Assigned.igd / Fact Model](Assigned.png)
 
-## Assigned.igd /ERD
+## Assigned.igd / Logical Model
 
-![Diagram Assigned.igd /ERD](Assigned.erd.png)
+![Diagram Assigned.igd / Logical Model](Assigned.erd.png)
 
-## Assigned.igd /UML
+## Assigned.igd / UML Classes
 
-![Diagram Assigned.igd /UML](Assigned.uml.png)
+![Diagram Assigned.igd / UML Classes](Assigned.uml.png)
 
-## Assigned.igd /MAP
+## Assigned.igd / Concept Map
 
-![Diagram Assigned.igd /MAP](Assigned.map.png)
+![Diagram Assigned.igd / Concept Map](Assigned.map.png)
 
-## Assigned.igd /EXP
+## Assigned.igd / Object types
 
-![Diagram Assigned.igd /EXP](Assigned.exp.png)
+![Diagram Assigned.igd / Object types](Assigned.exp.png)
 
-## Assigned.igd /ER
+## Assigned.igd / Entity-Relation Model
 
-![Diagram Assigned.igd /ER](Assigned.er.png)
+![Diagram Assigned.igd / Entity-Relation Model](Assigned.er.png)
 
-## Assigned.igd /KG
+## Assigned.igd / Knowledge Graph
 
-![Diagram Assigned.igd /KG](Assigned.kg.png)
-    *![Rich Text File](https://www.casetalk.com/images/icons/txt.png) Apprenticeship.rtf
+![Diagram Assigned.igd / Knowledge Graph](Assigned.kg.png)
+    * ![Rich Text File](https://www.casetalk.com/images/icons/txt.png) Apprenticeship.rtf
 
-    *![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_init.SQL
+    * ![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_init.SQL
 
-    *![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_create.SQL
+    * ![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_create.SQL
 
-    *![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_load.SQL
+    * ![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_load.SQL
 
-    *![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_protect.SQL
+    * ![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_protect.SQL
 
-    *![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_access.SQL
+    * ![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_access.SQL
 
-    *![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_noaccess.SQL
+    * ![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_noaccess.SQL
 
-    *![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_unload.SQL
+    * ![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_unload.SQL
 
-    *![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_drop.SQL
+    * ![Sql script](https://www.casetalk.com/images/icons/txt.png) apprenticeship_Postgresql_drop.SQL
 
-    *![Log file](https://www.casetalk.com/images/icons/log.png) apprenticeship_Postgresql.log
+    * ![Log file](https://www.casetalk.com/images/icons/log.png) apprenticeship_Postgresql.log
 
-    *![JSON File](https://www.casetalk.com/images/icons/json.png) apprenticeship_Postgresql.json
+    * ![JSON File](https://www.casetalk.com/images/icons/json.png) apprenticeship_Postgresql.json
 
-    *![Text File](https://www.casetalk.com/images/icons/txt.png) apprenticeship_OWL2.rdf
+    * ![Text File](https://www.casetalk.com/images/icons/txt.png) apprenticeship_OWL2.rdf
 
-  *![Text File](https://www.casetalk.com/images/icons/txt.png) apprenticeship.igd.html
+  * ![Text File](https://www.casetalk.com/images/icons/txt.png) apprenticeship.igd.html
 
-  *![PDF File](https://www.casetalk.com/images/icons/txt.png) apprenticeship.pdf
+  * ![PDF File](https://www.casetalk.com/images/icons/txt.png) apprenticeship.pdf
 
-  *![Text File](https://www.casetalk.com/images/icons/txt.png) Assigned.igd.html
+  * ![Text File](https://www.casetalk.com/images/icons/txt.png) Assigned.igd.html
 
