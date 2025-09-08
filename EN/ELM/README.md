@@ -12,28 +12,28 @@
 
 ## ELM Artifacts.igd / Fact Model
 
-![Diagram ELM Artifacts.igd / Fact Model](ELM+Artifacts.png)
+![Diagram ELM Artifacts.igd / Fact Model](ELM%20Artifacts.png)
 
 ## ELM Artifacts.igd / Logical Model
 
-![Diagram ELM Artifacts.igd / Logical Model](ELM+Artifacts.erd.png)
+![Diagram ELM Artifacts.igd / Logical Model](ELM%20Artifacts.erd.png)
 
 ## ELM Artifacts.igd / UML Classes
 
-![Diagram ELM Artifacts.igd / UML Classes](ELM+Artifacts.uml.png)
+![Diagram ELM Artifacts.igd / UML Classes](ELM%20Artifacts.uml.png)
 
 ## ELM Artifacts.igd / Concept Map
 
-![Diagram ELM Artifacts.igd / Concept Map](ELM+Artifacts.map.png)
+![Diagram ELM Artifacts.igd / Concept Map](ELM%20Artifacts.map.png)
 
 ## ELM Artifacts.igd / Object types
 
-![Diagram ELM Artifacts.igd / Object types](ELM+Artifacts.exp.png)
+![Diagram ELM Artifacts.igd / Object types](ELM%20Artifacts.exp.png)
 
 ## ELM Artifacts.igd / Entity-Relation Model
 
-![Diagram ELM Artifacts.igd / Entity-Relation Model](ELM+Artifacts.er.png)
+![Diagram ELM Artifacts.igd / Entity-Relation Model](ELM%20Artifacts.er.png)
 
 ## ELM Artifacts.igd / Knowledge Graph
 
-![Diagram ELM Artifacts.igd / Knowledge Graph](ELM+Artifacts.kg.png)
+![Diagram ELM Artifacts.igd / Knowledge Graph](ELM%20Artifacts.kg.png)
