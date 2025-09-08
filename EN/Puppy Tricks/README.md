@@ -1,23 +1,39 @@
 ﻿# ![CaseTalk Logo](https://www.casetalk.com/images/icons/casetalk.png) puppytricks.prj
-[Description]
-This model is loosely based upon the a poster used in the article by Thomas Frisendal.
-The article is here:
-https://www.dataversity.net/say-hello-to-graph-normal-form-gnf/#
-
-And the poster is about normalization. Though aged, containing
-*Project created with CaseTalk v13.0 Build 1.55377.*
+*Project created with CaseTalk v14.3 Build 1.57024.*
 
 * ![Project](https://www.casetalk.com/images/icons/prj.png) puppytricks.prj
+
   * ![Repository](https://www.casetalk.com/images/icons/ig.png) puppytricks.ig
+
     * ![Expression File](https://www.casetalk.com/images/icons/exp.png) puppytricks.exp
+
     * ![Diagram](https://www.casetalk.com/images/icons/igd.png) puppytricks.igd
-## puppytricks.igd
-![Diagram puppytricks.igd](puppytricks.png)
-## puppytricks.igd /ERD
-![Diagram puppytricks.igd /ERD](puppytricks.erd.png)
-## puppytricks.igd /UML
-![Diagram puppytricks.igd /UML](puppytricks.uml.png)
-## puppytricks.igd /MAP
-![Diagram puppytricks.igd /MAP](puppytricks.map.png)
-## puppytricks.igd /EXP
-![Diagram puppytricks.igd /EXP](puppytricks.exp.png)
+
+
+## puppytricks.igd / Fact Model
+
+![Diagram puppytricks.igd / Fact Model](puppytricks.png)
+
+## puppytricks.igd / Logical Model
+
+![Diagram puppytricks.igd / Logical Model](puppytricks.erd.png)
+
+## puppytricks.igd / UML Classes
+
+![Diagram puppytricks.igd / UML Classes](puppytricks.uml.png)
+
+## puppytricks.igd / Concept Map
+
+![Diagram puppytricks.igd / Concept Map](puppytricks.map.png)
+
+## puppytricks.igd / Object types
+
+![Diagram puppytricks.igd / Object types](puppytricks.exp.png)
+
+## puppytricks.igd / Entity-Relation Model
+
+![Diagram puppytricks.igd / Entity-Relation Model](puppytricks.er.png)
+
+## puppytricks.igd / Knowledge Graph
+
+![Diagram puppytricks.igd / Knowledge Graph](puppytricks.kg.png)
