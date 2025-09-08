@@ -1,19 +1,39 @@
 ﻿# ![CaseTalk Logo](https://www.casetalk.com/images/icons/casetalk.png) ELM Artifact.prj
-*Project created with CaseTalk v13.0 Build 1.55378.*
+*Project created with CaseTalk v14.3 Build 1.57024.*
 
 * ![Project](https://www.casetalk.com/images/icons/prj.png) ELM Artifact.prj
+
   * ![Repository](https://www.casetalk.com/images/icons/ig.png) elm artifact.ig
+
     * ![Spreadsheet File](https://www.casetalk.com/images/icons/unknown.png) CBC List and CBC Forms_v2021_example_v03_to_share.xls
+
     * ![Diagram](https://www.casetalk.com/images/icons/igd.png) ELM Artifacts.igd
 
-## ELM Artifacts.igd
- ![Diagram ELM Artifacts.igd](./ELM%20Artifacts.png)
 
-## ELM Artifacts.igd /UML
- ![Diagram ELM Artifacts.igd /UML](./ELM%20Artifacts.uml.png)
+## ELM Artifacts.igd / Fact Model
 
-## ELM Artifacts.igd /MAP
- ![Diagram ELM Artifacts.igd /MAP](./ELM%20Artifacts.map.png)
+![Diagram ELM Artifacts.igd / Fact Model](ELM+Artifacts.png)
 
-## ELM Artifacts.igd /EXP
- ![Diagram ELM Artifacts.igd /EXP](./ELM%20Artifacts.exp.png)
+## ELM Artifacts.igd / Logical Model
+
+![Diagram ELM Artifacts.igd / Logical Model](ELM+Artifacts.erd.png)
+
+## ELM Artifacts.igd / UML Classes
+
+![Diagram ELM Artifacts.igd / UML Classes](ELM+Artifacts.uml.png)
+
+## ELM Artifacts.igd / Concept Map
+
+![Diagram ELM Artifacts.igd / Concept Map](ELM+Artifacts.map.png)
+
+## ELM Artifacts.igd / Object types
+
+![Diagram ELM Artifacts.igd / Object types](ELM+Artifacts.exp.png)
+
+## ELM Artifacts.igd / Entity-Relation Model
+
+![Diagram ELM Artifacts.igd / Entity-Relation Model](ELM+Artifacts.er.png)
+
+## ELM Artifacts.igd / Knowledge Graph
+
+![Diagram ELM Artifacts.igd / Knowledge Graph](ELM+Artifacts.kg.png)
