@@ -1,63 +1,65 @@
 ﻿# ![CaseTalk Logo](https://www.casetalk.com/images/icons/casetalk.png) Vliegbelasting.prj
-*Project created with CaseTalk v14.0 Build 0.56609.*
+*Project created with CaseTalk v14.4 Build 0.57057.*
 
-*![Project](https://www.casetalk.com/images/icons/prj.png) Vliegbelasting.prj
+* ![Project](https://www.casetalk.com/images/icons/prj.png) Vliegbelasting.prj
 
-  *![Repository](https://www.casetalk.com/images/icons/ig.png) vliegbelasting.ig
+  * ![Repository](https://www.casetalk.com/images/icons/ig.png) vliegbelasting.ig
 
-    *![Expression File](https://www.casetalk.com/images/icons/exp.png) vliegbelasting.exp
+    * ![Expression File](https://www.casetalk.com/images/icons/exp.png) vliegbelasting.exp
 
-    *![Diagram](https://www.casetalk.com/images/icons/igd.png) vliegbelasting.igd
-
-
-## vliegbelasting.igd
-
-![Diagram vliegbelasting.igd](vliegbelasting.svg)
-
-## vliegbelasting.igd /ERD
-
-![Diagram vliegbelasting.igd /ERD](vliegbelasting.erd.png)
-
-## vliegbelasting.igd /UML
-
-![Diagram vliegbelasting.igd /UML](vliegbelasting.uml.png)
-
-## vliegbelasting.igd /MAP
-
-![Diagram vliegbelasting.igd /MAP](vliegbelasting.map.png)
-
-## vliegbelasting.igd /EXP
-
-![Diagram vliegbelasting.igd /EXP](vliegbelasting.exp.png)
-    *![Diagram](https://www.casetalk.com/images/icons/igd.png) vliegbelasting-otfts.igd
+    * ![Diagram](https://www.casetalk.com/images/icons/igd.png) vliegbelasting.igd
 
 
-## vliegbelasting-otfts.igd
+## vliegbelasting.igd / Fact Model
 
-![Diagram vliegbelasting-otfts.igd](vliegbelasting-otfts.png)
+![Diagram vliegbelasting.igd / Fact Model](vliegbelasting.png)
 
-## vliegbelasting-otfts.igd /ERD
+## vliegbelasting.igd / Logical Model
 
-![Diagram vliegbelasting-otfts.igd /ERD](vliegbelasting-otfts.erd.png)
+![Diagram vliegbelasting.igd / Logical Model](vliegbelasting.erd.png)
 
-## vliegbelasting-otfts.igd /UML
+## vliegbelasting.igd / UML Classes
 
-![Diagram vliegbelasting-otfts.igd /UML](vliegbelasting-otfts.uml.png)
+![Diagram vliegbelasting.igd / UML Classes](vliegbelasting.uml.png)
 
-## vliegbelasting-otfts.igd /MAP
+## vliegbelasting.igd / Concept Map
 
-![Diagram vliegbelasting-otfts.igd /MAP](vliegbelasting-otfts.map.png)
+![Diagram vliegbelasting.igd / Concept Map](vliegbelasting.map.png)
 
-## vliegbelasting-otfts.igd /EXP
+## vliegbelasting.igd / Object types
 
-![Diagram vliegbelasting-otfts.igd /EXP](vliegbelasting-otfts.exp.png)
-    *![Diagram](https://www.casetalk.com/images/icons/igd.png) Passagierstarief.igd
+![Diagram vliegbelasting.igd / Object types](vliegbelasting.exp.png)
+    * ![Diagram](https://www.casetalk.com/images/icons/igd.png) vliegbelasting-otfts.igd
 
 
-## Passagierstarief.igd
+## vliegbelasting-otfts.igd / Fact Model
 
-![Diagram Passagierstarief.igd](Passagierstarief.svg)
-  *![Text File](https://www.casetalk.com/images/icons/txt.png) BWBR0044580_2021-01-01_0.xml
+![Diagram vliegbelasting-otfts.igd / Fact Model](vliegbelasting-otfts.png)
 
-  *![Text File](https://www.casetalk.com/images/icons/txt.png) BWBR0007168_2024-01-01_0.xml
+## vliegbelasting-otfts.igd / Logical Model
+
+![Diagram vliegbelasting-otfts.igd / Logical Model](vliegbelasting-otfts.erd.png)
+
+## vliegbelasting-otfts.igd / UML Classes
+
+![Diagram vliegbelasting-otfts.igd / UML Classes](vliegbelasting-otfts.uml.png)
+
+## vliegbelasting-otfts.igd / Concept Map
+
+![Diagram vliegbelasting-otfts.igd / Concept Map](vliegbelasting-otfts.map.png)
+
+## vliegbelasting-otfts.igd / Object types
+
+![Diagram vliegbelasting-otfts.igd / Object types](vliegbelasting-otfts.exp.png)
+    * ![Diagram](https://www.casetalk.com/images/icons/igd.png) Passagierstarief.igd
+
+
+## Passagierstarief.igd / Fact Model
+
+![Diagram Passagierstarief.igd / Fact Model](Passagierstarief.png)
+  * ![Text File](https://www.casetalk.com/images/icons/txt.png) BWBR0044580_2021-01-01_0.xml
+
+  * ![Text File](https://www.casetalk.com/images/icons/txt.png) BWBR0007168_2024-01-01_0.xml
+
+  * ![HTML File](https://www.casetalk.com/images/icons/txt.png) vliegbelasting-otfts.igd.html
 
