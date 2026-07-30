@@ -1,0 +1,295 @@
+﻿# address Changelog
+
+### 2026-07-30 17:32 - Session (288 actions)
+
+- Add expression: Address
+- Add expression: Country
+- Add expression: Paradigm
+- Add expression: Location
+- Add expression: Script
+- Add expression: Rendering Purpose
+- Add expression: Address Country
+- Add expression: Address Paradigm
+- Add expression: Country Permitted Paradigm
+- Add expression: Address Location Designation
+- Add expression: Longitude Latitude
+- Add expression: Location Datum
+- Add expression: Location Coordinates
+- Add expression: Address Succession
+- Add expression: Rendering
+- Add expression: Rendering Line Position
+- Add expression: Rendering Line
+- Add expression: Admin Unit
+- Add expression: Admin Level Kind
+- Add expression: Landmark
+- Add expression: Registry
+- Add expression: Derivation Source
+- Add expression: Party
+- Add expression: Usage Kind
+- Add expression: Admin Unit Kind
+- Add expression: Admin Unit Containment
+- Add expression: Country Admin Level Depth
+- Add expression: Address Admin Unit
+- Add expression: Address Postal Place Name
+- Add expression: Address Landmark
+- Add expression: Address Landmark Qualification
+- Add expression: Landmark Bearing
+- Add expression: Address Landmark Distance
+- Add expression: Address Registry Key
+- Add expression: Address Registry Occasion
+- Add expression: Address Registry Check
+- Add expression: Address Verification Status
+- Add expression: Derivation Confidence
+- Add expression: Structuring
+- Add expression: Usage
+- Add expression: Usage Assertion
+- Add expression: Landmark Designation
+- Add expression: Thoroughfare Address
+- Add expression: Block Address
+- Add expression: Code Address
+- Add expression: Landmark Address
+- Add expression: Postbox Address
+- Add expression: Provisional Address
+- Add expression: NL Thoroughfare Address
+- Add expression: US Thoroughfare Address
+- Add expression: GB Thoroughfare Address
+- Add expression: ES Thoroughfare Address
+- Add expression: RU Thoroughfare Address
+- Add expression: BR Thoroughfare Address
+- Add expression: JP Block Address
+- Add expression: IE Code Address
+- Add expression: CR Landmark Address
+- Add expression: AU Provisional Address
+- Add expression: Address Cho
+- Add expression: Address Thoroughfare
+- Add expression: Address Thoroughfare Type
+- Add expression: Address Premise Number
+- Add expression: Address Premise Number Addition
+- Add expression: Address Premise Name
+- Add expression: Address Without Premise Number
+- Add expression: Address Dutch Postcode
+- Add expression: Address Primary Number
+- Add expression: Address Street Pre Directional
+- Add expression: Address Street Name
+- Add expression: Address Street Suffix
+- Add expression: Address Street Post Directional
+- Add expression: Address Secondary Designator
+- Add expression: Address Secondary Number
+- Add expression: Address State
+- Add expression: Address ZIP Code
+- Add expression: Address ZIP Add On
+- Add expression: Address Sub Building Name
+- Add expression: Address Building Name
+- Add expression: Address Dependent Locality
+- Add expression: Address Double Dependent Locality
+- Add expression: Address Post Town
+- Add expression: Address British Postcode
+- Add expression: Address Stair
+- Add expression: Address Floor
+- Add expression: Address Door
+- Add expression: Address Spanish Postal Code
+- Add expression: Address Korpus
+- Add expression: Address Stroenie
+- Add expression: Address Kvartira
+- Add expression: Address Complemento
+- Add expression: Address CEP
+- Add expression: Address Chome
+- Add expression: Address Banchi
+- Add expression: Address Go
+- Add expression: Address Japanese Building Name
+- Add expression: Address Japanese Floor
+- Add expression: Address Japanese Postal Code
+- Add expression: Eircode
+- Add expression: Address Eircode
+- Add expression: Address Routing Key
+- Add expression: Address Unique Identifier
+- Add expression: Address House Name
+- Add expression: Address Further Instruction
+- Add expression: Address Post Box Number
+- Add expression: Address Serving Post Office
+- Add expression: Address Lot Number
+- Add expression: Address Deposited Plan
+- Set OFType properties: Address
+- Set OFType properties: Address Paradigm
+- Set OFType properties: Address Succession
+- Set OFType properties: Landmark
+- Set OFType properties: Structuring
+- Set OFType properties: Usage
+- Set OFType properties: Rendering
+- Set OFType properties: Address Registry Occasion
+- Set OFType properties: Usage Assertion
+- Create UC 1
+- Create UC 2
+- Create UC 3
+- Create UC 4
+- Create UC 5
+- Create UC 6
+- Create UC 7
+- Create UC 8
+- Create UC 9
+- Create UC 10
+- Create UC 11
+- Create UC 12
+- Create UC 13
+- Create UC 14
+- Create UC 15
+- Create UC 16
+- Create UC 17
+- Create UC 18
+- Create UC 19
+- Create UC 20
+- Create UC 21
+- Create UC 22
+- Create UC 23
+- Create UC 24
+- Create UC 25
+- Create UC 26
+- Create UC 27
+- Create UC 28
+- Create UC 29
+- Create UC 30
+- Create UC 31
+- Create UC 32
+- Create UC 33
+- Create UC 34
+- Create UC 35
+- Create UC 36
+- Create UC 37
+- Create UC 38
+- Create UC 39
+- Create UC 40
+- Create UC 41
+- Create UC 42
+- Create UC 43
+- Create UC 44
+- Create UC 45
+- Create UC 46
+- Create UC 47
+- Create UC 48
+- Create UC 49
+- Create UC 50
+- Create UC 51
+- Create UC 52
+- Create UC 53
+- Create UC 54
+- Create UC 55
+- Create UC 56
+- Create UC 57
+- Create UC 58
+- Create UC 59
+- Create UC 60
+- Create UC 61
+- Create UC 62
+- Create UC 63
+- Create UC 64
+- Create UC 65
+- Create UC 66
+- Create UC 67
+- Create UC 68
+- Create UC 69
+- Create UC 70
+- Create UC 71
+- Create UC 72
+- Create UC 73
+- Create UC 74
+- Create UC 75
+- Create UC 76
+- Create UC 77
+- Create UC 78
+- Create UC 79
+- Create UC 80
+- Create UC 81
+- Create UC 82
+- Create UC 83
+- Create UC 84
+- Create UC 85
+- Create UC 86
+- Create UC 87
+- Create UC 88
+- Create UC 89
+- Create UC 90
+- Create UC 91
+- Create UC 92
+- Create UC 93
+- Create UC 94
+- Create UC 95
+- Create UC 96
+- Create UC 97
+- Create UC 98
+- Create UC 99
+- Create UC 100
+- Create UC 101
+- Create UC 102
+- Create UC 103
+- Create UC 104
+- Create UC 105
+- Create UC 106
+- Create UC 107
+- Create UC 108
+- Create UC 109
+- Create TC 1
+- Create TC 2
+- Create TC 3
+- Create TC 4
+- Create TC 5
+- Create TC 6
+- Create TC 7
+- Create TC 8
+- Create TC 9
+- Create TC 10
+- Create TC 11
+- Create TC 12
+- Create TC 13
+- Create TC 14
+- Create TC 15
+- Create TC 16
+- Create TC 17
+- Edit VC of Paradigm Code
+- Derivable Address Verification Status
+- Set note "Derivation" on Address Verification Status
+- Derivable Address Routing Key
+- Set note "Derivation" on Address Routing Key
+- Derivable Address Unique Identifier
+- Set note "Derivation" on Address Unique Identifier
+- Set OFType properties: Address
+- Set note "Definition" on Address
+- Set note "Definition" on Paradigm
+- Set note "Definition" on Location
+- Set note "Definition" on Rendering
+- Set note "Definition" on Usage
+- Set note "Definition" on Address Without Premise Number
+- Set note "Comment" on Address Postal Place Name
+- Set note "Comment" on Landmark
+- Set note "Comment" on JP Block Address
+- Set note "Comment" on Address Eircode
+- Set note "Comment" on Postbox Address
+- Set note "Comment" on AU Provisional Address
+- Set note "Comment" on Address Korpus
+- Set note "Comment" on Address Door
+- Set note "Comment" on Address Double Dependent Locality
+- Set note "Comment" on Address Street Pre Directional
+- Set note "Comment" on Address Registry Key
+- Set note "Comment" on Usage Assertion
+- Set note "Comment" on Structuring
+- Set note "Comment" on Address Paradigm
+- Set note "Comment" on Address Succession
+- Set note "Comment" on Rendering Line
+- Set note "Comment" on Admin Level Kind
+- Set note "Comment" on Address Landmark Qualification
+- Set note "Comment" on Address Code
+- Set note "Comment" on Dutch Postcode
+- Set note "Comment" on British Postcode
+- Set note "Comment" on Spanish Postal Code
+- Set note "Comment" on CEP
+- Set note "Comment" on Eircode
+- Set note "Comment" on Japanese Postal Code
+- Set note "Comment" on Address Premise Number Addition
+- Set note "Comment" on Address ZIP Add On
+- Set note "Comment" on Country Permitted Paradigm
+- Set note "Comment" on GB Thoroughfare Address
+- Set note "Comment" on CR Landmark Address
+- Set note "Comment" on Usage Kind
+- Set note "Comment" on Address Verification Status
+
+---
+

@@ -1,0 +1,2940 @@
+﻿{
+  "schema": {
+    "domains": [
+      {
+        "name": "Address Code",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "comment": "Value pattern /^A-[0-9]{4,}$/ - an opaque surrogate. Recorded as a note rather than a value constraint: CaseTalk value constraints enumerate values, ranges and state transitions, they do not hold regular expressions.",
+        "synclink": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}"
+      },
+      {
+        "name": "Admin Level Kind Code",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-0319-7441-B535-BFD8119B24B0}"
+      },
+      {
+        "name": "Admin Unit Code",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-02DD-756D-99EE-D530DD72EEAC}"
+      },
+      {
+        "name": "Banchi",
+        "datatype": "integer",
+        "quoted": false,
+        "localize": false,
+        "synclink": "{019FB3A7-1C77-7BEB-AD51-5900D1D12602}"
+      },
+      {
+        "name": "British Postcode",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "comment": "Mandatory for a GB thoroughfare address together with post town. Separate label type from the Dutch postcode because the formats and the identification semantics differ.",
+        "synclink": "{019FB3A7-17E4-70BC-A53C-D7158BFB66F8}"
+      },
+      {
+        "name": "Building Name",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-164B-798E-B456-36A92263F722}"
+      },
+      {
+        "name": "CEP",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "comment": "Value pattern /^[0-9]{5}-[0-9]{3}$/. Bairro is handled through Address Admin Unit with an Admin Level Kind of BAIRRO rather than its own role.",
+        "synclink": "{019FB3A7-1BA1-7A93-BECD-63F12FB70D71}"
+      },
+      {
+        "name": "Check Outcome",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-079A-769F-9C0B-0EBDF87A1C0F}"
+      },
+      {
+        "name": "Cho Name",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-0F25-7078-95D7-601B7DB9B7F0}"
+      },
+      {
+        "name": "Chome",
+        "datatype": "integer",
+        "quoted": false,
+        "localize": false,
+        "synclink": "{019FB3A7-1C0E-7A9A-A895-2FE3C6F97CE4}"
+      },
+      {
+        "name": "Complemento",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-1B35-7A8F-A09C-663A97B1EE2C}"
+      },
+      {
+        "name": "Confidence",
+        "datatype": "decimal",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-0834-77F9-9D9D-A7AE42CE31E0}"
+      },
+      {
+        "name": "Country Code",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A6-FA18-7FA1-8F3C-7302C688EB51}"
+      },
+      {
+        "name": "Datum",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A6-FC45-720E-9216-C654BF542D81}"
+      },
+      {
+        "name": "Dependent Locality",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-16AD-7176-BBE9-B93CB2F14732}"
+      },
+      {
+        "name": "Deposited Plan",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-22C2-7DBC-A452-2557877A7A59}"
+      },
+      {
+        "name": "Depth",
+        "datatype": "integer",
+        "quoted": false,
+        "localize": false,
+        "synclink": "{019FB3A7-051D-7C83-9D41-7CE68BB1D2CE}"
+      },
+      {
+        "name": "Derivation Source Code",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-03D2-7656-ABFD-7BB035F36035}"
+      },
+      {
+        "name": "Direction",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-066F-7B58-A808-5EF4B3A02202}"
+      },
+      {
+        "name": "Distance In Metres",
+        "datatype": "integer",
+        "quoted": false,
+        "localize": false,
+        "synclink": "{019FB3A7-066A-77EE-8AA1-536A4B732C18}"
+      },
+      {
+        "name": "Door",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-191A-7EDD-BBEB-A8763FA23234}"
+      },
+      {
+        "name": "Double Dependent Locality",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-1716-7D0C-8BAE-9351DB41E5CE}"
+      },
+      {
+        "name": "Dutch Postcode",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "comment": "Value pattern /^[1-9][0-9]{3}[A-Z]{2}$/. DR1/DR2: thoroughfare and administrative unit/place are CONSEQUENCES of postcode plus premise number, not independent facts - storing them as independent roles guarantees a reconciliation backlog that never empties. Composite identification (UC2) for a Dutch thoroughfare address is {postcode, premise number, premise number addition}: an identification spanning three fact types, which is not placeable as one intra-fact UC.",
+        "synclink": "{019FB3A7-11A7-780D-8D41-99B232D49374}"
+      },
+      {
+        "name": "Eircode Value",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-1E92-7BFC-B306-A7B4F4210A8D}"
+      },
+      {
+        "name": "Floor",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-18B9-7831-86A6-BD14270C617E}"
+      },
+      {
+        "name": "Further Instruction",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-20DE-7FDF-938B-405C70C3BD37}"
+      },
+      {
+        "name": "Go",
+        "datatype": "integer",
+        "quoted": false,
+        "localize": false,
+        "synclink": "{019FB3A7-1CE5-72BD-A9C4-5F52B03BACE2}"
+      },
+      {
+        "name": "House Name",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-205F-77E9-8339-3E109A3016C7}"
+      },
+      {
+        "name": "Japanese Building Name",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-1D50-75BB-B4DE-44342096FA49}"
+      },
+      {
+        "name": "Japanese Floor",
+        "datatype": "integer",
+        "quoted": false,
+        "localize": false,
+        "synclink": "{019FB3A7-1DBB-761D-9D66-734AA1875C43}"
+      },
+      {
+        "name": "Japanese Postal Code",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "comment": "Value pattern /^[0-9]{3}-[0-9]{4}$/.",
+        "synclink": "{019FB3A7-1E29-72B0-8C40-1BE07417562C}"
+      },
+      {
+        "name": "Korpus",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-19F6-789F-A634-1D0DF0E024BA}"
+      },
+      {
+        "name": "Kvartira",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-1AC3-7147-998C-DFAD3855AC02}"
+      },
+      {
+        "name": "Landmark Code",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-0355-73C9-B4B7-BC1F80C48A1E}"
+      },
+      {
+        "name": "Landmark Name",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-0975-7555-A147-697E629242C8}"
+      },
+      {
+        "name": "Landmark Qualifier",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-062D-71DA-87EE-3A8D673467A8}"
+      },
+      {
+        "name": "Latitude",
+        "datatype": "decimal",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A6-FC0B-7C43-86D8-4CD7AA46A40A}"
+      },
+      {
+        "name": "Line Number",
+        "datatype": "integer",
+        "quoted": false,
+        "localize": false,
+        "synclink": "{019FB3A7-025B-7B42-8BEE-C3D6C79401B2}"
+      },
+      {
+        "name": "Line Text",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-02A0-7F5D-9AF3-B9FE61C66AFF}"
+      },
+      {
+        "name": "Location Code",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A6-FA7E-7D2D-8B65-A8DE2DB8875C}"
+      },
+      {
+        "name": "Longitude",
+        "datatype": "decimal",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A6-FC08-747B-A415-2BAE5B0F303A}"
+      },
+      {
+        "name": "Lot Number",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-2250-7338-AF3A-C87B31EAB1AB}"
+      },
+      {
+        "name": "Paradigm Code",
+        "datatype": "string",
+        "valueconstraint": "BLOCK, CODE, LANDMARK, POSTBOX, PROVISIONAL, THOROUGHFARE",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A6-FA4B-76A7-9C27-58D0BFD5D61D}"
+      },
+      {
+        "name": "Party Code",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-0417-714D-A3E0-F3ACE625F797}"
+      },
+      {
+        "name": "Post Box Number",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-2159-7D76-ABDF-5007CFE9AD35}"
+      },
+      {
+        "name": "Post Directional",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-139B-775E-BDF4-E727D8C636A7}"
+      },
+      {
+        "name": "Post Office",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-21D2-7972-8A1A-FCF3230596BE}"
+      },
+      {
+        "name": "Post Town",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-1781-7CFB-A633-2C84E71C6A7E}"
+      },
+      {
+        "name": "Postal Place Name",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-05A1-7CF8-B280-08543F1FDE24}"
+      },
+      {
+        "name": "Pre Directional",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-1275-7270-974E-51F64CEB935C}"
+      },
+      {
+        "name": "Premise Name",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-10E7-7383-9573-F92354D522BE}"
+      },
+      {
+        "name": "Premise Number",
+        "datatype": "integer",
+        "quoted": false,
+        "localize": false,
+        "synclink": "{019FB3A7-1031-7E2C-A45E-B38211CC2CAC}"
+      },
+      {
+        "name": "Premise Number Addition",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-108C-76C9-8214-E0A1FDE9183C}"
+      },
+      {
+        "name": "Primary Number",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-1211-7C21-964D-1B892FC1640D}"
+      },
+      {
+        "name": "Registry Code",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-0393-7E7E-9616-034A1286EA49}"
+      },
+      {
+        "name": "Registry Key",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-06FD-7452-832F-752D0CD9108D}"
+      },
+      {
+        "name": "Rendering Purpose Code",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A6-FAED-73E7-8598-9D49C80E6CFE}"
+      },
+      {
+        "name": "Routing Key",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-1F82-7CFE-BC97-63B35B013114}"
+      },
+      {
+        "name": "Script Code",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A6-FAB4-77C8-972B-BF6AD4C6E6E7}"
+      },
+      {
+        "name": "Secondary Designator",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-13FC-7361-BF9B-BB64B37DA5C3}"
+      },
+      {
+        "name": "Secondary Number",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-145C-7083-A2CF-A583372A2F33}"
+      },
+      {
+        "name": "Spanish Postal Code",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "comment": "Value pattern /^[0-5][0-9]{4}$/. Composite identification (UC3) is {thoroughfare type, thoroughfare, premise number, stair, floor, door, municipality} - spanning several fact types, so not placeable as one intra-fact UC.",
+        "synclink": "{019FB3A7-1984-7250-ADA1-A81996634E20}"
+      },
+      {
+        "name": "Stair",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-1853-79EB-90F7-53D1BC8F5AB4}"
+      },
+      {
+        "name": "State Code",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-14BE-7AE5-9F3D-B2DA77F5181D}"
+      },
+      {
+        "name": "Street Name",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-12D5-7F4F-BA4F-B20C9B969445}"
+      },
+      {
+        "name": "Street Suffix",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-1335-76DE-8F3B-053C92D3E37F}"
+      },
+      {
+        "name": "Stroenie",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-1A5A-762F-A897-9E8FE7178875}"
+      },
+      {
+        "name": "Sub Building Name",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-15EA-7B56-87B1-ACA6C419C217}"
+      },
+      {
+        "name": "Thoroughfare Name",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-0F7F-7A31-8DDC-FAA3977FA5DF}"
+      },
+      {
+        "name": "Thoroughfare Type",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-0FD8-70DC-825E-AAE3FDC4A37B}"
+      },
+      {
+        "name": "Unique Identifier",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-1FF0-7D9B-A83D-3D964569A2BF}"
+      },
+      {
+        "name": "Usage Kind Code",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-0452-7C6A-864E-D3256F893C16}"
+      },
+      {
+        "name": "Verification Status",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-07E4-77E3-8160-8116896396C3}"
+      },
+      {
+        "name": "ZIP Add On",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-157D-794C-BF67-6B23E1BB84BB}"
+      },
+      {
+        "name": "ZIP Code",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{019FB3A7-1519-7C42-8ADC-C9424B2AAC7F}"
+      },
+      {
+        "name": "TemporalDateTime",
+        "datatype": "datetime",
+        "quoted": true,
+        "localize": false,
+        "comment": "Temporal timeline column",
+        "synclink": "{B4E1A0C2-9F3D-4A7E-8C1B-7A2E6D5F0C13}"
+      }
+    ],
+    "tables": [
+      {
+        "name": "Address",
+        "synclink": "{019FB3A6-F9D8-7BEC-B6B0-A9E845EB43F1}",
+        "temporal": "ValidTime",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "[Definition]\r\nA designation by which a location can be identified for delivery, legal or administrative purposes. Identified by an opaque surrogate (Address Code) - not a value, not a composite key, not a per-country type. Every real identification scheme in the world (postcode+number, Eircode, UPRN, chome/banchi/go) is a FACT ABOUT an address, not the address itself; making any of them the identifier imports one jurisdiction assumptions into the identity of the concept. What is universally true of an address is only this: it has an identity, it is in a country, it follows some addressing paradigm, and it can be rendered as an ordered sequence of lines.",
+        "verbalization": "[Expressions]\r\n  \" follows paradigm <Address Paradigm_Paradigm Code>Paradigm <Address Code>Address \"\r\n  \" designates <Address Location Designation_Location Code>Location <Address Code>Address \"\r\n  \" is located in <Address Country_Country Code>Country <Address Code>Address \"\r\n  \" superseded <Address Code>Address <PredecessorAddress_Address Code>Address \"\r\n  \" was produced by  with confidence <Structuring_Confidence><Structuring_Derivation Source Code>Derivation Source <Address Code>\"\r\n* \" has verification status <Address Verification Status><Address Code>\"\r\n  \" has postal place name <Address Postal Place Name><Address Code>Address \"\r\n[Rules]\r\n\"Population supports Valid Time\"\r\n\"<Address> is identified by <Address Code>\"\r\n\"<Address Code> in <Address> is a subset of <Address Code> in <Address>\"\r\n\"<Address Code> in <Address> is a subset of <Address Code> in <Rendering Line Position>\"\r\n",
+        "columns": [
+          {
+            "name": "Address Code",
+            "synclink": "{019FB3A6-F9DC-7EF4-84C6-F871BF745756}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Address Country_Country Code",
+            "synclink": "{019FB3A6-FB27-7EEE-A953-E573741CF9D2}",
+            "datatype": "string",
+            "domain": "{019FB3A6-FA18-7FA1-8F3C-7302C688EB51}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Address Paradigm_Paradigm Code",
+            "synclink": "{019FB3A6-FB5D-7F3E-B5AD-D47027D3D2B5}",
+            "datatype": "string",
+            "domain": "{019FB3A6-FA4B-76A7-9C27-58D0BFD5D61D}",
+            "mandatory": true,
+            "comment": "Which paradigm an address follows changes over time - the lot-to-street transition forced by the Australian population. The transition is NOT the destruction and recreation of the address, which would lose the continuity every downstream system needs; it is a new period of validity on the same address. Carried by the Valid Time flag on this fact type rather than by a date role, because the date only records when the assignment became true.",
+            "issubtype": false
+          },
+          {
+            "name": "Address Location Designation_Location Code",
+            "synclink": "{019FB3A6-FBD0-7AC0-8A63-654F18CD258C}",
+            "datatype": "string",
+            "domain": "{019FB3A6-FA7E-7D2D-8B65-A8DE2DB8875C}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "PredecessorAddress_Address Code",
+            "synclink": "{019FB3A6-FCBC-7F71-BA05-6B113E0691D5}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": false,
+            "comment": "Street renames, municipal mergers, lot-to-street transitions and country dissolutions are all the same shape, and together with the Valid Time flag on Address this carries the whole temporal burden. Acyclicity is required over the transitive closure. This is the piece to build first, because it is the only one that cannot be retrofitted.",
+            "issubtype": false
+          },
+          {
+            "name": "Address Postal Place Name",
+            "synclink": "{019FB3A7-05A1-762A-81AB-A954C24E9AC9}",
+            "datatype": "string",
+            "domain": "{019FB3A7-05A1-7CF8-B280-08543F1FDE24}",
+            "mandatory": false,
+            "comment": "Deliberately NOT the administrative unit. In the United States the USPS preferred city name is routinely not the incorporated municipality: an address may be postally Beverly Hills and municipally Los Angeles. Collapsing the two breaks tax jurisdiction and sales territory assignment in the same stroke, and the breakage stays invisible until an auditor finds it.",
+            "issubtype": false
+          },
+          {
+            "name": "Address Verification Status",
+            "synclink": "{019FB3A7-07E4-76F8-8B70-7CF764B7D11C}",
+            "datatype": "string",
+            "domain": "{019FB3A7-07E4-77E3-8160-8116896396C3}",
+            "mandatory": false,
+            "comment": "[Derivation]\r\nLatest outcome per Address from Address Registry Check, taking the instance with the maximal check date; UNVERIFIED where no check instance exists. Not stored: a boolean verified flag erodes in meaning, whereas an outcome plus its date can always be re-derived.\r\n[Comment]\r\nDerived, not stored. UNVERIFIED where no check instance exists. A large fraction of addresses in an international population can never be validated against any registry at all, so the absence of a check is itself information and must not be conflated with a failed check.",
+            "issubtype": false
+          },
+          {
+            "name": "Structuring_Derivation Source Code",
+            "synclink": "{019FB46B-0441-7FFA-9536-66AA7B5380AE}",
+            "datatype": "string",
+            "domain": "{019FB3A7-03D2-7656-ABFD-7BB035F36035}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Structuring_Confidence",
+            "synclink": "{019FB46B-0447-7E14-9AE4-AB57115F5A3E}",
+            "datatype": "decimal",
+            "domain": "{019FB3A7-0834-77F9-9D9D-A7AE42CE31E0}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "ValidStartTime",
+            "synclink": "{00000000-0000-0000-0000-000000000000}",
+            "datatype": "datetime",
+            "domain": "{B4E1A0C2-9F3D-4A7E-8C1B-7A2E6D5F0C13}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "ValidEndTime",
+            "synclink": "{00000000-0000-0000-0000-000000000000}",
+            "datatype": "datetime",
+            "domain": "{B4E1A0C2-9F3D-4A7E-8C1B-7A2E6D5F0C13}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0051-7C39-988D-9152537C59D9}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Address Code",
+                "ref": "{019FB3A6-F9DC-7EF4-84C6-F871BF745756}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Address_Address",
+            "synclink": "{00000000-0011-7DFA-84AB-B6F931769CE0}",
+            "fromtable": "{019FB3A6-F9D8-7BEC-B6B0-A9E845EB43F1}",
+            "totable": "{019FB3A6-F9D8-7BEC-B6B0-A9E845EB43F1}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "PredecessorAddress_Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          },
+          {
+            "name": "FK_Address_Rendering Line Position",
+            "synclink": "{00000000-0046-7B84-8357-5423AA668DB9}",
+            "fromtable": "{019FB3A6-F9D8-7BEC-B6B0-A9E845EB43F1}",
+            "totable": "{019FB3A7-0257-723F-8C2C-9598EED4E8C2}",
+            "issubset": true,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Address Code",
+                "tocolumn": "Rendering_Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Address Admin Unit",
+        "synclink": "{019FB3A7-0557-7612-8482-C5B98AE6F5DB}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" lies within <Admin Unit Code>Admin Unit <Address Code>Address \"\r\n[Rules]\r\n\"<Address Admin Unit> is identified by <Address Code> and <Admin Unit Code>\"\r\n\"<Address Code> in <Address Admin Unit> is a subset of <Address Code> in <Address>\"\r\n\"<Admin Unit Code> in <Address Admin Unit> is a subset of <Admin Unit Code> in <Admin Unit>\"\r\n",
+        "columns": [
+          {
+            "name": "Address Code",
+            "synclink": "{019FB3A7-055A-7E8F-B51C-B80A3AFD0200}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Admin Unit Code",
+            "synclink": "{019FB3A7-055D-76E7-884D-ADC742295D8F}",
+            "datatype": "string",
+            "domain": "{019FB3A7-02DD-756D-99EE-D530DD72EEAC}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-007A-71F3-9C0C-8498DDA2B12C}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Address Code",
+                "ref": "{019FB3A7-055A-7E8F-B51C-B80A3AFD0200}"
+              },
+              {
+                "name": "Admin Unit Code",
+                "ref": "{019FB3A7-055D-76E7-884D-ADC742295D8F}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Address Admin Unit_Address",
+            "synclink": "{00000000-001E-7E07-9342-CD2A3B4A765F}",
+            "fromtable": "{019FB3A7-0557-7612-8482-C5B98AE6F5DB}",
+            "totable": "{019FB3A6-F9D8-7BEC-B6B0-A9E845EB43F1}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          },
+          {
+            "name": "FK_Address Admin Unit_Admin Unit",
+            "synclink": "{00000000-001F-72D9-8FF5-CF34377050F3}",
+            "fromtable": "{019FB3A7-0557-7612-8482-C5B98AE6F5DB}",
+            "totable": "{019FB3A7-02DA-7E6B-AB44-A46BBFE8B411}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Admin Unit Code",
+                "tocolumn": "Admin Unit Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Address Landmark",
+        "synclink": "{019FB3A7-05E0-7A1F-861D-667F71EEB2ED}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" is qualified as <Address Landmark Qualification_Landmark Qualifier> relative to <Landmark Code>Landmark <Address Code>Address \"\r\n  \" lies  metres <Address Landmark Distance_Direction><Address Landmark Distance_Distance In Metres> relative to <Landmark Code>Landmark <Address Code>Address \"\r\n[Rules]\r\n\"<Address Landmark> is identified by <Address Code> and <Landmark Code>\"\r\n\"<Address Code> in <Address Landmark> is a subset of <Address Code> in <Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Address Code",
+            "synclink": "{019FB3A7-05E2-7E05-91D6-708023E90E59}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Landmark Code",
+            "synclink": "{019FB3A7-05E6-7666-92EB-80DC193ABC41}",
+            "datatype": "string",
+            "domain": "{019FB3A7-0355-73C9-B4B7-BC1F80C48A1E}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Address Landmark Qualification_Landmark Qualifier",
+            "synclink": "{019FB3A7-062D-776F-92DF-3B43D52D42C5}",
+            "datatype": "string",
+            "domain": "{019FB3A7-062D-71DA-87EE-3A8D673467A8}",
+            "mandatory": false,
+            "comment": "On the supertype, not inside the landmark subtype, because India uses landmarks as an optional SUPPLEMENT to a fully structured thoroughfare address rather than as a substitute for one. A landmark is therefore not a variant type of address; it is an optional fact that can attach to several.",
+            "issubtype": false
+          },
+          {
+            "name": "Address Landmark Distance_Distance In Metres",
+            "synclink": "{019FB46B-037D-7BDA-9305-DF5F44254897}",
+            "datatype": "integer",
+            "domain": "{019FB3A7-066A-77EE-8AA1-536A4B732C18}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address Landmark Distance_Direction",
+            "synclink": "{019FB46B-0383-70F2-95D5-ACE48A2E3F16}",
+            "datatype": "string",
+            "domain": "{019FB3A7-066F-7B58-A808-5EF4B3A02202}",
+            "mandatory": false,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-007C-7356-A0E7-0FDD45194B1A}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Address Code",
+                "ref": "{019FB3A7-05E2-7E05-91D6-708023E90E59}"
+              },
+              {
+                "name": "Landmark Code",
+                "ref": "{019FB3A7-05E6-7666-92EB-80DC193ABC41}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Address Landmark_Address",
+            "synclink": "{00000000-0020-7719-B728-420E4EE7DE91}",
+            "fromtable": "{019FB3A7-05E0-7A1F-861D-667F71EEB2ED}",
+            "totable": "{019FB3A6-F9D8-7BEC-B6B0-A9E845EB43F1}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Address Registry Key",
+        "synclink": "{019FB3A7-06F3-7F29-8ACC-8D0AB65C088C}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "One fact type per registry rather than a generic address-code role, because the identification semantics differ: a BAG nummeraanduiding identifies a designation, a UPRN identifies a property, an Eircode identifies a delivery point. They are not interchangeable values in one column.",
+        "verbalization": "[Expressions]\r\n  \" is registered in <Registry Code>Registry  under key <Registry Key><Address Code>Address \"\r\n[Rules]\r\n\"<Address Registry Key> is identified by <Address Code> and <Registry Code>\"\r\n\"The combination of <Registry Key> and <Registry Code> is unique\"\r\n\"<Address Code> in <Address Registry Key> is a subset of <Address Code> in <Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Address Code",
+            "synclink": "{019FB3A7-06F6-717A-9017-10085E153F0A}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Registry Code",
+            "synclink": "{019FB3A7-06FA-7B1F-8071-95FCFAA6C334}",
+            "datatype": "string",
+            "domain": "{019FB3A7-0393-7E7E-9616-034A1286EA49}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Registry Key",
+            "synclink": "{019FB3A7-06FD-78C8-A859-29C4EA865DD4}",
+            "datatype": "string",
+            "domain": "{019FB3A7-06FD-7452-832F-752D0CD9108D}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-007E-7F76-BF2F-DB83F73A6E79}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Address Code",
+                "ref": "{019FB3A7-06F6-717A-9017-10085E153F0A}"
+              },
+              {
+                "name": "Registry Code",
+                "ref": "{019FB3A7-06FA-7B1F-8071-95FCFAA6C334}"
+              }
+            ]
+          },
+          {
+            "name": "",
+            "synclink": "{00000000-007F-7BD3-A33E-1C33B81E107F}",
+            "primary": false,
+            "columns": [
+              {
+                "name": "Registry Key",
+                "ref": "{019FB3A7-06FD-78C8-A859-29C4EA865DD4}"
+              },
+              {
+                "name": "Registry Code",
+                "ref": "{019FB3A7-06FA-7B1F-8071-95FCFAA6C334}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Address Registry Key_Address",
+            "synclink": "{00000000-0024-7580-9A31-D28AA90839F4}",
+            "fromtable": "{019FB3A7-06F3-7F29-8ACC-8D0AB65C088C}",
+            "totable": "{019FB3A6-F9D8-7BEC-B6B0-A9E845EB43F1}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Address Registry Occasion",
+        "synclink": "{019FB3A7-073C-7187-816C-7C11942F4FD7}",
+        "temporal": "TransactionTime",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" had outcome <Address Registry Check_Check Outcome><Registry Code><Address Code>\"\r\n  \" against <Registry Code>Registry <Address Code>Address \"\r\n[Rules]\r\n\"Population supports Transaction Time\"\r\n\"<Address Registry Occasion> is identified by <Address Code> and <Registry Code>\"\r\n\"<Address Code> in <Address Registry Occasion> is a subset of <Address Code> in <Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Address Code",
+            "synclink": "{019FB3A7-073F-7158-AF69-61B17B275C4C}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Registry Code",
+            "synclink": "{019FB3A7-0743-7144-A40D-2190A5D5820B}",
+            "datatype": "string",
+            "domain": "{019FB3A7-0393-7E7E-9616-034A1286EA49}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Address Registry Check_Check Outcome",
+            "synclink": "{019FB3A7-079A-78AF-915E-356E4161C6B2}",
+            "datatype": "string",
+            "domain": "{019FB3A7-079A-769F-9C0B-0EBDF87A1C0F}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "TransactionStartTime",
+            "synclink": "{00000000-0000-0000-0000-000000000000}",
+            "datatype": "datetime",
+            "domain": "{B4E1A0C2-9F3D-4A7E-8C1B-7A2E6D5F0C13}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "TransactionEndTime",
+            "synclink": "{00000000-0000-0000-0000-000000000000}",
+            "datatype": "datetime",
+            "domain": "{B4E1A0C2-9F3D-4A7E-8C1B-7A2E6D5F0C13}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0081-7DAA-82B7-8C98E585249F}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Address Code",
+                "ref": "{019FB3A7-073F-7158-AF69-61B17B275C4C}"
+              },
+              {
+                "name": "Registry Code",
+                "ref": "{019FB3A7-0743-7144-A40D-2190A5D5820B}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Address Registry Occasion_Address",
+            "synclink": "{00000000-0026-7210-AEB2-6388A0BB01E1}",
+            "fromtable": "{019FB3A7-073C-7187-816C-7C11942F4FD7}",
+            "totable": "{019FB3A6-F9D8-7BEC-B6B0-A9E845EB43F1}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Address Without Premise Number",
+        "synclink": "{019FB3A7-113D-7331-AAFD-8776A99F3B94}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "[Definition]\r\nA positive assertion that this premise has been assigned NO number - Brazilian s/n, sem numero. Entirely different from \"we do not know the number\". A nullable column expresses neither and cannot tell them apart, and the distinction becomes unresolvable the moment a delivery exception is raised. Exclusive with Address Premise Number.",
+        "verbalization": "[Expressions]\r\n  \" has no assigned premise number<Thoroughfare Address_Address Code>\"\r\n[Rules]\r\n\"<Address Without Premise Number> is identified by <Address Code>\"\r\n\"<Address Without Premise Number> is a subset of <Address Code> in <Thoroughfare Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Thoroughfare Address_Address Code",
+            "synclink": "{019FB3A7-1140-74E2-B023-95EA22420E3A}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0099-7120-AFF0-7BCCE157C57C}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Thoroughfare Address_Address Code",
+                "ref": "{019FB3A7-1140-74E2-B023-95EA22420E3A}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Address Without Premise Number_Thoroughfare Address",
+            "synclink": "{00000000-0043-75C4-A29E-DC2CD9D0A75C}",
+            "fromtable": "{019FB3A7-113D-7331-AAFD-8776A99F3B94}",
+            "totable": "{019FB3A7-09BF-7091-A215-C09A5B2B9EFF}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Thoroughfare Address_Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Admin Unit",
+        "synclink": "{019FB3A7-02DA-7E6B-AB44-A46BBFE8B411}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" is of kind <Admin Unit Kind_Admin Level Kind Code>Admin Level Kind <Admin Unit Code>Admin Unit \"\r\n  \" lies within <ContainedAdmin Unit_Admin Unit Code>Admin Unit <Admin Unit Code>Admin Unit \"\r\n[Rules]\r\n\"<Admin Unit> is identified by <Admin Unit Code>\"\r\n\"<Admin Unit Code> in <Admin Unit> is a subset of <Admin Unit Code> in <Admin Unit>\"\r\n",
+        "columns": [
+          {
+            "name": "Admin Unit Code",
+            "synclink": "{019FB3A7-02DD-7175-BC65-6E1FFE34AED9}",
+            "datatype": "string",
+            "domain": "{019FB3A7-02DD-756D-99EE-D530DD72EEAC}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Admin Unit Kind_Admin Level Kind Code",
+            "synclink": "{019FB3A7-0492-7F9F-B7DF-AF229023B897}",
+            "datatype": "string",
+            "domain": "{019FB3A7-0319-7441-B535-BFD8119B24B0}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "ContainedAdmin Unit_Admin Unit Code",
+            "synclink": "{019FB3A7-04D7-72F7-9D1A-34357A7E3329}",
+            "datatype": "string",
+            "domain": "{019FB3A7-02DD-756D-99EE-D530DD72EEAC}",
+            "mandatory": false,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0057-7B0F-9F71-5C0F02228198}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Admin Unit Code",
+                "ref": "{019FB3A7-02DD-7175-BC65-6E1FFE34AED9}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Admin Unit_Admin Unit",
+            "synclink": "{00000000-001B-78C4-8263-A78BB44D39FD}",
+            "fromtable": "{019FB3A7-02DA-7E6B-AB44-A46BBFE8B411}",
+            "totable": "{019FB3A7-02DA-7E6B-AB44-A46BBFE8B411}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "ContainedAdmin Unit_Admin Unit Code",
+                "tocolumn": "Admin Unit Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "AU Provisional Address",
+        "synclink": "{019FB3A7-0EAD-7D8C-B1FE-FC90B832C721}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "A property under development carries a lot number and a deposited plan, and becomes a thoroughfare address when the council assigns one - a change of addressing paradigm for an unchanged parcel of land. Succession is recorded through Address Paradigm and Address Succession, never by mutation: the lot address remains in the population because contracts of sale reference it.",
+        "verbalization": "[Expressions]\r\n  \" has lot number <Address Lot Number><Provisional Address_Address Code>\"\r\n  \" is in deposited plan <Address Deposited Plan><Provisional Address_Address Code>\"\r\n  \" is located in Australia<Provisional Address_Address Code>\"\r\n[Rules]\r\n\"<AU Provisional Address> is identified by <Address Code>\"\r\n\"<Address Code> in <AU Provisional Address> is a subset of <Provisional Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Provisional Address_Address Code",
+            "synclink": "{019FB3A7-0EB0-7412-AF0F-207829D8C766}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": true
+          },
+          {
+            "name": "Address Lot Number",
+            "synclink": "{019FB3A7-2250-7C7D-81F2-6C573E435AFD}",
+            "datatype": "string",
+            "domain": "{019FB3A7-2250-7338-AF3A-C87B31EAB1AB}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Address Deposited Plan",
+            "synclink": "{019FB3A7-22C2-7A82-A192-417CFADED008}",
+            "datatype": "string",
+            "domain": "{019FB3A7-22C2-7DBC-A452-2557877A7A59}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0098-7A80-B9E0-BE4CE722371E}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Provisional Address_Address Code",
+                "ref": "{019FB3A7-0EB0-7412-AF0F-207829D8C766}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_AU Provisional Address_Provisional Address",
+            "synclink": "{00000000-0042-762A-A380-37488793C81F}",
+            "fromtable": "{019FB3A7-0EAD-7D8C-B1FE-FC90B832C721}",
+            "totable": "{019FB3A7-0B42-7F0B-9777-6DB9DAFB044A}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Provisional Address_Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Block Address",
+        "synclink": "{019FB3A7-0A07-7D06-B63A-955BFD81D67E}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" follows the block paradigm<Address Code>\"\r\n[Rules]\r\n\"<Block Address> is identified by <Address Code>\"\r\n\"<Block Address> is a subset of <Address Code> in <Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Address Code",
+            "synclink": "{019FB3A7-0A0A-7527-A3C7-D3C20F90DCA1}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": true
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-008A-72D9-893C-E4F416CD222C}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Address Code",
+                "ref": "{019FB3A7-0A0A-7527-A3C7-D3C20F90DCA1}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Block Address_Address",
+            "synclink": "{00000000-0034-772F-B999-AAB60B2CF1CC}",
+            "fromtable": "{019FB3A7-0A07-7D06-B63A-955BFD81D67E}",
+            "totable": "{019FB3A6-F9D8-7BEC-B6B0-A9E845EB43F1}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "BR Thoroughfare Address",
+        "synclink": "{019FB3A7-0D31-7B6F-8F7C-3079B41B9C67}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" has complemento <Address Complemento><Thoroughfare Address_Address Code>\"\r\n  \" has CEP <Address CEP><Thoroughfare Address_Address Code>\"\r\n  \" is located in Brazil<Thoroughfare Address_Address Code>\"\r\n[Rules]\r\n\"<BR Thoroughfare Address> is identified by <Address Code>\"\r\n\"<Address Code> in <BR Thoroughfare Address> is a subset of <Address Code> in <Thoroughfare Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Thoroughfare Address_Address Code",
+            "synclink": "{019FB3A7-0D34-76D6-A5A1-2A105663588D}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": true
+          },
+          {
+            "name": "Address Complemento",
+            "synclink": "{019FB3A7-1B35-7D5B-AD5B-61B4C6D7E9B7}",
+            "datatype": "string",
+            "domain": "{019FB3A7-1B35-7A8F-A09C-663A97B1EE2C}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address CEP",
+            "synclink": "{019FB3A7-1BA1-7BE8-9060-768D7BD43CC5}",
+            "datatype": "string",
+            "domain": "{019FB3A7-1BA1-7A93-BECD-63F12FB70D71}",
+            "mandatory": false,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0094-7AD4-8519-27E7FE2AFC9B}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Thoroughfare Address_Address Code",
+                "ref": "{019FB3A7-0D34-76D6-A5A1-2A105663588D}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_BR Thoroughfare Address_Thoroughfare Address",
+            "synclink": "{00000000-003E-75CF-AC6C-36D57CC750CD}",
+            "fromtable": "{019FB3A7-0D31-7B6F-8F7C-3079B41B9C67}",
+            "totable": "{019FB3A7-09BF-7091-A215-C09A5B2B9EFF}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Thoroughfare Address_Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Code Address",
+        "synclink": "{019FB3A7-0A52-77EF-9C19-8F4574EB6023}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" follows the code paradigm<Address Code>\"\r\n[Rules]\r\n\"<Code Address> is identified by <Address Code>\"\r\n\"<Code Address> is a subset of <Address Code> in <Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Address Code",
+            "synclink": "{019FB3A7-0A55-7D3A-9F76-E3AC53FFB8F0}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": true
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-008B-7773-AD59-8CCD4CB3D73A}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Address Code",
+                "ref": "{019FB3A7-0A55-7D3A-9F76-E3AC53FFB8F0}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Code Address_Address",
+            "synclink": "{00000000-0035-794D-B923-D4E8182E4F5E}",
+            "fromtable": "{019FB3A7-0A52-77EF-9C19-8F4574EB6023}",
+            "totable": "{019FB3A6-F9D8-7BEC-B6B0-A9E845EB43F1}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Country Admin Level Depth",
+        "synclink": "{019FB3A7-0513-77FD-999D-97BCF5788D2F}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" uses <Admin Level Kind Code>Admin Level Kind  at depth <Depth><Country Code>Country \"\r\n[Rules]\r\n\"<Country Admin Level Depth> is identified by <Country Code>, <Depth> and <Admin Level Kind Code>\"\r\n",
+        "columns": [
+          {
+            "name": "Country Code",
+            "synclink": "{019FB3A7-0516-7271-B8F2-29B48B618E98}",
+            "datatype": "string",
+            "domain": "{019FB3A6-FA18-7FA1-8F3C-7302C688EB51}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Admin Level Kind Code",
+            "synclink": "{019FB3A7-051A-787A-BC76-7D090D595A02}",
+            "datatype": "string",
+            "domain": "{019FB3A7-0319-7441-B535-BFD8119B24B0}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Depth",
+            "synclink": "{019FB3A7-051D-7488-B49F-36D91CD7F1F1}",
+            "datatype": "integer",
+            "domain": "{019FB3A7-051D-7C83-9D41-7CE68BB1D2CE}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0078-773D-82D4-88A1129EE81D}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Country Code",
+                "ref": "{019FB3A7-0516-7271-B8F2-29B48B618E98}"
+              },
+              {
+                "name": "Depth",
+                "ref": "{019FB3A7-051D-7488-B49F-36D91CD7F1F1}"
+              },
+              {
+                "name": "Admin Level Kind Code",
+                "ref": "{019FB3A7-051A-787A-BC76-7D090D595A02}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+        ]
+      },
+      {
+        "name": "Country Permitted Paradigm",
+        "synclink": "{019FB3A6-FB93-71C3-BE1B-2424144F6BE5}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "SC1: an address may not follow a paradigm its country does not permit - the projection on (country, paradigm) of Address Country joined with Address Paradigm must be a subset of this fact type. Recorded as a note; subset constraints are not placeable through the MCP interface yet.",
+        "verbalization": "[Expressions]\r\n  \" permits paradigm <Paradigm Code>Paradigm <Country Code>Country \"\r\n[Rules]\r\n\"<Country Permitted Paradigm> is identified by <Country Code> and <Paradigm Code>\"\r\n",
+        "columns": [
+          {
+            "name": "Country Code",
+            "synclink": "{019FB3A6-FB96-721F-9322-13F85F13DC08}",
+            "datatype": "string",
+            "domain": "{019FB3A6-FA18-7FA1-8F3C-7302C688EB51}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Paradigm Code",
+            "synclink": "{019FB3A6-FB9A-7B4A-82C2-1890512097C5}",
+            "datatype": "string",
+            "domain": "{019FB3A6-FA4B-76A7-9C27-58D0BFD5D61D}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-006F-7F3B-B86A-F1C3958936B4}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Country Code",
+                "ref": "{019FB3A6-FB96-721F-9322-13F85F13DC08}"
+              },
+              {
+                "name": "Paradigm Code",
+                "ref": "{019FB3A6-FB9A-7B4A-82C2-1890512097C5}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+        ]
+      },
+      {
+        "name": "CR Landmark Address",
+        "synclink": "{019FB3A7-0E4B-764E-9761-090001EF05DC}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "Identity here is relative and depends on another object lifecycle. There is no postal code role and no premise number role; the nearest thing to a stable identifier is the landmark, and the landmark can be cut down. At least one of Address Landmark Qualification or Address Landmark Distance is required - but those roles are played by Address (the supertype, deliberately, per the India argument), so the requirement cannot be scoped to this subtype as a set constraint and is recorded here.",
+        "verbalization": "[Expressions]\r\n  \" has further instruction <Address Further Instruction><Landmark Address_Address Code>\"\r\n  \" is located in Costa Rica<Landmark Address_Address Code>\"\r\n[Rules]\r\n\"<CR Landmark Address> is identified by <Address Code>\"\r\n\"<Address Code> in <CR Landmark Address> is a subset of <Landmark Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Landmark Address_Address Code",
+            "synclink": "{019FB3A7-0E4E-7D95-98FC-55CB5DC01120}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": true
+          },
+          {
+            "name": "Address Further Instruction",
+            "synclink": "{019FB3A7-20DE-7B68-8DFE-50749E37B097}",
+            "datatype": "string",
+            "domain": "{019FB3A7-20DE-7FDF-938B-405C70C3BD37}",
+            "mandatory": false,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0097-7E96-BAB3-0026933BBD4D}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Landmark Address_Address Code",
+                "ref": "{019FB3A7-0E4E-7D95-98FC-55CB5DC01120}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_CR Landmark Address_Landmark Address",
+            "synclink": "{00000000-0041-7972-A6D9-7218D60ABC84}",
+            "fromtable": "{019FB3A7-0E4B-764E-9761-090001EF05DC}",
+            "totable": "{019FB3A7-0AA0-7E44-B0B2-96E395B5E047}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Landmark Address_Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ES Thoroughfare Address",
+        "synclink": "{019FB3A7-0C8D-73DC-9225-61782028774D}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" has postal code <Address Spanish Postal Code><Thoroughfare Address_Address Code>\"\r\n  \" is on floor <Address Floor><Thoroughfare Address_Address Code>\"\r\n  \" has door <Address Door><Thoroughfare Address_Address Code>\"\r\n  \" has stair <Address Stair><Thoroughfare Address_Address Code>\"\r\n  \" is located in Spain<Thoroughfare Address_Address Code>\"\r\n[Rules]\r\n\"<ES Thoroughfare Address> is identified by <Address Code>\"\r\n\"<Address Code> in <ES Thoroughfare Address> is a subset of <Address Code> in <Thoroughfare Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Thoroughfare Address_Address Code",
+            "synclink": "{019FB3A7-0C90-7FC2-84F0-5D83BB9E5357}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": true
+          },
+          {
+            "name": "Address Stair",
+            "synclink": "{019FB3A7-1853-789B-B680-6F420B58EB4A}",
+            "datatype": "string",
+            "domain": "{019FB3A7-1853-79EB-90F7-53D1BC8F5AB4}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address Floor",
+            "synclink": "{019FB3A7-18B9-78BD-9A40-5A75EFC34EAE}",
+            "datatype": "string",
+            "domain": "{019FB3A7-18B9-7831-86A6-BD14270C617E}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address Door",
+            "synclink": "{019FB3A7-191A-7E5B-8F0A-1430BDD5F359}",
+            "datatype": "string",
+            "domain": "{019FB3A7-191A-7EDD-BBEB-A8763FA23234}",
+            "mandatory": false,
+            "comment": "The vertical component participates in identity. Two Spanish addresses differing only in door are as distinct as two differing in house number, so floor and door cannot be relegated to an unstructured \"unit\" line without losing uniqueness - and that is exactly the reflex of models built in countries with mostly-detached housing.",
+            "issubtype": false
+          },
+          {
+            "name": "Address Spanish Postal Code",
+            "synclink": "{019FB3A7-1984-756F-A51F-F7109623B413}",
+            "datatype": "string",
+            "domain": "{019FB3A7-1984-7250-ADA1-A81996634E20}",
+            "mandatory": false,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0092-7955-885C-710D8ABE2941}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Thoroughfare Address_Address Code",
+                "ref": "{019FB3A7-0C90-7FC2-84F0-5D83BB9E5357}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_ES Thoroughfare Address_Thoroughfare Address",
+            "synclink": "{00000000-003C-7116-8A0E-F8E670E67A2C}",
+            "fromtable": "{019FB3A7-0C8D-73DC-9225-61782028774D}",
+            "totable": "{019FB3A7-09BF-7091-A215-C09A5B2B9EFF}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Thoroughfare Address_Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "GB Thoroughfare Address",
+        "synclink": "{019FB3A7-0C3B-78DC-8FDA-4ABF9C4F17C4}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "Number or building name, at least one: \"Rose Cottage, Nether Poppleton, York\" is a complete, deliverable, unambiguous address containing no number whatsoever. That disjunction spans two object types - Address Premise Number is played by Thoroughfare Address while Address Building Name is played by this subtype - so it cannot be expressed as one set constraint and is recorded here. Post town and postcode are both mandatory.",
+        "verbalization": "[Expressions]\r\n  \" is in dependent locality <Address Dependent Locality><Thoroughfare Address_Address Code>\"\r\n  \" has building name <Address Building Name><Thoroughfare Address_Address Code>\"\r\n  \" has postcode <Address British Postcode><Thoroughfare Address_Address Code>\"\r\n  \" has post town <Address Post Town><Thoroughfare Address_Address Code>\"\r\n  \" has subbuilding name <Address Sub Building Name><Thoroughfare Address_Address Code>\"\r\n  \" is in double dependent locality <Address Double Dependent Locality><Thoroughfare Address_Address Code>\"\r\n  \" is located in the United Kingdom<Thoroughfare Address_Address Code>\"\r\n[Rules]\r\n\"<GB Thoroughfare Address> is identified by <Address Code>\"\r\n\"<Address Code> in <GB Thoroughfare Address> is a subset of <Address Code> in <Thoroughfare Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Thoroughfare Address_Address Code",
+            "synclink": "{019FB3A7-0C3E-7F39-8FC6-E25107FFFA80}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": true
+          },
+          {
+            "name": "Address Sub Building Name",
+            "synclink": "{019FB3A7-15EA-7D45-83BE-D2CA98C0B038}",
+            "datatype": "string",
+            "domain": "{019FB3A7-15EA-7B56-87B1-ACA6C419C217}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address Building Name",
+            "synclink": "{019FB3A7-164B-79AC-AE42-999B1C614402}",
+            "datatype": "string",
+            "domain": "{019FB3A7-164B-798E-B456-36A92263F722}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address Dependent Locality",
+            "synclink": "{019FB3A7-16AD-71A1-94F2-D37438BA4F77}",
+            "datatype": "string",
+            "domain": "{019FB3A7-16AD-7176-BBE9-B93CB2F14732}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address Double Dependent Locality",
+            "synclink": "{019FB3A7-1716-7CDE-991F-22653E8DDE6C}",
+            "datatype": "string",
+            "domain": "{019FB3A7-1716-7D0C-8BAE-9351DB41E5CE}",
+            "mandatory": false,
+            "comment": "Two independent levels of dependent locality exist in the UK and both are needed to disambiguate rural populations; most models allow one. Presupposes a dependent locality.",
+            "issubtype": false
+          },
+          {
+            "name": "Address Post Town",
+            "synclink": "{019FB3A7-1781-72DC-9C59-D66CFE4D82D7}",
+            "datatype": "string",
+            "domain": "{019FB3A7-1781-7CFB-A633-2C84E71C6A7E}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Address British Postcode",
+            "synclink": "{019FB3A7-17E4-7E02-87C8-20152A1660F6}",
+            "datatype": "string",
+            "domain": "{019FB3A7-17E4-70BC-A53C-D7158BFB66F8}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0091-75B6-BC2F-B8023E2BC56F}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Thoroughfare Address_Address Code",
+                "ref": "{019FB3A7-0C3E-7F39-8FC6-E25107FFFA80}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_GB Thoroughfare Address_Thoroughfare Address",
+            "synclink": "{00000000-003B-7138-9D1A-FD47A1B2CC6A}",
+            "fromtable": "{019FB3A7-0C3B-78DC-8FDA-4ABF9C4F17C4}",
+            "totable": "{019FB3A7-09BF-7091-A215-C09A5B2B9EFF}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Thoroughfare Address_Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "IE Code Address",
+        "synclink": "{019FB3A7-0DE9-7839-8179-93FF78829F0A}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n* \" has routing key <Address Routing Key><Code Address_Address Code>\"\r\n  \" has house name <Address House Name><Code Address_Address Code>\"\r\n  \" has Eircode <Address Eircode_Eircode Value>Eircode <Code Address_Address Code>\"\r\n* \" has unique identifier <Address Unique Identifier><Code Address_Address Code>\"\r\n  \" is located in Ireland<Code Address_Address Code>\"\r\n[Rules]\r\n\"<IE Code Address> is identified by <Address Code>\"\r\n\"Each <Eircode Value> is related to at most one <IE Code Address>\"\r\n\"<Address Code> in <IE Code Address> is a subset of <Code Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Code Address_Address Code",
+            "synclink": "{019FB3A7-0DEC-71A8-9509-6B3F8770B8E9}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": true
+          },
+          {
+            "name": "Address Eircode_Eircode Value",
+            "synclink": "{019FB3A7-1F0A-76EB-8FB4-62EC624CF057}",
+            "datatype": "string",
+            "domain": "{019FB3A7-1E92-7BFC-B306-A7B4F4210A8D}",
+            "mandatory": true,
+            "comment": "The identifier portion is deliberately non-geographic and unordered: neighbouring dwellings share nothing beyond the routing key. Nothing below the routing key is derivable from the code, and the code is derivable from nothing else. Before Eircode the descriptive facts genuinely did not identify - dozens of dwellings in one townland shared identical address text. That historical population is worth keeping as a live example of a designation that fails to designate.",
+            "issubtype": false
+          },
+          {
+            "name": "Address Routing Key",
+            "synclink": "{019FB3A7-1F82-78B8-8BA1-3A0513435B93}",
+            "datatype": "string",
+            "domain": "{019FB3A7-1F82-7CFE-BC97-63B35B013114}",
+            "mandatory": false,
+            "comment": "[Derivation]\r\nFirst three characters of the Eircode. The routing key is the only part of an Eircode that carries geography.",
+            "issubtype": false
+          },
+          {
+            "name": "Address Unique Identifier",
+            "synclink": "{019FB3A7-1FF0-744F-909D-B0B3767C7E78}",
+            "datatype": "string",
+            "domain": "{019FB3A7-1FF0-7D9B-A83D-3D964569A2BF}",
+            "mandatory": false,
+            "comment": "[Derivation]\r\nLast four characters of the Eircode. Deliberately non-geographic and unordered - neighbouring dwellings share nothing beyond the routing key.",
+            "issubtype": false
+          },
+          {
+            "name": "Address House Name",
+            "synclink": "{019FB3A7-205F-7506-AD70-B85DC28E44F2}",
+            "datatype": "string",
+            "domain": "{019FB3A7-205F-77E9-8339-3E109A3016C7}",
+            "mandatory": false,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0096-7B37-A9CB-3CB8CF806070}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Code Address_Address Code",
+                "ref": "{019FB3A7-0DEC-71A8-9509-6B3F8770B8E9}"
+              }
+            ]
+          },
+          {
+            "name": "",
+            "synclink": "{00000000-009A-77A9-B545-2849312FFA89}",
+            "primary": false,
+            "columns": [
+              {
+                "name": "Address Eircode_Eircode Value",
+                "ref": "{019FB3A7-1F0A-76EB-8FB4-62EC624CF057}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_IE Code Address_Code Address",
+            "synclink": "{00000000-0040-70B9-A5D7-465B2ECBF932}",
+            "fromtable": "{019FB3A7-0DE9-7839-8179-93FF78829F0A}",
+            "totable": "{019FB3A7-0A52-77EF-9C19-8F4574EB6023}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Code Address_Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "JP Block Address",
+        "synclink": "{019FB3A7-0D88-703E-9710-BD82213C0BD4}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "Address Thoroughfare is not optional here, it is INAPPLICABLE. Numbering proceeds by block within a named area, and in older districts numbering within a block follows registration order rather than geography, so adjacency in the data implies nothing about adjacency in the world; most Japanese streets have no name at all. This single population is the clearest justification for subtyping over one wide optional type - a wide type would carry a street role that can never be truthfully filled for tens of millions of addresses. Large buildings hold their own postal code, sometimes floor-specific, which is why the postal code attaches to the address rather than deriving from the admin unit.",
+        "verbalization": "[Expressions]\r\n  \" has chome <Address Chome><Block Address_Address Code>\"\r\n  \" is in cho <Address Cho_Cho Name><Block Address_Address Code>\"\r\n  \" has banchi <Address Banchi><Block Address_Address Code>\"\r\n  \" has building name <Address Japanese Building Name><Block Address_Address Code>\"\r\n  \" has postal code <Address Japanese Postal Code><Block Address_Address Code>\"\r\n  \" is on floor <Address Japanese Floor><Block Address_Address Code>\"\r\n  \" has go <Address Go><Block Address_Address Code>\"\r\n  \" is located in Japan<Block Address_Address Code>\"\r\n[Rules]\r\n\"<JP Block Address> is identified by <Address Code>\"\r\n\"<Address Code> in <JP Block Address> is a subset of <Block Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Block Address_Address Code",
+            "synclink": "{019FB3A7-0D8B-7888-AC2C-5045211AAA16}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": true
+          },
+          {
+            "name": "Address Cho_Cho Name",
+            "synclink": "{019FB3A7-0F25-765D-AAFA-4379594D15EE}",
+            "datatype": "string",
+            "domain": "{019FB3A7-0F25-7078-95D7-601B7DB9B7F0}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Address Chome",
+            "synclink": "{019FB3A7-1C0E-7034-A995-B290A1A74043}",
+            "datatype": "integer",
+            "domain": "{019FB3A7-1C0E-7A9A-A895-2FE3C6F97CE4}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Address Banchi",
+            "synclink": "{019FB3A7-1C77-73DD-8394-EF9DB0DF2F3E}",
+            "datatype": "integer",
+            "domain": "{019FB3A7-1C77-7BEB-AD51-5900D1D12602}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Address Go",
+            "synclink": "{019FB3A7-1CE5-7C48-BFCD-8690802618D8}",
+            "datatype": "integer",
+            "domain": "{019FB3A7-1CE5-72BD-A9C4-5F52B03BACE2}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address Japanese Building Name",
+            "synclink": "{019FB3A7-1D50-7786-BE87-4DF48F58E5F4}",
+            "datatype": "string",
+            "domain": "{019FB3A7-1D50-75BB-B4DE-44342096FA49}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address Japanese Floor",
+            "synclink": "{019FB3A7-1DBB-7316-8FE8-066935A0EF09}",
+            "datatype": "integer",
+            "domain": "{019FB3A7-1DBB-761D-9D66-734AA1875C43}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address Japanese Postal Code",
+            "synclink": "{019FB3A7-1E29-7791-9D19-853FEC4DCB3F}",
+            "datatype": "string",
+            "domain": "{019FB3A7-1E29-72B0-8C40-1BE07417562C}",
+            "mandatory": false,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0095-7C69-B474-A79E435D6278}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Block Address_Address Code",
+                "ref": "{019FB3A7-0D8B-7888-AC2C-5045211AAA16}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_JP Block Address_Block Address",
+            "synclink": "{00000000-003F-7D40-AB5A-4D44DD036442}",
+            "fromtable": "{019FB3A7-0D88-703E-9710-BD82213C0BD4}",
+            "totable": "{019FB3A7-0A07-7D06-B63A-955BFD81D67E}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Block Address_Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Landmark Address",
+        "synclink": "{019FB3A7-0AA0-7E44-B0B2-96E395B5E047}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" follows the landmark paradigm<Address Code>\"\r\n[Rules]\r\n\"<Landmark Address> is identified by <Address Code>\"\r\n\"<Landmark Address> is a subset of <Address Code> in <Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Address Code",
+            "synclink": "{019FB3A7-0AA3-79E3-B711-55B38E9114B2}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": true
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-008C-77BC-8403-FACA3FE56AA2}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Address Code",
+                "ref": "{019FB3A7-0AA3-79E3-B711-55B38E9114B2}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Landmark Address_Address",
+            "synclink": "{00000000-0036-7C0C-84CF-6602E697E21B}",
+            "fromtable": "{019FB3A7-0AA0-7E44-B0B2-96E395B5E047}",
+            "totable": "{019FB3A6-F9D8-7BEC-B6B0-A9E845EB43F1}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Landmark Designation",
+        "synclink": "{019FB3A7-096E-737E-9203-5CF28EC13E30}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" is known as <Landmark Name><Landmark Code>Landmark \"\r\n[Rules]\r\n\"<Landmark Designation> is identified by <Landmark Name> and <Landmark Code>\"\r\n",
+        "columns": [
+          {
+            "name": "Landmark Code",
+            "synclink": "{019FB3A7-0971-7AF2-89A9-6508994C20A7}",
+            "datatype": "string",
+            "domain": "{019FB3A7-0355-73C9-B4B7-BC1F80C48A1E}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Landmark Name",
+            "synclink": "{019FB3A7-0974-7E0A-AA13-697B42A2FBAB}",
+            "datatype": "string",
+            "domain": "{019FB3A7-0975-7555-A147-697E629242C8}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0088-76B9-AD04-5921C31E9FE6}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Landmark Name",
+                "ref": "{019FB3A7-0974-7E0A-AA13-697B42A2FBAB}"
+              },
+              {
+                "name": "Landmark Code",
+                "ref": "{019FB3A7-0971-7AF2-89A9-6508994C20A7}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+        ]
+      },
+      {
+        "name": "Location Coordinates",
+        "synclink": "{019FB3A6-FC7A-7DF9-8585-B5A728DB2A4D}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" is at <Longitude Latitude><Longitude Latitude_Longitude> in datum <Location Datum><Location Datum_Location Code>Location \"\r\n[Rules]\r\n\"<Location Coordinates> is identified by <Location Code>, <Datum>, <Latitude> and <Longitude>\"\r\n\"<Datum>, <Location Code> in <Location Coordinates> is a subset of <Location Datum>\"\r\n",
+        "columns": [
+          {
+            "name": "Location Datum_Location Code",
+            "synclink": "{019FB46B-019D-7F8A-8AC9-BDF50A863598}",
+            "datatype": "string",
+            "domain": "{019FB3A6-FA7E-7D2D-8B65-A8DE2DB8875C}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Location Datum",
+            "synclink": "{019FB46B-01A1-70FF-B340-CE8DE4E98F6A}",
+            "datatype": "string",
+            "domain": "{019FB3A6-FC45-720E-9216-C654BF542D81}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Longitude Latitude_Longitude",
+            "synclink": "{019FB46B-01BB-73C2-9B5D-F5483459B534}",
+            "datatype": "decimal",
+            "domain": "{019FB3A6-FC08-747B-A415-2BAE5B0F303A}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Longitude Latitude",
+            "synclink": "{019FB46B-01C1-79A1-99F3-9A7B39201F97}",
+            "datatype": "decimal",
+            "domain": "{019FB3A6-FC0B-7C43-86D8-4CD7AA46A40A}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0072-7D4E-902F-34337C4CD9E3}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Location Datum_Location Code",
+                "ref": "{019FB46B-019D-7F8A-8AC9-BDF50A863598}"
+              },
+              {
+                "name": "Location Datum",
+                "ref": "{019FB46B-01A1-70FF-B340-CE8DE4E98F6A}"
+              },
+              {
+                "name": "Longitude Latitude",
+                "ref": "{019FB46B-01C1-79A1-99F3-9A7B39201F97}"
+              },
+              {
+                "name": "Longitude Latitude_Longitude",
+                "ref": "{019FB46B-01BB-73C2-9B5D-F5483459B534}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Location Coordinates_Location Datum",
+            "synclink": "{00000000-000E-7D76-83F7-4C4EAF8B7F99}",
+            "fromtable": "{019FB3A6-FC7A-7DF9-8585-B5A728DB2A4D}",
+            "totable": "{019FB3A6-FC3F-76D4-BCE7-78D81AB5F636}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Location Datum_Location Code",
+                "tocolumn": "Location Code"
+              },
+              {
+                "fromcolumn": "Location Datum",
+                "tocolumn": "Datum"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Location Datum",
+        "synclink": "{019FB3A6-FC3F-76D4-BCE7-78D81AB5F636}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Rules]\r\n\"<Location Datum> is identified by <Datum> and <Location Code>\"\r\n",
+        "columns": [
+          {
+            "name": "Location Code",
+            "synclink": "{019FB3A6-FC42-7345-BE59-4502BF54F0F4}",
+            "datatype": "string",
+            "domain": "{019FB3A6-FA7E-7D2D-8B65-A8DE2DB8875C}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Datum",
+            "synclink": "{019FB3A6-FC45-7A5E-8DCE-F33B0EEABCFD}",
+            "datatype": "string",
+            "domain": "{019FB3A6-FC45-720E-9216-C654BF542D81}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0070-7CA3-AD10-B63D7D57ACC6}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Datum",
+                "ref": "{019FB3A6-FC45-7A5E-8DCE-F33B0EEABCFD}"
+              },
+              {
+                "name": "Location Code",
+                "ref": "{019FB3A6-FC42-7345-BE59-4502BF54F0F4}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+        ]
+      },
+      {
+        "name": "NL Thoroughfare Address",
+        "synclink": "{019FB3A7-0B90-755A-A8A1-F9697DCE652D}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" has postcode <Address Dutch Postcode><Thoroughfare Address_Address Code>\"\r\n  \" is located in the Netherlands<Thoroughfare Address_Address Code>\"\r\n[Rules]\r\n\"<NL Thoroughfare Address> is identified by <Address Code>\"\r\n\"<Address Code> in <NL Thoroughfare Address> is a subset of <Address Code> in <Thoroughfare Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Thoroughfare Address_Address Code",
+            "synclink": "{019FB3A7-0B93-7F91-B937-D9ABC043842E}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": true
+          },
+          {
+            "name": "Address Dutch Postcode",
+            "synclink": "{019FB3A7-11A6-7227-859E-86EF74B0D805}",
+            "datatype": "string",
+            "domain": "{019FB3A7-11A7-780D-8D41-99B232D49374}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-008F-7994-BE23-3724FCF05B4F}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Thoroughfare Address_Address Code",
+                "ref": "{019FB3A7-0B93-7F91-B937-D9ABC043842E}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_NL Thoroughfare Address_Thoroughfare Address",
+            "synclink": "{00000000-0039-7CBC-9001-8F4F11C5D7AC}",
+            "fromtable": "{019FB3A7-0B90-755A-A8A1-F9697DCE652D}",
+            "totable": "{019FB3A7-09BF-7091-A215-C09A5B2B9EFF}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Thoroughfare Address_Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Postbox Address",
+        "synclink": "{019FB3A7-0AF0-7202-BD6C-1E6E6FE0DAF3}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "Designates no Location. The United Arab Emirates population has no premise, no thoroughfare and no postal code whatsoever; a Dutch postbus is the same paradigm with a postcode. Sharing one paradigm across those two is exactly what the paradigm-as-discriminator decision buys.",
+        "verbalization": "[Expressions]\r\n  \" is served by post office <Address Serving Post Office><Address Code>\"\r\n  \" has post box number <Address Post Box Number><Address Code>\"\r\n  \" follows the postbox paradigm<Address Code>\"\r\n[Rules]\r\n\"<Postbox Address> is identified by <Address Code>\"\r\n\"<Address Code> in <Postbox Address> is a subset of <Address Code> in <Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Address Code",
+            "synclink": "{019FB3A7-0AF3-785A-88CD-9B7CC309615E}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": true
+          },
+          {
+            "name": "Address Post Box Number",
+            "synclink": "{019FB3A7-2159-7EF0-807E-8E3DC9105CA6}",
+            "datatype": "string",
+            "domain": "{019FB3A7-2159-7D76-ABDF-5007CFE9AD35}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Address Serving Post Office",
+            "synclink": "{019FB3A7-21D2-7BA6-9726-26A893C6DA1B}",
+            "datatype": "string",
+            "domain": "{019FB3A7-21D2-7972-8A1A-FCF3230596BE}",
+            "mandatory": false,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-008D-7595-BD34-0C6323E23613}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Address Code",
+                "ref": "{019FB3A7-0AF3-785A-88CD-9B7CC309615E}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Postbox Address_Address",
+            "synclink": "{00000000-0037-72F7-A925-6A2A2BBD41AE}",
+            "fromtable": "{019FB3A7-0AF0-7202-BD6C-1E6E6FE0DAF3}",
+            "totable": "{019FB3A6-F9D8-7BEC-B6B0-A9E845EB43F1}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Provisional Address",
+        "synclink": "{019FB3A7-0B42-7F0B-9777-6DB9DAFB044A}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" follows the provisional paradigm<Address Code>\"\r\n[Rules]\r\n\"<Provisional Address> is identified by <Address Code>\"\r\n\"<Provisional Address> is a subset of <Address Code> in <Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Address Code",
+            "synclink": "{019FB3A7-0B45-74E2-9715-8AC4ABF1AEF1}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": true
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-008E-76BF-AFBF-BD20F7907B68}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Address Code",
+                "ref": "{019FB3A7-0B45-74E2-9715-8AC4ABF1AEF1}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Provisional Address_Address",
+            "synclink": "{00000000-0038-7EDC-A4F1-A05C4F924BD0}",
+            "fromtable": "{019FB3A7-0B42-7F0B-9777-6DB9DAFB044A}",
+            "totable": "{019FB3A6-F9D8-7BEC-B6B0-A9E845EB43F1}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rendering Line Position",
+        "synclink": "{019FB3A7-0257-723F-8C2C-9598EED4E8C2}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" reads <Rendering Line_Line Text><Line Number> of  in script <Rendering_Script Code>Script  for purpose <Rendering Purpose Code>Rendering Purpose <Rendering_Address Code>Address line \"\r\n[Rules]\r\n\"<Rendering Line Position> is identified by <Line Number>, <Rendering Purpose Code>, <Script Code> and <Address Code>\"\r\n\"<Address Code> in <Rendering Line Position> is a subset of <Address Code> in <Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Line Number",
+            "synclink": "{019FB3A7-025B-7B39-B9B9-89624DC12714}",
+            "datatype": "integer",
+            "domain": "{019FB3A7-025B-7B42-8BEE-C3D6C79401B2}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Rendering_Address Code",
+            "synclink": "{019FB46B-025D-7AAE-9F7C-78D0629B1920}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Rendering_Script Code",
+            "synclink": "{019FB46B-0263-731E-BE34-530ABA2F947B}",
+            "datatype": "string",
+            "domain": "{019FB3A6-FAB4-77C8-972B-BF6AD4C6E6E7}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Rendering Purpose Code",
+            "synclink": "{019FB46B-0267-7F4A-AE61-E6119116B015}",
+            "datatype": "string",
+            "domain": "{019FB3A6-FAED-73E7-8598-9D49C80E6CFE}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Rendering Line_Line Text",
+            "synclink": "{019FB3A7-02A0-7C65-8A3B-CBC2E99DA4CD}",
+            "datatype": "string",
+            "domain": "{019FB3A7-02A0-7F5D-9AF3-B9FE61C66AFF}",
+            "mandatory": false,
+            "comment": "A sequenced line fact type, not three fixed roles. Three roles fix an arbitrary cardinality into the schema, leave most of the population with empty roles, and force a migration the first time a Japanese building name and floor push an address to six lines. The sequence must be gapless and every rendering has a line 1.",
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0076-7402-8948-52133F2D1BF0}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Line Number",
+                "ref": "{019FB3A7-025B-7B39-B9B9-89624DC12714}"
+              },
+              {
+                "name": "Rendering Purpose Code",
+                "ref": "{019FB46B-0267-7F4A-AE61-E6119116B015}"
+              },
+              {
+                "name": "Rendering_Script Code",
+                "ref": "{019FB46B-0263-731E-BE34-530ABA2F947B}"
+              },
+              {
+                "name": "Rendering_Address Code",
+                "ref": "{019FB46B-025D-7AAE-9F7C-78D0629B1920}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Rendering Line Position_Address",
+            "synclink": "{00000000-004B-739D-8CE6-D354C7A80996}",
+            "fromtable": "{019FB3A7-0257-723F-8C2C-9598EED4E8C2}",
+            "totable": "{019FB3A6-F9D8-7BEC-B6B0-A9E845EB43F1}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Rendering_Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "RU Thoroughfare Address",
+        "synclink": "{019FB3A7-0CE2-72B8-975F-F69719658F85}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" has stroenie <Address Stroenie><Thoroughfare Address_Address Code>\"\r\n  \" has kvartira <Address Kvartira><Thoroughfare Address_Address Code>\"\r\n  \" has korpus <Address Korpus><Thoroughfare Address_Address Code>\"\r\n  \" is located in Russia<Thoroughfare Address_Address Code>\"\r\n[Rules]\r\n\"<RU Thoroughfare Address> is identified by <Address Code>\"\r\n\"<Address Code> in <RU Thoroughfare Address> is a subset of <Address Code> in <Thoroughfare Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Thoroughfare Address_Address Code",
+            "synclink": "{019FB3A7-0CE5-7DE3-97E1-4177CBC0C99E}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": true
+          },
+          {
+            "name": "Address Korpus",
+            "synclink": "{019FB3A7-19F6-7903-A870-AF4F64CAF953}",
+            "datatype": "string",
+            "domain": "{019FB3A7-19F6-789F-A634-1D0DF0E024BA}",
+            "mandatory": false,
+            "comment": "A single Russian plot number may carry several physically separate buildings (korpus), each further subdivided (stroenie), with the flat (kvartira) a third level below. Four numeric components, all ordinary in the population, none meaning what \"house number\" means elsewhere. This breaks the near-universal assumption that a premise number designates one building.",
+            "issubtype": false
+          },
+          {
+            "name": "Address Stroenie",
+            "synclink": "{019FB3A7-1A5A-7B22-AD7F-2CE368BA2639}",
+            "datatype": "string",
+            "domain": "{019FB3A7-1A5A-762F-A897-9E8FE7178875}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address Kvartira",
+            "synclink": "{019FB3A7-1AC3-7D40-98AF-31AE7299522D}",
+            "datatype": "string",
+            "domain": "{019FB3A7-1AC3-7147-998C-DFAD3855AC02}",
+            "mandatory": false,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0093-7A88-A627-54565ADDB292}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Thoroughfare Address_Address Code",
+                "ref": "{019FB3A7-0CE5-7DE3-97E1-4177CBC0C99E}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_RU Thoroughfare Address_Thoroughfare Address",
+            "synclink": "{00000000-003D-74AF-92F7-B5E4E2C26AF9}",
+            "fromtable": "{019FB3A7-0CE2-72B8-975F-F69719658F85}",
+            "totable": "{019FB3A7-09BF-7091-A215-C09A5B2B9EFF}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Thoroughfare Address_Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Thoroughfare Address",
+        "synclink": "{019FB3A7-09BF-7091-A215-C09A5B2B9EFF}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" has premise number addition <Address Premise Number Addition><Address Code>\"\r\n  \" has premise number <Address Premise Number><Address Code>\"\r\n  \" has premise name <Address Premise Name><Address Code>\"\r\n  \" has thoroughfare type <Address Thoroughfare Type><Address Code>\"\r\n  \" is on thoroughfare <Address Thoroughfare_Thoroughfare Name><Address Code>\"\r\n  \" follows the thoroughfare paradigm<Address Code>\"\r\n[Rules]\r\n\"<Thoroughfare Address> is identified by <Address Code>\"\r\n\"<Address Code> in <Thoroughfare Address> is a subset of <Address Code> in <Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Address Code",
+            "synclink": "{019FB3A7-09C2-7425-BDED-CDD690A2E8C0}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": true
+          },
+          {
+            "name": "Address Thoroughfare_Thoroughfare Name",
+            "synclink": "{019FB3A7-0F7F-7247-A9AA-6AC05644EDC6}",
+            "datatype": "string",
+            "domain": "{019FB3A7-0F7F-7A31-8DDC-FAA3977FA5DF}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address Thoroughfare Type",
+            "synclink": "{019FB3A7-0FD8-773A-8252-0DA84FDC4762}",
+            "datatype": "string",
+            "domain": "{019FB3A7-0FD8-70DC-825E-AAE3FDC4A37B}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address Premise Number",
+            "synclink": "{019FB3A7-1031-78B0-A705-6215702A5465}",
+            "datatype": "integer",
+            "domain": "{019FB3A7-1031-7E2C-A45E-B38211CC2CAC}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address Premise Number Addition",
+            "synclink": "{019FB3A7-108C-7832-A35C-9EC32DCDF4A4}",
+            "datatype": "string",
+            "domain": "{019FB3A7-108C-76C9-8214-E0A1FDE9183C}",
+            "mandatory": false,
+            "comment": "Subset constraint: an addition presupposes a premise number. Subset constraints are not placeable through the MCP interface yet, so it is recorded here.",
+            "issubtype": false
+          },
+          {
+            "name": "Address Premise Name",
+            "synclink": "{019FB3A7-10E7-7D9B-A627-44FE62C60376}",
+            "datatype": "string",
+            "domain": "{019FB3A7-10E7-7383-9573-F92354D522BE}",
+            "mandatory": false,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0089-7C21-AE15-B2CA84243A4A}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Address Code",
+                "ref": "{019FB3A7-09C2-7425-BDED-CDD690A2E8C0}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Thoroughfare Address_Address",
+            "synclink": "{00000000-0033-7320-9D54-750649BEC998}",
+            "fromtable": "{019FB3A7-09BF-7091-A215-C09A5B2B9EFF}",
+            "totable": "{019FB3A6-F9D8-7BEC-B6B0-A9E845EB43F1}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "US Thoroughfare Address",
+        "synclink": "{019FB3A7-0BEF-7C08-81B4-2F55464DF04D}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" has secondary number <Address Secondary Number><Thoroughfare Address_Address Code>\"\r\n  \" has secondary designator <Address Secondary Designator><Thoroughfare Address_Address Code>\"\r\n  \" has primary number <Address Primary Number><Thoroughfare Address_Address Code>\"\r\n  \" has street name <Address Street Name><Thoroughfare Address_Address Code>\"\r\n  \" has street preirectional <Address Street Pre Directional><Thoroughfare Address_Address Code>\"\r\n  \" has ZIP addon <Address ZIP Add On><Thoroughfare Address_Address Code>\"\r\n  \" has ZIP code <Address ZIP Code><Thoroughfare Address_Address Code>\"\r\n  \" has street suffix <Address Street Suffix><Thoroughfare Address_Address Code>\"\r\n  \" has street postirectional <Address Street Post Directional><Thoroughfare Address_Address Code>\"\r\n  \" is in state <Address State_State Code><Thoroughfare Address_Address Code>\"\r\n  \" is located in the United States<Thoroughfare Address_Address Code>\"\r\n[Rules]\r\n\"<US Thoroughfare Address> is identified by <Address Code>\"\r\n\"<Address Code> in <US Thoroughfare Address> is a subset of <Address Code> in <Thoroughfare Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Thoroughfare Address_Address Code",
+            "synclink": "{019FB3A7-0BF2-7C98-ACA5-7AD6717713A9}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": true
+          },
+          {
+            "name": "Address Primary Number",
+            "synclink": "{019FB3A7-1211-7462-8ADF-55D08DD87516}",
+            "datatype": "string",
+            "domain": "{019FB3A7-1211-7C21-964D-1B892FC1640D}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address Street Pre Directional",
+            "synclink": "{019FB3A7-1275-7006-8C58-D2E7ECDA4913}",
+            "datatype": "string",
+            "domain": "{019FB3A7-1275-7270-974E-51F64CEB935C}",
+            "mandatory": false,
+            "comment": "Both directionals are load-bearing and independently so: one US city can contain N Main St, S Main St, Main St N and Main St NW as four distinct thoroughfares. Folding directionals into the street name defeats every subsequent match attempt.",
+            "issubtype": false
+          },
+          {
+            "name": "Address Street Name",
+            "synclink": "{019FB3A7-12D5-7613-8EFD-623801E1501D}",
+            "datatype": "string",
+            "domain": "{019FB3A7-12D5-7F4F-BA4F-B20C9B969445}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address Street Suffix",
+            "synclink": "{019FB3A7-1335-7928-B5AB-9F7090E506FE}",
+            "datatype": "string",
+            "domain": "{019FB3A7-1335-76DE-8F3B-053C92D3E37F}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address Street Post Directional",
+            "synclink": "{019FB3A7-139B-7AC4-B038-43AF99AA1A42}",
+            "datatype": "string",
+            "domain": "{019FB3A7-139B-775E-BDF4-E727D8C636A7}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address Secondary Designator",
+            "synclink": "{019FB3A7-13FC-7D11-8CAD-DF9F115F010C}",
+            "datatype": "string",
+            "domain": "{019FB3A7-13FC-7361-BF9B-BB64B37DA5C3}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address Secondary Number",
+            "synclink": "{019FB3A7-145C-76AB-832D-84F6107694B2}",
+            "datatype": "string",
+            "domain": "{019FB3A7-145C-7083-A2CF-A583372A2F33}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address State_State Code",
+            "synclink": "{019FB3A7-14BE-7C3E-B5C0-6DE7849D43AB}",
+            "datatype": "string",
+            "domain": "{019FB3A7-14BE-7AE5-9F3D-B2DA77F5181D}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address ZIP Code",
+            "synclink": "{019FB3A7-1519-795C-AC26-030EB1600E7E}",
+            "datatype": "string",
+            "domain": "{019FB3A7-1519-7C42-8ADC-C9424B2AAC7F}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Address ZIP Add On",
+            "synclink": "{019FB3A7-157D-77FC-8EAB-46F74158EC11}",
+            "datatype": "string",
+            "domain": "{019FB3A7-157D-794C-BF67-6B23E1BB84BB}",
+            "mandatory": false,
+            "comment": "Subset constraint: a ZIP add-on presupposes a ZIP code, and a secondary number presupposes a secondary designator. Recorded as notes - subset constraints are not placeable through the MCP interface yet.",
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0090-7053-820F-6941BA6F5ACA}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Thoroughfare Address_Address Code",
+                "ref": "{019FB3A7-0BF2-7C98-ACA5-7AD6717713A9}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_US Thoroughfare Address_Thoroughfare Address",
+            "synclink": "{00000000-003A-7F07-9240-01BCF9012DAF}",
+            "fromtable": "{019FB3A7-0BEF-7C08-81B4-2F55464DF04D}",
+            "totable": "{019FB3A7-09BF-7091-A215-C09A5B2B9EFF}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Thoroughfare Address_Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Usage",
+        "synclink": "{019FB3A7-08C2-778A-B69E-5955C1BAB051}",
+        "temporal": "ValidTime",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "[Definition]\r\nThe use a party makes of an address - billing, shipping, registered office, place of birth, tax residence. The role of use belongs to the connecting fact type, never to the address. Put usage inside Address and no address instance is ever reusable, deduplication becomes impossible, and the constraint that a registered office may not be a post box cannot be expressed at all.",
+        "verbalization": "[Expressions]\r\n  \" uses <Address Code> as <Usage Kind Code>Usage Kind <Party Code>Party \"\r\n[Rules]\r\n\"Population supports Valid Time\"\r\n\"<Usage> is identified by <Address Code>, <Party Code> and <Usage Kind Code>\"\r\n\"<Address Code> in <Usage> is a subset of <Address Code> in <Address>\"\r\n",
+        "columns": [
+          {
+            "name": "Party Code",
+            "synclink": "{019FB3A7-08C5-7FB2-AFC7-0FD1AF97AC55}",
+            "datatype": "string",
+            "domain": "{019FB3A7-0417-714D-A3E0-F3ACE625F797}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Address Code",
+            "synclink": "{019FB3A7-08CA-7F0F-A0F1-A928021074DF}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Usage Kind Code",
+            "synclink": "{019FB3A7-08CE-7C21-BFF7-80BF01F9969A}",
+            "datatype": "string",
+            "domain": "{019FB3A7-0452-7C6A-864E-D3256F893C16}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "ValidStartTime",
+            "synclink": "{00000000-0000-0000-0000-000000000000}",
+            "datatype": "datetime",
+            "domain": "{B4E1A0C2-9F3D-4A7E-8C1B-7A2E6D5F0C13}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "ValidEndTime",
+            "synclink": "{00000000-0000-0000-0000-000000000000}",
+            "datatype": "datetime",
+            "domain": "{B4E1A0C2-9F3D-4A7E-8C1B-7A2E6D5F0C13}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0085-73AB-96D1-679DD59B825A}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Address Code",
+                "ref": "{019FB3A7-08CA-7F0F-A0F1-A928021074DF}"
+              },
+              {
+                "name": "Party Code",
+                "ref": "{019FB3A7-08C5-7FB2-AFC7-0FD1AF97AC55}"
+              },
+              {
+                "name": "Usage Kind Code",
+                "ref": "{019FB3A7-08CE-7C21-BFF7-80BF01F9969A}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Usage_Address",
+            "synclink": "{00000000-002D-7938-AB50-9CC436998CC4}",
+            "fromtable": "{019FB3A7-08C2-778A-B69E-5955C1BAB051}",
+            "totable": "{019FB3A6-F9D8-7BEC-B6B0-A9E845EB43F1}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Address Code",
+                "tocolumn": "Address Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Usage Assertion",
+        "synclink": "{019FB3A7-0912-798D-A0AC-9D0731E8FB2F}",
+        "temporal": "TransactionTime",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "The communication-oriented heart of the model. An address supplied by a customer is not a fact about the world; it is a statement made by a party at a moment, and it may be wrong. Modelled as a plain attribute of Party, the statement and its truth are fused; modelled as a fact with an asserter and a date they separate - and verification against a registry becomes another fact with its own date and outcome rather than a boolean flag whose meaning erodes.",
+        "verbalization": "[Expressions]\r\n  \" was asserted by <Party Code><Usage_Address Code><Usage Kind Code><Usage_Party Code>\"\r\n[Rules]\r\n\"Population supports Transaction Time\"\r\n\"<Usage Assertion> is identified by <Party Code>, <Address Code>, <Usage Kind Code> and <Party Code>\"\r\n\"<Usage Kind Code>, <Address Code>, <Party Code> in <Usage Assertion> is a subset of <Usage>\"\r\n",
+        "columns": [
+          {
+            "name": "Usage_Party Code",
+            "synclink": "{019FB46B-04D2-7D3B-8F1F-39E681FC9BCB}",
+            "datatype": "string",
+            "domain": "{019FB3A7-0417-714D-A3E0-F3ACE625F797}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Usage_Address Code",
+            "synclink": "{019FB46B-04D6-796F-9F71-F8701A6677C5}",
+            "datatype": "string",
+            "domain": "{019FB3A6-F9DC-7196-83A4-FCF01445E648}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Usage Kind Code",
+            "synclink": "{019FB46B-04D9-79D5-A5F5-BDE1E890DBE4}",
+            "datatype": "string",
+            "domain": "{019FB3A7-0452-7C6A-864E-D3256F893C16}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Party Code",
+            "synclink": "{019FB3A7-0929-7319-A58B-F1073C9E5411}",
+            "datatype": "string",
+            "domain": "{019FB3A7-0417-714D-A3E0-F3ACE625F797}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "TransactionStartTime",
+            "synclink": "{00000000-0000-0000-0000-000000000000}",
+            "datatype": "datetime",
+            "domain": "{B4E1A0C2-9F3D-4A7E-8C1B-7A2E6D5F0C13}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "TransactionEndTime",
+            "synclink": "{00000000-0000-0000-0000-000000000000}",
+            "datatype": "datetime",
+            "domain": "{B4E1A0C2-9F3D-4A7E-8C1B-7A2E6D5F0C13}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0087-7657-A04D-A80717FD147F}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Usage_Party Code",
+                "ref": "{019FB46B-04D2-7D3B-8F1F-39E681FC9BCB}"
+              },
+              {
+                "name": "Usage_Address Code",
+                "ref": "{019FB46B-04D6-796F-9F71-F8701A6677C5}"
+              },
+              {
+                "name": "Usage Kind Code",
+                "ref": "{019FB46B-04D9-79D5-A5F5-BDE1E890DBE4}"
+              },
+              {
+                "name": "Party Code",
+                "ref": "{019FB3A7-0929-7319-A58B-F1073C9E5411}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Usage Assertion_Usage",
+            "synclink": "{00000000-0030-77DC-B671-D5D721137140}",
+            "fromtable": "{019FB3A7-0912-798D-A0AC-9D0731E8FB2F}",
+            "totable": "{019FB3A7-08C2-778A-B69E-5955C1BAB051}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Usage_Party Code",
+                "tocolumn": "Party Code"
+              },
+              {
+                "fromcolumn": "Usage_Address Code",
+                "tocolumn": "Address Code"
+              },
+              {
+                "fromcolumn": "Usage Kind Code",
+                "tocolumn": "Usage Kind Code"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
