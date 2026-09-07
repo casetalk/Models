@@ -1,0 +1,285 @@
+﻿# Schema Changelog
+
+### 2026-09-07 16:35 - GLR (145 change(s))
+
+**Domains**
+- Type changed: `date` -> `char`
+- Length changed: 0,0 -> 10,0
+- Type changed: `date` -> `char`
+- Length changed: 0,0 -> 10,0
+- Type changed: `date` -> `char`
+- Length changed: 0,0 -> 10,0
+- Type changed: `date` -> `char`
+- Length changed: 0,0 -> 10,0
+- Type changed: `date` -> `char`
+- Length changed: 0,0 -> 10,0
+- Type changed: `date` -> `char`
+- Length changed: 0,0 -> 10,0
+- Type changed: `date` -> `char`
+- Length changed: 0,0 -> 10,0
+- Type changed: `date` -> `char`
+- Length changed: 0,0 -> 10,0
+- Dropped `Authorized Area`
+- Dropped `Branch ID`
+- Dropped `Car Group ID`
+- Dropped `Car Group Upgrade`
+- Dropped `Car ID`
+- Dropped `Car Model ID`
+- Dropped `Car Transfer`
+- Dropped `Country ID`
+- Dropped `EU-Rent`
+- Dropped `Local Area ID`
+- Dropped `Person ID`
+- Dropped `Rental Agreement`
+- Dropped `Rental ID`
+- Dropped `Scheduled Service`
+
+**Tables**
+- Added `Advance Rental`
+- Added `Branch`
+- Added `Car`
+- Added `Car Group`
+- Added `Car Model`
+- Added `Country`
+- Added `Customer`
+- Added `Driver`
+- Added `Local Area`
+- Added `One-Way Rental`
+- Added `Open Rental`
+- Added `Person`
+- Added `Rental`
+- Added `Walk-in Rental`
+- Dropped `Actual Return`
+- Dropped `Branch - EU-Rent`
+- Dropped `Branch City`
+- Dropped `Branch Identification`
+- Dropped `Car - Car Transfer`
+- Dropped `Car - Scheduled Service`
+- Dropped `Car Condition`
+- Dropped `Car Group - Car Group Upgrade`
+- Dropped `Car Group Identification`
+- Dropped `Car Group of Car Model`
+- Dropped `Car Identification`
+- Dropped `Car Model Identification`
+- Dropped `Car Model of Car`
+- Dropped `Car Odometer Reading`
+- Dropped `Car of Rental`
+- Dropped `Country Identification`
+- Dropped `Country of Local Area`
+- Dropped `Date of Birth`
+- Dropped `Description of Car Group`
+- Dropped `Driving Licence`
+- Dropped `Drop Off Branch`
+- Dropped `Home Branch of Car`
+- Dropped `Licence Expiry`
+- Dropped `Local Area - Authorized Area`
+- Dropped `Local Area Identification`
+- Dropped `Local Area of Branch`
+- Dropped `Main Driver of Rental`
+- Dropped `Name of Branch`
+- Dropped `Name of Country`
+- Dropped `Name of Person`
+- Dropped `Person Identification`
+- Dropped `Pick Up Branch`
+- Dropped `Rental - Rental Agreement`
+- Dropped `Rental Identification`
+- Dropped `Rental Period`
+- Dropped `Rental State`
+- Dropped `Renter of Rental`
+- Dropped `Requested Car Group`
+
+**Columns**
+- Renamed `Rental` -> `Rental Number`
+- Type changed for column in `Additional Driver`
+- Renamed `Driver` -> `Driver_Person Number`
+- Type changed for column in `Additional Driver`
+- Renamed `Rental` -> `Rental Number`
+- Type changed for column in `Authorized Area of Rental`
+- Renamed `Local Area` -> `Local Area Code`
+- Type changed for column in `Authorized Area of Rental`
+- Renamed `Driver` -> `Driver_Person Number`
+- Type changed for column in `Bad Experience`
+- Renamed `Driver` -> `Driver_Person Number`
+- Type changed for column in `Barred Driver`
+- Renamed `Car` -> `Car_Registration Number`
+- Type changed for column in `Car Service`
+- Renamed `Car` -> `Car_Registration Number`
+- Type changed for column in `Car Transfer Movement`
+- Renamed `FromBranch` -> `FromBranch_Branch Code`
+- Type changed for column in `Car Transfer Movement`
+- Renamed `ToBranch` -> `ToBranch_Branch Code`
+- Type changed for column in `Car Transfer Movement`
+- Renamed `Customer` -> `Customer_Person Number`
+- Type changed for column in `Customer Credit Card`
+- Renamed `Rental` -> `Rental Number`
+- Type changed for column in `Rental Charge`
+- Renamed `Charge Kind` -> `EU-Rent Charging_Charge Kind`
+- Renamed `Charge Amount` -> `EU-Rent Charging_Charge Amount`
+- Renamed `Car Group` -> `Car Group Code`
+- Type changed for column in `Rental Tariff`
+- Renamed `Country` -> `EU-Rent Charging_Country Code`
+- Type changed for column in `Rental Tariff`
+- Renamed `Daily Rate` -> `EU-Rent Charging_Daily Rate`
+
+**Keys**
+- Added `PK_Additional Driver`
+- Dropped ``
+- Added `PK_Authorized Area of Rental`
+- Dropped ``
+- Added `PK_Bad Experience`
+- Dropped ``
+- Added `PK_Barred Driver`
+- Dropped ``
+- Added `PK_Car Service`
+- Dropped ``
+- Added `PK_Car Transfer Movement`
+- Dropped ``
+- Added `PK_Customer Credit Card`
+- Dropped ``
+- Added `PK_Rental Charge`
+- Dropped ``
+- Added `PK_Rental Tariff`
+- Dropped ``
+
+**Foreign Keys**
+- Added `FK_Additional Driver_Rental`
+- Added `FK_Additional Driver_Driver`
+- Added `FK_Authorized Area of Rental_Rental`
+- Added `FK_Authorized Area of Rental_Local Area`
+- Added `FK_Bad Experience_Driver`
+- Added `FK_Barred Driver_Driver`
+- Added `FK_Car Service_Car`
+- Added `FK_Car Transfer Movement_Car`
+- Added `FK_Car Transfer Movement_Branch`
+- Added `FK_Car Transfer Movement_Branch`
+- Added `FK_Customer Credit Card_Customer`
+- Added `FK_Rental Charge_Rental`
+- Added `FK_Rental Tariff_Car Group`
+- Added `FK_Rental Tariff_Country`
+
+### 2026-09-07 19:19 - GLR (118 change(s))
+
+**Columns**
+- Added `Car Model of Car_Manufacturer` to `Car`
+- Added `Car Model of Car_Model Name` to `Car`
+- Dropped `Car Model of Car_Manufacturer` from `Car`
+- Dropped `Car Model of Car_Model Name` from `Car`
+
+**Keys**
+- Added `PK_Additional Driver`
+- Dropped ``
+- Added `PK_Advance Rental`
+- Dropped ``
+- Added `PK_Authorized Area of Rental`
+- Dropped ``
+- Added `PK_Bad Experience`
+- Dropped ``
+- Added `PK_Barred Driver`
+- Dropped ``
+- Added `PK_Branch`
+- Dropped ``
+- Added `PK_Car`
+- Dropped ``
+- Added `PK_Car Group`
+- Dropped ``
+- Added `PK_Car Model`
+- Dropped ``
+- Added `PK_Car Service`
+- Dropped ``
+- Added `PK_Car Transfer Movement`
+- Dropped ``
+- Added `UK_Country_0`
+- Added `PK_Country`
+- Dropped ``
+- Dropped ``
+- Added `PK_Customer`
+- Dropped ``
+- Added `PK_Customer Credit Card`
+- Dropped ``
+- Added `UK_Driver_1`
+- Added `PK_Driver`
+- Dropped ``
+- Dropped ``
+- Added `PK_Local Area`
+- Dropped ``
+- Added `PK_One-Way Rental`
+- Dropped ``
+- Added `PK_Open Rental`
+- Dropped ``
+- Added `PK_Person`
+- Dropped ``
+- Added `PK_Rental`
+- Dropped ``
+- Added `PK_Rental Charge`
+- Dropped ``
+- Added `PK_Rental Tariff`
+- Dropped ``
+- Added `PK_Walk-in Rental`
+- Dropped ``
+
+**Foreign Keys**
+- Added `FK_Additional Driver_Rental`
+- Added `FK_Additional Driver_Driver`
+- Dropped `FK_Additional Driver_Rental`
+- Dropped `FK_Additional Driver_Driver`
+- Added `FK_Advance Rental_Rental`
+- Dropped `FK_Advance Rental_Rental`
+- Added `FK_Authorized Area of Rental_Rental`
+- Added `FK_Authorized Area of Rental_Local Area`
+- Dropped `FK_Authorized Area of Rental_Rental`
+- Dropped `FK_Authorized Area of Rental_Local Area`
+- Added `FK_Bad Experience_Driver`
+- Dropped `FK_Bad Experience_Driver`
+- Added `FK_Barred Driver_Driver`
+- Dropped `FK_Barred Driver_Driver`
+- Added `FK_Branch_Local Area`
+- Dropped `FK_Branch_Local Area`
+- Added `FK_Car_Car Model`
+- Added `FK_Car_Branch`
+- Dropped `FK_Car_Car Model`
+- Dropped `FK_Car_Branch`
+- Added `FK_Car Model_Car Group`
+- Dropped `FK_Car Model_Car Group`
+- Added `FK_Car Service_Car`
+- Dropped `FK_Car Service_Car`
+- Added `FK_Car Transfer Movement_Car`
+- Added `FK_Car Transfer Movement_Branch`
+- Added `FK_Car Transfer Movement_Branch`
+- Dropped `FK_Car Transfer Movement_Car`
+- Dropped `FK_Car Transfer Movement_Branch`
+- Dropped `FK_Car Transfer Movement_Branch`
+- Added `FK_Customer_Person`
+- Added `FK_Customer_Customer Credit Card`
+- Dropped `FK_Customer_Person`
+- Dropped `FK_Customer_Customer Credit Card`
+- Added `FK_Customer Credit Card_Customer`
+- Dropped `FK_Customer Credit Card_Customer`
+- Added `FK_Driver_Person`
+- Dropped `FK_Driver_Person`
+- Added `FK_Local Area_Country`
+- Dropped `FK_Local Area_Country`
+- Added `FK_One-Way Rental_Rental`
+- Dropped `FK_One-Way Rental_Rental`
+- Added `FK_Open Rental_Rental`
+- Dropped `FK_Open Rental_Rental`
+- Added `FK_Rental_Customer`
+- Added `FK_Rental_Car Group`
+- Added `FK_Rental_Branch`
+- Added `FK_Rental_Branch`
+- Added `FK_Rental_Car`
+- Added `FK_Rental_Driver`
+- Dropped `FK_Rental_Customer`
+- Dropped `FK_Rental_Car Group`
+- Dropped `FK_Rental_Branch`
+- Dropped `FK_Rental_Branch`
+- Dropped `FK_Rental_Car`
+- Dropped `FK_Rental_Driver`
+- Added `FK_Rental Charge_Rental`
+- Dropped `FK_Rental Charge_Rental`
+- Added `FK_Rental Tariff_Car Group`
+- Added `FK_Rental Tariff_Country`
+- Dropped `FK_Rental Tariff_Car Group`
+- Dropped `FK_Rental Tariff_Country`
+- Added `FK_Walk-in Rental_Rental`
+- Dropped `FK_Walk-in Rental_Rental`
+
