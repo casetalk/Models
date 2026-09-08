@@ -160,10 +160,10 @@ title:"Model the fleet disposal rule from the original case: sold at one year ol
 bookmark:"",
 user:"marcowobben",
 created:"20260907 182651.847",
-modified:"20260907 182651.847",
+modified:"20260908 092304.445",
 priority:"Medium",
 category:"Enhancement",
-completed:"False",
+completed:"True",
 text:"The 1995 GUIDE / Business Rules Group report (Appendix D, EU-Rent Car Rentals, by Model Systems Ltd.) states that cars are to be sold when they reach one year old or 40,000 kilometres, whichever comes first. The model has no purchase date or age for a Car, and the odometer is in miles (the 5000-mile service interval comes from the later SBVR retelling). Add a Car purchase/registration date fact, decide on the unit of Mileage, add a Condition state for a car sold or withdrawn, and write the rule as R21 with a derivation over Car Odometer Reading and the new date."
 },
 {

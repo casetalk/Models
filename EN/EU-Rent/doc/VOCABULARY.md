@@ -1,6 +1,6 @@
 # EU-Rent — vocabulary
 
-Every fact type in `eu-rent.ig` (33 fact types plus the two subtype expressions Customer and
+Every fact type in `eu-rent.ig` (34 fact types plus the two subtype expressions Customer and
 Driver), with its expression and its constraints. Every fact type carries sample population —
 see [POPULATION.md](POPULATION.md).
 Role players are written `<Like This>`; a `|datatype` marks a label type.
@@ -58,6 +58,7 @@ cannot say, because it constrains the *shape* of a value rather than listing val
 | Home Branch of Car | `<Car> is stationed at <Branch>` | UC on Car; TC |
 | Car Odometer Reading | `<Car> has odometer reading <Mileage\|integer>` | UC on Car |
 | Car Condition | `<Car> is in condition <Condition\|string>` | UC on Car; TC; VC (state machine) |
+| Purchase Date of Car | `<Car> was purchased on <Purchase Date\|date>` | UC on Car; TC |
 | Car Service | `<Car> was serviced on <Service Date\|date> at mileage <Service Mileage\|integer>` | UC on Car + Service Date; composite |
 | Car Transfer Movement | `<Car> was transferred from <Branch[From..]> to <Branch[To..]> on <Transfer Date\|date>` | UC on Car + Transfer Date; composite |
 
@@ -116,14 +117,16 @@ A=Economy   B=Compact   C=Intermediate   D=Full Size   E=Premium   F=Luxury
 ```
 
 `Condition` — a **state machine**. A car enters the fleet Available, can only be rented from
-Available, and once written off never returns to service.
+Available, is sold (R21) from Available or In Service but never while Rented, and once
+written off or sold never returns to service.
 
 ```
 [*] -> Available
-Available   -> Rented ; In Service ; Written Off
+Available   -> Rented ; In Service ; Written Off ; Sold
 Rented      -> Available ; In Service ; Written Off
-In Service  -> Available ; Written Off
+In Service  -> Available ; Written Off ; Sold
 Written Off -> [*]
+Sold        -> [*]
 ```
 
 `Rental Status` — a **state machine**. An advance booking is Requested, becomes Open at

@@ -1,0 +1,1960 @@
+﻿{
+  "schema": {
+    "domains": [
+      {
+        "name": "Actual Return Date",
+        "datatype": "char",
+        "maxlength": 10,
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04732-1853-7169-B41F-C83668543CA8}"
+      },
+      {
+        "name": "Bad Experience Kind",
+        "datatype": "string",
+        "valueconstraint": "Damage To Car, Late Return, Non Return, Police Action, Unpaid Charge, Unpaid Fine",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04731-F522-7EF1-8CAE-88CE781CD47E}"
+      },
+      {
+        "name": "Birth Date",
+        "datatype": "char",
+        "maxlength": 10,
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04731-D240-7218-9FAF-A8F7B17A84B4}"
+      },
+      {
+        "name": "Branch Code",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04731-A0E2-7E79-83B9-8A6A4F3E9A5C}"
+      },
+      {
+        "name": "Branch Name",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04731-A22C-788C-8E42-1F08A4EE3CD1}"
+      },
+      {
+        "name": "Car Group Code",
+        "datatype": "string",
+        "valueconstraint": "A, B, C, D, E, F",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04731-B8E1-78C7-9A54-34EE8CF19A26}"
+      },
+      {
+        "name": "Car Group Description",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04731-B9EC-7885-8880-1FDC96DE5C4E}"
+      },
+      {
+        "name": "Charge Amount",
+        "datatype": "currency",
+        "quoted": false,
+        "localize": false,
+        "synclink": "{01A04732-19FA-7901-ADF8-5A599CB22374}"
+      },
+      {
+        "name": "Charge Kind",
+        "datatype": "string",
+        "valueconstraint": "Damage Charge, Fuel Charge, Late Return Penalty, Location Penalty Charge, One Way Charge, Rental Charge",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04732-19A0-7E2F-9D93-B4FCFFBD3380}"
+      },
+      {
+        "name": "City",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04731-A465-74BD-B79D-533C40646527}"
+      },
+      {
+        "name": "Condition",
+        "datatype": "string",
+        "valueconstraint": "Available, In Service, Rented, Sold, Written Off",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04731-C173-788A-BA1A-ED05C1F0D76B}"
+      },
+      {
+        "name": "Country Code",
+        "datatype": "char",
+        "maxlength": 2,
+        "quoted": true,
+        "localize": false,
+        "customattributes": "$mask.pattern=[A-Z]{2}\r\n",
+        "synclink": "{01A04731-9C20-73B1-A46B-79BE0B68E0B7}"
+      },
+      {
+        "name": "Country Name",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04731-9D5C-7B38-B9F5-9DDF79354D09}"
+      },
+      {
+        "name": "Credit Card Number",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04731-F6DD-765F-8AB8-FE0E7775EC5C}"
+      },
+      {
+        "name": "Daily Rate",
+        "datatype": "currency",
+        "quoted": false,
+        "localize": false,
+        "synclink": "{01A04732-1B5F-7ED5-84D7-C58A6370C1AA}"
+      },
+      {
+        "name": "Incident Date",
+        "datatype": "char",
+        "maxlength": 10,
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04731-F57A-74B6-B709-874FBDA622EA}"
+      },
+      {
+        "name": "Licence Expiry Date",
+        "datatype": "char",
+        "maxlength": 10,
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04731-F354-716E-BC76-D531CB81B244}"
+      },
+      {
+        "name": "Licence Number",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04731-F206-7BC3-81C7-A5A4FEC40820}"
+      },
+      {
+        "name": "Local Area Code",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04731-9EA0-7A32-8189-4361764100ED}"
+      },
+      {
+        "name": "Manufacturer",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04731-BAF2-779D-9B1D-269A52F3669D}"
+      },
+      {
+        "name": "Mileage",
+        "datatype": "integer",
+        "quoted": false,
+        "localize": false,
+        "comment": "[Definition]\r\nOdometer reading in miles. The SBVR-era sources state the service interval in miles (R14, \"5.000 miles intervals\"), so the model keeps one unit for every distance; the 40,000 km disposal limit of the original case study (R21) is applied as 25,000 miles (24,855 rounded). Service Mileage uses the same unit.",
+        "synclink": "{01A04731-C065-70B5-925E-0CA4C5C1335B}"
+      },
+      {
+        "name": "Model Name",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04731-BB42-7F2C-BABA-15DA09DDB449}"
+      },
+      {
+        "name": "Person Name",
+        "datatype": "string",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04731-D112-7B73-9FDC-CD3D1EF438EF}"
+      },
+      {
+        "name": "Person Number",
+        "datatype": "integer",
+        "quoted": false,
+        "localize": false,
+        "synclink": "{01A04731-D008-70D3-ADDD-2695E99B15EF}"
+      },
+      {
+        "name": "Pick Up Date",
+        "datatype": "char",
+        "maxlength": 10,
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04732-1242-7C5E-A0FA-734F0B661613}"
+      },
+      {
+        "name": "Purchase Date",
+        "datatype": "char",
+        "maxlength": 10,
+        "quoted": true,
+        "localize": false,
+        "comment": "[Definition]\r\nCalendar date on which a car was bought for the EU-Rent fleet.",
+        "synclink": "{01A07FE2-DD5F-7F24-8A99-5A48C47D9D16}"
+      },
+      {
+        "name": "Registration Number",
+        "datatype": "char",
+        "maxlength": 20,
+        "quoted": true,
+        "localize": false,
+        "comment": "[Definition]\r\nThe number plate of the car as issued by its country of registration, prefixed with the ISO 3166-1 alpha-2 code of that country and a hyphen, because a plate is unique only within the country that issued it: NL-G-482-TK, BE-2-XYZ-123, DE-D-AB-1234. The plate is written as issued. Dutch plates follow the series issued since 2019, one letter, three digits, two letters, without vowels; Belgian plates since 2010 are an index digit, three letters and three digits; German plates start with the district code (D for Dusseldorf), then one or two letters and up to four digits. Under R21 no fleet car is older than one year, so every plate belongs to the currently issued series of its country. The value pattern covers the three countries in the sample; another country needs the pattern extended.\r\n[Pattern]\r\nValue pattern (regular expression) for the three countries in the sample: ^(NL-[B-DF-HJ-NP-TV-Z]-[0-9]{3}-[B-DF-HJ-NP-TV-Z]{2}|BE-[12]-[A-Z]{3}-[0-9]{3}|DE-[A-Z]{1,3}-[A-Z]{1,2}-[0-9]{1,4})$ . Recorded as a note because this CaseTalk build does not store a value pattern on a label type.",
+        "synclink": "{01A04731-BD3D-7BB6-998F-FEB219EBE5C6}"
+      },
+      {
+        "name": "Rental Number",
+        "datatype": "integer",
+        "quoted": false,
+        "localize": false,
+        "synclink": "{01A04732-0CD3-7A9E-B825-FDC872375F3D}"
+      },
+      {
+        "name": "Rental Status",
+        "datatype": "string",
+        "valueconstraint": "Cancelled, Closed, Open, Requested",
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04732-173D-77F6-948E-A5B262076118}"
+      },
+      {
+        "name": "Return Date",
+        "datatype": "char",
+        "maxlength": 10,
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04732-12BD-7303-A726-27FDBB25E4CE}"
+      },
+      {
+        "name": "Service Date",
+        "datatype": "char",
+        "maxlength": 10,
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04731-C2A0-7E0D-A54E-D42B99CEAC79}"
+      },
+      {
+        "name": "Service Mileage",
+        "datatype": "integer",
+        "quoted": false,
+        "localize": false,
+        "comment": "[Definition]\r\nOdometer reading, in miles, at the moment the car was serviced. Same unit as Mileage.",
+        "synclink": "{01A04731-C2F0-794F-9F60-DD278DEEFBD4}"
+      },
+      {
+        "name": "Transfer Date",
+        "datatype": "char",
+        "maxlength": 10,
+        "quoted": true,
+        "localize": false,
+        "synclink": "{01A04735-AA50-75E0-BBB5-A1A9E99DDBCA}"
+      }
+    ],
+    "tables": [
+      {
+        "name": "Additional Driver",
+        "synclink": "{01A04732-1592-732F-8443-62B7D6DBD3CB}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" has additional driver <Driver_Person Number><Rental Number>\"\r\n[Rules]\r\n\"<Additional Driver> is identified by <Rental Number> and <Person Number>\"\r\n\"<Rental Number> in <Additional Driver> is a subset of <Rental Number> in <Rental>\"\r\n\"<Person Number> in <Additional Driver> is a subset of <Person Number> in <Driver>\"\r\n",
+        "columns": [
+          {
+            "name": "Rental Number",
+            "synclink": "{01A04732-15C3-7649-AE07-90ACEA414DF2}",
+            "datatype": "integer",
+            "domain": "{01A04732-0CD3-7A9E-B825-FDC872375F3D}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Driver_Person Number",
+            "synclink": "{01A04732-1630-750B-8C7D-5B811B5517C4}",
+            "datatype": "integer",
+            "domain": "{01A04731-D008-70D3-ADDD-2695E99B15EF}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-004F-7C6F-8657-FDB9CDA42062}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Rental Number",
+                "ref": "{01A04732-15C3-7649-AE07-90ACEA414DF2}"
+              },
+              {
+                "name": "Driver_Person Number",
+                "ref": "{01A04732-1630-750B-8C7D-5B811B5517C4}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Additional Driver_Rental",
+            "synclink": "{00000000-0014-79E2-8E8F-82E11C5EC525}",
+            "fromtable": "{01A04732-1592-732F-8443-62B7D6DBD3CB}",
+            "totable": "{01A04732-0C75-70DA-8AE4-2876EFA701D6}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Rental Number",
+                "tocolumn": "EU-Rent Rental Process_Rental Number"
+              }
+            ]
+          },
+          {
+            "name": "FK_Additional Driver_Driver",
+            "synclink": "{00000000-0015-7F91-83A1-3ADBBEC3BDA0}",
+            "fromtable": "{01A04732-1592-732F-8443-62B7D6DBD3CB}",
+            "totable": "{01A04731-DE1A-72B0-AED0-C3A246C00627}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Driver_Person Number",
+                "tocolumn": "EU-Rent Parties_Person Number"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Advance Rental",
+        "synclink": "{01A04735-4546-76D3-9A47-7CB6887CC8FC}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "[Definition]\r\nA rental booked before the pick-up date. Subtype of Rental, defined by state: a rental that is in state Requested and whose pick-up date is in the future. EU-Rent supports both advance bookings and walk-in rentals.\r\n[Derivation]\r\nAdvance Rental := Rental R WHERE Rental State[R].Rental Status = 'Requested' AND Rental Period[R].Pick Up Date > TODAY. Never asserted: it follows from the state and the pick-up date.",
+        "verbalization": "[Rules]\r\n\"<Advance Rental> is identified by <Rental Number>\"\r\n\"<Advance Rental> is a subset of <Rental Number> in <Rental>\"\r\n",
+        "columns": [
+          {
+            "name": "EU-Rent Rental Process_Rental Number",
+            "synclink": "{01A04735-C3B6-7053-859B-ECE6A25531C7}",
+            "datatype": "integer",
+            "domain": "{01A04732-0CD3-7A9E-B825-FDC872375F3D}",
+            "mandatory": true,
+            "issubtype": true
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0056-7DA8-8FF9-2BDEC1B9001C}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "EU-Rent Rental Process_Rental Number",
+                "ref": "{01A04735-C3B6-7053-859B-ECE6A25531C7}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Advance Rental_Rental",
+            "synclink": "{00000000-001E-795C-A2DE-12E0A316E32F}",
+            "fromtable": "{01A04735-4546-76D3-9A47-7CB6887CC8FC}",
+            "totable": "{01A04732-0C75-70DA-8AE4-2876EFA701D6}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "EU-Rent Rental Process_Rental Number",
+                "tocolumn": "EU-Rent Rental Process_Rental Number"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Authorized Area of Rental",
+        "synclink": "{01A04735-A77B-7A83-B5B4-AE57CEC19F71}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" is authorized for use in <Local Area Code><Rental Number>\"\r\n[Rules]\r\n\"<Authorized Area of Rental> is identified by <Rental Number> and <Local Area Code>\"\r\n\"<Rental Number> in <Authorized Area of Rental> is a subset of <Rental Number> in <Rental>\"\r\n\"<Local Area Code> in <Authorized Area of Rental> is a subset of <Local Area Code> in <Local Area>\"\r\n",
+        "columns": [
+          {
+            "name": "Rental Number",
+            "synclink": "{01A04735-A7B6-76BC-808D-649B2D65DD10}",
+            "datatype": "integer",
+            "domain": "{01A04732-0CD3-7A9E-B825-FDC872375F3D}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Local Area Code",
+            "synclink": "{01A04735-A83D-72B4-8A47-C448CEE4AD8A}",
+            "datatype": "string",
+            "domain": "{01A04731-9EA0-7A32-8189-4361764100ED}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0054-715D-B345-62266CC78DC1}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Rental Number",
+                "ref": "{01A04735-A7B6-76BC-808D-649B2D65DD10}"
+              },
+              {
+                "name": "Local Area Code",
+                "ref": "{01A04735-A83D-72B4-8A47-C448CEE4AD8A}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Authorized Area of Rental_Rental",
+            "synclink": "{00000000-0019-7239-A30B-065E2A403C8C}",
+            "fromtable": "{01A04735-A77B-7A83-B5B4-AE57CEC19F71}",
+            "totable": "{01A04732-0C75-70DA-8AE4-2876EFA701D6}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Rental Number",
+                "tocolumn": "EU-Rent Rental Process_Rental Number"
+              }
+            ]
+          },
+          {
+            "name": "FK_Authorized Area of Rental_Local Area",
+            "synclink": "{00000000-001A-79A1-85DA-D10D07F3343C}",
+            "fromtable": "{01A04735-A77B-7A83-B5B4-AE57CEC19F71}",
+            "totable": "{01A04731-9E44-73A1-8380-9AB621298906}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Local Area Code",
+                "tocolumn": "EU-Rent Network_Local Area Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bad Experience",
+        "synclink": "{01A04731-F48C-7239-B3EC-89F9A0819778}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" caused a bad experience of kind <Bad Experience Kind> on <Incident Date><Driver_Person Number>\"\r\n[Rules]\r\n\"<Bad Experience> is identified by <Bad Experience Kind>, <Incident Date> and <Person Number>\"\r\n\"<Person Number> in <Bad Experience> is a subset of <Person Number> in <Driver>\"\r\n",
+        "columns": [
+          {
+            "name": "Driver_Person Number",
+            "synclink": "{01A04731-F4C3-788F-8682-F5C91F0DF9C2}",
+            "datatype": "integer",
+            "domain": "{01A04731-D008-70D3-ADDD-2695E99B15EF}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Bad Experience Kind",
+            "synclink": "{01A04731-F521-7E6C-BE52-B41E877ECE4A}",
+            "datatype": "string",
+            "domain": "{01A04731-F522-7EF1-8CAE-88CE781CD47E}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Incident Date",
+            "synclink": "{01A04731-F57A-7F1A-964C-9FBD22412FD6}",
+            "datatype": "char(10)",
+            "domain": "{01A04731-F57A-74B6-B709-874FBDA622EA}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-004D-7339-87F8-AB8AE0C90956}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Bad Experience Kind",
+                "ref": "{01A04731-F521-7E6C-BE52-B41E877ECE4A}"
+              },
+              {
+                "name": "Incident Date",
+                "ref": "{01A04731-F57A-7F1A-964C-9FBD22412FD6}"
+              },
+              {
+                "name": "Driver_Person Number",
+                "ref": "{01A04731-F4C3-788F-8682-F5C91F0DF9C2}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Bad Experience_Driver",
+            "synclink": "{00000000-000B-77CF-BFCE-A3771F83541A}",
+            "fromtable": "{01A04731-F48C-7239-B3EC-89F9A0819778}",
+            "totable": "{01A04731-DE1A-72B0-AED0-C3A246C00627}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Driver_Person Number",
+                "tocolumn": "EU-Rent Parties_Person Number"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Barred Driver",
+        "synclink": "{01A04731-F3C2-7018-8AB3-2D1C5CF0E375}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" is barred from renting<Driver_Person Number>\"\r\n[Rules]\r\n\"<Barred Driver> is identified by <Person Number>\"\r\n\"<Barred Driver> is a subset of <Person Number> in <Driver>\"\r\n",
+        "columns": [
+          {
+            "name": "Driver_Person Number",
+            "synclink": "{01A04731-F3F1-7DD5-9FB0-9A258FBB9FB7}",
+            "datatype": "integer",
+            "domain": "{01A04731-D008-70D3-ADDD-2695E99B15EF}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-004C-7CE2-8569-A169505789B9}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Driver_Person Number",
+                "ref": "{01A04731-F3F1-7DD5-9FB0-9A258FBB9FB7}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Barred Driver_Driver",
+            "synclink": "{00000000-000A-778B-BDCB-E8F293E69BB4}",
+            "fromtable": "{01A04731-F3C2-7018-8AB3-2D1C5CF0E375}",
+            "totable": "{01A04731-DE1A-72B0-AED0-C3A246C00627}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Driver_Person Number",
+                "tocolumn": "EU-Rent Parties_Person Number"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Branch",
+        "synclink": "{01A04731-A083-78AC-9227-73FD7A358A86}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "[Definition]\r\nAn EU-Rent site from which cars are rented out and to which they are returned. A branch belongs to exactly one local area. The same object type plays the pick-up role and the drop-off role of a rental; when the two differ the rental is a one-way rental.\r\n[Example]\r\nAMS01 - Amsterdam Schiphol; AMS02 - Amsterdam Centraal; BRU01 - Brussels Airport; DUS01 - Dusseldorf Hbf.",
+        "verbalization": "[Expressions]\r\n  \" is called <Name of Branch_Branch Name><EU-Rent Network_Branch Code>\"\r\n  \" belongs to <Local Area of Branch_Local Area Code><EU-Rent Network_Branch Code>\"\r\n  \" is situated in <Branch City><EU-Rent Network_Branch Code>\"\r\n[Rules]\r\n\"<Branch> is identified by <Branch Code>\"\r\n\"<Local Area Code> in <Branch> is a subset of <Local Area Code> in <Local Area>\"\r\n",
+        "columns": [
+          {
+            "name": "Name of Branch_Branch Name",
+            "synclink": "{01A04731-A22C-7374-BC7A-6DE89AD2AA58}",
+            "datatype": "string",
+            "domain": "{01A04731-A22C-788C-8E42-1F08A4EE3CD1}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Local Area of Branch_Local Area Code",
+            "synclink": "{01A04731-A366-7407-8146-4609AC778D07}",
+            "datatype": "string",
+            "domain": "{01A04731-9EA0-7A32-8189-4361764100ED}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Branch City",
+            "synclink": "{01A04731-A464-7F58-B2E0-715B3B93E2BC}",
+            "datatype": "string",
+            "domain": "{01A04731-A465-74BD-B79D-533C40646527}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "EU-Rent Network_Branch Code",
+            "synclink": "{01A07218-B883-7F9B-96BD-210B7FEB5CAE}",
+            "datatype": "string",
+            "domain": "{01A04731-A0E2-7E79-83B9-8A6A4F3E9A5C}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-003C-7934-AA69-10800C42DE3A}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "EU-Rent Network_Branch Code",
+                "ref": "{01A07218-B883-7F9B-96BD-210B7FEB5CAE}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Branch_Local Area",
+            "synclink": "{00000000-0003-7B05-A997-454951E1DDAD}",
+            "fromtable": "{01A04731-A083-78AC-9227-73FD7A358A86}",
+            "totable": "{01A04731-9E44-73A1-8380-9AB621298906}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Local Area of Branch_Local Area Code",
+                "tocolumn": "EU-Rent Network_Local Area Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Car",
+        "synclink": "{01A04731-BCDB-7E38-836D-F5878C005152}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "[Definition]\r\nA physical vehicle in the EU-Rent fleet, identified by its registration number. A car is of exactly one car model, is stationed at a branch, carries an odometer reading and is always in exactly one condition.\r\n[Example]\r\nNL-G-482-TK, a Volkswagen Polo stationed at AMS01, purchased 2025-11-03, odometer 23800, condition Available.",
+        "verbalization": "[Expressions]\r\n  \" is stationed at <Home Branch of Car_Branch Code><EU-Rent Fleet_Registration Number>\"\r\n  \" has odometer reading <Car Odometer Reading_Mileage><EU-Rent Fleet_Registration Number>\"\r\n  \" is of model <Car Model of Car_Model Name><Car Model of Car_Manufacturer><EU-Rent Fleet_Registration Number>\"\r\n  \" was purchased on <Purchase Date of Car_Purchase Date><EU-Rent Fleet_Registration Number>\"\r\n  \" is in condition <Car Condition><EU-Rent Fleet_Registration Number>\"\r\n[Rules]\r\n\"<Car> is identified by <Registration Number>\"\r\n\"<Model Name>, <Manufacturer> in <Car> is a subset of <Model Name>, <Manufacturer> in <Car Model>\"\r\n\"<Branch Code> in <Car> is a subset of <Branch Code> in <Branch>\"\r\n",
+        "columns": [
+          {
+            "name": "Car Model of Car_Manufacturer",
+            "synclink": "{01A0802B-4F0D-7779-96CA-F8BA2BE7FE21}",
+            "datatype": "string",
+            "domain": "{01A04731-BAF2-779D-9B1D-269A52F3669D}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Car Model of Car_Model Name",
+            "synclink": "{01A0802B-4F1C-7C07-B5FF-15298CC01F65}",
+            "datatype": "string",
+            "domain": "{01A04731-BB42-7F2C-BABA-15DA09DDB449}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Home Branch of Car_Branch Code",
+            "synclink": "{01A04731-BF54-7AA4-BE9D-62DC5FAC9B77}",
+            "datatype": "string",
+            "domain": "{01A04731-A0E2-7E79-83B9-8A6A4F3E9A5C}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Car Odometer Reading_Mileage",
+            "synclink": "{01A04731-C065-71D5-8E93-387667B20800}",
+            "datatype": "integer",
+            "domain": "{01A04731-C065-70B5-925E-0CA4C5C1335B}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Car Condition",
+            "synclink": "{01A04731-C173-74BC-B770-D5B307481F38}",
+            "datatype": "string",
+            "domain": "{01A04731-C173-788A-BA1A-ED05C1F0D76B}",
+            "mandatory": true,
+            "default": "Available",
+            "issubtype": false
+          },
+          {
+            "name": "EU-Rent Fleet_Registration Number",
+            "synclink": "{01A07218-C83E-743E-B913-72FD4AC6BC2D}",
+            "datatype": "char(20)",
+            "domain": "{01A04731-BD3D-7BB6-998F-FEB219EBE5C6}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Purchase Date of Car_Purchase Date",
+            "synclink": "{01A07FE2-DD5F-70EF-90F2-97395ECA64C2}",
+            "datatype": "char(10)",
+            "domain": "{01A07FE2-DD5F-7F24-8A99-5A48C47D9D16}",
+            "mandatory": true,
+            "comment": "[Definition]\r\nThe date on which EU-Rent bought the car and it entered the fleet. Every car has exactly one purchase date. It is the date R21 measures the car's age from: a car is sold when it is one year old, or earlier when it reaches 40,000 km.\r\n[Source]\r\nVerbatim from the original case study: \"Cars are to be sold when they reach one year old or 40,000 kilometers, whichever occurs first.\" - Appendix D \"Case Study: EU-Rent Car Rentals\" (developed by Model Systems Ltd., example by John Hall) of the Business Rules Group / GUIDE Business Rules Project final report \"Defining Business Rules ~ What Are They Really?\" (1995; rev. 1.3 July 2000). https://www.businessrulesgroup.org/first_paper/BRG-whatisBR_3ed.pdf . Not in the SBVR-era retellings the rest of the model was built from; those give the service interval in miles (R14), so the model keeps one unit, miles, and applies 40,000 km as 25,000 miles (24,855 rounded).",
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-003F-7604-91EA-7F8773728597}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "EU-Rent Fleet_Registration Number",
+                "ref": "{01A07218-C83E-743E-B913-72FD4AC6BC2D}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Car_Car Model",
+            "synclink": "{00000000-0005-7D8E-81FB-A28931452489}",
+            "fromtable": "{01A04731-BCDB-7E38-836D-F5878C005152}",
+            "totable": "{01A04731-BA8B-78A6-AE98-21DE39F8CF78}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Car Model of Car_Manufacturer",
+                "tocolumn": "Manufacturer"
+              },
+              {
+                "fromcolumn": "Car Model of Car_Model Name",
+                "tocolumn": "EU-Rent Fleet_Model Name"
+              }
+            ]
+          },
+          {
+            "name": "FK_Car_Branch",
+            "synclink": "{00000000-0006-7ECC-AAA7-008233E3DDF4}",
+            "fromtable": "{01A04731-BCDB-7E38-836D-F5878C005152}",
+            "totable": "{01A04731-A083-78AC-9227-73FD7A358A86}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Home Branch of Car_Branch Code",
+                "tocolumn": "EU-Rent Network_Branch Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Car Group",
+        "synclink": "{01A04731-B882-7303-A2AB-CF0D32915ED7}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "[Definition]\r\nA class of car models that share a rental tariff. A customer rents a car group, never a particular car: the requested car group is what the rental promises, and the car allocated at pick-up must be in that group or a higher one.\r\n[Source]\r\nEU-Rent: \"each car is of a given model; car models are grouped into car groups; all cars in a car group have the same rental tariff.\" https://kdmanalytics.com/sbvr/sbvr_intro_2.html",
+        "verbalization": "[Expressions]\r\n  \" is described as <Description of Car Group_Car Group Description><EU-Rent Fleet_Car Group Code>\"\r\n[Rules]\r\n\"<Car Group> is identified by <Car Group Code>\"\r\n",
+        "columns": [
+          {
+            "name": "Description of Car Group_Car Group Description",
+            "synclink": "{01A04731-B9EC-7846-AE5B-5B411D37D357}",
+            "datatype": "string",
+            "domain": "{01A04731-B9EC-7885-8880-1FDC96DE5C4E}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "EU-Rent Fleet_Car Group Code",
+            "synclink": "{01A07218-C038-7963-BE09-28FD7C2C7E8F}",
+            "datatype": "string",
+            "domain": "{01A04731-B8E1-78C7-9A54-34EE8CF19A26}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-003D-76C3-82A2-2779C4476C21}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "EU-Rent Fleet_Car Group Code",
+                "ref": "{01A07218-C038-7963-BE09-28FD7C2C7E8F}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+        ]
+      },
+      {
+        "name": "Car Model",
+        "synclink": "{01A04731-BA8B-78A6-AE98-21DE39F8CF78}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "[Definition]\r\nA make and model of car that EU-Rent operates. Identified by the pair (manufacturer, model name) - a composite identification, expressed by the uniqueness constraint spanning both label roles of \"Car Model Identification\".\r\n[Example]\r\nVolkswagen Polo (group A); Opel Astra (group B); Volvo V60 (group D); BMW 5 Series (group E).",
+        "verbalization": "[Expressions]\r\n  \" is classified in <Car Group of Car Model_Car Group Code><EU-Rent Fleet_Model Name><Manufacturer>\"\r\n[Rules]\r\n\"<Car Model> is identified by <Model Name> and <Manufacturer>\"\r\n\"<Car Group Code> in <Car Model> is a subset of <Car Group Code> in <Car Group>\"\r\n",
+        "columns": [
+          {
+            "name": "Car Group of Car Model_Car Group Code",
+            "synclink": "{01A04731-BC46-74A1-B0F8-95D21EB71BB2}",
+            "datatype": "string",
+            "domain": "{01A04731-B8E1-78C7-9A54-34EE8CF19A26}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Manufacturer",
+            "synclink": "{01A07218-DEBA-7CA3-9121-554120A27AF7}",
+            "datatype": "string",
+            "domain": "{01A04731-BAF2-779D-9B1D-269A52F3669D}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "EU-Rent Fleet_Model Name",
+            "synclink": "{01A07219-00D8-79CA-8A11-A7DF9007EB4D}",
+            "datatype": "string",
+            "domain": "{01A04731-BB42-7F2C-BABA-15DA09DDB449}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0048-7515-B999-3C3FF0D22201}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "EU-Rent Fleet_Model Name",
+                "ref": "{01A07219-00D8-79CA-8A11-A7DF9007EB4D}"
+              },
+              {
+                "name": "Manufacturer",
+                "ref": "{01A07218-DEBA-7CA3-9121-554120A27AF7}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Car Model_Car Group",
+            "synclink": "{00000000-0004-789B-95A4-B7E94C72388F}",
+            "fromtable": "{01A04731-BA8B-78A6-AE98-21DE39F8CF78}",
+            "totable": "{01A04731-B882-7303-A2AB-CF0D32915ED7}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Car Group of Car Model_Car Group Code",
+                "tocolumn": "EU-Rent Fleet_Car Group Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Car Service",
+        "synclink": "{01A04731-C228-7FE4-97F9-C5BF4678EF1B}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" was serviced on <Service Date> at mileage <Service Mileage><Car_Registration Number>\"\r\n[Rules]\r\n\"<Car Service> is identified by <Service Date> and <Registration Number>\"\r\n\"<Registration Number> in <Car Service> is a subset of <Registration Number> in <Car>\"\r\n",
+        "columns": [
+          {
+            "name": "Car_Registration Number",
+            "synclink": "{01A04731-C253-7447-8433-26A463B4D639}",
+            "datatype": "char(20)",
+            "domain": "{01A04731-BD3D-7BB6-998F-FEB219EBE5C6}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Service Date",
+            "synclink": "{01A04731-C2A0-7367-A4E8-ABC679D16C87}",
+            "datatype": "char(10)",
+            "domain": "{01A04731-C2A0-7E0D-A54E-D42B99CEAC79}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Service Mileage",
+            "synclink": "{01A04731-C2F0-7626-8593-2D26CE93F065}",
+            "datatype": "integer",
+            "domain": "{01A04731-C2F0-794F-9F60-DD278DEEFBD4}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0049-7301-96DE-20EDB48E016F}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Service Date",
+                "ref": "{01A04731-C2A0-7367-A4E8-ABC679D16C87}"
+              },
+              {
+                "name": "Car_Registration Number",
+                "ref": "{01A04731-C253-7447-8433-26A463B4D639}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Car Service_Car",
+            "synclink": "{00000000-0007-7A1E-997B-E030724A8AC9}",
+            "fromtable": "{01A04731-C228-7FE4-97F9-C5BF4678EF1B}",
+            "totable": "{01A04731-BCDB-7E38-836D-F5878C005152}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Car_Registration Number",
+                "tocolumn": "EU-Rent Fleet_Registration Number"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Car Transfer Movement",
+        "synclink": "{01A04735-A913-78E6-B58D-ACC34F11A3E9}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" was transferred from <FromBranch_Branch Code> to <ToBranch_Branch Code> on <Transfer Date><Car_Registration Number>\"\r\n[Rules]\r\n\"<Car Transfer Movement> is identified by <Transfer Date> and <Registration Number>\"\r\n\"<Registration Number> in <Car Transfer Movement> is a subset of <Registration Number> in <Car>\"\r\n\"<Branch Code> in <Car Transfer Movement> is a subset of <Branch Code> in <Branch>\"\r\n\"<Branch Code> in <Car Transfer Movement> is a subset of <Branch Code> in <Branch>\"\r\n",
+        "columns": [
+          {
+            "name": "Car_Registration Number",
+            "synclink": "{01A04735-A948-7289-B7D2-B974F8984BE6}",
+            "datatype": "char(20)",
+            "domain": "{01A04731-BD3D-7BB6-998F-FEB219EBE5C6}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "FromBranch_Branch Code",
+            "synclink": "{01A04735-A99D-7588-BD1F-4C0C98173B9B}",
+            "datatype": "string",
+            "domain": "{01A04731-A0E2-7E79-83B9-8A6A4F3E9A5C}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "ToBranch_Branch Code",
+            "synclink": "{01A04735-A9FB-7FEB-B4F4-1F6A4614DF7F}",
+            "datatype": "string",
+            "domain": "{01A04731-A0E2-7E79-83B9-8A6A4F3E9A5C}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Transfer Date",
+            "synclink": "{01A04735-AA50-748C-8C0D-FD0ACE788DBA}",
+            "datatype": "char(10)",
+            "domain": "{01A04735-AA50-75E0-BBB5-A1A9E99DDBCA}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0055-70EF-8766-B511E9EACB07}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Transfer Date",
+                "ref": "{01A04735-AA50-748C-8C0D-FD0ACE788DBA}"
+              },
+              {
+                "name": "Car_Registration Number",
+                "ref": "{01A04735-A948-7289-B7D2-B974F8984BE6}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Car Transfer Movement_Car",
+            "synclink": "{00000000-001B-7497-A865-C9E9E343203A}",
+            "fromtable": "{01A04735-A913-78E6-B58D-ACC34F11A3E9}",
+            "totable": "{01A04731-BCDB-7E38-836D-F5878C005152}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Car_Registration Number",
+                "tocolumn": "EU-Rent Fleet_Registration Number"
+              }
+            ]
+          },
+          {
+            "name": "FK_Car Transfer Movement_Branch",
+            "synclink": "{00000000-001C-7F93-A418-E800507D0274}",
+            "fromtable": "{01A04735-A913-78E6-B58D-ACC34F11A3E9}",
+            "totable": "{01A04731-A083-78AC-9227-73FD7A358A86}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "FromBranch_Branch Code",
+                "tocolumn": "EU-Rent Network_Branch Code"
+              }
+            ]
+          },
+          {
+            "name": "FK_Car Transfer Movement_Branch",
+            "synclink": "{00000000-001D-74EE-9B55-FB2F5FCEA420}",
+            "fromtable": "{01A04735-A913-78E6-B58D-ACC34F11A3E9}",
+            "totable": "{01A04731-A083-78AC-9227-73FD7A358A86}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "ToBranch_Branch Code",
+                "tocolumn": "EU-Rent Network_Branch Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Country",
+        "synclink": "{01A04731-9BC4-79CA-BAFB-7B8AC7A73347}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "[Definition]\r\nA country in which EU-Rent operates. Countries matter to the model because the rental tariff of a car group is set per country, and because taking a car across a national border affects insurance cover.\r\n[Example]\r\nNL - Netherlands; BE - Belgium; DE - Germany; FR - France.",
+        "verbalization": "[Expressions]\r\n  \" is named <Name of Country_Country Name><EU-Rent Network_Country Code>\"\r\n[Rules]\r\n\"Each <Country Name> is related to at most one <Country Code>\"\r\n\"<Country> is identified by <Country Code>\"\r\n",
+        "columns": [
+          {
+            "name": "Name of Country_Country Name",
+            "synclink": "{01A04731-9D5C-7366-9D16-D4704B68D89B}",
+            "datatype": "string",
+            "domain": "{01A04731-9D5C-7B38-B9F5-9DDF79354D09}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "EU-Rent Network_Country Code",
+            "synclink": "{01A07218-8A8F-7629-B390-38C83EC63785}",
+            "datatype": "char(2)",
+            "domain": "{01A04731-9C20-73B1-A46B-79BE0B68E0B7}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0004-7FD2-96DC-2BA6E314DA1A}",
+            "primary": false,
+            "columns": [
+              {
+                "name": "Name of Country_Country Name",
+                "ref": "{01A04731-9D5C-7366-9D16-D4704B68D89B}"
+              }
+            ]
+          },
+          {
+            "name": "",
+            "synclink": "{00000000-003A-7677-874F-B8F0A1EC6127}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "EU-Rent Network_Country Code",
+                "ref": "{01A07218-8A8F-7629-B390-38C83EC63785}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+        ]
+      },
+      {
+        "name": "Customer",
+        "synclink": "{01A04731-DD51-7C81-806A-133293971D73}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "[Definition]\r\nA person who contracts rentals with EU-Rent and is liable for the charges. Subtype of Person. A customer need not drive: the renter and the driver are separate roles.",
+        "verbalization": "[Expressions]\r\n  \" is a customer of EU-Rent<EU-Rent Parties_Person Number>\"\r\n[Rules]\r\n\"<Customer> is identified by <Person Number>\"\r\n\"<Customer> is a subset of <Person Number> in <Person>\"\r\n\"<Customer> is a subset of <Person Number> in <Customer Credit Card>\"\r\n",
+        "columns": [
+          {
+            "name": "EU-Rent Parties_Person Number",
+            "synclink": "{01A04731-DD7B-7BE7-AC96-5ED65EAB474E}",
+            "datatype": "integer",
+            "domain": "{01A04731-D008-70D3-ADDD-2695E99B15EF}",
+            "mandatory": true,
+            "issubtype": true
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-004A-7E23-B6E9-FF3A6CFEAAD6}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "EU-Rent Parties_Person Number",
+                "ref": "{01A04731-DD7B-7BE7-AC96-5ED65EAB474E}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Customer_Person",
+            "synclink": "{00000000-0008-7305-8FD0-BE194003D8EB}",
+            "fromtable": "{01A04731-DD51-7C81-806A-133293971D73}",
+            "totable": "{01A04731-CF99-7C08-9115-C96DDFFF767E}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "EU-Rent Parties_Person Number",
+                "tocolumn": "EU-Rent Parties_Person Number"
+              }
+            ]
+          },
+          {
+            "name": "FK_Customer_Customer Credit Card",
+            "synclink": "{00000000-000D-771F-8382-1863E66264A1}",
+            "fromtable": "{01A04731-DD51-7C81-806A-133293971D73}",
+            "totable": "{01A04731-F635-77D2-9FFB-DFC24FDF9A40}",
+            "issubset": true,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "EU-Rent Parties_Person Number",
+                "tocolumn": "Customer_Person Number"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Customer Credit Card",
+        "synclink": "{01A04731-F635-77D2-9FFB-DFC24FDF9A40}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" guarantees payment with card <Credit Card Number><Customer_Person Number>\"\r\n[Rules]\r\n\"<Customer Credit Card> is identified by <Credit Card Number>\"\r\n\"<Person Number> in <Customer Credit Card> is a subset of <Customer>\"\r\n",
+        "columns": [
+          {
+            "name": "Customer_Person Number",
+            "synclink": "{01A04731-F66A-7EE1-B191-F9DA519D230A}",
+            "datatype": "integer",
+            "domain": "{01A04731-D008-70D3-ADDD-2695E99B15EF}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Credit Card Number",
+            "synclink": "{01A04731-F6DD-7E2B-95B5-BE5F27571D64}",
+            "datatype": "string",
+            "domain": "{01A04731-F6DD-765F-8AB8-FE0E7775EC5C}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0023-7568-8B38-E0F96C782DEB}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Credit Card Number",
+                "ref": "{01A04731-F6DD-7E2B-95B5-BE5F27571D64}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Customer Credit Card_Customer",
+            "synclink": "{00000000-000C-7BFE-BFC9-ED8E9DBDA91D}",
+            "fromtable": "{01A04731-F635-77D2-9FFB-DFC24FDF9A40}",
+            "totable": "{01A04731-DD51-7C81-806A-133293971D73}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Customer_Person Number",
+                "tocolumn": "EU-Rent Parties_Person Number"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Driver",
+        "synclink": "{01A04731-DE1A-72B0-AED0-C3A246C00627}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "[Definition]\r\nA person qualified to drive an EU-Rent car, holding a driving licence. Subtype of Person. A driver may be barred from renting after bad experiences.\r\n[Source]\r\nEU-Rent: \"each rented car has one or more registered drivers\", and EU-Rent \"may bar drivers who cause bad experiences\". https://caminao.blog/community/sample-problems/eu-rent-car/",
+        "verbalization": "[Expressions]\r\n  \" holds a licence valid until <Licence Expiry Date><EU-Rent Parties_Person Number>\"\r\n  \" holds driving licence <Driving Licence_Licence Number><EU-Rent Parties_Person Number>\"\r\n  \" is a qualified driver<EU-Rent Parties_Person Number>\"\r\n[Rules]\r\n\"Each <Licence Number> is related to at most one <Driver>\"\r\n\"<Driver> is identified by <Person Number>\"\r\n\"<Person Number> in <Driver> is a subset of <Person Number> in <Person>\"\r\n",
+        "columns": [
+          {
+            "name": "EU-Rent Parties_Person Number",
+            "synclink": "{01A04731-DE43-71DC-BD6E-A8DACECA79AA}",
+            "datatype": "integer",
+            "domain": "{01A04731-D008-70D3-ADDD-2695E99B15EF}",
+            "mandatory": true,
+            "issubtype": true
+          },
+          {
+            "name": "Driving Licence_Licence Number",
+            "synclink": "{01A04731-F206-7720-94D6-5E3EFBAB5839}",
+            "datatype": "string",
+            "domain": "{01A04731-F206-7BC3-81C7-A5A4FEC40820}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Licence Expiry Date",
+            "synclink": "{01A04731-F354-72DE-B4B5-C15A5C43188A}",
+            "datatype": "char(10)",
+            "domain": "{01A04731-F354-716E-BC76-D531CB81B244}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-001F-7321-B93A-DB1450D2BB65}",
+            "primary": false,
+            "columns": [
+              {
+                "name": "Driving Licence_Licence Number",
+                "ref": "{01A04731-F206-7720-94D6-5E3EFBAB5839}"
+              }
+            ]
+          },
+          {
+            "name": "",
+            "synclink": "{00000000-004B-708F-AE79-0D9809BB047C}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "EU-Rent Parties_Person Number",
+                "ref": "{01A04731-DE43-71DC-BD6E-A8DACECA79AA}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Driver_Person",
+            "synclink": "{00000000-0009-7120-91B2-A14410496704}",
+            "fromtable": "{01A04731-DE1A-72B0-AED0-C3A246C00627}",
+            "totable": "{01A04731-CF99-7C08-9115-C96DDFFF767E}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "EU-Rent Parties_Person Number",
+                "tocolumn": "EU-Rent Parties_Person Number"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Local Area",
+        "synclink": "{01A04731-9E44-73A1-8380-9AB621298906}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "[Definition]\r\nA region within a country that groups EU-Rent branches. Cars are owned at local-area level and stored at the branches of that area; a local area is also what an \"authorized area\" of a rental is expressed in.\r\n[Source]\r\nEU-Rent: \"in each country it has local areas containing branches\", with \"car ownership at the local area level with storage at branches\". https://caminao.blog/community/sample-problems/eu-rent-car/",
+        "verbalization": "[Expressions]\r\n  \" lies in <Country of Local Area_Country Code><EU-Rent Network_Local Area Code>\"\r\n[Rules]\r\n\"<Local Area> is identified by <Local Area Code>\"\r\n\"<Country Code> in <Local Area> is a subset of <Country Code> in <Country>\"\r\n",
+        "columns": [
+          {
+            "name": "Country of Local Area_Country Code",
+            "synclink": "{01A04731-9FDC-71AA-9066-FDD416F643DB}",
+            "datatype": "char(2)",
+            "domain": "{01A04731-9C20-73B1-A46B-79BE0B68E0B7}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "EU-Rent Network_Local Area Code",
+            "synclink": "{01A07218-B191-79B1-9BE8-DD7A8D690702}",
+            "datatype": "string",
+            "domain": "{01A04731-9EA0-7A32-8189-4361764100ED}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-003B-7DD8-8422-257571234C69}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "EU-Rent Network_Local Area Code",
+                "ref": "{01A07218-B191-79B1-9BE8-DD7A8D690702}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Local Area_Country",
+            "synclink": "{00000000-0002-7924-B977-A63281244771}",
+            "fromtable": "{01A04731-9E44-73A1-8380-9AB621298906}",
+            "totable": "{01A04731-9BC4-79CA-BAFB-7B8AC7A73347}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Country of Local Area_Country Code",
+                "tocolumn": "EU-Rent Network_Country Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "One-Way Rental",
+        "synclink": "{01A04735-4AC4-78F9-B4C9-C787AD1854C9}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "[Definition]\r\nA rental whose drop-off branch differs from its pick-up branch. Subtype of Rental, derived rather than asserted: it follows from comparing the two Branch roles. It attracts a location penalty charge (R09).\r\n[Derivation]\r\nOne-Way Rental := Rental R WHERE Pick Up Branch[R].Branch <> Drop Off Branch[R].Branch. Never asserted: it follows from the two Branch roles (R09).",
+        "verbalization": "[Rules]\r\n\"<One-Way Rental> is identified by <Rental Number>\"\r\n\"<One-Way Rental> is a subset of <Rental Number> in <Rental>\"\r\n",
+        "columns": [
+          {
+            "name": "EU-Rent Rental Process_Rental Number",
+            "synclink": "{01A04735-D2EE-7FA9-A2D8-B27FF889C3F9}",
+            "datatype": "integer",
+            "domain": "{01A04732-0CD3-7A9E-B825-FDC872375F3D}",
+            "mandatory": true,
+            "issubtype": true
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0058-702A-8778-739C616A01C2}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "EU-Rent Rental Process_Rental Number",
+                "ref": "{01A04735-D2EE-7FA9-A2D8-B27FF889C3F9}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_One-Way Rental_Rental",
+            "synclink": "{00000000-0020-7F9B-B160-9AC60455A74D}",
+            "fromtable": "{01A04735-4AC4-78F9-B4C9-C787AD1854C9}",
+            "totable": "{01A04732-0C75-70DA-8AE4-2876EFA701D6}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "EU-Rent Rental Process_Rental Number",
+                "tocolumn": "EU-Rent Rental Process_Rental Number"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Open Rental",
+        "synclink": "{01A04735-4BA6-7F56-B624-D6BDA9DEF474}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "[Definition]\r\nA rental that has been picked up but not yet returned - state Open. The subject of the Area of Usage Rule (R10): only an open rental has a car out on the road that can leave its authorized area.\r\n[Source]\r\n\"open rental\" is used as a term in the SBVR EU-Rent rule statements quoted at https://www.brcommunity.com/articles.php?id=c009\r\n[Derivation]\r\nOpen Rental := Rental R WHERE Rental State[R].Rental Status = 'Open'. Never asserted: it follows from the state (R10, R11).",
+        "verbalization": "[Rules]\r\n\"<Open Rental> is identified by <Rental Number>\"\r\n\"<Open Rental> is a subset of <Rental Number> in <Rental>\"\r\n",
+        "columns": [
+          {
+            "name": "EU-Rent Rental Process_Rental Number",
+            "synclink": "{01A04735-DAB2-7FAA-BA50-2C68297D3141}",
+            "datatype": "integer",
+            "domain": "{01A04732-0CD3-7A9E-B825-FDC872375F3D}",
+            "mandatory": true,
+            "issubtype": true
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0059-7CD5-A9F5-C2B4790A3266}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "EU-Rent Rental Process_Rental Number",
+                "ref": "{01A04735-DAB2-7FAA-BA50-2C68297D3141}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Open Rental_Rental",
+            "synclink": "{00000000-0021-7E52-98EB-EC250DF5BA37}",
+            "fromtable": "{01A04735-4BA6-7F56-B624-D6BDA9DEF474}",
+            "totable": "{01A04732-0C75-70DA-8AE4-2876EFA701D6}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "EU-Rent Rental Process_Rental Number",
+                "tocolumn": "EU-Rent Rental Process_Rental Number"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Person",
+        "synclink": "{01A04731-CF99-7C08-9115-C96DDFFF767E}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "[Definition]\r\nA human being known to EU-Rent. Person is the supertype: the same person may be a customer, a driver, or both. Every person must be at least one of the two - a totality constraint spans the Customer and Driver roles.",
+        "verbalization": "[Expressions]\r\n  \" is named <Name of Person_Person Name><EU-Rent Parties_Person Number>\"\r\n  \" was born on <Date of Birth_Birth Date><EU-Rent Parties_Person Number>\"\r\n[Rules]\r\n\"<Person> is identified by <Person Number>\"\r\n\"<Person Number> in <Person> is a subset of <Customer> and/or <Person Number> in <Driver>\"\r\n",
+        "columns": [
+          {
+            "name": "Name of Person_Person Name",
+            "synclink": "{01A04731-D112-72B8-A202-55D018AB0663}",
+            "datatype": "string",
+            "domain": "{01A04731-D112-7B73-9FDC-CD3D1EF438EF}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Date of Birth_Birth Date",
+            "synclink": "{01A04731-D240-7B2D-BE31-4B3F4BB130AF}",
+            "datatype": "char(10)",
+            "domain": "{01A04731-D240-7218-9FAF-A8F7B17A84B4}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "EU-Rent Parties_Person Number",
+            "synclink": "{01A07218-CFA7-759D-9DCD-BADF3FB6094B}",
+            "datatype": "integer",
+            "domain": "{01A04731-D008-70D3-ADDD-2695E99B15EF}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0040-7240-832E-E495953EC280}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "EU-Rent Parties_Person Number",
+                "ref": "{01A07218-CFA7-759D-9DCD-BADF3FB6094B}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+        ]
+      },
+      {
+        "name": "Rental",
+        "synclink": "{01A04732-0C75-70DA-8AE4-2876EFA701D6}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "[Definition]\r\nAn agreement under which EU-Rent provides a car of a requested car group to a customer for a period, from a pick-up branch to a drop-off branch. The central object type of the model: nearly every business rule is about a rental.\r\n[Example]\r\nRental 10001: contracted by customer 1001, group B requested, picked up at AMS01 on 2026-09-01, dropped off at BRU01 on 2026-09-05, fulfilled with NL-34-DEF-5. One-way, so it incurs a location penalty charge.\r\n[Source]\r\nEU-Rent case study, OMG SBVR Annex. Overviews: https://kdmanalytics.com/sbvr/EU-Rent.html , https://caminao.blog/community/sample-problems/eu-rent-car/ . EU-Rent was originally developed by Model Systems Ltd. and popularised by the Business Rules Group.",
+        "verbalization": "[Expressions]\r\n  \" is driven by <Main Driver of Rental_Person Number><EU-Rent Rental Process_Rental Number>\"\r\n  \" is dropped off at <Drop Off Branch_Branch Code><EU-Rent Rental Process_Rental Number>\"\r\n  \" is fulfilled with <Car of Rental_Registration Number><EU-Rent Rental Process_Rental Number>\"\r\n  \" runs from <Rental Period_Pick Up Date> until <Rental Period_Return Date><EU-Rent Rental Process_Rental Number>\"\r\n  \" is contracted by <Renter of Rental_Person Number><EU-Rent Rental Process_Rental Number>\"\r\n  \" requests <Requested Car Group_Car Group Code><EU-Rent Rental Process_Rental Number>\"\r\n  \" is in state <Rental State_Rental Status><EU-Rent Rental Process_Rental Number>\"\r\n  \" is picked up at <Pick Up Branch_Branch Code><EU-Rent Rental Process_Rental Number>\"\r\n  \" was actually returned on <Actual Return Date><EU-Rent Rental Process_Rental Number>\"\r\n[Rules]\r\n\"<Rental> is identified by <Rental Number>\"\r\n\"<Person Number> in <Rental> is a subset of <Customer>\"\r\n\"<Car Group Code> in <Rental> is a subset of <Car Group Code> in <Car Group>\"\r\n\"<Branch Code> in <Rental> is a subset of <Branch Code> in <Branch>\"\r\n\"<Branch Code> in <Rental> is a subset of <Branch Code> in <Branch>\"\r\n\"<Registration Number> in <Rental> is a subset of <Registration Number> in <Car>\"\r\n\"<Person Number> in <Rental> is a subset of <Person Number> in <Driver>\"\r\n",
+        "columns": [
+          {
+            "name": "Renter of Rental_Person Number",
+            "synclink": "{01A04732-0E10-733F-92F6-47C552E2B896}",
+            "datatype": "integer",
+            "domain": "{01A04731-D008-70D3-ADDD-2695E99B15EF}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Requested Car Group_Car Group Code",
+            "synclink": "{01A04732-0F1A-7760-B6F8-A8BDBE514C3B}",
+            "datatype": "string",
+            "domain": "{01A04731-B8E1-78C7-9A54-34EE8CF19A26}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Pick Up Branch_Branch Code",
+            "synclink": "{01A04732-102D-7614-B1EF-074272E8B87D}",
+            "datatype": "string",
+            "domain": "{01A04731-A0E2-7E79-83B9-8A6A4F3E9A5C}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Drop Off Branch_Branch Code",
+            "synclink": "{01A04732-1136-7E91-AF80-3E0CF1A5125E}",
+            "datatype": "string",
+            "domain": "{01A04731-A0E2-7E79-83B9-8A6A4F3E9A5C}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Rental Period_Pick Up Date",
+            "synclink": "{01A04732-1242-7F9E-B72E-C23ADD7DF426}",
+            "datatype": "char(10)",
+            "domain": "{01A04732-1242-7C5E-A0FA-734F0B661613}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Rental Period_Return Date",
+            "synclink": "{01A04732-12BD-7627-BABF-9BDD0802B1E4}",
+            "datatype": "char(10)",
+            "domain": "{01A04732-12BD-7303-A726-27FDBB25E4CE}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Car of Rental_Registration Number",
+            "synclink": "{01A04732-13C9-7C8D-B04E-BC3C6C735E83}",
+            "datatype": "char(20)",
+            "domain": "{01A04731-BD3D-7BB6-998F-FEB219EBE5C6}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "Main Driver of Rental_Person Number",
+            "synclink": "{01A04732-14DF-71DD-B89C-685137D834D3}",
+            "datatype": "integer",
+            "domain": "{01A04731-D008-70D3-ADDD-2695E99B15EF}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "Rental State_Rental Status",
+            "synclink": "{01A04732-173D-7720-92F6-844D871D6F17}",
+            "datatype": "string",
+            "domain": "{01A04732-173D-77F6-948E-A5B262076118}",
+            "mandatory": true,
+            "default": "Requested",
+            "issubtype": false
+          },
+          {
+            "name": "Actual Return Date",
+            "synclink": "{01A04732-1853-7E4C-A728-F1D6B1D72829}",
+            "datatype": "char(10)",
+            "domain": "{01A04732-1853-7169-B41F-C83668543CA8}",
+            "mandatory": false,
+            "issubtype": false
+          },
+          {
+            "name": "EU-Rent Rental Process_Rental Number",
+            "synclink": "{01A07218-D6E5-7784-B8FF-8D78F57F4F88}",
+            "datatype": "integer",
+            "domain": "{01A04732-0CD3-7A9E-B825-FDC872375F3D}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0041-77E4-8D65-E9C32FF09DCB}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "EU-Rent Rental Process_Rental Number",
+                "ref": "{01A07218-D6E5-7784-B8FF-8D78F57F4F88}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Rental_Customer",
+            "synclink": "{00000000-000E-7BCD-B58C-CE998E660FF4}",
+            "fromtable": "{01A04732-0C75-70DA-8AE4-2876EFA701D6}",
+            "totable": "{01A04731-DD51-7C81-806A-133293971D73}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Renter of Rental_Person Number",
+                "tocolumn": "EU-Rent Parties_Person Number"
+              }
+            ]
+          },
+          {
+            "name": "FK_Rental_Car Group",
+            "synclink": "{00000000-000F-7990-97C6-876C5ACB9D16}",
+            "fromtable": "{01A04732-0C75-70DA-8AE4-2876EFA701D6}",
+            "totable": "{01A04731-B882-7303-A2AB-CF0D32915ED7}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Requested Car Group_Car Group Code",
+                "tocolumn": "EU-Rent Fleet_Car Group Code"
+              }
+            ]
+          },
+          {
+            "name": "FK_Rental_Branch",
+            "synclink": "{00000000-0010-7F8F-BC2D-8ACAFFE2FBF0}",
+            "fromtable": "{01A04732-0C75-70DA-8AE4-2876EFA701D6}",
+            "totable": "{01A04731-A083-78AC-9227-73FD7A358A86}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Pick Up Branch_Branch Code",
+                "tocolumn": "EU-Rent Network_Branch Code"
+              }
+            ]
+          },
+          {
+            "name": "FK_Rental_Branch",
+            "synclink": "{00000000-0011-788C-835B-500486FFEA21}",
+            "fromtable": "{01A04732-0C75-70DA-8AE4-2876EFA701D6}",
+            "totable": "{01A04731-A083-78AC-9227-73FD7A358A86}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Drop Off Branch_Branch Code",
+                "tocolumn": "EU-Rent Network_Branch Code"
+              }
+            ]
+          },
+          {
+            "name": "FK_Rental_Car",
+            "synclink": "{00000000-0012-7B23-BE6F-09E59B3AEBD0}",
+            "fromtable": "{01A04732-0C75-70DA-8AE4-2876EFA701D6}",
+            "totable": "{01A04731-BCDB-7E38-836D-F5878C005152}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Car of Rental_Registration Number",
+                "tocolumn": "EU-Rent Fleet_Registration Number"
+              }
+            ]
+          },
+          {
+            "name": "FK_Rental_Driver",
+            "synclink": "{00000000-0013-7A89-A84D-E1ACC7A97177}",
+            "fromtable": "{01A04732-0C75-70DA-8AE4-2876EFA701D6}",
+            "totable": "{01A04731-DE1A-72B0-AED0-C3A246C00627}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Main Driver of Rental_Person Number",
+                "tocolumn": "EU-Rent Parties_Person Number"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rental Charge",
+        "synclink": "{01A04732-1908-7894-A434-694D7301BA31}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" incurs a <EU-Rent Charging_Charge Kind> of <EU-Rent Charging_Charge Amount><Rental Number>\"\r\n[Rules]\r\n\"<Rental Charge> is identified by <Charge Kind> and <Rental Number>\"\r\n\"<Rental Number> in <Rental Charge> is a subset of <Rental Number> in <Rental>\"\r\n",
+        "columns": [
+          {
+            "name": "Rental Number",
+            "synclink": "{01A04732-1937-71BE-8BC7-2B200F6905E0}",
+            "datatype": "integer",
+            "domain": "{01A04732-0CD3-7A9E-B825-FDC872375F3D}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "EU-Rent Charging_Charge Kind",
+            "synclink": "{01A04732-199F-7F08-979B-61979F4B5D92}",
+            "datatype": "string",
+            "domain": "{01A04732-19A0-7E2F-9D93-B4FCFFBD3380}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "EU-Rent Charging_Charge Amount",
+            "synclink": "{01A04732-19FA-7480-A3F5-4BBD8E13A366}",
+            "datatype": "currency",
+            "domain": "{01A04732-19FA-7901-ADF8-5A599CB22374}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0050-7677-A4BC-E28FE8BF92E5}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "EU-Rent Charging_Charge Kind",
+                "ref": "{01A04732-199F-7F08-979B-61979F4B5D92}"
+              },
+              {
+                "name": "Rental Number",
+                "ref": "{01A04732-1937-71BE-8BC7-2B200F6905E0}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Rental Charge_Rental",
+            "synclink": "{00000000-0016-7CFB-A210-0BF3F20445AE}",
+            "fromtable": "{01A04732-1908-7894-A434-694D7301BA31}",
+            "totable": "{01A04732-0C75-70DA-8AE4-2876EFA701D6}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Rental Number",
+                "tocolumn": "EU-Rent Rental Process_Rental Number"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rental Tariff",
+        "synclink": "{01A04732-1A6B-72BD-9F1C-343718615C9A}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "verbalization": "[Expressions]\r\n  \" in <EU-Rent Charging_Country Code> costs <EU-Rent Charging_Daily Rate> per day<Car Group Code>\"\r\n[Rules]\r\n\"<Rental Tariff> is identified by <Car Group Code> and <Country Code>\"\r\n\"<Car Group Code> in <Rental Tariff> is a subset of <Car Group Code> in <Car Group>\"\r\n\"<Country Code> in <Rental Tariff> is a subset of <Country Code> in <Country>\"\r\n",
+        "columns": [
+          {
+            "name": "Car Group Code",
+            "synclink": "{01A04732-1A9F-7864-AB40-616287B7A5A5}",
+            "datatype": "string",
+            "domain": "{01A04731-B8E1-78C7-9A54-34EE8CF19A26}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "EU-Rent Charging_Country Code",
+            "synclink": "{01A04732-1B06-7B21-8953-E418C6CCA212}",
+            "datatype": "char(2)",
+            "domain": "{01A04731-9C20-73B1-A46B-79BE0B68E0B7}",
+            "mandatory": true,
+            "issubtype": false
+          },
+          {
+            "name": "EU-Rent Charging_Daily Rate",
+            "synclink": "{01A04732-1B5F-7BC3-AC05-AF2906A2233B}",
+            "datatype": "currency",
+            "domain": "{01A04732-1B5F-7ED5-84D7-C58A6370C1AA}",
+            "mandatory": true,
+            "issubtype": false
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0052-7E75-9F85-A67756750B84}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "Car Group Code",
+                "ref": "{01A04732-1A9F-7864-AB40-616287B7A5A5}"
+              },
+              {
+                "name": "EU-Rent Charging_Country Code",
+                "ref": "{01A04732-1B06-7B21-8953-E418C6CCA212}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Rental Tariff_Car Group",
+            "synclink": "{00000000-0017-7B12-ABCF-7C44AAF372B8}",
+            "fromtable": "{01A04732-1A6B-72BD-9F1C-343718615C9A}",
+            "totable": "{01A04731-B882-7303-A2AB-CF0D32915ED7}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "Car Group Code",
+                "tocolumn": "EU-Rent Fleet_Car Group Code"
+              }
+            ]
+          },
+          {
+            "name": "FK_Rental Tariff_Country",
+            "synclink": "{00000000-0018-715F-A417-18BFCC61440D}",
+            "fromtable": "{01A04732-1A6B-72BD-9F1C-343718615C9A}",
+            "totable": "{01A04731-9BC4-79CA-BAFB-7B8AC7A73347}",
+            "issubset": false,
+            "issubtype": false,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "EU-Rent Charging_Country Code",
+                "tocolumn": "EU-Rent Network_Country Code"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Walk-in Rental",
+        "synclink": "{01A04735-4951-7994-B985-D7EE656AFAFE}",
+        "temporal": "None",
+        "transitional": false,
+        "annotatable": false,
+        "staticpopulation": false,
+        "artificialkey": false,
+        "comment": "[Definition]\r\nA rental contracted at the branch counter on the pick-up date itself, with no prior booking. Subtype of Rental. It goes straight to state Open, skipping the Requested state.\r\n[Derivation]\r\nWalk-in Rental := Rental R WHERE Rental State[R] entered 'Open' without ever having been 'Requested' - i.e. the rental was contracted on Rental Period[R].Pick Up Date itself. Needs the state history (transaction time on Rental State) to be evaluated exactly; approximated as NOT Advance Rental at the moment of contracting.",
+        "verbalization": "[Rules]\r\n\"<Walk-in Rental> is identified by <Rental Number>\"\r\n\"<Walk-in Rental> is a subset of <Rental Number> in <Rental>\"\r\n",
+        "columns": [
+          {
+            "name": "EU-Rent Rental Process_Rental Number",
+            "synclink": "{01A04735-CBB9-7495-98F7-A17C14082798}",
+            "datatype": "integer",
+            "domain": "{01A04732-0CD3-7A9E-B825-FDC872375F3D}",
+            "mandatory": true,
+            "issubtype": true
+          }
+        ],
+        "keys": [
+          {
+            "name": "",
+            "synclink": "{00000000-0057-7662-A67C-148D2F86FEF9}",
+            "primary": true,
+            "columns": [
+              {
+                "name": "EU-Rent Rental Process_Rental Number",
+                "ref": "{01A04735-CBB9-7495-98F7-A17C14082798}"
+              }
+            ]
+          }
+        ],
+        "foreignkeys": [
+          {
+            "name": "FK_Walk-in Rental_Rental",
+            "synclink": "{00000000-001F-7F7C-A6D3-BB608D1D89BD}",
+            "fromtable": "{01A04735-4951-7994-B985-D7EE656AFAFE}",
+            "totable": "{01A04732-0C75-70DA-8AE4-2876EFA701D6}",
+            "issubset": false,
+            "issubtype": true,
+            "function": "Mandatory",
+            "references": [
+              {
+                "fromcolumn": "EU-Rent Rental Process_Rental Number",
+                "tocolumn": "EU-Rent Rental Process_Rental Number"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

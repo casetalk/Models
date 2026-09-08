@@ -15,7 +15,7 @@ end are entered **unconfirmed and flagged `is_counter_example`**.
 
 Column convention for the `values` of an insert: one value per lexical column, left to right,
 with an object-type role expanded to its identifying label(s). So `Car Model of Car` takes
-three values (`NL-12-ABC-3,Volkswagen,Polo`) because Car Model is identified by Manufacturer
+three values (`NL-G-482-TK,Volkswagen,Polo`) because Car Model is identified by Manufacturer
 plus Model Name, and a Driver or Customer role takes the Person Number.
 
 ### Network
@@ -36,18 +36,29 @@ Description of Car Group  A → Economy small hatchback · B → Compact hatchba
                           C → Intermediate saloon     · D → Full size estate
                           E → Premium saloon          · F → Luxury saloon
 Car Group of Car Model    Volkswagen Polo → A · Opel Astra → B · Volvo V60 → D · BMW 5 Series → E
-Car Model of Car          NL-12-ABC-3 → Volkswagen Polo · NL-34-DEF-5 → Opel Astra
-                          BE-1-XYZ-99 → Volvo V60       · DE-D-AB-1234 → BMW 5 Series
-Home Branch of Car        NL-12-ABC-3 → AMS01 · NL-34-DEF-5 → AMS01
-                          BE-1-XYZ-99 → BRU01 · DE-D-AB-1234 → DUS01
-Car Odometer Reading      NL-12-ABC-3 → 48200 · NL-34-DEF-5 → 12750
-                          BE-1-XYZ-99 → 61400 · DE-D-AB-1234 → 4900
-Car Condition             NL-12-ABC-3 → Available · NL-34-DEF-5 → Rented
-                          BE-1-XYZ-99 → In Service · DE-D-AB-1234 → Available
-Car Service               NL-12-ABC-3, 2026-06-14, 45000
-                          NL-34-DEF-5, 2026-07-02, 10000
-                          BE-1-XYZ-99, 2026-03-11, 55000     ← 6400 miles ago: R14 violated
-Car Transfer Movement     NL-34-DEF-5, from AMS01 to BRU01, 2026-09-06   ← returning a one-way car
+Car Model of Car          NL-G-482-TK → Volkswagen Polo · NL-H-517-ZR → Opel Astra
+                          BE-2-XYZ-123 → Volvo V60       · DE-D-AB-1234 → BMW 5 Series
+                          NL-K-903-LP → Volkswagen Polo · DE-D-CD-5678 → BMW 5 Series
+                          NL-J-286-XB → Opel Astra
+Home Branch of Car        NL-G-482-TK → AMS01 · NL-H-517-ZR → AMS01
+                          BE-2-XYZ-123 → BRU01 · DE-D-AB-1234 → DUS01
+                          NL-K-903-LP → AMS01 · DE-D-CD-5678 → DUS01 · NL-J-286-XB → AMS01
+Purchase Date of Car      NL-G-482-TK → 2025-11-03 · NL-H-517-ZR → 2026-02-17
+                          BE-2-XYZ-123 → 2025-10-21 · DE-D-AB-1234 → 2026-07-30
+                          NL-K-903-LP → 2025-06-02           ← fifteen months old on 2026-09-08: R21 (age)
+                          DE-D-CD-5678 → 2026-01-12 · NL-J-286-XB → 2025-05-12
+Car Odometer Reading      NL-G-482-TK → 23800 · NL-H-517-ZR → 12750
+                          BE-2-XYZ-123 → 24400 · DE-D-AB-1234 → 4900
+                          NL-K-903-LP → 19300 · NL-J-286-XB → 24100
+                          DE-D-CD-5678 → 31200               ← over 25,000 miles (40,000 km): R21 (distance)
+Car Condition             NL-G-482-TK → Available · NL-H-517-ZR → Rented
+                          BE-2-XYZ-123 → In Service · DE-D-AB-1234 → Available
+                          NL-K-903-LP → Available · DE-D-CD-5678 → Available   ← should be Sold: the R21 counter-examples
+                          NL-J-286-XB → Sold                                   ← sold at one year old, 24100 miles
+Car Service               NL-G-482-TK, 2026-06-14, 20000
+                          NL-H-517-ZR, 2026-07-02, 10000
+                          BE-2-XYZ-123, 2026-03-11, 18000     ← 6400 miles ago: R14 violated
+Car Transfer Movement     NL-H-517-ZR, from AMS01 to BRU01, 2026-09-06   ← returning a one-way car
 ```
 
 ### Parties
@@ -79,7 +90,7 @@ Rental 10001 — the ordinary case
   Pick Up Branch          10001 → AMS01
   Drop Off Branch         10001 → BRU01          ← one-way: R09 fires
   Rental Period           10001, 2026-09-01, 2026-09-05
-  Car of Rental           10001 → NL-34-DEF-5
+  Car of Rental           10001 → NL-H-517-ZR
   Main Driver of Rental   10001 → 1001
   Rental State            10001 → Open
   Authorized Area         10001 → NL-NH, NL-ZH, BE-BRU
@@ -103,7 +114,7 @@ Rental 10003 — closed, returned late
   Pick Up Branch          10003 → AMS02
   Drop Off Branch         10003 → AMS02
   Rental Period           10003, 2026-08-01, 2026-08-08
-  Car of Rental           10003 → NL-12-ABC-3
+  Car of Rental           10003 → NL-G-482-TK
   Main Driver of Rental   10003 → 1002
   Additional Driver       10003 → 1001
   Actual Return           10003 → 2026-08-11        ← three days late: R18 fires
@@ -133,9 +144,11 @@ fact(s) that violate a rule; they have none of their mandatory facts (see the to
 | Rental 10004 driven by person 1002 | R04 — 1002 is a barred driver |
 | Rental 10005 with four additional drivers | R03 |
 | Rental 10006 running 2026-09-01 to 2026-12-15 | R07 — 105 days |
-| Rental 10007 fulfilled with BE-1-XYZ-99 | R15 — that car is In Service |
+| Rental 10007 fulfilled with BE-2-XYZ-123 | R15 — that car is In Service |
 | Rental 10008 requesting group E, fulfilled with a Polo (group A) | R13 — a downgrade |
 | Two `Rental Tariff` rows for B/NL | UC over (Car Group, Country) |
 | Rental 10009, renter 1001, state Open while 10001 is still Open | R22 — one car on rental at a time |
 | Rental 10010, main driver 1001, state Open while 10001 is still Open | R23 — the signing driver has no car out |
+| Car NL-K-903-LP still Available, purchased 2025-06-02 (fifteen months old on 2026-09-08) | R21 — sold at one year old |
+| Car DE-D-CD-5678 still Available at 31200 miles (50,200 km) | R21 — sold at 40,000 km |
 | ~~A second Car Model "Opel / Astra"~~ — not entered: Car Model is identified by its own expression, so a duplicate is the same instance | UC over (Manufacturer, Model Name) on Car Model |

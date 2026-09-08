@@ -1,0 +1,338 @@
+﻿# Coach history
+
+<!-- coach 2026-08-28T09:02:11 save -->
+When you named that fact type as you did, what led you to treat it as a single fact rather than something that might be expressed in more than one elementary statement?
+<!-- /coach -->
+
+<!-- coach 2026-08-28T09:14:19 save -->
+When you named the rule "Car Model Belongs To One Car Group," what led you to treat a car model's membership in a group as something that holds for exactly one group and never changes?
+<!-- /coach -->
+
+<!-- coach 2026-08-28T09:18:13 wellformedness -->
+Which fact type carries the largest share of those hints, and what do those particular hints point to about its verbalization? Have you looked at whether the warnings cluster around specific object types or roles that share a common structural pattern? When you trace the dominant hint type back to its source, what naming or bridging convention keeps reappearing across the flagged elements? What would you need to examine first to decide whether these hints reflect a single underlying cause or several unrelated ones?
+<!-- /coach -->
+
+<!-- coach 2026-08-28T09:19:00 save -->
+What makes you confident that a country's identification will always take exactly the form of the population you just entered?
+<!-- /coach -->
+
+<!-- coach 2026-08-28T09:21:54 save -->
+When you populated Registration Number as the identifier for a car, what did you assume stays true about that number across the whole life of the physical vehicle?
+<!-- /coach -->
+
+<!-- coach 2026-08-28T09:22:29 wellformedness -->
+Which fact types are generating the largest share of those warnings when you sort them by element? Have you looked at whether the same object types recur across those flagged fact types? What do you notice about the naming conventions or role readings in the elements where hints cluster most densely? Which of these would you tackle first, and what makes you confident that starting there addresses the root rather than a symptom?
+<!-- /coach -->
+
+<!-- coach 2026-08-28T09:31:55 save -->
+When you assigned that char(60) datatype to EU-Rent, Authorized Area, and the other four terms so the well-formedness check would pass, what did that datatype come to mean about what those terms actually are?
+<!-- /coach -->
+
+<!-- coach 2026-08-28T09:35:14 wellformedness -->
+Which fact types generated the largest share of those 345 hints, and have you looked at whether they cluster around a few specific object types?
+
+What do the 170 warnings have in common when you sort them by element — are they concentrated in your identification schemes or in your populations?
+
+Have you considered which single element, if corrected, would resolve the most violations at once?
+
+What distinguishes the warnings from the hints in your mind, and which category have you not yet examined closely?
+<!-- /coach -->
+
+<!-- coach 2026-08-28T09:40:20 save -->
+When you cleared all eight identification populations and then created UCs 66 through 71, what were you treating as the reason those uniqueness constraints belong on those fact types—the sample data you removed, or something else?
+<!-- /coach -->
+
+<!-- coach 2026-08-28T09:42:44 wellformedness -->
+Which fact type shows the highest concentration of these warnings when you sort them by element?
+
+Have you looked at whether those warnings cluster around a specific object type's naming or reference scheme?
+
+What do the 341 hints have in common when you group them—are they pointing at missing verbalizations, absent examples, or something else entirely?
+
+Which of these two categories, if you addressed it first, would clear the most downstream issues?
+<!-- /coach -->
+
+<!-- coach 2026-08-28T09:43:39 save -->
+When you set those six glossary terms to a char(60) datatype purely so the well-formedness check would pass, what are you treating that check as measuring?
+<!-- /coach -->
+
+<!-- coach 2026-09-05T16:57:42 wellformedness -->
+Which fact type in your model shows the highest concentration of these warnings, and what do those warnings have in common?
+
+Have you looked at whether the hints cluster around the same elements as the warnings, or do they point to a different part of the model?
+
+When you examine the objectified fact types or the naming conventions on your object types, which ones have you not yet verified against the check output?
+
+What would you need to confirm before deciding whether these signals reflect a genuine modeling gap or an acceptable pattern in your domain?
+<!-- /coach -->
+
+<!-- coach 2026-09-05T17:21:10 wellformedness -->
+Which fact type expressions produced the largest share of those warnings when you sort them by frequency? Have you looked at whether the hints cluster around specific object types or roles that share a common naming or population pattern? What do the top offending elements have in common that might point to a single underlying cause rather than 147 separate ones? Which of these would change the most downstream elements if you addressed it first?
+<!-- /coach -->
+
+<!-- coach 2026-09-05T17:29:05 wellformedness -->
+Which fact type expressions carry the largest share of those warnings when you sort them by frequency?
+
+Once you locate that cluster, have you examined whether the object types they reference are consistently named across every expression?
+
+What might the hints be telling you about the elements that sit just outside those warning-heavy fact types?
+
+Have you asked yourself which single element, if corrected, would resolve the most violations at once?
+<!-- /coach -->
+
+<!-- coach 2026-09-05T17:29:26 wellformedness -->
+Which fact type or object type accounts for the largest share of those warnings when you sort them by element? Have you looked at whether those warnings cluster around a particular set of roles or verbalizations? What do the recurring hints have in common when you group them by the element they reference? Which of these elements would you consider addressing first, and what makes you choose that one?
+<!-- /coach -->
+
+<!-- coach 2026-09-05T17:34:33 save -->
+You marked the identification-repair todo's work as complete — what makes you confident that identifying Car Model by its own expression, rather than by its parts, is a decision the business would recognize as true, rather than one that merely makes the duplicate-instance warning go away?
+<!-- /coach -->
+
+<!-- coach 2026-09-05T17:34:41 wellformedness -->
+Which fact type carries the largest share of those warnings, and have you looked at what its verbalization has in common with the others clustered around it?
+
+When you compare those flagged fact types, what pattern do you notice in how their object types are named or reused? Have you asked yourself whether the hints point back to missing or unclear roles on those same elements? What would it take for you to trace one warning from its fact type down to the population that triggered it?
+<!-- /coach -->
+
+<!-- coach 2026-09-05T17:37:26 save -->
+When you flagged those five counter-example rentals with only the single fact each violates, what did you take for granted about what a reader needs in order to recognize *why* that lone tuple is forbidden?
+<!-- /coach -->
+
+<!-- coach 2026-09-05T17:38:52 wellformedness -->
+Which fact types account for the largest share of those warnings, and have you looked at what they share in common?
+
+When you inspect the objectified or bridge fact types among them, what patterns in their naming or role wording do you notice? Have you considered whether the hints cluster around the same elements as the warnings, or point somewhere else entirely? What would change in your model if the top three offending fact types were reworded to match your verbalization conventions?
+<!-- /coach -->
+
+<!-- coach 2026-09-05T17:40:28 save -->
+When you repointed each object type to be identified by its own code—Country Code, Person Number, Rental Number, and the rest—what led you to treat each of those codes as something that will always be unique and never itself need to be broken down or qualified further?
+<!-- /coach -->
+
+<!-- coach 2026-09-07T16:36:56 save -->
+When you repointed each object type's identification to a single code—Country Code, Person Number, Rental Number and the rest—what did you take for granted about whether one such value could ever identify the same real-world thing in two different ways, or two different things in the same way?
+<!-- /coach -->
+
+<!-- coach 2026-09-07T18:03:13 wellformedness -->
+Which fact types are generating the largest share of those warnings, and have you looked at what they share in common?
+
+When you inspect the objectified fact types, what patterns do you notice in how their roles are named? Have you considered whether the hints cluster around specific object types or verbalizations that could be tightened? What would happen to that warning count if you addressed the most-connected element first?
+<!-- /coach -->
+
+<!-- coach 2026-09-07T18:04:07 wellformedness -->
+Which fact type carries the largest share of those hints, and what do the objectified or bridge-type expressions there have in common?
+
+Have you looked at whether the warnings cluster around the same population of objects, or are they spread across unrelated fact types?
+
+What would you need to examine in the concrete example sentences to tell whether these are genuine role-naming gaps or intended readings?
+
+Which single element, if you addressed it first, would silence the most warnings at once?
+<!-- /coach -->
+
+<!-- coach 2026-09-07T18:04:44 wellformedness -->
+Which fact types account for the largest share of those warnings, and what do they have in common? Have you looked at whether the hints cluster around specific object types or reference modes? What patterns emerge when you sort the violations by the element they point to? Which of these elements sits at the center of the most relationships in your model?
+<!-- /coach -->
+
+<!-- coach 2026-09-07T18:27:29 save -->
+When you set the note "Source" on EU-Rent, what did you take "source" to mean there—and does that meaning match what you intend "source" to signify everywhere else it appears in this model?
+<!-- /coach -->
+
+<!-- coach 2026-09-07T18:32:25 save -->
+When you defined R22 and R23 in terms of "Open Rental," what did you assume determines the exact moment a Rental becomes—and stops being—open?
+<!-- /coach -->
+
+<!-- coach 2026-09-07T19:23:25 save -->
+When you defined R22 and R23 as derivations over "Open Rental," what did you assume determines the exact moment a rental becomes open and the moment it stops being open?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T09:14:45 wellformedness -->
+Which fact types generated the largest share of those hints, and have you looked at whether they cluster around specific object types? What patterns do you notice when you sort the warnings by the elements they reference? Have you considered whether the objectified fact types or the naming conventions on your roles might be driving the bulk of these? What would change in your view of the model if you traced the top three most-referenced elements back to their original verbalizations?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T09:23:50 save -->
+You just modeled R21 with the odometer reading in miles while the original rule speaks of 40,000 kilometres — what are you assuming about how a car's accumulated distance gets from the world into the value your rule compares against?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T09:36:54 save -->
+When you set the datatype on Registration Number just now, what did you take for granted about the range of forms a registration number can validly take across all the countries EU-Rent operates in?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T09:37:49 save -->
+When you set the datatype on Registration Number just now, what did you take for granted about whether every car that EU-Rent tracks — including one that has been sold or withdrawn — carries a registration number of that same form?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T10:20:00 save -->
+When you set that "Pattern" note on Registration Number, what did you take for granted about whether every registration number across all the countries EU-Rent operates in actually conforms to a single pattern?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T10:35:31 save -->
+When you set that "Pattern" note on Registration Number, what did you take for granted about whether every car's registration—across all the countries EU-Rent operates in—actually conforms to a single pattern?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T10:47:09 save -->
+When you set that "Pattern" note on Registration Number, what assumption were you making about whether every registration number across all the countries EU-Rent operates in actually conforms to a single pattern?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T10:52:58 save -->
+When you set that "Pattern" note on Registration Number, what assumption did you make about whether every car's registration—across all the countries EU-Rent operates in—actually conforms to a single pattern?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T10:58:50 save -->
+When you set the pattern on Registration Number, what did you take for granted about the range of registration formats a car in this fleet could actually carry?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:06:09 save -->
+When you attached "R04 Barred Driver May Not Drive" to "Additional Driver" just now, and earlier attached that same rule name to both "Barred Driver" and "Main Driver of Rental" — what are you assuming about whether one rule wearing the same name across three roles is one rule or three?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:06:37 save -->
+When you added "R06 Minimum Driver Age" as a role on Date of Birth alone, what did you take for granted about which moment in time that age is measured against?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:07:08 save -->
+When you attached "R07 Maximum Rental Duration" to the single role "Rental Period," what are you assuming about where in the model the two dates that bound that duration are held, and whether one role can carry a constraint that spans them?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:07:40 save -->
+When you recorded that a one-way rental incurs a location penalty charge, what did you take to be true about the relationship between a pick-up branch and a drop-off branch that makes a rental count as "one-way"?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:08:11 save -->
+What led you to treat "Rental State" and "Authorized Area of Rental" as the two roles that fully capture what makes an area-of-usage remedial rule apply, rather than any other fact that a rental carries?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:08:33 save -->
+When you attached "R12 Free Upgrade When Requested Group Unavailable" as a role on "Car Group of Car Model," what did you take to be true about the moment at which a requested car group's unavailability can be known?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:09:08 save -->
+When you say an allocated car "matches or exceeds" the requested group, what have you assumed makes one car group rank higher than another?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:09:39 save -->
+When you attached "R14 Service Interval Of 5000 Miles" to "Car Condition" and "R15 Only An Available Car May Be Rented" to "Condition," what led you to treat those two as belonging at different levels — one at the fact type and one at the label?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:10:08 save -->
+When you added "R17 One Tariff Per Car Group Per Country" as a role on Rental Tariff, what assumption did you make about whether a country's tariff for a car group stays the same over time?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:10:37 save -->
+When you say a driver is barred after "three bad experiences," what is it about a bad experience that makes each one countable as the same kind of thing — and have you considered what distinguishes one bad experience from another so the model knows when it has reached three?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:11:07 save -->
+When you named R22 "One Car On Rental At A Time" and attached it to Renter of Rental, what did you take "at a time" to mean — and where in the model does that meaning become visible to someone who wasn't the one who wrote it?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:11:32 save -->
+When you added R22 as "One Car On Rental At A Time" with roles reaching Renter, Rental State, and Open Rental, what did you take "at a time" to mean about the moment at which that count of open rentals is checked?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:12:38 save -->
+When you added the roles for R22 and R23 that both hinge on "Open Rental," what did you take "open" to mean, and at which moment does a rental start and stop being open?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:12:51 wellformedness -->
+Which fact type has drawn the most hints, and have you looked at whether its verbalization reads as a complete, natural sentence? When you scan the warnings, do you notice whether they cluster around missing or incomplete objectifications? Have you considered which object types still lack a reference mode or identifying fact type? What patterns emerge when you group these violations by the elements they touch?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:41:05 save -->
+When you added R23 stating the signing driver has no car on rental, what did you take "on rental" to mean at the exact moment of signing versus across the whole rental period?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:42:20 save -->
+When you added R23 requiring that the signing driver has no car currently on rental, what did you take "the signing driver" to mean in a rental where the renter nominates a different person as the main driver?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:42:35 save -->
+When you added R23 requiring that the signing driver has no car currently on rental, what did you take "on rental" to mean for a driver who signs one agreement while their name still stands as an additional driver on someone else's open rental?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:43:34 save -->
+When you added R23 to require that the signing driver has no car currently on rental, what did you take "the signing driver" to mean about the relationship between the person who signs and the roles of renter and main driver you had already modeled?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:46:03 save -->
+When you added R23 to declare that the signing driver has no car currently on rental, what did you take "currently" to mean at the exact moment a rental begins?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:48:29 save -->
+When you added R23 as three separate roles across "Rental State", "Open Rental", and "Main Driver of Rental" — what are you taking for granted about what makes a rental "open" at the exact moment a driver signs?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:50:53 save -->
+When you added "R23 Signing Driver Has No Car On Rental" as a role on both "Rental State" and "Open Rental," what were you assuming about the relationship between those two fact types that let the same rule attach to each?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:53:18 save -->
+When you added R23 stating the signing driver has no car on rental, what did you assume the word "signing" points to—and is that the same person your model names as "Main Driver of Rental"?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T11:59:08 save -->
+When you added R23 stating the signing driver has no car on rental, what did you take "Main Driver" to mean at the moment of pick-up versus across the life of a rental — and does R23 assume those are the same person?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T12:00:45 save -->
+When you added R23 as a role on "Main Driver of Rental" but not on "Additional Driver," what did you assume about which drivers count as "having a car on rental"?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T12:02:24 save -->
+When you say "R23 Signing Driver Has No Car On Rental," what does "has no car on rental" assume about the exact moment being checked — and would that moment be the same for every rental you save it against?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T12:05:11 save -->
+When you added R23 requiring that the signing driver has no car currently on rental, what did you take "the signing driver" to mean in a rental that has additional drivers but no separately named main driver?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T12:06:48 save -->
+When you added R23's requirement that the signing driver has no car on rental, what did you take "the signing driver" to mean for a rental that has a renter but no main driver named yet?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T12:12:17 save -->
+When you defined "R23 Signing Driver Has No Car On Rental" over "Open Rental" and "Main Driver of Rental," what did you take "currently has a car on rental" to mean at the exact moment the signing driver is checked — and does that boundary treat the rental being signed the same as every other one?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T12:13:44 save -->
+When you added R23 to require that the signing driver has no car on rental, what did you take "signing driver" to mean here — and does that match the role you attached it to?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T12:17:17 save -->
+When you added "R23 Signing Driver Has No Car On Rental" as a role reaching into "Open Rental," what does "no car on rental" assume about the moment in time at which that condition is being checked?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T12:18:53 save -->
+When you added R23 requiring that the signing driver has no car currently on rental, what did you take "the signing driver" to mean in relation to the main driver and the renter you connected it to?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T12:21:27 save -->
+When you added R23 requiring that the signing driver has no car currently on rental, what did you take "the signing driver" to mean in a rental that has a separate renter and main driver — and does your model make those the same person, or leave open which one signs?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T12:23:54 save -->
+When you added R23 saying the signing driver must have no car on rental, what did you take "the signing driver" to mean in relation to the "Main Driver of Rental" role you attached it to?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T12:25:06 save -->
+When you added the two roles connecting "R23 Signing Driver Has No Car On Rental" to both "Rental State" and "Open Rental" — just as R22 already reaches into those same two fact types — what is your assumption about what it means for a rental to be "open," and does the signing driver's constraint depend on that meaning in the same way the renter's constraint does?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T12:26:17 save -->
+When you added R23 requiring that the signing driver has no car currently on rental, what did you take "signing driver" to mean in relation to the Main Driver role you connected it to — and does that assume the person who signs is always the same person who drives?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T12:27:27 save -->
+When you added R23 saying the signing driver has no car on rental, what did you take "the signing driver" to mean here — and does that match the role you attached it to?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T12:28:30 save -->
+When you added R23 as a role on both "Rental State" and "Open Rental," what were you assuming about how "Open Rental" comes to be recognized as open in the first place?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T12:37:04 save -->
+When you added R23 requiring that the signing driver has no car currently on rental, what did you take "signing driver" to mean in relation to the Main Driver and the Renter roles you connected it to—and does that assumption hold in every case you can imagine?
+<!-- /coach -->
+
+<!-- coach 2026-09-08T12:38:31 save -->
+When you added R23 stating the signing driver must have no car currently on rental, what did you take "currently" to mean — the moment of signing, the pick-up moment, or the whole span of the open rental — and where in the model does that choice live?
+<!-- /coach -->
+

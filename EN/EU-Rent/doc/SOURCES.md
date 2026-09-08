@@ -21,8 +21,9 @@ now on the todo list:
   and a shared customer base.
 - It has **1000 branches**, plus separate **service depots** that each serve several branches
   and take maintenance bookings subject to capacity.
-- Cars are **sold at one year old or 40,000 km**. The 5000-mile service interval (R14) is from
-  the later SBVR retelling.
+- Cars are **sold at one year old or 40,000 km** — modelled as R21 on 2026-09-08, with a
+  `Purchase Date of Car` fact type and a `Sold` state. The 5000-mile service interval (R14) is
+  from the later SBVR retelling, so the model keeps miles and applies the limit as 25,000 miles.
 - A customer may hold several reservations but **only one car on rental at a time**, and the
   **signing driver must not currently have an EU-Rent car out** — modelled as R22 and R23.
 

@@ -1,5 +1,216 @@
 ﻿# eu-rent Changelog
 
+### 2026-09-08 11:12 - Session (2 actions)
+<!-- since 2026-09-08T11:12:22 -->
+
+- New Role: "R23 Signing Driver Has No Car On Rental" to "Rental State"
+- New Role: "R23 Signing Driver Has No Car On Rental" to "Open Rental"
+
+---
+
+### 2026-09-08 11:11 - Session (5 actions)
+<!-- since 2026-09-08T11:11:16 -->
+
+- New Role: "R21 Car Sold At One Year Or 40000 Km" to "Car Condition"
+- New Role: "R22 One Car On Rental At A Time" to "Renter of Rental"
+- New Role: "R22 One Car On Rental At A Time" to "Rental State"
+- New Role: "R22 One Car On Rental At A Time" to "Open Rental"
+- New Role: "R23 Signing Driver Has No Car On Rental" to "Main Driver of Rental"
+
+---
+
+### 2026-09-08 11:10 - Session (5 actions)
+<!-- since 2026-09-08T11:10:46 -->
+
+- New Role: "R19 Three Bad Experiences Bar A Driver" to "Barred Driver"
+- New Role: "R20 Renter Drives Or Nominates A Driver" to "Main Driver of Rental"
+- New Role: "R20 Renter Drives Or Nominates A Driver" to "Renter of Rental"
+- New Role: "R21 Car Sold At One Year Or 40000 Km" to "Purchase Date of Car"
+- New Role: "R21 Car Sold At One Year Or 40000 Km" to "Car Odometer Reading"
+
+---
+
+### 2026-09-08 11:10 - Session (5 actions)
+<!-- since 2026-09-08T11:10:16 -->
+
+- New Role: "R17 One Tariff Per Car Group Per Country" to "Rental Tariff"
+- New Role: "R18 Late Return Incurs Penalty" to "Actual Return"
+- New Role: "R18 Late Return Incurs Penalty" to "Rental Period"
+- New Role: "R18 Late Return Incurs Penalty" to "Rental Charge"
+- New Role: "R19 Three Bad Experiences Bar A Driver" to "Bad Experience"
+
+---
+
+### 2026-09-08 11:09 - Session (5 actions)
+<!-- since 2026-09-08T11:09:47 -->
+
+- New Role: "R14 Service Interval Of 5000 Miles" to "Car Condition"
+- New Role: "R15 Only An Available Car May Be Rented" to "Condition"
+- New Role: "R15 Only An Available Car May Be Rented" to "Car Condition"
+- New Role: "R15 Only An Available Car May Be Rented" to "Car of Rental"
+- New Role: "R16 Rental Is Guaranteed By Credit Card" to "Customer Credit Card"
+
+---
+
+### 2026-09-08 11:09 - Session (5 actions)
+<!-- since 2026-09-08T11:09:17 -->
+
+- New Role: "R13 Allocated Car Matches Or Exceeds Requested Group" to "Car Group of Car Model"
+- New Role: "R13 Allocated Car Matches Or Exceeds Requested Group" to "Requested Car Group"
+- New Role: "R13 Allocated Car Matches Or Exceeds Requested Group" to "Car Group Code"
+- New Role: "R14 Service Interval Of 5000 Miles" to "Car Odometer Reading"
+- New Role: "R14 Service Interval Of 5000 Miles" to "Car Service"
+
+---
+
+### 2026-09-08 11:08 - Session (5 actions)
+<!-- since 2026-09-08T11:08:48 -->
+
+- New Role: "R12 Free Upgrade When Requested Group Unavailable" to "Car Group of Car Model"
+- New Role: "R12 Free Upgrade When Requested Group Unavailable" to "Rental Tariff"
+- New Role: "R12 Free Upgrade When Requested Group Unavailable" to "Car Condition"
+- New Role: "R13 Allocated Car Matches Or Exceeds Requested Group" to "Car of Rental"
+- New Role: "R13 Allocated Car Matches Or Exceeds Requested Group" to "Car Model of Car"
+
+---
+
+### 2026-09-08 11:08 - Session (5 actions)
+<!-- since 2026-09-08T11:08:17 -->
+
+- New Role: "R11 Area Of Usage Remedial Rule" to "Rental State"
+- New Role: "R11 Area Of Usage Remedial Rule" to "Authorized Area of Rental"
+- New Role: "R11 Area Of Usage Remedial Rule" to "Open Rental"
+- New Role: "R12 Free Upgrade When Requested Group Unavailable" to "Requested Car Group"
+- New Role: "R12 Free Upgrade When Requested Group Unavailable" to "Car of Rental"
+
+---
+
+### 2026-09-08 11:07 - Session (5 actions)
+<!-- since 2026-09-08T11:07:47 -->
+
+- New Role: "R09 One Way Rental Incurs Location Penalty Charge" to "Rental Charge"
+- New Role: "R09 One Way Rental Incurs Location Penalty Charge" to "One-Way Rental"
+- New Role: "R10 Area Of Usage Rule" to "Authorized Area of Rental"
+- New Role: "R10 Area Of Usage Rule" to "Car of Rental"
+- New Role: "R10 Area Of Usage Rule" to "Rental State"
+
+---
+
+### 2026-09-08 11:07 - Session (5 actions)
+<!-- since 2026-09-08T11:07:18 -->
+
+- New Role: "R07 Maximum Rental Duration" to "Rental Period"
+- New Role: "R08 Drop Off Branch Is An EU-Rent Branch" to "Drop Off Branch"
+- New Role: "R08 Drop Off Branch Is An EU-Rent Branch" to "Branch"
+- New Role: "R09 One Way Rental Incurs Location Penalty Charge" to "Pick Up Branch"
+- New Role: "R09 One Way Rental Incurs Location Penalty Charge" to "Drop Off Branch"
+
+---
+
+### 2026-09-08 11:06 - Session (5 actions)
+<!-- since 2026-09-08T11:06:46 -->
+
+- New Role: "R05 Driver Holds Valid Licence" to "Additional Driver"
+- New Role: "R06 Minimum Driver Age" to "Date of Birth"
+- New Role: "R06 Minimum Driver Age" to "Rental Period"
+- New Role: "R06 Minimum Driver Age" to "Main Driver of Rental"
+- New Role: "R06 Minimum Driver Age" to "Additional Driver"
+
+---
+
+### 2026-09-08 11:06 - Session (5 actions)
+<!-- since 2026-09-08T11:06:16 -->
+
+- New Role: "R04 Barred Driver May Not Drive" to "Additional Driver"
+- New Role: "R05 Driver Holds Valid Licence" to "Driving Licence"
+- New Role: "R05 Driver Holds Valid Licence" to "Licence Expiry"
+- New Role: "R05 Driver Holds Valid Licence" to "Rental Period"
+- New Role: "R05 Driver Holds Valid Licence" to "Main Driver of Rental"
+
+---
+
+### 2026-09-08 11:05 - Session (5 actions)
+<!-- since 2026-09-08T11:05:47 -->
+
+- New Role: "R01 Car Model Belongs To One Car Group" to "Car Group of Car Model"
+- New Role: "R02 Rental Requests Exactly One Car Group" to "Requested Car Group"
+- New Role: "R03 Maximum Three Additional Drivers" to "Additional Driver"
+- New Role: "R04 Barred Driver May Not Drive" to "Barred Driver"
+- New Role: "R04 Barred Driver May Not Drive" to "Main Driver of Rental"
+
+---
+
+### 2026-09-08 09:37 - Session (1 actions)
+<!-- since 2026-09-08T09:37:38 -->
+
+- Set note "Pattern" on Registration Number
+
+---
+
+### 2026-09-08 09:36 - Session (8 actions)
+<!-- since 2026-09-08T09:36:44 -->
+
+- MCP population update Car (6x)
+- MCP population update Car Condition (2x)
+- MCP population update Car of Rental
+- Set note "Example" on Car
+- Set note "Derivation" on R14 Service Interval Of 5000 Miles
+- Set note "Derivation" on R21 Car Sold At One Year Or 40000 Km
+- Set note "Definition" on Registration Number
+- MCP set datatype: Registration Number
+
+---
+
+### 2026-09-08 09:23 - Session (41 actions)
+<!-- since 2026-09-08T09:23:33 -->
+
+- Add expression: Purchase Date of Car
+- Edit VC of Condition
+- New Business Rule: "R21 Car Sold At One Year Or 40000 Km"
+- MCP add role (contains): EU-Rent Business Rules -> R21 Car Sold At One Year Or 40000 Km
+- Set note "Definition" on R21 Car Sold At One Year Or 40000 Km
+- Set note "Source" on R21 Car Sold At One Year Or 40000 Km
+- Set note "Derivation" on R21 Car Sold At One Year Or 40000 Km
+- Set note "Definition" on Mileage
+- Set note "Definition" on Service Mileage
+- Set note "Definition" on Purchase Date of Car
+- Set note "Source" on Purchase Date of Car
+- Set note "Definition" on Purchase Date
+- Set note "Source" on R21 Car Sold At One Year Or 40000 Km
+- Set note "Source" on Purchase Date of Car
+- Create UC 73
+- Create TC 32
+- MCP population update Car Odometer Reading (2x)
+- MCP population update Car Service (2x)
+- MCP population insert Purchase Date of Car (4x)
+- MCP population insert Car Model of Car
+- MCP population insert Home Branch of Car
+- MCP population insert Car Odometer Reading
+- MCP population insert Purchase Date of Car
+- MCP population insert Car Condition
+- MCP population insert Car Model of Car
+- MCP population insert Home Branch of Car
+- MCP population insert Car Odometer Reading
+- MCP population insert Purchase Date of Car
+- MCP population insert Car Condition
+- MCP population insert Car Model of Car
+- MCP population insert Home Branch of Car
+- MCP population insert Car Odometer Reading
+- MCP population insert Purchase Date of Car
+- MCP population insert Car Condition
+- Set note "Derivation" on R14 Service Interval Of 5000 Miles
+- Set note "Example" on Car
+- MCP population update Car Condition
+- MCP tuple counter-example Car Condition
+- MCP population update Car Condition
+- MCP tuple counter-example Car Condition
+- Set note "Paragraph" on 4. Modelling Decisions
+
+**Todo items**
+- [x] [Enhancement] Model the fleet disposal rule from the original case: sold at one year old or 40,000 km
+
+---
+
 ### 2026-09-07 18:32 - Session (22 actions)
 <!-- since 2026-09-07T18:32:12 -->
 

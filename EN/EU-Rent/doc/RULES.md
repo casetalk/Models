@@ -1,6 +1,6 @@
 # EU-Rent — business rules
 
-The twenty-two rules held as `rule` OFTypes in the container **EU-Rent Business Rules**. Each
+The twenty-three rules held as `rule` OFTypes in the container **EU-Rent Business Rules**. Each
 rule in the repository carries its statement in a `[Definition]` annotation and its provenance
 in a `[Source]` annotation; both are reproduced here.
 
@@ -39,11 +39,22 @@ expressible as constraints on single fact types.
 | R18 | A late return incurs a penalty | Derivation — compares `Actual Return` with `Rental Period` |
 | R19 | Three bad experiences bar a driver | Derivation — counts `Bad Experience` tuples per driver |
 | R20 | The renter drives, or nominates a driver | Partly structural — `Main Driver of Rental` is mandatory for a Rental |
+| R21 | A car is sold when it is one year old or has done 40,000 km, whichever comes first | Derivation — compares `Purchase Date of Car` with the evaluation date and `Car Odometer Reading` with 25,000 miles; the `Sold` state of the `Condition` VC is the remedial transition |
 | R22 | A customer has at most one open rental at a time; reservations are unlimited | Derivation — counts `Open Rental` per Customer through `Renter of Rental` |
 | R23 | The signing (main) driver of a rental has no other car on rental | Derivation — counts `Open Rental` per Driver through `Main Driver of Rental` |
 
-R21 is reserved for the fleet disposal rule (sold at one year or 40,000 km), still on the
-todo list.
+R21 is the fleet disposal rule of the original 1995 case study, modelled on 2026-09-08 with a
+`Purchase Date of Car` fact type (UC + TC on Car) and a `Sold` state in the `Condition` state
+machine, reachable from Available and In Service, never from Rented.
+
+## Each rule is linked to what it governs
+
+Since 2026-09-08 every rule carries a link role to the fact types (and, where the rule is
+about the type itself, the object or label type) it constrains: R03 to `Additional Driver`,
+R14 to `Car Odometer Reading`, `Car Service` and `Car Condition`, R21 to `Purchase Date of
+Car`, `Car Odometer Reading` and `Car Condition`, and so on - 62 links over the 23 rules.
+The `roles` tool (`partof=<rule>`) lists them, and CaseTalk's relationship views draw them,
+so "which rules touch this fact type?" is a query rather than a search through the notes.
 
 ## Quoted verbatim
 
@@ -66,6 +77,11 @@ Appendix D, by Model Systems Ltd.): *"A customer can have several reservations b
 car rented at a time"* and *"The driver who signs the rental agreement must not currently have
 a EU-Rent car on rental."* Rental IS the rental agreement in this model, and the signing driver
 is the main driver (R20).
+
+R21 is quoted from the same appendix: *"Cars are to be sold when they reach one year old or
+40,000 kilometers, whichever occurs first."* The odometer in this model is in miles, because
+the SBVR-era sources give the service interval that way (R14); the 40,000 km limit is applied
+as 25,000 miles (24,855 rounded) and the rule's `[Definition]` says so.
 
 ## Three numbers the sources do not fix
 
